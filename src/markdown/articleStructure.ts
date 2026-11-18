@@ -34,6 +34,7 @@ export function getArticleToc(markdown: string): TocItem[] {
 export function normalizeArticleImageUrls(markdown: string) {
   return markdown
     .replace(/\]\(\.\.\/\.\.\/\.\.\/public\//g, '](./')
+    .replace(/\]\(\/articles\//g, '](./articles/')
     .replace(/\]\(\/images\//g, '](./images/')
 }
 
