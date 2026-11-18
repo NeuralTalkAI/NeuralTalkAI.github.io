@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, NavLink, Route, Routes, useParams } from 'react-router'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -161,7 +161,7 @@ function About() {
       <p className="about-lead">把散落在公众号里的内容，整理成一个可以搜索、引用和持续更新的个人知识库。</p>
       <div className="about-grid">
         <section><h2>这里收录什么</h2><p>主要关注 AI、计算系统、逆向工程与工程实践。文章保留发布时间、原创标记、关键词和公众号原始链接。</p></section>
-        <section><h2>如何参与讨论</h2><p>文章底部将接入 Utterances。读者可以使用 GitHub 账号留言，评论会保存在仓库 Issues 中，公开且便于维护。</p></section>
+        <section><h2>如何参与讨论</h2><p>文章底部已接入 Utterances。读者可以使用 GitHub 账号留言，评论会保存在仓库 Issues 中，公开且便于维护。</p></section>
         <section><h2>内容如何维护</h2><p>每篇文章对应一个 Markdown 文件，图片与文章一起放入仓库。更新内容后，GitHub Pages 会自动重新生成网站。</p></section>
       </div>
       <Link to="/" className="primary-link">开始阅读 <ArrowRight size={17} /></Link>
@@ -193,6 +193,24 @@ function ArticleToc({ items }: { items: TocItem[] }) {
       </ul>
     </nav>
   )
+}
+
+function Utterances({ title }: { title: string }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+    container.innerHTML = ''
+    const script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'NeuralTalkAI/neuraltalk')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.crossOrigin = 'anonymous'
+    script.async = true
+    container.appendChild(script)
+  }, [title])
+  return <div className="utterances-container" ref={containerRef} />
 }
 
 function Article() {
@@ -242,9 +260,10 @@ function Article() {
           components={{ h2: ({ children, ...props }) => <><h2 {...props}>{children}</h2>{props.id === tocHeadingId && <ArticleToc items={toc} />}</> }}
         >{markdown}</ReactMarkdown></div>
         <div className="keyword-list">{post.keywords.map((keyword) => <span key={keyword}>#{keyword}</span>)}</div>
-        <section className="comments-placeholder">
-          <MessageCircle size={24} />
-          <div><h2>评论与讨论</h2><p>这里将接入 Utterances，评论会保存到 GitHub Issues。本地预览不加载外部评论服务。</p></div>
+        <section className="comments-section">
+          <h2><MessageCircle size={18} /> 评论与讨论</h2>
+          <p className="comments-hint">使用 GitHub 账号登录后即可留言，评论会公开保存在本站的 GitHub Issues 中。</p>
+          <Utterances key={post.slug} title={post.title} />
         </section>
         {nextPost && <Link className="next-post" to={`/post/${nextPost.slug}`}><span>下一篇</span><strong>{nextPost.title}</strong><ArrowRight size={20} /></Link>}
       </article>
