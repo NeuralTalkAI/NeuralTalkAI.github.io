@@ -1,0 +1,79 @@
+/* Adapted from ysh329/online-markdown: template/basic.js + markdown/yamabuki.js. */
+#nice{color:#000;background:transparent;font-family:Optima,"Microsoft YaHei",PingFangSC-regular,serif;font-size:16px;line-height:1.5em;padding:0;word-spacing:0;letter-spacing:0;word-break:break-word;overflow-wrap:break-word;text-align:left}
+#nice p{margin:0;padding-top:8px;padding-bottom:8px;color:#3a3a3a;font-size:16px;line-height:1.8em}
+#nice h1,#nice h2,#nice h3,#nice h4,#nice h5,#nice h6{margin-top:30px;margin-bottom:15px;padding:0;font-weight:bold;color:#000;line-height:1.5;scroll-margin-top:96px}
+#nice h1 .prefix,#nice h2 .prefix,#nice h3 .prefix,#nice h4 .prefix,#nice h5 .prefix,#nice h6 .prefix,#nice h1 .suffix,#nice h2 .suffix,#nice h3 .suffix,#nice h4 .suffix,#nice h5 .suffix,#nice h6 .suffix{display:none}
+#nice h1 .content,#nice h2 .content,#nice h3 .content,#nice h4 .content,#nice h5 .content,#nice h6 .content{display:block}
+#nice h1{margin:30px 0 15px;padding:0;border:0;background:none}
+#nice h2{margin:30px 0 15px;padding:0;border:0;background:none}
+#nice h3{margin:30px 0 15px;padding:0;border:0;background:none}
+#nice h1 .content{font-size:24px;color:#000;font-weight:bold;line-height:1.5em}
+#nice h2 .content{display:block;font-size:22px;color:#515151;font-weight:bold;line-height:1.5em;padding:2px 13px;box-shadow:inset 0 -.5em 0 0 #ffb11b}
+#nice h3 .content{font-size:18px;color:#222;font-weight:bold;border-left:3px solid #ffb11b;padding-left:20px;line-height:1.8em}
+#nice h4 .content{font-size:18px;color:#000;font-weight:bold}
+#nice h5 .content{font-size:16px;color:#000;font-weight:bold}
+#nice h6 .content{font-size:14px;color:#000;font-weight:bold}
+#nice ul,#nice ol{margin-top:8px;margin-bottom:8px;padding-left:25px;color:#000}
+#nice ul{list-style-type:disc}#nice ul ul{list-style-type:square}#nice ol{list-style-type:decimal}
+#nice ul li section{color:#3a3a3a;font-size:16px;line-height:1.8em;font-weight:normal}
+#nice ol li section{color:#010101;font-size:16px;line-height:1.8em;font-weight:normal}
+#nice ul section,#nice ol section{margin-top:5px;margin-bottom:5px}
+#nice li{display:list-item;padding:0;margin:0}
+#nice li section>p{padding:0}
+#nice blockquote{margin:20px 0;padding:10px 10px 10px 20px;border-left:3px solid #ffb11b;background:#fff5e3;overflow:auto}
+#nice .multiquote-1{display:block;margin:20px 0;padding:10px 10px 10px 20px;border-left:3px solid #ffb11b;background:#fff5e3;color:#3a3a3a;font-size:.9em}
+#nice .multiquote-1 p{margin:0;color:#3a3a3a;line-height:1.8em}
+#nice .multiquote-2,#nice .multiquote-3{box-shadow:1px 1px 10px rgba(0,0,0,.2);padding:20px;margin:20px 0}
+#nice .multiquote-3 p,#nice .multiquote-3 h3{text-align:center}
+#nice strong{color:#fa5b0c;font-weight:bold}
+#nice em{color:#000;font-style:italic}
+#nice em strong,#nice strong em{color:#000;font-weight:bold;font-style:italic}
+#nice .mdnice-bold-italic,#nice .mdnice-bold-italic strong,#nice .mdnice-bold-italic em{color:#000;font-weight:bold;font-style:italic}
+#nice .block-1 em strong,#nice .block-1 .mdnice-highlight,#nice .block-1 .mdnice-highlight strong,#nice .block-1 .mdnice-highlight em,#nice .block-1 .mdnice-bold-italic,#nice .block-1 .mdnice-bold-italic strong,#nice .block-1 .mdnice-bold-italic em{color:#000;font-weight:bold;font-style:italic;background-image:linear-gradient(90deg,rgba(252,255,191,.7) 0%,rgba(219,200,247,.7) 100%);background-repeat:no-repeat}
+#nice del,#nice s{color:#d19826;font-style:italic}
+#nice sub,#nice sup{line-height:0}
+#nice .footnote-word{color:#ffb11b;font-weight:bold}
+#nice .footnote-ref{color:#dda52d;font-weight:bold}
+#nice .footnotes-sep{margin:30px 0 15px;padding:0;border:none}
+#nice .footnotes-sep::before{display:block;content:\"参考资料\";color:#000;font-size:18px;line-height:1.5em;font-weight:bold}
+#nice .footnotes{margin:0;padding:0;border:none}
+#nice .footnotes span{font-size:14px;line-height:1.8em}
+#nice .footnote-item{display:flex}
+#nice .footnotes .footnote-num{color:rgba(0,0,0,.6);display:inline;width:10%;background:none;font-size:80%;padding-top:2px}
+#nice .footnote-item p{color:#000;display:inline;padding:0;margin:0;word-break:break-all;flex-grow:1;flex-basis:0%}
+#nice .footnote-item p em{color:#000;font-style:italic}
+#nice hr{height:1px;margin:10px 0;border:none;border-top:1px solid #f9bf45}
+#nice a{text-decoration:none;color:#dda52d;font-weight:bold;border-bottom:1px solid #dda52d;overflow-wrap:break-word}
+#nice img{display:block;margin:0 auto;max-width:100%;height:auto}
+#nice figure{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:10px 0}
+#nice figure img{border:0;border-radius:4px}
+#nice figcaption,#nice .image-caption{display:block;margin-top:5px;margin-bottom:18px;text-align:center;color:#dda52d;font-size:14px;font-weight:400;line-height:1.5}
+#nice .image-caption p{display:inline;margin:0;padding:0;color:inherit;font-size:inherit;line-height:inherit}
+#nice .block-1{margin:20px 0;padding:10px 20px;background:#fafafa}
+#nice .block-1-inner>p:last-child{padding-bottom:8px}
+#nice .table-container{overflow-x:auto}
+#nice table{display:table;width:100%;border-collapse:collapse;text-align:left;margin:20px 0;font-size:16px}
+#nice table tr{border:0;border-top:1px solid #ccc;background:#fff}
+#nice table tr:nth-child(2n){background:#f8f8f8}
+#nice table tr th,#nice table tr td{font-size:16px;border:1px solid rgba(204,204,204,.4);padding:5px 10px;text-align:left;min-width:85px}
+#nice table tr th{background:#f0f0f0;color:#000;font-weight:bold}
+#nice pre{margin:10px 0;padding:0;overflow-x:auto;background:transparent;border:0;border-radius:5px;box-shadow:0 2px 10px rgba(0,0,0,.55)}
+#nice pre code{display:block;min-width:max-content;padding:15px 16px 16px;color:#abb2bf;background:#282c34;border-radius:5px;font-family:Consolas,Monaco,Menlo,monospace;font-size:12px;line-height:26px;white-space:pre}
+#nice p code,#nice li code{padding:2px 4px;margin:0 2px;border-radius:4px;color:#9b6e23;background:#fff5e3;font-family:Consolas,Monaco,Menlo,monospace;font-size:14px;overflow-wrap:break-word}
+#nice .block-equation{display:block;margin:20px 0;text-align:center;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+#nice .block-equation .katex-display{margin:0;overflow:visible}
+#nice .inline-equation{display:inline;overflow:visible;white-space:normal;vertical-align:baseline}
+#nice .katex{font-size:1.05em}
+#nice .related-title{margin:0;padding:8px 0;color:#ffa900;font-size:12px;font-weight:bold;line-height:1.8;letter-spacing:.578px;text-align:center}
+#nice .related-title p{display:inline;margin:0;padding:0;color:inherit;font-size:inherit;line-height:inherit}
+#nice .related-title strong{color:inherit}
+#nice .related-links{margin:0;padding:0}
+#nice .related-links li,#nice .related-links li section{line-height:1.8;letter-spacing:.578px}
+#nice .related-links a,#nice .related-links a strong{color:#576b95;border:0;font-size:14px;font-weight:normal;line-height:1.8}
+#nice .article-toc{margin:12px 0 24px;padding:12px 16px;background:#fafafa}
+#nice .article-toc>ul{margin:0;padding-left:22px}
+#nice .article-toc li,#nice .article-toc li section{margin:0;padding:2px 0;font-size:15px;line-height:1.7;font-weight:400}
+#nice .article-toc li li,#nice .article-toc li li section{font-size:14px}
+#nice .article-toc ul ul{margin:2px 0 6px;padding-left:22px;list-style-type:circle}
+#nice .article-toc a{color:#3a3a3a;border:0;font-weight:normal}
+#nice .article-toc a:hover,#nice .article-toc a:focus-visible{text-decoration:underline;text-underline-offset:3px}

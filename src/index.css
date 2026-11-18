@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --paper:#ffffff;
+  --ink:rgba(0,0,0,.9);
+  --text-body:#3a3a3a;
+  --muted:#666666;
+  --forest:#b56a00;
+  --forest-light:#925500;
+  --soft:#fff5e3;
+  --line:#e8e8e8;
+  --line-dark:#ffb11b;
+  --gold:#ffb11b;
+  --gold-dark:#a96300;
+  --serif:Optima,"Microsoft YaHei","PingFang SC",sans-serif;
+  --sans:Optima,"Microsoft YaHei","PingFang SC",sans-serif;
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  font-synthesis:weight style;
+  text-rendering:optimizeLegibility;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;min-height:100dvh;background:var(--paper)}
+button,input{font:inherit}
+::selection{background:#ffe4ad;color:#222222}
