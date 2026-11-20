@@ -158,6 +158,7 @@ function About() {
   return (
     <main className="page-shell narrow-page about-page">
       <div className="page-title"><p className="section-kicker">ABOUT</p><h1>关于这个知识库</h1></div>
+      <p className="about-lead">关注深度学习框架开发、模型压缩、低比特量化、移动端推理加速性能优化、工程化部署，Wechat: AgentTalk。</p>
       <p className="about-lead">把散落在公众号里的内容，整理成一个可以搜索、引用和持续更新的个人知识库。</p>
       <div className="about-grid">
         <section><h2>这里收录什么</h2><p>主要关注 AI、计算系统、逆向工程与工程实践。文章保留发布时间、原创标记、关键词和公众号原始链接。</p></section>
