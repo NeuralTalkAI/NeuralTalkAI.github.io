@@ -6,14 +6,12 @@
 
 最近几天，几个非官方 GPU Unlock 项目集中出现。**实现在 NVIDIA 驱动接管显卡前修改 SM speed-select，让部分消费级显卡提高 FP16、BF16、TF32 的 Tensor Core 运算速率**。
 
-::: block-1
-已经公开的结果里，:mdnice-highlight[RTX 3090 Ti 的 BF16 GEMM 提升 79.9%、TF32 提升 94.0%；RTX 4090 的 FP16/FP32 指令吞吐最高测到 2.002 倍]；4070 Ti SUPER 在 240 W 下也把 FP16、BF16、TF32 提到约 2 倍。
+::: block-1已经公开的结果里，:mdnice-highlight[RTX 3090 Ti 的 BF16 GEMM 提升 79.9%、TF32 提升 94.0%；RTX 4090 的 FP16/FP32 指令吞吐最高测到 2.002 倍]；4070 Ti SUPER 在 240 W 下也把 FP16、BF16、TF32 提到约 2 倍。
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/01.jpg)
 
-::: image-caption
-图 1：支持矩阵按公开实测数量和复现范围排序。Linux 系统的 NVIDIA RTX 30 系显卡用户报告最多；Ada 同卡对照正在补齐；RTX 4090 的公开实测只覆盖指定设备 ID；Windows UEFI 组合绑定具体主板和 BIOS。RTX 5060 Ti 暂无同类项目。
+::: image-caption图 1：支持矩阵按公开实测数量和复现范围排序。Linux 系统的 NVIDIA RTX 30 系显卡用户报告最多；Ada 同卡对照正在补齐；RTX 4090 的公开实测只覆盖指定设备 ID；Windows UEFI 组合绑定具体主板和 BIOS。RTX 5060 Ti 暂无同类项目。
 :::
 
 ::: related-title
@@ -50,14 +48,12 @@ JustAResearcher/gpu-unlock-ada 4070 Ti SUPER 实测：在 240 W 下，FP16、BF1
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/04.jpg)
 
-::: image-caption
-双 RTX 3080 20GB 在 220 W 下，vLLM prefill 提升 33% 至 36%，Strata 只有长上下文提升约 12% 至 13%；decode 未见稳定变化。
+::: image-caption双 RTX 3080 20GB 在 220 W 下，vLLM prefill 提升 33% 至 36%，Strata 只有长上下文提升约 12% 至 13%；decode 未见稳定变化。
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/05.jpg)
 
-::: image-caption
-elias-gaeros/gpu-unlock 的 rtx4090 分支在寄存器内测试，FP16/FP32 从 165.6 到 331.6 TF/s，BF16/FP32 从 165.5 到 330.6 TF/s。它测的是指令发射速率，不等于整机应用速度；原始记录只有一张卡和一次成功冷启动。
+::: image-captionelias-gaeros/gpu-unlock 的 rtx4090 分支在寄存器内测试，FP16/FP32 从 165.6 到 331.6 TF/s，BF16/FP32 从 165.5 到 330.6 TF/s。它测的是指令发射速率，不等于整机应用速度；原始记录只有一张卡和一次成功冷启动。
 :::
 
 ## 本文目录
@@ -95,8 +91,7 @@ elias-gaeros/gpu-unlock 的 rtx4090 分支在寄存器内测试，FP16/FP32 从 
 
 **这套操作影响的是 FP16、BF16 等路径的指令发射速率。** 它不会增加 CUDA Core、显存容量、显存带宽和功耗上限。elias-gaeros/gpu-unlock 的 rtx4090 分支对照数据也支持这一点：**FP16、BF16 的 FP32 累加吞吐接近翻倍，** INT8、dp4a 和 scalar FP32 基本保持原样。
 
-::: block-1
-因此，期待所有 AI 应用都获得两倍速度并不现实。**计算密集的矩阵乘法和 Attention 更可能受益；** 依赖显存带宽的逐 token decode，以及主要走整数 kernel 的量化推理，收益会小很多。
+::: block-1因此，期待所有 AI 应用都获得两倍速度并不现实。**计算密集的矩阵乘法和 Attention 更可能受益；** 依赖显存带宽的逐 token decode，以及主要走整数 kernel 的量化推理，收益会小很多。
 :::
 
 ## 二、核心原理：先打开寄存器权限，再把 speed-select 调到全速档
@@ -146,8 +141,7 @@ mailbox 是主机和固件交换状态的通信位置，模块看到标记后再
 3. 打开权限并写入速率开关。代码先发布 V67 payload，再由 `unlock_transaction_boot()` 启动 SEC2 上的签名 Booter；随后恢复原厂签名数据，调用 `write_selector()` 写入 SS0、SS1，并立即读回确认。
 4. 清理中间状态并交接驱动。`unlock_transaction_reset()` 执行 PCIe Function Level Reset（FLR），确认 SS0、SS1 在复位后仍然保留，同时检查 WPR2 关闭、GSP 停止、DMA 受控，最后恢复 PCI 状态。
 
-::: block-1
-其中，第四步的 FLR 的作用是把提权过程中启动的固件和临时状态收束起来。:mdnice-bold-italic[speed-select 的修改在 FLR 后仍能保留，原版 NVIDIA 驱动随后从一个相对干净的状态初始化显卡。驱动文件没有被替换，CUDA 测试却能看到新的指令发射速率。]
+::: block-1其中，第四步的 FLR 的作用是把提权过程中启动的固件和临时状态收束起来。:mdnice-bold-italic[speed-select 的修改在 FLR 后仍能保留，原版 NVIDIA 驱动随后从一个相对干净的状态初始化显卡。驱动文件没有被替换，CUDA 测试却能看到新的指令发射速率。]
 :::
 
 ### 2.5 为什么能成功：硬件开关本来存在，签名启动链又能被复用
@@ -174,14 +168,12 @@ mailbox 是主机和固件交换状态的通信位置，模块看到标记后再
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/06.jpg)
 
-::: image-caption
-图 2：RTX 3090 Ti 在 8192³ GEMM、450 W、FP32 累加和五次中位数。FP16 提升 35.4%，BF16 提升 79.9%，TF32 提升 94.0%，可直接比较不同精度受 speed-select 影响的程度。这组数据说明解锁确实改变了部分 Tensor Core 路径的有效吞吐。FP16 没有同步接近翻倍，也提醒读者不能用一个“2×”概括所有精度。FP16 从 87.46 提升到 118.39 TFLOPS，增幅 35.4%；BF16 从 87.50 提升到 157.41 TFLOPS，增幅 79.9%；TF32 从 42.58 提升到 82.61 TFLOPS，增幅 94.0%。（数据来源：开源项目 Zagitta/gpu-unlock[13]）
+::: image-caption图 2：RTX 3090 Ti 在 8192³ GEMM、450 W、FP32 累加和五次中位数。FP16 提升 35.4%，BF16 提升 79.9%，TF32 提升 94.0%，可直接比较不同精度受 speed-select 影响的程度。这组数据说明解锁确实改变了部分 Tensor Core 路径的有效吞吐。FP16 没有同步接近翻倍，也提醒读者不能用一个“2×”概括所有精度。FP16 从 87.46 提升到 118.39 TFLOPS，增幅 35.4%；BF16 从 87.50 提升到 157.41 TFLOPS，增幅 79.9%；TF32 从 42.58 提升到 82.61 TFLOPS，增幅 94.0%。（数据来源：开源项目 Zagitta/gpu-unlock[13]）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/07.jpg)
 
-::: image-caption
-图 3：RTX 3090 Ti GEMM 实测，只呈现解锁前后差异。BF16 和 TF32 的柱高差距明显大于 FP16，提醒读者不能用一个“2×”概括所有精度；它仍是 GEMM 结果，不代表所有应用的端到端速度。（数据来源：开源项目 Zagitta/gpu-unlock[14]）
+::: image-caption图 3：RTX 3090 Ti GEMM 实测，只呈现解锁前后差异。BF16 和 TF32 的柱高差距明显大于 FP16，提醒读者不能用一个“2×”概括所有精度；它仍是 GEMM 结果，不代表所有应用的端到端速度。（数据来源：开源项目 Zagitta/gpu-unlock[14]）
 :::
 
 ### 3.2 大模型推理的主要收益在 prefill，decode 基本不变
@@ -192,14 +184,12 @@ mailbox 是主机和固件交换状态的通信位置，模块看到标记后再
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/08.jpg)
 
-::: image-caption
-图 4：双 RTX 3080 20GB 的 issue #15，下方是原厂 RTX 3090 的 issue #25。两张表保留 prefill、decode 和 TTFT 的关键结果，去掉了难以阅读的过宽原始列。（来源：Zagitta/gpu-unlock 的 #15、#25 测试）
+::: image-caption图 4：双 RTX 3080 20GB 的 issue #15，下方是原厂 RTX 3090 的 issue #25。两张表保留 prefill、decode 和 TTFT 的关键结果，去掉了难以阅读的过宽原始列。（来源：Zagitta/gpu-unlock 的 #15、#25 测试）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/09.jpg)
 
-::: image-caption
-图 5：大模型 prefill 实测，统计图只取 issue #15 的单流结果。vLLM 在 8K、32K、128K 下提升 33% 至 36%；Strata 只有 32K、128K 提升约 12% 至 13%。decode 没有稳定变化，所以没有画成收益柱。（来源：Zagitta/gpu-unlock 的 #15 测试）
+::: image-caption图 5：大模型 prefill 实测，统计图只取 issue #15 的单流结果。vLLM 在 8K、32K、128K 下提升 33% 至 36%；Strata 只有 32K、128K 提升约 12% 至 13%。decode 没有稳定变化，所以没有画成收益柱。（来源：Zagitta/gpu-unlock 的 #15 测试）
 :::
 
 **另一张原厂 RTX 3090 在 vLLM、27B BF16 模型、约 2.9K prompt 下测得 prefill 提升 33%，TTFT 缩短 24%，** decode 只变化 1.2%。测试者还记录了 8 小时以上混合负载，包括持续 LLM 服务、图像生成和图生视频，期间没有 hang 和 Xid 错误。这是一段有价值的短期稳定性记录。
@@ -210,8 +200,7 @@ mailbox 是主机和固件交换状态的通信位置，模块看到标记后再
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/10.jpg)
 
-::: image-caption
-图 6：issue #14 的两个 INT4 扩散模型在模型加载完成后的重复运行时间缩短 14.2% 和 12.5%，四组 llama.cpp 量化模型基本不变，收益取决于受影响矩阵 kernel 的占比。（数据来源：#14 RTX 3080 测试[17]）
+::: image-caption图 6：issue #14 的两个 INT4 扩散模型在模型加载完成后的重复运行时间缩短 14.2% 和 12.5%，四组 llama.cpp 量化模型基本不变，收益取决于受影响矩阵 kernel 的占比。（数据来源：#14 RTX 3080 测试[17]）
 :::
 
 RTX 3090 Ti 的 Issue #1[18] 也显示，在一个 INT8 占比较高的 vLLM 分支中，BF16/FP16 kernel 只占约 29% GPU 时间，端到端收益约 5%，且接近运行波动。
@@ -238,14 +227,12 @@ RTX 3090 Ti 的 Issue #1[18] 也显示，在一个 INT8 占比较高的 vLLM 分
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/11.jpg)
 
-::: image-caption
-图 7：4070 Ti SUPER 与 4090 的 cuBLAS GEMM 比值分开列出。前三条指令路径接近翻倍；4090 的 FP16 最高提升 1.344×，4096³ BF16 为 0.995×。（来源：JustAResearcher/gpu-unlock-ada 报告）
+::: image-caption图 7：4070 Ti SUPER 与 4090 的 cuBLAS GEMM 比值分开列出。前三条指令路径接近翻倍；4090 的 FP16 最高提升 1.344×，4096³ BF16 为 0.995×。（来源：JustAResearcher/gpu-unlock-ada 报告）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/12.jpg)
 
-::: image-caption
-图 8：统计图只呈现 4070 Ti SUPER 的指令吞吐对照，避免与 4090 GEMM 表数据混排。FP16/FP32、BF16/FP32、TF32/FP32 分别约为 2.00×、2.00×、1.99×。（来源：JustAResearcher/gpu-unlock-ada 报告）
+::: image-caption图 8：统计图只呈现 4070 Ti SUPER 的指令吞吐对照，避免与 4090 GEMM 表数据混排。FP16/FP32、BF16/FP32、TF32/FP32 分别约为 2.00×、2.00×、1.99×。（来源：JustAResearcher/gpu-unlock-ada 报告）
 :::
 
 ## 五、elias-gaeros/gpu-unlock（rtx4090 分支）：数据最整齐，测试记录最少
@@ -254,14 +241,12 @@ RTX 3090 Ti 的 Issue #1[18] 也显示，在一个 INT8 占比较高的 vLLM 分
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/13.jpg)
 
-::: image-caption
-图 9：六组寄存器内指令测试。FP16/FP32、BF16/FP32 接近 2 倍，INT8、dp4a 和 scalar FP32 保持原速；计时循环没有显存读写，所以它衡量的是指令发射速率。（来源：该分支技术报告）
+::: image-caption图 9：六组寄存器内指令测试。FP16/FP32、BF16/FP32 接近 2 倍，INT8、dp4a 和 scalar FP32 保持原速；计时循环没有显存读写，所以它衡量的是指令发射速率。（来源：该分支技术报告）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/14.jpg)
 
-::: image-caption
-图 10：RTX 4090 分支指令实测，统计图单独保留变化最大的两组数据。FP16/FP32 从 165.6 到 331.6 TF/s，BF16/FP32 从 165.5 到 330.6 TF/s；（来源：该分支技术报告）
+::: image-caption图 10：RTX 4090 分支指令实测，统计图单独保留变化最大的两组数据。FP16/FP32 从 165.6 到 331.6 TF/s，BF16/FP32 从 165.5 到 330.6 TF/s；（来源：该分支技术报告）
 :::
 
 ## 六、目前只支持这些系统和卡系
@@ -270,8 +255,7 @@ RTX 3090 Ti 的 Issue #1[18] 也显示，在一个 INT8 占比较高的 vLLM 分
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/15.jpg)
 
-::: image-caption
-图 1：支持矩阵按公开实测数量和复现范围排序。Linux 系统的 NVIDIA RTX 30 系显卡用户报告最多；Ada 同卡对照正在补齐；RTX 4090 的公开实测只覆盖指定设备 ID；Windows UEFI 组合绑定具体主板和 BIOS。RTX 5060 Ti 暂无同类项目。
+::: image-caption图 1：支持矩阵按公开实测数量和复现范围排序。Linux 系统的 NVIDIA RTX 30 系显卡用户报告最多；Ada 同卡对照正在补齐；RTX 4090 的公开实测只覆盖指定设备 ID；Windows UEFI 组合绑定具体主板和 BIOS。RTX 5060 Ti 暂无同类项目。
 :::
 
 ### 6.1 Zagitta/gpu-unlock：有成功报告的主要是 GA102、GA104、GA106
@@ -303,20 +287,17 @@ JustAResearcher/gpu-unlock-ada 另有一套 MSI RTX 4070 Ti Windows 参考移植
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/16.jpg)
 
-::: image-caption
-图 11：RTX 3090 FE 的 Windows 情况，保留前后中位数和三次运行范围。FP16 后期中位数为 125.91 TFLOPS，BF16 为 128.70 TFLOPS。（来源：impacifist/Windows-GPU-UNLOCK 测试文档）
+::: image-caption图 11：RTX 3090 FE 的 Windows 情况，保留前后中位数和三次运行范围。FP16 后期中位数为 125.91 TFLOPS，BF16 为 128.70 TFLOPS。（来源：impacifist/Windows-GPU-UNLOCK 测试文档）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/17.jpg)
 
-::: image-caption
-图 12：Windows MSI RTX 3070 Ti 性能表，只保留路径、实测值、锁定基线和变化四列。FP16、BF16 均约达到锁定基线的 2.03 倍，FP32 pedantic 作为对照保留。（来源：impacifist/Windows-GPU-UNLOCK 测试文档）
+::: image-caption图 12：Windows MSI RTX 3070 Ti 性能表，只保留路径、实测值、锁定基线和变化四列。FP16、BF16 均约达到锁定基线的 2.03 倍，FP32 pedantic 作为对照保留。（来源：impacifist/Windows-GPU-UNLOCK 测试文档）
 :::
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/18.jpg)
 
-::: image-caption
-图 13：Windows MSI RTX 4070 Ti 性能表。4096³ cuBLAS GEMM 下，FP16 从 84.08 提升到 151.43 TFLOPS，BF16 从 84.03 提升到 148.25 TFLOPS。（来源：JustAResearcher/gpu-unlock-ada 参考移植）
+::: image-caption图 13：Windows MSI RTX 4070 Ti 性能表。4096³ cuBLAS GEMM 下，FP16 从 84.08 提升到 151.43 TFLOPS，BF16 从 84.03 提升到 148.25 TFLOPS。（来源：JustAResearcher/gpu-unlock-ada 参考移植）
 :::
 
 这些数字仍受单机测试限制。**3090 文档明确说明，没有独立控制的未处理冷启动基线，不能据此证明所有主板都能复现**；游戏、ComfyUI、睡眠恢复和长期稳定性也没有完成测试。
@@ -327,8 +308,7 @@ JustAResearcher/gpu-unlock-ada 另有一套 MSI RTX 4070 Ti Windows 参考移植
 
 ![文章插图](/articles/2026-10-25-gpu-unlock-rtx-4090-df8a9d0c/images/19.jpg)
 
-::: image-caption
-图 14：phiraml/gpu-unlock-blackwell 的只测量 stock RTX 5090：FP16/FP32 为 FP16/FP16 的 0.676 倍，BF16/FP32 为 0.664 倍。它说明限制存在，尚无公开 payload 或 5060 Ti 解锁数据。
+::: image-caption图 14：phiraml/gpu-unlock-blackwell 的只测量 stock RTX 5090：FP16/FP32 为 FP16/FP16 的 0.676 倍，BF16/FP32 为 0.664 倍。它说明限制存在，尚无公开 payload 或 5060 Ti 解锁数据。
 :::
 
 phiraml/gpu-unlock-blackwell 的 RTX 5090 测试只确认限制存在：NVIDIA 610.88、575 W 功耗限制下，FP16/FP32 吞吐为 FP16/FP16 的 0.676 倍，BF16/FP32 为 0.664 倍。仓库没有把 RTX 5060 Ti（GB206）列为支持目标，也没有 5060 Ti 解锁前后的 benchmark。因此，RTX 50 系仍处在限制已被测量、解锁尚未公开的阶段。
@@ -363,105 +343,55 @@ Zagitta/gpu-unlock 已经为 suspend to RAM 增加重新解锁流程，恢复时
 
 参考资料
 
-[1]
+[1] Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
 
-Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
+[2] JustAResearcher/gpu-unlock-ada: *https://github.com/JustAResearcher/gpu-unlock-ada*
 
-[2]
+[3] impacifist/Windows-GPU-UNLOCK: *https://github.com/impacifist/Windows-GPU-UNLOCK*
 
-JustAResearcher/gpu-unlock-ada: *https://github.com/JustAResearcher/gpu-unlock-ada*
+[4] 开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
 
-[3]
+[5] Zagitta/gpu-unlock 的 gfw_eval.h: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/gfw_eval.h*
 
-impacifist/Windows-GPU-UNLOCK: *https://github.com/impacifist/Windows-GPU-UNLOCK*
+[6] elias-gaeros/gpu-unlock 的 RTX 4090 寄存器报告: *https://github.com/elias-gaeros/gpu-unlock/blob/4ec490d49c1cc292c0b4cd5ce5a801b5d2c396dc/rtx4090-register-report.md*
 
-[4]
+[7] Zagitta/gpu-unlock 的 main.c: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/main.c*
 
-开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
+[8] Zagitta/gpu-unlock 的 unlock_610.c: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/unlock_610.c*
 
-[5]
+[9] JustAResearcher/gpu-unlock-ada 的 unlock_610.c: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/4e7fefcc4923f9e083d5324dc75a7d2f906af77f/kernel/gpu_unlock/unlock_610.c*
 
-Zagitta/gpu-unlock 的 gfw_eval.h: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/gfw_eval.h*
+[10] impacifist/Windows-GPU-UNLOCK 的 app.c: *https://github.com/impacifist/Windows-GPU-UNLOCK/blob/e3f03cd9389195adcabda4743d8fc2922b32498c/unlock/app.c*
 
-[6]
+[11] port.c: *https://github.com/impacifist/Windows-GPU-UNLOCK/blob/e3f03cd9389195adcabda4743d8fc2922b32498c/unlock/port.c*
 
-elias-gaeros/gpu-unlock 的 RTX 4090 寄存器报告: *https://github.com/elias-gaeros/gpu-unlock/blob/4ec490d49c1cc292c0b4cd5ce5a801b5d2c396dc/rtx4090-register-report.md*
+[12] 开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
 
-[7]
+[13] 开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
 
-Zagitta/gpu-unlock 的 main.c: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/main.c*
+[14] 开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
 
-[8]
+[15] 开源项目 Zagitta/gpu-unlock 的 #15 对照测试: *https://github.com/Zagitta/gpu-unlock/issues/15*
 
-Zagitta/gpu-unlock 的 unlock_610.c: *https://github.com/Zagitta/gpu-unlock/blob/af28cbbfd3d922a659227ecfb7369adfd924cf03/kernel/gpu_unlock/unlock_610.c*
+[16] #14 测试: *https://github.com/Zagitta/gpu-unlock/issues/14*
 
-[9]
+[17] #14 RTX 3080 测试: *https://github.com/Zagitta/gpu-unlock/issues/14*
 
-JustAResearcher/gpu-unlock-ada 的 unlock_610.c: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/4e7fefcc4923f9e083d5324dc75a7d2f906af77f/kernel/gpu_unlock/unlock_610.c*
+[18] #1 测试: *https://github.com/Zagitta/gpu-unlock/issues/1*
 
-[10]
+[19] 开源项目 JustAResearcher/gpu-unlock-ada: *https://github.com/JustAResearcher/gpu-unlock-ada*
 
-impacifist/Windows-GPU-UNLOCK 的 app.c: *https://github.com/impacifist/Windows-GPU-UNLOCK/blob/e3f03cd9389195adcabda4743d8fc2922b32498c/unlock/app.c*
+[20] 4060 Ti 16GB 报告: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/main/docs/ada-2805-report.md*
 
-[11]
+[21] 开源项目 elias-gaeros/gpu-unlock（rtx4090 分支）: *https://github.com/elias-gaeros/gpu-unlock/tree/rtx4090*
 
-port.c: *https://github.com/impacifist/Windows-GPU-UNLOCK/blob/e3f03cd9389195adcabda4743d8fc2922b32498c/unlock/port.c*
+[22] #28 报告: *https://github.com/Zagitta/gpu-unlock/issues/28*
 
-[12]
+[23] 开源项目 impacifist/Windows-GPU-UNLOCK: *https://github.com/impacifist/Windows-GPU-UNLOCK*
 
-开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
+[24] MSI RTX 4070 Ti Windows 参考移植: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/main/docs/ad104-windows-latence-app.md*
 
-[13]
-
-开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
-
-[14]
-
-开源项目 Zagitta/gpu-unlock: *https://github.com/Zagitta/gpu-unlock*
-
-[15]
-
-开源项目 Zagitta/gpu-unlock 的 #15 对照测试: *https://github.com/Zagitta/gpu-unlock/issues/15*
-
-[16]
-
-#14 测试: *https://github.com/Zagitta/gpu-unlock/issues/14*
-
-[17]
-
-#14 RTX 3080 测试: *https://github.com/Zagitta/gpu-unlock/issues/14*
-
-[18]
-
-#1 测试: *https://github.com/Zagitta/gpu-unlock/issues/1*
-
-[19]
-
-开源项目 JustAResearcher/gpu-unlock-ada: *https://github.com/JustAResearcher/gpu-unlock-ada*
-
-[20]
-
-4060 Ti 16GB 报告: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/main/docs/ada-2805-report.md*
-
-[21]
-
-开源项目 elias-gaeros/gpu-unlock（rtx4090 分支）: *https://github.com/elias-gaeros/gpu-unlock/tree/rtx4090*
-
-[22]
-
-#28 报告: *https://github.com/Zagitta/gpu-unlock/issues/28*
-
-[23]
-
-开源项目 impacifist/Windows-GPU-UNLOCK: *https://github.com/impacifist/Windows-GPU-UNLOCK*
-
-[24]
-
-MSI RTX 4070 Ti Windows 参考移植: *https://github.com/JustAResearcher/gpu-unlock-ada/blob/main/docs/ad104-windows-latence-app.md*
-
-[25]
-
-开源项目 phiraml/gpu-unlock-blackwell: *https://github.com/phiraml/gpu-unlock-blackwell*
+[25] 开源项目 phiraml/gpu-unlock-blackwell: *https://github.com/phiraml/gpu-unlock-blackwell*
 
 ::: related-title
 **相关推荐**

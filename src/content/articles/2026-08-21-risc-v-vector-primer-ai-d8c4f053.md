@@ -108,8 +108,7 @@ $$
 
 这条指令体现了 RVV 的优雅之处：循环不用硬编码“512 位能放 16 个 int32”，也不用知道目标机器实际 VLEN。**编译器把剩余元素数放进 `a0`，硬件给出这次最合适的 `VL`。**
 
-::: block-1
-这套机制也让“尾巴处理”变得自然。现实数组长度很少刚好等于 VLMAX。传统 SIMD 常出现“主循环 + 尾循环”的代码形态：先处理能整除向量宽度的大块，最后用标量或掩码处理剩余元素。**RVV 的 `VL` 让最后一轮自动变短，循环结构仍然统一。**
+::: block-1这套机制也让“尾巴处理”变得自然。现实数组长度很少刚好等于 VLMAX。传统 SIMD 常出现“主循环 + 尾循环”的代码形态：先处理能整除向量宽度的大块，最后用标量或掩码处理剩余元素。**RVV 的 `VL` 让最后一轮自动变短，循环结构仍然统一。**
 :::
 
 掩码与 `vstart` 则补上不规则控制。`v0` 中每个 bit 对应一个元素，决定它是否参与操作；`vstart` 记录从哪个元素继续执行，用于异常恢复。向量 load 如果在第 4 个元素触发 page fault，硬件可以记录 `vstart=3`，异常处理后继续执行。RVV 给系统软件留下了可恢复的坐标，也给编译器留下了表达不规则数据的空间。
@@ -153,8 +152,7 @@ Primer 在这里给出了一个很现实的架构判断：**高性能 RVV 实现
 # 来源：chapter-04.mdvrgather.vv vd, vs2, vs1, vm      # vd[i] = vs2[vs1[i]]vrgatherei16.vv vd, vs2, vs1, vm  # 16-bit indexvrgather.vx vd, vs2, rs1, vm      # 所有元素取同一个索引vrgather.vi vd, vs2, uimm, vm     # 立即数索引# 常见策略：# 1. 用 unit-stride load 连续取数# 2. 用 vrgather 在 VRF 内完成重排
 ```
 
-::: block-1
-这类指令让 RVV 具备处理真实数据布局的能力。:mdnice-bold-italic[许多性能问题本质上是数据没有以合适形态抵达计算单元。RVV 给了编译器两条路：直接表达复杂访问，或者用连续访问加寄存器内重排来换取更稳定的带宽。]
+::: block-1这类指令让 RVV 具备处理真实数据布局的能力。:mdnice-bold-italic[许多性能问题本质上是数据没有以合适形态抵达计算单元。RVV 给了编译器两条路：直接表达复杂访问，或者用连续访问加寄存器内重排来换取更稳定的带宽。]
 :::
 
 ## 六、从向量到矩阵：RVV 留下的下一层抽象
@@ -182,9 +180,7 @@ Primer 在这里给出了一个很现实的架构判断：**高性能 RVV 实现
 
 参考资料
 
-[1]
-
-`README.md`: *https://github.com/simplex-micro/riscv-vector-primer/blob/main/README.md*
+[1] `README.md`: *https://github.com/simplex-micro/riscv-vector-primer/blob/main/README.md*
 
 ::: related-title
 **相关推荐**

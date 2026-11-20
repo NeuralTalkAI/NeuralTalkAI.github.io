@@ -26,8 +26,7 @@
 
 ![文章插图](/articles/2026-08-30-learn-cuda-kernel-softmax-attention-a2b7c839/images/02.jpg)
 
-::: block-1
-读完代码，你会发现:mdnice-highlight[性能优化并非只靠神秘参数，更多时候是在数据搬运、计算分块、同步边界和硬件指令之间做清晰取舍。]
+::: block-1读完代码，你会发现:mdnice-highlight[性能优化并非只靠神秘参数，更多时候是在数据搬运、计算分块、同步边界和硬件指令之间做清晰取舍。]
 :::
 
 ## 本文目录
@@ -72,8 +71,7 @@ git clone https://github.com/gau-nernst/learn-cuda.gitcd learn-cuda# 建议�
 
 这里的核心依赖是 PyTorch 的 `torch.utils.cpp_extension.load`：Python 负责动态编译 CUDA/C++ 扩展、构造输入张量、调用自定义 kernel，并用 `torch.testing.assert_close` 与 PyTorch 结果对齐。
 
-::: block-1
-也就是说，这个仓库的学习姿势是**把 CUDA kernel 放进真实深度学习工作流里验证**，并非“单独写一堆 `.cu` 文件”。
+::: block-1也就是说，这个仓库的学习姿势是**把 CUDA kernel 放进真实深度学习工作流里验证**，并非“单独写一堆 `.cu` 文件”。
 :::
 
 ## 二、项目全景：一条从入门 Kernel 到 LLM Megakernel 的路线
@@ -104,8 +102,7 @@ git clone https://github.com/gau-nernst/learn-cuda.gitcd learn-cuda# 建议�
 
 > `02a_matmul_simt/matmul.cu`**用一组版本展示 FP32 GEMM 如何逐步接近 cuBLAS**。README 给出的 4096 方阵结果很有代表性：naive v1 约为 cuBLAS 的 8.49%，v4 通过 2D thread tiling 到 53.48%，v6b 通过去边界检查、向量化访存和 shared memory 中转置 A 到 92.44%。
 
-::: block-1
-关键变化可以用一句话概括：:mdnice-highlight[矩阵乘优化的第一目标，是让全局内存中的元素被搬进 shared memory 后复用尽可能多次；第二目标，是让每个线程在寄存器里攒更多局部结果，减少反复访存。]
+::: block-1关键变化可以用一句话概括：:mdnice-highlight[矩阵乘优化的第一目标，是让全局内存中的元素被搬进 shared memory 后复用尽可能多次；第二目标，是让每个线程在寄存器里攒更多局部结果，减少反复访存。]
 :::
 
 ```
@@ -268,15 +265,12 @@ v5 已经具备典型 FlashAttention 风格：Q 只加载一次，K/V 按块流�
 
 如果把 GPU 看成一座工厂，global memory 是远处仓库，shared memory 是车间缓存，寄存器是工人手边的零件盒，Tensor Core 是专用加工机床。**高性能 kernel 的任务，就是让仓库少跑空车，让车间入口不堵，让工人手里的零件持续供给机床**。这个仓库最实在的地方，正是它用可运行代码把这套工厂调度过程摊在读者眼前。
 
-::: block-1
-对想深入 AI 系统、编译器后端或推理引擎的工程师来说，这是一份带着实验痕迹的底层性能地图。沿着它读下去，你会逐渐拥有判断 kernel 性能瓶颈的直觉：:mdnice-highlight[看一段代码时，先问数据从哪里来、在哪里复用、由哪个 warp 计算、何时同步、输出前是否还能融合更多工作。这样的直觉，正是从“会写 CUDA”走向“能设计高性能算子”的分水岭。]
+::: block-1对想深入 AI 系统、编译器后端或推理引擎的工程师来说，这是一份带着实验痕迹的底层性能地图。沿着它读下去，你会逐渐拥有判断 kernel 性能瓶颈的直觉：:mdnice-highlight[看一段代码时，先问数据从哪里来、在哪里复用、由哪个 warp 计算、何时同步、输出前是否还能融合更多工作。这样的直觉，正是从“会写 CUDA”走向“能设计高性能算子”的分水岭。]
 :::
 
 参考资料
 
-[1]
-
-README: *https://github.com/gau-nernst/learn-cuda/blob/main/README.md*
+[1] README: *https://github.com/gau-nernst/learn-cuda/blob/main/README.md*
 
 ::: related-title
 **相关推荐**

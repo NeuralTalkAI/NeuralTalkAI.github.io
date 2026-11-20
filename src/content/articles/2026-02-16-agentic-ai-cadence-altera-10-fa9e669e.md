@@ -22,8 +22,7 @@ ChipStack AI 超级智能体将 Agentic AI（智能体 AI）技术深度融合�
 
 ![文章插图](/articles/2026-02-16-agentic-ai-cadence-altera-10-fa9e669e/images/02.png)
 
-::: image-caption
-这张图展示了Cadence基于JedAI AI平台构建的五级智能体（Agentic AI）演进路径以及其在芯片与系统设计全流程中的应用布局，图中从左至右将AI能力划分为五个层级，分别是聚焦局部优化、助力数字设计实现PPA指标与验证加速收敛的Level 1（Optimization AI），支持自然语言交互与代码生成的Level 2（Conversational LLM），具备复杂推理与链式思考能力、可自主规划执行并评估设计任务的Level 3（Complex Reasoning），实现多智能体协同工作、串联多个工具形成自动化工作流且已有Cerebrus AI Studio等实践案例的Level 4（Agentic Workflows），以及由Silicon Agent和System Agent分别驱动芯片与系统设计端到端自动化、达成全流程自主决策的Level 5（Autonomy），同时在垂直应用领域，Cadence将AI能力深度融入数字设计（Cerebrus）、数字验证（Verisium）、定制设计（Virtuoso Studio）、封装设计（Allegro X）和系统设计（OPTIMALITY）等核心工具链，并通过JedAI平台整合模型、RAG、数据、API与算力资源，为芯片设计从“AI辅助”迈向“AI自主”提供了完整的技术支撑。
+::: image-caption这张图展示了Cadence基于JedAI AI平台构建的五级智能体（Agentic AI）演进路径以及其在芯片与系统设计全流程中的应用布局，图中从左至右将AI能力划分为五个层级，分别是聚焦局部优化、助力数字设计实现PPA指标与验证加速收敛的Level 1（Optimization AI），支持自然语言交互与代码生成的Level 2（Conversational LLM），具备复杂推理与链式思考能力、可自主规划执行并评估设计任务的Level 3（Complex Reasoning），实现多智能体协同工作、串联多个工具形成自动化工作流且已有Cerebrus AI Studio等实践案例的Level 4（Agentic Workflows），以及由Silicon Agent和System Agent分别驱动芯片与系统设计端到端自动化、达成全流程自主决策的Level 5（Autonomy），同时在垂直应用领域，Cadence将AI能力深度融入数字设计（Cerebrus）、数字验证（Verisium）、定制设计（Virtuoso Studio）、封装设计（Allegro X）和系统设计（OPTIMALITY）等核心工具链，并通过JedAI平台整合模型、RAG、数据、API与算力资源，为芯片设计从“AI辅助”迈向“AI自主”提供了完整的技术支撑。
 :::
 
 ## 本文目录
@@ -43,13 +42,7 @@ ChipStack AI 超级智能体将 Agentic AI（智能体 AI）技术深度融合�
 
 ![文章插图](/articles/2026-02-16-agentic-ai-cadence-altera-10-fa9e669e/images/03.png)
 
-交流加群请在
-
-NeuralTalk 公众号
-
-后台回复：
-
-加群
+交流加群请在 NeuralTalk 公众号后台回复：加群
 
 ## 一、为何 Agentic AI，成了芯片设计的破局关键？
 
@@ -91,8 +84,7 @@ Cadence 高级总监 Kartik Hegde 曾解释，:mdnice-bold-italic[要让普通�
 
 简单来说，心智模型就像为 AI 智能体搭建了一个“芯片设计知识库”，所有智能体的决策和执行都基于这个知识库，而非凭空生成。**Cadence 的实验数据显示，开启心智模型后，AI 智能体的验证准确率能直接提升 30%-40%，** 这也是 ChipStack 能在工业场景落地的核心前提。
 
-::: block-1
-同时，心智模型还支持工程师的交互式反馈：:mdnice-bold-italic[工程师只需聚焦于测试要点，用自然语言向 AI 提出修改意见]，ChipStack 就能根据反馈快速调整设计方案，实现“人机协同”的高效设计。
+::: block-1同时，心智模型还支持工程师的交互式反馈：:mdnice-bold-italic[工程师只需聚焦于测试要点，用自然语言向 AI 提出修改意见]，ChipStack 就能根据反馈快速调整设计方案，实现“人机协同”的高效设计。
 :::
 
 ### 2.2 多智能体协同：一群“虚拟工程师”，覆盖设计验证全环节
@@ -151,8 +143,7 @@ Tenstorrent 则聚焦于 RISC-V 内核的设计，其在三个月的评估中，
 
 除此之外，还有一家头部存储企业的实测数据同样亮眼：**原本需要工程师一周甚至更久才能完成的测试计划生成**，ChipStack **仅用不到 40 分钟就完成**，成为芯片设计环节效率提升的典型案例。
 
-::: block-1
-这些头部企业的实测结果，不仅验证了 ChipStack 的技术可行性，更证明了 Agentic AI 技术在芯片设计领域的商业价值——效率的提升直接转化为研发周期的缩短、流片成功率的提高，最终帮助芯片企业加快产品上市节奏，在激烈的市场竞争中占据先机。
+::: block-1这些头部企业的实测结果，不仅验证了 ChipStack 的技术可行性，更证明了 Agentic AI 技术在芯片设计领域的商业价值——效率的提升直接转化为研发周期的缩短、流片成功率的提高，最终帮助芯片企业加快产品上市节奏，在激烈的市场竞争中占据先机。
 :::
 
 ## 四、Cadence 的 AI 布局：不止于 ChipStack，重构芯片设计全生态
@@ -178,8 +169,7 @@ Cadence 研发副总裁 Paul Cunningham 表示，行业正面临资深工程人�
 
 在未来的芯片研发团队中，工程师将不再被繁琐的重复性设计、验证、调试工作所困扰，而是**将精力聚焦于芯片架构创新、功能定义、PPA 优化等高价值环节**。AI 智能体将承担起标准化、流程化的工作，实现“AI 做执行，人类做创新”的高效协作模式，这不仅能解决行业的人才缺口问题，更能让芯片研发的效率和质量提升到全新高度。
 
-::: block-1
-而随着 Agentic AI 技术的不断成熟，芯片设计的自动化程度还将持续提升，从目前的 Level 4 级自动化向完全自主的 Level 5 级迈进，未来甚至可能实现“输入设计需求，AI 自主完成从设计到流片的全流程”。这并非天方夜谭，而是 Cadence 等 EDA 企业正在探索的方向。
+::: block-1而随着 Agentic AI 技术的不断成熟，芯片设计的自动化程度还将持续提升，从目前的 Level 4 级自动化向完全自主的 Level 5 级迈进，未来甚至可能实现“输入设计需求，AI 自主完成从设计到流片的全流程”。这并非天方夜谭，而是 Cadence 等 EDA 企业正在探索的方向。
 :::
 
 对于整个半导体行业而言，Agentic AI 的落地将带来一场深刻的产业变革：研发周期大幅缩短，流片成本显著降低，芯片企业能以更快的速度推出新产品，加速先进制程和新架构芯片的商业化落地。而在这场变革中，Cadence 凭借 ChipStack AI 超级智能体的先发优势，已然占据了 AI 驱动芯片设计的制高点。

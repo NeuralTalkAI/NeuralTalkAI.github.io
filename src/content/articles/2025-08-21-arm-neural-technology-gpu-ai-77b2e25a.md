@@ -2,8 +2,7 @@
 
 ![文章插图](/articles/2025-08-21-arm-neural-technology-gpu-ai-77b2e25a/images/01.png)
 
-::: image-caption
-https://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
+::: image-captionhttps://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
 :::
 
 - Neural Graphics Development Kit: Bring AI-Enhanced Graphics to Mobile & Neural Graphics Development Kit
@@ -14,13 +13,7 @@ https://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
 
 开发者可在更低 GPU 开销下实现桌面级画质——只需借助神经超分技术。
 
-交流加群请在
-
-NeuralTalk 公众号
-
-后台回复：
-
-交个朋友
+交流加群请在 NeuralTalk 公众号后台回复：交个朋友
 
 ## 一、核心定位：让 AI 成为 GPU 的"原生基因"
 
@@ -42,8 +35,7 @@ Arm表示，神经加速器将在未来的Arm GPU中发挥关键作用
 
 ![文章插图](/articles/2025-08-21-arm-neural-technology-gpu-ai-77b2e25a/images/03.png)
 
-::: image-caption
-https://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
+::: image-captionhttps://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
 :::
 
 ## 二、核心技术：Neural Super Sampling（NSS）的突破
@@ -123,8 +115,7 @@ NSS 模型结构在 Model Explorer 的示意图
 
 ![文章插图](/articles/2025-08-21-arm-neural-technology-gpu-ai-77b2e25a/images/07.png)
 
-::: image-caption
-https://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
+::: image-captionhttps://developer.arm.com/mobile-graphics-and-gaming/neural-graphics
 :::
 
 ## 五、生态支持：从引擎到游戏的全链路响应
@@ -174,10 +165,4 @@ Arm 的野心不止于"追赶桌面"，而是通过 AI 技术实现移动端图�
 2. CNX-Software, "Arm neural technology to add AI acceleration to Arm GPUs...", 2025-08-13.
 3. The FPS Review, "Arm Announces AI-Driven Neural Super Sampling (NSS) Graphics Upscaler...", 2025-08-14.
 
-交流加群请在
-
-NeuralTalk 公众号
-
-后台回复：
-
-交个朋友
+交流加群请在 NeuralTalk 公众号后台回复：交个朋友

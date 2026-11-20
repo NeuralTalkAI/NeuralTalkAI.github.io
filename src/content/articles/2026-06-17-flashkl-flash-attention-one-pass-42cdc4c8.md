@@ -25,8 +25,7 @@
 
 其实需要计算 attention 分布间 KL loss 的场景有很多，例如 attention 的压缩或剪枝、高效 attention 与标准 attention 的对齐、蒸馏时 teacher-student 逐层 attention 分布匹配等。如果有一种不用 materialize 完整 attention 矩阵就能算 KL loss 的方法，上述场景都能直接受益。
 
-::: block-1
-所以：有没有办法像 Flash Attention 那样，用 tiling + one pass 的方式，**一趟扫过去就把 KL loss 算完**，显存从 $O(L^2)$ 降到 $O(L)$，而且不损失效果呢？如果是两个 softmax 分布之间的 KL，社区已经有 one-pass 的 TileLang 实现（如tilelang-dsa[1]），但其算法需要先拿到 softmax 之前的 logits。
+::: block-1所以：有没有办法像 Flash Attention 那样，用 tiling + one pass 的方式，**一趟扫过去就把 KL loss 算完**，显存从 $O(L^2)$ 降到 $O(L)$，而且不损失效果呢？如果是两个 softmax 分布之间的 KL，社区已经有 one-pass 的 TileLang 实现（如tilelang-dsa[1]），但其算法需要先拿到 softmax 之前的 logits。
 :::
 
 然而在 DSA 的标准实现中，teacher attention 是多头平均后的分布：
@@ -45,8 +44,7 @@ $$
 FlashKL github.com/XiaojuanTang/FlashKL
 :::
 
-::: block-1
-本文代码已开源，包含 PyTorch 参考实现与完整的正确性验证，后续将提供基于 TileLang 的 fused kernel 实现。
+::: block-1本文代码已开源，包含 PyTorch 参考实现与完整的正确性验证，后续将提供基于 TileLang 的 fused kernel 实现。
 :::
 
 ## 本文目录
@@ -170,8 +168,7 @@ $$
 
 每个 head 可以独立算 $\sum_s p^h_{t,s}\, I_{t,s}$，最后进行平均即可。事实上，逐 tile 扫描时 $p^{(h)}_{t,s}$ 的归一化常数会随新 tile 不断更新，但 $I_{t,s} = \sum_{j=1}^{H_I} w_{t,j} \cdot \mathrm{ReLU}\!\left( q^{I,(j)\top}_t k^I_s \right)$ 的计算只和当前 $t, s$ 有关，所以相当于 $\sum_s p^{(h)}_{t,s}\, I_{t,s}$ 对 $p^{(h)}$ 是线性的，也就是说当归一化常数因新 tile 更新时，只需对之前的累积值乘一个 rescale 系数 $e^{m_{\text{old}} - m_{\text{new}}}$ 即可修正，这正是 Flash Attention 的 tiling 核心技巧。因此 one-pass tiling 就能得到精确结果。
 
-::: block-1
-这可能也解释了 DSA 在设计时 indexer 为什么在 logit 阶段做 head 加权求和而不是先 softmax 再加权：前者产出的 $I_{t,s}$ 是和其他 $s$ 无关的 logit，可以直接参与上述线性累积；后者会引入额外的 softmax 归一化，破坏 one-pass 所需的线性结构。
+::: block-1这可能也解释了 DSA 在设计时 indexer 为什么在 logit 阶段做 head 加权求和而不是先 softmax 再加权：前者产出的 $I_{t,s}$ 是和其他 $s$ 无关的 logit，可以直接参与上述线性累积；后者会引入额外的 softmax 归一化，破坏 one-pass 所需的线性结构。
 :::
 
 ## 2. 梯度计算
@@ -369,8 +366,7 @@ $$
 
 然后累积：$\text{entropy}_t \mathrel{+}= \bar{p}_{t,s} \log \bar{p}_{t,s}$。
 
-::: block-1
-总之，即便保留 teacher entropy 也可以通过 tiling 计算，但多头情况下需要两趟扫描。既然这一项本身不影响梯度，用更快更省的 one-pass 方式显然是更好的选择。
+::: block-1总之，即便保留 teacher entropy 也可以通过 tiling 计算，但多头情况下需要两趟扫描。既然这一项本身不影响梯度，用更快更省的 one-pass 方式显然是更好的选择。
 :::
 
 ## 小结
@@ -396,29 +392,17 @@ PS：本文部分公式推导和代码与 Claude Code 共同完成，感谢 cc�
 
 参考资料
 
-[1]
+[1] tilelang-dsa: *https://github.com/lemyx/tilelang-dsa*
 
-tilelang-dsa: *https://github.com/lemyx/tilelang-dsa*
+[2] Flash Attention原理详解(含代码讲解): *https://zhuanlan.zhihu.com/p/676655352*
 
-[2]
+[3] 孟繁续: *https://www.zhihu.com/people/meng-fan-xu-4*
 
-Flash Attention原理详解(含代码讲解): *https://zhuanlan.zhihu.com/p/676655352*
+[4] DeepSeek-DSA: *https://github.com/deepseek-ai/DeepSeek-V3.2-Exp/blob/main/DeepSeek_V3_2.pdf*
 
-[3]
+[5] Flash Attention: Fast and Memory-Efficient Exact Attention with IO-Awareness: *https://arxiv.org/abs/2205.14135*
 
-孟繁续: *https://www.zhihu.com/people/meng-fan-xu-4*
-
-[4]
-
-DeepSeek-DSA: *https://github.com/deepseek-ai/DeepSeek-V3.2-Exp/blob/main/DeepSeek_V3_2.pdf*
-
-[5]
-
-Flash Attention: Fast and Memory-Efficient Exact Attention with IO-Awareness: *https://arxiv.org/abs/2205.14135*
-
-[6]
-
-TileLang-DSA: TileLang implementation of DSA KL loss: *https://github.com/lemyx/tilelang-dsa*
+[6] TileLang-DSA: TileLang implementation of DSA KL loss: *https://github.com/lemyx/tilelang-dsa*
 
 ::: related-title
 **相关推荐**

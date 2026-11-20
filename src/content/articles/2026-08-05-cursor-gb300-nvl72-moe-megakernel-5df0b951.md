@@ -40,14 +40,12 @@
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/02.jpg)
 
-::: image-caption
-在 GB300 NVL72 上，Mixture-of-Kittens 的 MXFP8 前向吞吐量最高达到最快公开基线的 2.37 倍。对比对象包括：NCCL + PyTorch、DeepEP + PyTorch、DeepEP + TransformerEngine、HybridEP + Megatron、Mixture-of-Kittens。
+::: image-caption在 GB300 NVL72 上，Mixture-of-Kittens 的 MXFP8 前向吞吐量最高达到最快公开基线的 2.37 倍。对比对象包括：NCCL + PyTorch、DeepEP + PyTorch、DeepEP + TransformerEngine、HybridEP + Megatron、Mixture-of-Kittens。
 :::
 
 在我们横跨多个 NVL72 机架的生产训练栈中，MoK 将端到端每秒 token 数提升了 1.41 倍。
 
-::: block-1
-本文的其余部分将讲解 MoK 背后的关键思想，包括：:mdnice-highlight[我们如何选定正确的通信方向、如何组织计算与通信之间的重叠、以及如何用环形 token 缓冲区消除 CPU-GPU 同步]。我们还会介绍 **megakernel 设计、确定性、MXFP8 支持，以及其他若干实现细节。**
+::: block-1本文的其余部分将讲解 MoK 背后的关键思想，包括：:mdnice-highlight[我们如何选定正确的通信方向、如何组织计算与通信之间的重叠、以及如何用环形 token 缓冲区消除 CPU-GPU 同步]。我们还会介绍 **megakernel 设计、确定性、MXFP8 支持，以及其他若干实现细节。**
 :::
 
 ## 本文目录
@@ -109,8 +107,7 @@ $$
 
 分布式 MoE 最直接的实现方式是：把每个 token 发送到持有其指定专家的 rank（dispatch all-to-all），执行 FFN，再把结果送回各 token 原本的 rank（combine all-to-all），最后对专家输出做加权和。但由于通信耗时可能与计算本身相当，将两者串行执行是低效的。
 
-::: block-1
-标准的补救办法是通过流水线把 dispatch/combine 通信与逐专家 FFN 重叠起来：先传输一块 token，在其上计算 FFN 的同时重叠传输下一块，如此往复。:mdnice-highlight[MoK 正是这一方案的一个变体，并配有一组新颖的、针对特定硬件的技术，使其快于现有基线。]
+::: block-1标准的补救办法是通过流水线把 dispatch/combine 通信与逐专家 FFN 重叠起来：先传输一块 token，在其上计算 FFN 的同时重叠传输下一块，如此往复。:mdnice-highlight[MoK 正是这一方案的一个变体，并配有一组新颖的、针对特定硬件的技术，使其快于现有基线。]
 :::
 
 *注: 在本文中，dispatch 指 dispatch all-to-all 通信，combine 指 combine all-to-all 通信。通常包含在"combine"中的加权归约，在本文中被单独称为"加权和"（weighted sum）。*
@@ -136,8 +133,7 @@ MoE 前向中计算与通信的重叠示意图（上：串行执行 Dispatch →
 3. :mdnice-bold-italic[本地零拷贝]。属于某个专家的 token 应直接落进连续内存，分组 GEMM 无需在本地重排任何东西即可开始。
 4. :mdnice-bold-italic[满足上述三个条件的开销必须保持最小]。我们希望绝大多数时间花在真正发送 token 上，而不是花在调度或寻找待发送的 token 上。
 
-::: block-1
-使用 push 式 dispatch 时，我们需要生成一张调度表，列为 `{src_index, dst_rank, dst_index}`，其中 `src_index` 是本地输入激活缓冲区的索引，`dst_index` 是 token 在目标 rank 内存中必须落到的位置。
+::: block-1使用 push 式 dispatch 时，我们需要生成一张调度表，列为 `{src_index, dst_rank, dst_index}`，其中 `src_index` 是本地输入激活缓冲区的索引，`dst_index` 是 token 在目标 rank 内存中必须落到的位置。
 
 该表的行索引决定 token 经 NVLink 发送的顺序。:mdnice-highlight[我们希望表的行按 `dst_rank` 轮转循环，从而让每条互连通道都保持繁忙。]
 :::
@@ -200,8 +196,7 @@ MoE 前向中计算与通信的重叠示意图（上：串行执行 Dispatch →
 
 上表中，RX 指接收方向，TX 指发送方向。**可以看到，push 的总字节数大约少 12.4 KB，理想情况下能带来更好的整体 NVLink 饱和度**。然而，NVLink 的每个方向都有独立通道。:mdnice-bold-italic[要达到 NVLink 规格标称的带宽（GB300 上第五代 NVLink 为 1.8 TB/s），流量必须双向同时打满]。而对于 MoE dispatch/combine 这样的工作负载，每次传输往往只有几千字节且并不均衡，会在链路上留下执行气泡。
 
-::: block-1
-根据实测，:mdnice-highlight[在专家负载不均衡的情况下 dispatch token 时，pull 式通信的 NVLink 带宽利用率最高比 push 式通信高出 29%，因而是更好的选择。]
+::: block-1根据实测，:mdnice-highlight[在专家负载不均衡的情况下 dispatch token 时，pull 式通信的 NVLink 带宽利用率最高比 push 式通信高出 29%，因而是更好的选择。]
 :::
 
 ### 2.3 信号传递
@@ -219,8 +214,7 @@ MoE 前向中计算与通信的重叠示意图（上：串行执行 Dispatch →
 Push 与 Pull 式 dispatch 对比图（左：push 式，GPU 0 向各 GPU 推送 token 并发送信号；右：pull 式，GPU 0 从各 GPU 拉取 token，信号在本地完成）。具体来说，左侧推送模式下，GPU 0 主动向 GPU1、GPU2、GPU3 推送 token 数据，同步发送信号通知各接收 GPU。右侧拉取模式中，GPU1、GPU2、GPU3 主动向 GPU 0 拉取 token，GPU 0 接收信号。两种方式数据流向相反，推送由源 GPU 发起传输，拉取由目标 GPU 主动请求数据，清晰展示两类 MoE token 分发的通信交互逻辑差异。
 :::
 
-::: block-1
-基于这些结果，:mdnice-highlight[MoK 采用：pull 式前向 dispatch、push 式前向 combine、pull 式反向 reverse-combine、push 式反向 reverse-dispatch。]
+::: block-1基于这些结果，:mdnice-highlight[MoK 采用：pull 式前向 dispatch、push 式前向 combine、pull 式反向 reverse-combine、push 式反向 reverse-dispatch。]
 :::
 
 ## 三、合理组织计算-通信重叠的结构
@@ -362,8 +356,7 @@ MoE 反向中 reverse-combine、FFN 反向、reverse-dispatch 与 wgrad 的调�
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/09.png)
 
-::: image-caption
-前向中跨 macrobatch 的 dispatch-combine 交错示意图。纵向分为计算 SM 与通信 SM 两条时序通道，横轴代表时间。计算 SM 依次执行多个子批次路由专家计算，包含 Up+gate、SwiGLU、Down 运算。计算任务完成后发送信号，驱动通信 SM 交错执行 Combine 合并、Dispatch 分发操作，交替处理不同宏批次、子批次任务，实现计算任务与通信任务流水衔接，调度时序随时间持续向后延伸。
+::: image-caption前向中跨 macrobatch 的 dispatch-combine 交错示意图。纵向分为计算 SM 与通信 SM 两条时序通道，横轴代表时间。计算 SM 依次执行多个子批次路由专家计算，包含 Up+gate、SwiGLU、Down 运算。计算任务完成后发送信号，驱动通信 SM 交错执行 Combine 合并、Dispatch 分发操作，交替处理不同宏批次、子批次任务，实现计算任务与通信任务流水衔接，调度时序随时间持续向后延伸。
 :::
 
 ### 4.1 反转环形缓冲区，最小化反向时的前向重放
@@ -440,8 +433,7 @@ MoK 的反向过程还会计算路由权重的梯度，采用 SonicMoE[10] 提�
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/10.jpg)
 
-::: image-caption
-在 GB300 NVL72s 硬件平台上，Mixture-of-Kittens 的 MXFP8 前向吞吐量最高可达最优公开基线的 2.37 倍。纵轴单位为 TFLOP/s，横轴包含 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四款模型。图例列出五种方案，橙色柱代表 Mixture-of-Kittens。在全部模型测试中，该方案吞吐量均显著高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等基线方案。
+::: image-caption在 GB300 NVL72s 硬件平台上，Mixture-of-Kittens 的 MXFP8 前向吞吐量最高可达最优公开基线的 2.37 倍。纵轴单位为 TFLOP/s，横轴包含 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四款模型。图例列出五种方案，橙色柱代表 Mixture-of-Kittens。在全部模型测试中，该方案吞吐量均显著高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等基线方案。
 :::
 
 | 实现 | Kimi K2.7 | GLM 5.2 | Qwen 3.5-397B-A17B | DeepSeek V4 Pro |
@@ -456,8 +448,7 @@ MoK 的反向过程还会计算路由权重的梯度，采用 SonicMoE[10] 提�
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/11.jpg)
 
-::: image-caption
-专家并行 MoE 吞吐量：MXFP8 反向传播（GB300 NVL72s），纵轴单位 TFLOP/s，横轴依次为 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例包含五种方案，橙色柱代表 Mixture-of-Kittens。在全部测试模型场景中，Mixture-of-Kittens 吞吐量均高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案，在各个模型下都展现出领先的性能水平。
+::: image-caption专家并行 MoE 吞吐量：MXFP8 反向传播（GB300 NVL72s），纵轴单位 TFLOP/s，横轴依次为 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例包含五种方案，橙色柱代表 Mixture-of-Kittens。在全部测试模型场景中，Mixture-of-Kittens 吞吐量均高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案，在各个模型下都展现出领先的性能水平。
 :::
 
 | 实现 | Kimi K2.7 | GLM 5.2 | Qwen 3.5-397B-A17B | DeepSeek V4 Pro |
@@ -472,8 +463,7 @@ MoK 的反向过程还会计算路由权重的梯度，采用 SonicMoE[10] 提�
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/12.jpg)
 
-::: image-caption
-专家并行 MoE 吞吐量：BF16 前向传播（GB300 NVL72s），纵轴单位为 TFLOP/s，横轴包含 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例展示五种实现方案，橙色柱代表 Mixture-of-Kittens。在全部测试模型下，Mixture-of-Kittens 吞吐量均显著高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案，在各场景中均具备明显性能优势。
+::: image-caption专家并行 MoE 吞吐量：BF16 前向传播（GB300 NVL72s），纵轴单位为 TFLOP/s，横轴包含 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例展示五种实现方案，橙色柱代表 Mixture-of-Kittens。在全部测试模型下，Mixture-of-Kittens 吞吐量均显著高于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案，在各场景中均具备明显性能优势。
 :::
 
 | 实现 | Kimi K2.7 | GLM 5.2 | Qwen 3.5-397B-A17B | DeepSeek V4 Pro |
@@ -488,8 +478,7 @@ MoK 的反向过程还会计算路由权重的梯度，采用 SonicMoE[10] 提�
 
 ![文章插图](/articles/2026-08-05-cursor-gb300-nvl72-moe-megakernel-5df0b951/images/13.jpg)
 
-::: image-caption
-专家并行 MoE 吞吐量：BF16 反向传播（GB300 NVL72s），纵轴单位 TFLOP/s，横轴依次为 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例包含五种方案，橙色代表 Mixture-of-Kittens。在全部模型测试场景中，Mixture-of-Kittens 吞吐量均处于较高水平，尤其在 Qwen 3.5-397B-A17B 模型上优势突出，整体性能普遍优于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案。
+::: image-caption专家并行 MoE 吞吐量：BF16 反向传播（GB300 NVL72s），纵轴单位 TFLOP/s，横轴依次为 Kimi K2.7、GLM 5.2、Qwen 3.5-397B-A17B、DeepSeek V4 Pro 四类模型。图例包含五种方案，橙色代表 Mixture-of-Kittens。在全部模型测试场景中，Mixture-of-Kittens 吞吐量均处于较高水平，尤其在 Qwen 3.5-397B-A17B 模型上优势突出，整体性能普遍优于 NCCL+PyTorch、DeepEP 系列、HybridEP+Megatron 等对比方案。
 :::
 
 | 实现 | Kimi K2.7 | GLM 5.2 | Qwen 3.5-397B-A17B | DeepSeek V4 Pro |
@@ -531,63 +520,36 @@ End-to-end training throughput comparison (GB300 NVL72s)，横轴为训练 Step�
 - 去年，编写一个 megakernel 还需要先造一层简化的抽象，比如这个 SonicMoE 也是我们的工作[12]。
 - **今年，我们不再需要框架，而是移除了那层额外的抽象，在智能体的帮助下从零开始直面复杂性本身。**
 
-::: block-1
-智能体自动完成了较简单的任务（例如单算子 kernel），并帮助我们以非常小的团队、快得多地攻克了更难的任务（例如编写分布式 MoE megakernel）。:mdnice-highlight[话虽如此，在优化横跨数十万张 GPU 运行的高风险 ML 工作负载方面，前方还有大量工作]。如果你对这篇文章和这类工作感兴趣，我们很期待你的来信：hiring@cursor.com[13]。
+::: block-1智能体自动完成了较简单的任务（例如单算子 kernel），并帮助我们以非常小的团队、快得多地攻克了更难的任务（例如编写分布式 MoE megakernel）。:mdnice-highlight[话虽如此，在优化横跨数十万张 GPU 运行的高风险 ML 工作负载方面，前方还有大量工作]。如果你对这篇文章和这类工作感兴趣，我们很期待你的来信：hiring@cursor.com[13]。
 :::
 
 参考资料
 
-[1]
+[1] Mixture-of-Kittens（MoK）: *https://github.com/cursor/mixture-of-kittens*
 
-Mixture-of-Kittens（MoK）: *https://github.com/cursor/mixture-of-kittens*
+[2] Composer: *https://cursor.com/blog/composer-2*
 
-[2]
+[3] GitHub: *https://github.com/cursor/mixture-of-kittens*
 
-Composer: *https://cursor.com/blog/composer-2*
+[4] MXFP8: *https://cursor.com/blog/kernels*
 
-[3]
+[5] warp decode: *https://cursor.com/blog/warp-decode*
 
-GitHub: *https://github.com/cursor/mixture-of-kittens*
+[6] Comet: *https://arxiv.org/abs/2502.19811*
 
-[4]
+[7] DeepEP: *https://github.com/deepseek-ai/DeepEP*
 
-MXFP8: *https://cursor.com/blog/kernels*
+[8] 不到三分之一的 SM: *https://arxiv.org/abs/2511.13940*
 
-[5]
+[9] megakernel: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
 
-warp decode: *https://cursor.com/blog/warp-decode*
+[10] SonicMoE: *https://arxiv.org/abs/2512.14080*
 
-[6]
+[11] 完全开源: *https://github.com/cursor/mixture-of-kittens*
 
-Comet: *https://arxiv.org/abs/2502.19811*
+[12] 这个: *https://github.com/HazyResearch/Megakernels*
 
-[7]
-
-DeepEP: *https://github.com/deepseek-ai/DeepEP*
-
-[8]
-
-不到三分之一的 SM: *https://arxiv.org/abs/2511.13940*
-
-[9]
-
-megakernel: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
-
-[10]
-
-SonicMoE: *https://arxiv.org/abs/2512.14080*
-
-[11]
-
-完全开源: *https://github.com/cursor/mixture-of-kittens*
-
-[12]
-
-这个: *https://github.com/HazyResearch/Megakernels*
-
-[13]
-
-hiring@cursor.com: *mailto:hiring@cursor.com*
+[13] hiring@cursor.com: *mailto:hiring@cursor.com*
 
 ::: related-title
 **相关推荐**

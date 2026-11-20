@@ -39,7 +39,9 @@ Project Glasswing 为期数月，Anthropic 将在 90 天内公开漏洞修复情
   - 多方协作治理路径
   - 长期生态建设愿景
 
-![文章插图](/articles/2026-04-08-anthropic-mythos-opus-4-6-bec5bb98/images/01.webp)交流加群请在 NeuralTalk 公众号后台回复：加群
+![文章插图](/articles/2026-04-08-anthropic-mythos-opus-4-6-bec5bb98/images/01.webp)
+
+交流加群请在 NeuralTalk 公众号后台回复：加群
 
 ## 关键问题
 

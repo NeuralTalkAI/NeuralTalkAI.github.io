@@ -27,8 +27,7 @@
 
 实现层面，PR 新增 TableGen 类型、属性与操作定义，接入 `cutegen` 作为类型推导与代数计算后端，实现 `cute-fold-static`、`cute-expand-ops`、`cute-to-base`、`base-prepare`、`one-shot-convert-to-llvm`、`attach-nvvm-target` 与 `emit-gpu-binary` 等关键 Pass，并提供 `cute-opt`、`base-opt`、`cutlass-compiler` 三类工具。
 
-::: block-1
-其长期价值在于将原先隐式存在于模板元编程中的 CuTe 代数显式化为可验证、可测试、可优化的 IR 体系，:mdnice-highlight[为后续 DSL、JIT、GPU kernel pipeline 与 MLIR 生态集成提供基础。]
+::: block-1其长期价值在于将原先隐式存在于模板元编程中的 CuTe 代数显式化为可验证、可测试、可优化的 IR 体系，:mdnice-highlight[为后续 DSL、JIT、GPU kernel pipeline 与 MLIR 生态集成提供基础。]
 :::
 
 ## 本文目录
