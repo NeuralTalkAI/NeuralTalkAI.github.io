@@ -1,0 +1,300 @@
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="300" viewBox="0 0 460.8 216" version="1.1" role="img">
+   <desc>
+    
+    
+    
+    Measured tokens per second at 1K through 252K input tokens, shown on a log context axis. rec: 131.2 to 22.6 tok/s; llama.cpp: 88.0 to 8.6 tok/s. 48 GiB, 4-bit weights, five repeats, 1024 output steps, prefill excluded.
+   </desc>
+   <defs>
+   </defs>
+   <g>
+    <g>
+     <path d="M 0 216  L 460.8 216  L 460.8 0  L 0 0  L 0 216  z " style="fill: none">
+     </path>
+    </g>
+    <g>
+     <g>
+      <path d="M 41.472 172.8  L 382.464 172.8  L 382.464 23.76  L 41.472 23.76  L 41.472 172.8  z " style="fill: none">
+      </path>
+     </g>
+     <g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="49.093195" y="186.322187" transform="rotate(-0 49.093195 186.322187)">
+         
+         
+         
+         1K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="90.019214" y="186.322187" transform="rotate(-0 90.019214 186.322187)">
+         
+         
+         
+         2K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="130.945233" y="186.322187" transform="rotate(-0 130.945233 186.322187)">
+         
+         
+         
+         4K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="171.871253" y="186.322187" transform="rotate(-0 171.871253 186.322187)">
+         
+         
+         
+         8K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="212.797272" y="186.322187" transform="rotate(-0 212.797272 186.322187)">
+         
+         
+         
+         16K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="253.723292" y="186.322187" transform="rotate(-0 253.723292 186.322187)">
+         
+         
+         
+         32K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="294.649311" y="186.322187" transform="rotate(-0 294.649311 186.322187)">
+         
+         
+         
+         64K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="335.575331" y="186.322187" transform="rotate(-0 335.575331 186.322187)">
+         
+         
+         
+         128K
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="375.571508" y="186.322187" transform="rotate(-0 375.571508 186.322187)">
+         
+         
+         
+         252K
+        </text>
+       </g>
+      </g>
+      <g>
+       <text style="font-size: 10px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #59636e" x="211.968" y="207.436563" transform="rotate(-0 211.968 207.436563)">
+        
+        
+        
+        Context length (tokens, log scale)
+       </text>
+      </g>
+     </g>
+     <g>
+      <g>
+       <g>
+        <path d="M 41.472 172.8  L 382.464 172.8  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #e8ebee; stroke-width: 0.65; stroke-linecap: square">
+        </path>
+       </g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="34.472" y="176.061094" transform="rotate(-0 34.472 176.061094)">
+         
+         
+         
+         0
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+        <path d="M 41.472 130.217143  L 382.464 130.217143  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #e8ebee; stroke-width: 0.65; stroke-linecap: square">
+        </path>
+       </g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="34.472" y="133.478237" transform="rotate(-0 34.472 133.478237)">
+         
+         
+         
+         40
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+        <path d="M 41.472 87.634286  L 382.464 87.634286  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #e8ebee; stroke-width: 0.65; stroke-linecap: square">
+        </path>
+       </g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="34.472" y="90.895379" transform="rotate(-0 34.472 90.895379)">
+         
+         
+         
+         80
+        </text>
+       </g>
+      </g>
+      <g>
+       <g>
+        <path d="M 41.472 45.051429  L 382.464 45.051429  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #e8ebee; stroke-width: 0.65; stroke-linecap: square">
+        </path>
+       </g>
+       <g>
+       </g>
+       <g>
+        <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="34.472" y="48.312522" transform="rotate(-0 34.472 48.312522)">
+         
+         
+         
+         120
+        </text>
+       </g>
+      </g>
+     </g>
+     <g>
+      <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="29.53728" y="17.890144" transform="rotate(-0 29.53728 17.890144)">
+       
+       
+       
+       tok/s
+      </text>
+     </g>
+     <g>
+      <path d="M 49.093195 33.10839  L 90.019214 36.222283  L 130.945233 41.828693  L 171.871253 51.70839  L 212.797272 67.3871  L 253.723292 85.0844  L 294.649311 107.108932  L 335.575331 131.221168  L 375.571508 148.74395  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #2a78d6; stroke-width: 1.8; stroke-linecap: round">
+      </path>
+      <defs>
+       <path d="M 0 2.05  C 0.543666 2.05 1.065139 1.833999 1.449569 1.449569  C 1.833999 1.065139 2.05 0.543666 2.05 0  C 2.05 -0.543666 1.833999 -1.065139 1.449569 -1.449569  C 1.065139 -1.833999 0.543666 -2.05 0 -2.05  C -0.543666 -2.05 -1.065139 -1.833999 -1.449569 -1.449569  C -1.833999 -1.065139 -2.05 -0.543666 -2.05 0  C -2.05 0.543666 -1.833999 1.065139 -1.449569 1.449569  C -1.065139 1.833999 -0.543666 2.05 0 2.05  z ">
+       </path>
+      </defs>
+      <g clip-path="url(#pcc9c0a9f15)">
+       <use x="49.093195" y="33.10839" style="fill: #2a78d6">
+       </use>
+       <use x="90.019214" y="36.222283" style="fill: #2a78d6">
+       </use>
+       <use x="130.945233" y="41.828693" style="fill: #2a78d6">
+       </use>
+       <use x="171.871253" y="51.70839" style="fill: #2a78d6">
+       </use>
+       <use x="212.797272" y="67.3871" style="fill: #2a78d6">
+       </use>
+       <use x="253.723292" y="85.0844" style="fill: #2a78d6">
+       </use>
+       <use x="294.649311" y="107.108932" style="fill: #2a78d6">
+       </use>
+       <use x="335.575331" y="131.221168" style="fill: #2a78d6">
+       </use>
+       <use x="375.571508" y="148.74395" style="fill: #2a78d6">
+       </use>
+      </g>
+     </g>
+     <g>
+      <text style="font-weight: 700; font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start; fill: #2a78d6" x="385.571508" y="151.329887" transform="rotate(-0 385.571508 151.329887)">
+       
+       
+       
+       rec
+      </text>
+     </g>
+     <g>
+      <path d="M 49.093195 79.135762  L 90.019214 81.326506  L 130.945233 83.663643  L 171.871253 88.206038  L 212.797272 96.825174  L 253.723292 110.118879  L 294.649311 127.179408  L 335.575331 147.036856  L 375.571508 163.662888  " clip-path="url(#pcc9c0a9f15)" style="fill: none; stroke: #c4c8cc; stroke-width: 1.8; stroke-linecap: round">
+      </path>
+      <defs>
+       <path d="M 0 2.05  C 0.543666 2.05 1.065139 1.833999 1.449569 1.449569  C 1.833999 1.065139 2.05 0.543666 2.05 0  C 2.05 -0.543666 1.833999 -1.065139 1.449569 -1.449569  C 1.065139 -1.833999 0.543666 -2.05 0 -2.05  C -0.543666 -2.05 -1.065139 -1.833999 -1.449569 -1.449569  C -1.833999 -1.065139 -2.05 -0.543666 -2.05 0  C -2.05 0.543666 -1.833999 1.065139 -1.449569 1.449569  C -1.065139 1.833999 -0.543666 2.05 0 2.05  z ">
+       </path>
+      </defs>
+      <g clip-path="url(#pcc9c0a9f15)">
+       <use x="49.093195" y="79.135762" style="fill: #c4c8cc">
+       </use>
+       <use x="90.019214" y="81.326506" style="fill: #c4c8cc">
+       </use>
+       <use x="130.945233" y="83.663643" style="fill: #c4c8cc">
+       </use>
+       <use x="171.871253" y="88.206038" style="fill: #c4c8cc">
+       </use>
+       <use x="212.797272" y="96.825174" style="fill: #c4c8cc">
+       </use>
+       <use x="253.723292" y="110.118879" style="fill: #c4c8cc">
+       </use>
+       <use x="294.649311" y="127.179408" style="fill: #c4c8cc">
+       </use>
+       <use x="335.575331" y="147.036856" style="fill: #c4c8cc">
+       </use>
+       <use x="375.571508" y="163.662888" style="fill: #c4c8cc">
+       </use>
+      </g>
+     </g>
+     <g>
+      <text style="font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start; fill: #59636e" x="385.571508" y="166.248826" transform="rotate(-0 385.571508 166.248826)">
+       
+       
+       
+       llama.cpp
+      </text>
+     </g>
+    </g>
+    <g>
+     <text style="font-size: 9px; font-family: 'Liberation Sans'; text-anchor: end; fill: #59636e" x="382.464" y="13.127344" transform="rotate(-0 382.464 13.127344)">
+      
+      
+      
+      Flint · M4 Pro · 48 GB
+     </text>
+    </g>
+   </g>
+   <defs>
+    <clipPath>
+     <rect x="41.472" y="23.76" width="340.992" height="149.04">
+     </rect>
+    </clipPath>
+   </defs>
+  </svg>
