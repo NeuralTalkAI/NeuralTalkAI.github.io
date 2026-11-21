@@ -115,7 +115,8 @@ NVIDIA/nccl-extensions├── nccl_ep/      MoE Expert Parallelism：dispat
 
 **`nccl_m2n`解决另一个问题：两个互不重叠的 GPU 进程组持有同一个逻辑张量的不同切分布局，需要把源组上的局部 tile 搬到目标组上的局部 tile**。典型场景是强化学习或在线服务里，训练侧使用一种并行布局，推理侧使用另一种并行布局。M2N 通过`ncclWindow_t`和`ncclMemAlloc`构建零拷贝、one-sided 的数据移动路径，对外只暴露核心入口`ncclReshardWithWindow`。
 
-::: block-1这两个子项目的共同风格非常鲜明：公共 API 尽量保持 C ABI 清晰，复杂策略放到 host 侧准备阶段，真正热路径交给 CUDA kernel、NCCL Device API、GIN 信号、LSA/NVLink 域内访问与 Window 机制执行。:mdnice-highlight[换句话说，仓库关注的核心问题是“AI 通信模式的专用化”，把上层框架反复手写的通信套路固化成底层可复用原语。]
+::: block-1
+这两个子项目的共同风格非常鲜明：公共 API 尽量保持 C ABI 清晰，复杂策略放到 host 侧准备阶段，真正热路径交给 CUDA kernel、NCCL Device API、GIN 信号、LSA/NVLink 域内访问与 Window 机制执行。:mdnice-highlight[换句话说，仓库关注的核心问题是“AI 通信模式的专用化”，把上层框架反复手写的通信套路固化成底层可复用原语。]
 :::
 
 ## 三、NCCL EP：把 MoE 的 token 旅行拆成 dispatch 与 combine
@@ -323,7 +324,8 @@ M2N 配置文件`m2n_config.cc`开头直接说明优先级：内建默认值最�
 5. 读`nccl_m2n/src/reshard_mesh.cc`、`reshard_prepare.cc`、`reshard_user_window.cu`、`reshard_cache.cc`，串起“mesh 解析—overlap 计算—计划生成—window 通信—缓存复用”的完整链路。
 6. 最后跑`ep_bench`和`reshard_bench`，对照环境变量调参，观察 LL/HT、RING/DIRECT、NODE_AWARE/UNIFORM 在不同拓扑上的差异。
 
-::: block-1总的来说，NCCL Extensions 不是一个“再封装一层 NCCL”的轻量工具库。它更像 :mdnice-bold-italic[NVIDIA 把大模型系统中两个高频、昂贵、结构化的通信问题，提前沉淀成底层通信原语：MoE token 在专家之间高速穿梭，训练权重在不同 mesh 之间零拷贝换形]。随着 MoE、解耦式训练推理、强化学习 rollout 和多集群服务成为常态，这类面向 AI 语义的通信扩展，很可能会成为下一代大模型系统栈的基础部件。
+::: block-1
+总的来说，NCCL Extensions 不是一个“再封装一层 NCCL”的轻量工具库。它更像 :mdnice-bold-italic[NVIDIA 把大模型系统中两个高频、昂贵、结构化的通信问题，提前沉淀成底层通信原语：MoE token 在专家之间高速穿梭，训练权重在不同 mesh 之间零拷贝换形]。随着 MoE、解耦式训练推理、强化学习 rollout 和多集群服务成为常态，这类面向 AI 语义的通信扩展，很可能会成为下一代大模型系统栈的基础部件。
 :::
 
 ::: related-title

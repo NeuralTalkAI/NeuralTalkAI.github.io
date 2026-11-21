@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import remarkDirective from 'remark-directive'
 import rehypeKatex from 'rehype-katex'
-import remarkMdniceBlocks, { normalizeMdniceContainers } from './markdown/remarkMdniceBlocks'
+import remarkMdniceBlocks, { normalizeMdniceContainers, remarkUnswallowMath } from './markdown/remarkMdniceBlocks'
 import rehypeYamabuki from './markdown/rehypeYamabuki'
 import { getArticleToc, normalizeArticleImageUrls, remarkArticleHeadingIds, stripManualTocList, type TocItem } from './markdown/articleStructure'
 import 'katex/dist/katex.min.css'
@@ -256,7 +256,7 @@ function Article() {
           <a className="article-original-source" href={post.sourceUrl} target="_blank" rel="noreferrer" aria-label={`微信原文：${post.title}`}>微信原文：<span className="original-source-link">查看原文</span><ArrowUpRight size={14} /></a>
         </header>
         <div id="nice" className="markdown-body"><ReactMarkdown
-          remarkPlugins={[remarkGfm, remarkMath, remarkDirective, remarkMdniceBlocks, remarkArticleHeadingIds]}
+          remarkPlugins={[remarkGfm, remarkMath, remarkDirective, remarkMdniceBlocks, remarkUnswallowMath, remarkArticleHeadingIds]}
           rehypePlugins={[rehypeKatex, rehypeYamabuki]}
           components={{ h2: ({ children, ...props }) => <><h2 {...props}>{children}</h2>{props.id === tocHeadingId && <ArticleToc items={toc} />}</> }}
         >{markdown}</ReactMarkdown></div>

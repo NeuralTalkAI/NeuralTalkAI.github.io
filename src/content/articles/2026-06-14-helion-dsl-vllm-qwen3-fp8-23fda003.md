@@ -93,7 +93,8 @@ Helion 的核心价值是将内核开发验证周期压缩至单日，大幅降�
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/02.jpg)
 
-::: image-captionvLLM 整体系统架构。vLLM 采用集中式调度器 + 分布式 GPU 工作节点的架构，适配超大模型多卡部署场景。核心组件包含全局调度器、KV 缓存管理器、块表、GPU/CPU 块分配器以及模型分片模块。调度器统一管控全量请求与内存策略，块表负责逻辑块与物理块的映射，CPU 块分配器支持缓存交换以应对显存不足。该架构兼容主流的张量模型并行策略，解耦模型计算与内存管理。分布式工作节点仅负责计算，内存管控由中央模块统一执行，保障分页、缓存共享、请求抢占等机制在多卡环境中稳定运行。
+::: image-caption
+vLLM 整体系统架构。vLLM 采用集中式调度器 + 分布式 GPU 工作节点的架构，适配超大模型多卡部署场景。核心组件包含全局调度器、KV 缓存管理器、块表、GPU/CPU 块分配器以及模型分片模块。调度器统一管控全量请求与内存策略，块表负责逻辑块与物理块的映射，CPU 块分配器支持缓存交换以应对显存不足。该架构兼容主流的张量模型并行策略，解耦模型计算与内存管理。分布式工作节点仅负责计算，内存管控由中央模块统一执行，保障分页、缓存共享、请求抢占等机制在多卡环境中稳定运行。
 :::
 
 在内部实现中，vLLM 高度依赖自定义 GPU 内核、TorchInductor 融合机制，以及 CUTLASS、DeepGEMM 等优化后的 GEMM 后端，以此在各类硬件平台上实现超高推理效率。
@@ -102,7 +103,8 @@ Helion 的核心价值是将内核开发验证周期压缩至单日，大幅降�
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/03.jpg)
 
-::: image-caption创建全新 DSL 领域专用语言的核心动因，左侧点明痛点与优势：企业海量自定义算子易累积技术债务、跨硬件移植困难，而异构硬件已是行业趋势；该 DSL 可自动化 Triton 中张量索引、网格分块、参数管理等手动流程，相比 torch.compile 拥有更精细的底层管控，同时具备跨硬件性能移植、自动调优能力。右侧纵向抽象层级轴从底层硬件专属 PTX、CUDA 向上延伸，依次为 Triton、Helion、顶层硬件无关的 PyTorch，Helion DSL 居中，平衡高层抽象与底层算力调度需求。
+::: image-caption
+创建全新 DSL 领域专用语言的核心动因，左侧点明痛点与优势：企业海量自定义算子易累积技术债务、跨硬件移植困难，而异构硬件已是行业趋势；该 DSL 可自动化 Triton 中张量索引、网格分块、参数管理等手动流程，相比 torch.compile 拥有更精细的底层管控，同时具备跨硬件性能移植、自动调优能力。右侧纵向抽象层级轴从底层硬件专属 PTX、CUDA 向上延伸，依次为 Triton、Helion、顶层硬件无关的 PyTorch，Helion DSL 居中，平衡高层抽象与底层算力调度需求。
 :::
 
 可以将其理解为**带分块能力的 PyTorch**。如果你掌握 PyTorch 或 Triton，就能快速上手 Helion。除了简洁的开发体验外，Helion 还配备强大的超前编译（AOT）自动调优组件，可遍历海量内核配置组合，针对特定负载与硬件目标自动筛选最优实现方案。
@@ -169,7 +171,8 @@ Helion DSL 实现矩阵乘法的示例代码，先导入 Torch 与 Helion 语言
 10. silu_and_mul + fp8_quant（SiLU 激活与乘法 + FP8 量化）
 11. scaled_mm (down_proj)（缩放矩阵乘法，下降投影）
 
-::: block-1补充说明：`scaled_mm` 与 `attention` 均已注册为 PyTorch 自定义算子[3]。由于 TorchInductor 无法解析这类自定义算子，二者会形成融合边界，阻碍编译器开展进一步内核融合。
+::: block-1
+补充说明：`scaled_mm` 与 `attention` 均已注册为 PyTorch 自定义算子[3]。由于 TorchInductor 无法解析这类自定义算子，二者会形成融合边界，阻碍编译器开展进一步内核融合。
 :::
 
 #### 动态分组激活量化
@@ -191,7 +194,8 @@ Helion DSL 实现矩阵乘法的示例代码，先导入 Torch 与 Helion 语言
 13. fp8_quant (ue8m0)（UE8M0 格式 FP8 量化）
 14. scaled_mm (down_proj, DeepGEMM)（缩放矩阵乘法，下降投影，DeepGEMM 后端）
 
-::: block-1补充说明：DeepGEMM 内部采用 UE8M0 格式完成激活量化。在当前 vLLM 实现中，UE8M0 量化模式不支持 `fuse_act_quant`（激活量化融合）与 `fuse_norm_quant`（归一化-量化融合），因此无法实现这两类额外融合优化。
+::: block-1
+补充说明：DeepGEMM 内部采用 UE8M0 格式完成激活量化。在当前 vLLM 实现中，UE8M0 量化模式不支持 `fuse_act_quant`（激活量化融合）与 `fuse_norm_quant`（归一化-量化融合），因此无法实现这两类额外融合优化。
 :::
 
 若环境中无 DeepGEMM，系统会切换为基于 CUTLASS 的内核，此时执行流程与**动态逐 Token 激活量化** 场景基本一致。
@@ -268,7 +272,8 @@ initial_population=FROM_RANDOM, copies=5, max_generations=20, similarity_penalty
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/07.png)
 
-::: image-caption表 1：各 Qwen3 模型投影层 [K, N] 维度。该表格列出 Qwen3-1.7B、8B、32B 三款模型 Transformer 四大核心投影层的权重矩阵尺寸，涵盖注意力 qkv_proj、输出 out_proj、MLP gate_up 与 down_proj。随模型参数量提升，各层矩阵维度整体同步扩容；out_proj 均为同维度方阵，gate_up 升维、down_proj 降维构成 MLP 扩展收缩结构，qkv_proj 负责多头注意力映射。这些权重规格是前文 FP8 量化、算子自动调优、内核性能实测的核心基础参数，直接决定矩阵计算负载规模与优化适配方案。
+::: image-caption
+表 1：各 Qwen3 模型投影层 [K, N] 维度。该表格列出 Qwen3-1.7B、8B、32B 三款模型 Transformer 四大核心投影层的权重矩阵尺寸，涵盖注意力 qkv_proj、输出 out_proj、MLP gate_up 与 down_proj。随模型参数量提升，各层矩阵维度整体同步扩容；out_proj 均为同维度方阵，gate_up 升维、down_proj 降维构成 MLP 扩展收缩结构，qkv_proj 负责多头注意力映射。这些权重规格是前文 FP8 量化、算子自动调优、内核性能实测的核心基础参数，直接决定矩阵计算负载规模与优化适配方案。
 :::
 
 团队针对每一款被测硬件平台，对所有内核分别执行独立自动调优。
@@ -279,7 +284,8 @@ initial_population=FROM_RANDOM, copies=5, max_generations=20, similarity_penalty
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/08.png)
 
-::: image-caption该 issue 是 vLLM 项目集成 Helion 自定义内核的性能优化议题，明确了内核适配范围，梳理出线性计算、FP8 量化、归一化、集合通信等多类待优化内核，并关联对应开发任务。项目在 H100、B200 显卡上完成内核与端到端性能测试，多数内核相比原有方案实现显著加速，同时经评测验证模型精度基本无损。文中还给出完整的部署、测试复现指令，也记录了社区开发者参与交流、协作开发的相关动态。
+::: image-caption
+该 issue 是 vLLM 项目集成 Helion 自定义内核的性能优化议题，明确了内核适配范围，梳理出线性计算、FP8 量化、归一化、集合通信等多类待优化内核，并关联对应开发任务。项目在 H100、B200 显卡上完成内核与端到端性能测试，多数内核相比原有方案实现显著加速，同时经评测验证模型精度基本无损。文中还给出完整的部署、测试复现指令，也记录了社区开发者参与交流、协作开发的相关动态。
 :::
 
 以 `scaled_mm` 为例，调度逻辑基于两个输入矩阵的维度 (M, K, N) 实现：会根据每一批请求的运行时 `num_tokens`，将 M 向上取整为最近的 2 的幂次。其余内核均采用同类调度策略。
@@ -308,7 +314,8 @@ torch.compile(    native_torch_impl,    fullgraph=True,    dynamic=False,�
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/09.png)
 
-::: image-caption表 2：Helion 内核几何平均加速比汇总。该表格统计多款自定义算子在 H100、B200 显卡上，相对 torch.compile、torch.ops._C、CUTLASS 基线的吞吐加速倍数，N/A 代表无对应对照数据。各类 FP8 量化、归一化融合算子在两块硬件均实现正向提速，分块量化的 rms_norm、silu_and_mul 算子收益最高，相对原生 torch.ops._C 最高可达 2.325 倍，且 B200 多数算子加速幅度优于 H100；仅 scaled_mm 矩阵算子表现分化，H100 小幅提速，B200 对比 CUTLASS 基线出现性能下降，整体验证融合量化内核可显著优化大模型推理算子效率。
+::: image-caption
+表 2：Helion 内核几何平均加速比汇总。该表格统计多款自定义算子在 H100、B200 显卡上，相对 torch.compile、torch.ops._C、CUTLASS 基线的吞吐加速倍数，N/A 代表无对应对照数据。各类 FP8 量化、归一化融合算子在两块硬件均实现正向提速，分块量化的 rms_norm、silu_and_mul 算子收益最高，相对原生 torch.ops._C 最高可达 2.325 倍，且 B200 多数算子加速幅度优于 H100；仅 scaled_mm 矩阵算子表现分化，H100 小幅提速，B200 对比 CUTLASS 基线出现性能下降，整体验证融合量化内核可显著优化大模型推理算子效率。
 :::
 
 ### 3.1 结果分析
@@ -363,7 +370,8 @@ vllm serve --model $MODEL --max-num-seqs $BATCH_SIZE --tensor-parallel-size 
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/10.png)
 
-::: image-caption图 1：H100 开启逐 Token 激活量化后的整体吞吐量加速比（基线为 vLLM 默认配置）。图中左右两张折线图分别展示 H100 显卡下 Qwen3-1.7B、Qwen3-8B 动态 FP8 量化的吞吐加速表现，横轴为 Batch Size，纵轴是吞吐加速倍数，四条曲线对应 scaled_mm、qk_norm_rope、fp8_quant 单算子与全部算子叠加优化方案。1.7B 模型小批量下全算子优化峰值达 1.10 倍，单算子曲线波动明显；8B 模型整体提速幅度更小，全算子优化随批量增大稳步上涨至 1.05 倍。整体来看，叠加全部算子的加速效果普遍优于单一算子，两款模型在不同批次负载下的提速波动与峰值特性存在显著区别，多数场景下优化方案可带来正向吞吐增益。
+::: image-caption
+图 1：H100 开启逐 Token 激活量化后的整体吞吐量加速比（基线为 vLLM 默认配置）。图中左右两张折线图分别展示 H100 显卡下 Qwen3-1.7B、Qwen3-8B 动态 FP8 量化的吞吐加速表现，横轴为 Batch Size，纵轴是吞吐加速倍数，四条曲线对应 scaled_mm、qk_norm_rope、fp8_quant 单算子与全部算子叠加优化方案。1.7B 模型小批量下全算子优化峰值达 1.10 倍，单算子曲线波动明显；8B 模型整体提速幅度更小，全算子优化随批量增大稳步上涨至 1.05 倍。整体来看，叠加全部算子的加速效果普遍优于单一算子，两款模型在不同批次负载下的提速波动与峰值特性存在显著区别，多数场景下优化方案可带来正向吞吐增益。
 :::
 
 测试结果解读：
@@ -382,7 +390,8 @@ vllm serve --model $MODEL --max-num-seqs $BATCH_SIZE --tensor-parallel-size 
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/11.png)
 
-::: image-caption表 3：H100 平台、逐 Token 激活量化+推测解码场景端到端测试结果（括号内为推测 Token 接受率）TTFT：Time To First Token，首 Token 生成延迟；TPOT：Time Per Output Token，单输出 Token 生成延迟。该表格对比 Helion 方案与默认基线，在 Qwen3-8B、Qwen3-32B 模型、不同批次及投机预测 token 数下的推理指标，涵盖 TTFT、TPOT、总吞吐与对应加速倍数。Helion 可显著降低首包与单 token 生成时延，TTFT 加速最高达 1.33 倍，TPOT 稳定提升 1.05–1.08 倍；整体吞吐实现 1.06–1.09 倍提速。增加投机 token 数量后 TTFT 优化效果更突出，16 批次下 8B 模型吞吐绝对值更高，8 批次 32B 大模型也保持正向增益，证明 Helion 投机推理能同步优化时延与吞吐。
+::: image-caption
+表 3：H100 平台、逐 Token 激活量化+推测解码场景端到端测试结果（括号内为推测 Token 接受率）TTFT：Time To First Token，首 Token 生成延迟；TPOT：Time Per Output Token，单输出 Token 生成延迟。该表格对比 Helion 方案与默认基线，在 Qwen3-8B、Qwen3-32B 模型、不同批次及投机预测 token 数下的推理指标，涵盖 TTFT、TPOT、总吞吐与对应加速倍数。Helion 可显著降低首包与单 token 生成时延，TTFT 加速最高达 1.33 倍，TPOT 稳定提升 1.05–1.08 倍；整体吞吐实现 1.06–1.09 倍提速。增加投机 token 数量后 TTFT 优化效果更突出，16 批次下 8B 模型吞吐绝对值更高，8 批次 32B 大模型也保持正向增益，证明 Helion 投机推理能同步优化时延与吞吐。
 :::
 
 #### B200 平台表现
@@ -393,7 +402,8 @@ vllm serve --model $MODEL --max-num-seqs $BATCH_SIZE --tensor-parallel-size 
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/12.png)
 
-::: image-caption图 2：B200 开启逐 Token 激活量化后的整体吞吐量加速比（基线为 vLLM 默认配置）。该折线图展示 B200 显卡上单 Token FP8 量化算子对 Qwen3-1.7B、8B、32B 三款模型的吞吐加速效果，横轴为 1 至 64 的批次大小，纵轴代表总吞吐加速倍数。三款模型提速均为正向，变化趋势相近，均在 Batch Size=8 时迎来加速峰值，其中 1.7B 模型峰值最高，接近 1.07 倍；批量超过 8 后加速持续回落，到 64 时 1.7B 模型降幅最明显，8B、32B 曲线相对平缓，可见单 Token 量化能稳定提升推理吞吐，但不同参数量模型对大批次负载的适配表现存在差异。
+::: image-caption
+图 2：B200 开启逐 Token 激活量化后的整体吞吐量加速比（基线为 vLLM 默认配置）。该折线图展示 B200 显卡上单 Token FP8 量化算子对 Qwen3-1.7B、8B、32B 三款模型的吞吐加速效果，横轴为 1 至 64 的批次大小，纵轴代表总吞吐加速倍数。三款模型提速均为正向，变化趋势相近，均在 Batch Size=8 时迎来加速峰值，其中 1.7B 模型峰值最高，接近 1.07 倍；批量超过 8 后加速持续回落，到 64 时 1.7B 模型降幅最明显，8B、32B 曲线相对平缓，可见单 Token 量化能稳定提升推理吞吐，但不同参数量模型对大批次负载的适配表现存在差异。
 :::
 
 ### 4.2 动态分组激活量化
@@ -406,12 +416,14 @@ vllm serve --model $MODEL --max-num-seqs $BATCH_SIZE --tensor-parallel-size 
 
 ![文章插图](/articles/2026-06-14-helion-dsl-vllm-qwen3-fp8-23fda003/images/13.png)
 
-::: image-caption图 3：H100、B200 开启分组激活量化后的整体吞吐量加速比（基线：线性层后端替换为 CUTLASS 的 vLLM 配置）。图中左右两张折线图分别展示H100、B200显卡上Qwen3系列模型分组量化算子的吞吐加速表现，横轴为1至64的Batch Size，纵轴代表总吞吐加速倍数。左侧H100测试1.7B、8B模型，1.7B加速波动幅度更大，小批量时峰值达1.1倍，8B随批量增大提速稳步上涨；右侧B200新增32B模型，三款模型加速稳定维持在1.04至1.08区间，曲线波动更小，大批量下32B模型加速持续走高，两款硬件中FP8分组量化算子均为模型带来正向吞吐增益，B200平台运行更平稳。
+::: image-caption
+图 3：H100、B200 开启分组激活量化后的整体吞吐量加速比（基线：线性层后端替换为 CUTLASS 的 vLLM 配置）。图中左右两张折线图分别展示H100、B200显卡上Qwen3系列模型分组量化算子的吞吐加速表现，横轴为1至64的Batch Size，纵轴代表总吞吐加速倍数。左侧H100测试1.7B、8B模型，1.7B加速波动幅度更大，小批量时峰值达1.1倍，8B随批量增大提速稳步上涨；右侧B200新增32B模型，三款模型加速稳定维持在1.04至1.08区间，曲线波动更小，大批量下32B模型加速持续走高，两款硬件中FP8分组量化算子均为模型带来正向吞吐增益，B200平台运行更平稳。
 :::
 
 在分组激活量化场景下，H100、B200 平台的分块 FP8 GEMM 默认后端为 DeepGEMM。:mdnice-bold-italic[但当前 Helion 分组量化内核暂不兼容 DeepGEMM 依赖的 UE8M0 量化格式，因此本次实验强制 vLLM 将线性层后端切换为 CUTLASS。]
 
-::: block-1重要说明：该场景下的基线**并非** vLLM 默认配置。但所有实验组与对照组均统一使用 CUTLASS 作为线性层后端，因此性能差异仅来源于非 GEMM 内核（FP8 量化、量化融合内核），对比结果具备参考价值。
+::: block-1
+重要说明：该场景下的基线**并非** vLLM 默认配置。但所有实验组与对照组均统一使用 CUTLASS 作为线性层后端，因此性能差异仅来源于非 GEMM 内核（FP8 量化、量化融合内核），对比结果具备参考价值。
 :::
 
 测试结果：仅启用 Helion 轻量化内核，全负载场景下端到端吞吐量即可实现约 **1.05 倍** 提升。
@@ -450,29 +462,53 @@ Helion 运行时调度逻辑会为每次内核调用引入数十微秒的 CPU �
 
 参考资料
 
-[1] vLLM: *https://docs.vllm.ai/en/latest/*
+[1]
 
-[2] Helion: *https://helionlang.com/index.html*
+vLLM: *https://docs.vllm.ai/en/latest/*
 
-[3] PyTorch 自定义算子: *https://docs.pytorch.org/tutorials/advanced/custom_ops_landing_page.html*
+[2]
 
-[4] triton_scaled_mm: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py#L141*
+Helion: *https://helionlang.com/index.html*
 
-[5] w8a8_triton_block_scaled_mm: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/utils/fp8_utils.py#L835*
+[3]
 
-[6] vLLM Helion 内核集成框架: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/utils/fp8_utils.py#L835*
+PyTorch 自定义算子: *https://docs.pytorch.org/tutorials/advanced/custom_ops_landing_page.html*
 
-[7] LFBOTreeSearch: *https://helionlang.com/api/autotuner.html#helion.autotuner.surrogate_pattern_search.LFBOTreeSearch*
+[4]
 
-[8] Helion 集成框架: *https://github.com/vllm-project/vllm/issues/32219*
+triton_scaled_mm: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/compressed_tensors/triton_scaled_mm.py#L141*
 
-[9] 受性能问题影响: *https://github.com/vllm-project/vllm/issues/25094*
+[5]
 
-[10] issue: *https://github.com/vllm-project/vllm/issues/32962*
+w8a8_triton_block_scaled_mm: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/utils/fp8_utils.py#L835*
 
-[11] 168 种不同输入形状: *https://github.com/vllm-project/vllm/commit/5bc478ccee9bae4056aeae9953861fe587265e3f#diff-be77e79f35962c7bc20c44638613a5fdca7bb745b987888b4c63dd7557dd4207*
+[6]
 
-[12] 现有研究表明: *https://github.com/vllm-project/vllm/commit/5bc478ccee9bae4056aeae9953861fe587265e3f#diff-be77e79f35962c7bc20c44638613a5fdca7bb745b987888b4c63dd7557dd4207*
+vLLM Helion 内核集成框架: *https://github.com/vllm-project/vllm/blob/v0.21.1rc0/vllm/model_executor/layers/quantization/utils/fp8_utils.py#L835*
+
+[7]
+
+LFBOTreeSearch: *https://helionlang.com/api/autotuner.html#helion.autotuner.surrogate_pattern_search.LFBOTreeSearch*
+
+[8]
+
+Helion 集成框架: *https://github.com/vllm-project/vllm/issues/32219*
+
+[9]
+
+受性能问题影响: *https://github.com/vllm-project/vllm/issues/25094*
+
+[10]
+
+issue: *https://github.com/vllm-project/vllm/issues/32962*
+
+[11]
+
+168 种不同输入形状: *https://github.com/vllm-project/vllm/commit/5bc478ccee9bae4056aeae9953861fe587265e3f#diff-be77e79f35962c7bc20c44638613a5fdca7bb745b987888b4c63dd7557dd4207*
+
+[12]
+
+现有研究表明: *https://github.com/vllm-project/vllm/commit/5bc478ccee9bae4056aeae9953861fe587265e3f#diff-be77e79f35962c7bc20c44638613a5fdca7bb745b987888b4c63dd7557dd4207*
 
 ::: related-title
 **相关推荐**

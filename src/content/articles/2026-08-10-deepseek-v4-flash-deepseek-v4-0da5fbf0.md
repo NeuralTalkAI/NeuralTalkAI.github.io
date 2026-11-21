@@ -123,19 +123,33 @@ FlyCockpit 项目封面：两台 DGX Spark 驱动视觉版 DeepSeek-V4-Flash。F
 
 参考资料
 
-[1] `webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4`: *https://huggingface.co/webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4*
+[1]
 
-[2] `deepseek-ai/DeepSeek-V4-Flash-0731`: *https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731*
+`webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4`: *https://huggingface.co/webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4*
 
-[3] `webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4`: *https://huggingface.co/webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4*
+[2]
 
-[4] FlyCockpit/DeepSeek-V4-Vision-2x-DGX-Sparks: *https://github.com/FlyCockpit/DeepSeek-V4-Vision-2x-DGX-Sparks*
+`deepseek-ai/DeepSeek-V4-Flash-0731`: *https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731*
 
-[5] `FlyCockpit/DeepSeek-V4-Flash-0731-vision`: *https://huggingface.co/FlyCockpit/DeepSeek-V4-Flash-0731-vision*
+[3]
 
-[6] `DeepSeek-V4-Flash-NVFP4`: *https://huggingface.co/nvidia/DeepSeek-V4-Flash-NVFP4*
+`webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4`: *https://huggingface.co/webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4*
 
-[7] NVIDIA 开发者论坛原帖: *https://forums.developer.nvidia.com/t/deepseek-v4-flash-with-vision/379212*
+[4]
+
+FlyCockpit/DeepSeek-V4-Vision-2x-DGX-Sparks: *https://github.com/FlyCockpit/DeepSeek-V4-Vision-2x-DGX-Sparks*
+
+[5]
+
+`FlyCockpit/DeepSeek-V4-Flash-0731-vision`: *https://huggingface.co/FlyCockpit/DeepSeek-V4-Flash-0731-vision*
+
+[6]
+
+`DeepSeek-V4-Flash-NVFP4`: *https://huggingface.co/nvidia/DeepSeek-V4-Flash-NVFP4*
+
+[7]
+
+NVIDIA 开发者论坛原帖: *https://forums.developer.nvidia.com/t/deepseek-v4-flash-with-vision/379212*
 
 ::: related-title
 **相关推荐**

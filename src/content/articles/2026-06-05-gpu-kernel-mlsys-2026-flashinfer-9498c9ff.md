@@ -59,7 +59,13 @@ B200 GPU 实测显示，**人机协同方案全部算子性能优于 FlashInfer 
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/02.jpg)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
 
 ## 一、研究背景
 
@@ -71,7 +77,8 @@ B200 GPU 实测显示，**人机协同方案全部算子性能优于 FlashInfer 
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/03.png)
 
-::: image-caption图1：KernelBench评测流程。模型接收一段PyTorch运算任务，编写自定义内核实现代码，随后从功能正确性与运行时延两个维度完成评测。左侧原始 Model 为基准 PyTorch 模块，forward 函数依赖原生 PyTorch 算子；依托任务指令与原模型结构，生成嵌入自定义 Inline CUDA 内核的新 ModelNew，新模型混合原生算子与自研 CUDA Kernel。优化后分两步验证，正确性校验通过多组随机输入，对比原 Model 与 ModelNew 前向输出是否一致；性能测试则多次压测，将定制 CUDA 实现同 PyTorch 原生 Eager、Torch.Compile 两种运行模式做耗时对标，兼顾数值正确性与运行加速效果，完成算子优化闭环验证。
+::: image-caption
+图1：KernelBench评测流程。模型接收一段PyTorch运算任务，编写自定义内核实现代码，随后从功能正确性与运行时延两个维度完成评测。左侧原始 Model 为基准 PyTorch 模块，forward 函数依赖原生 PyTorch 算子；依托任务指令与原模型结构，生成嵌入自定义 Inline CUDA 内核的新 ModelNew，新模型混合原生算子与自研 CUDA Kernel。优化后分两步验证，正确性校验通过多组随机输入，对比原 Model 与 ModelNew 前向输出是否一致；性能测试则多次压测，将定制 CUDA 实现同 PyTorch 原生 Eager、Torch.Compile 两种运行模式做耗时对标，兼顾数值正确性与运行加速效果，完成算子优化闭环验证。
 :::
 
 ### 1.2 FlashInfer-Bench
@@ -80,7 +87,8 @@ B200 GPU 实测显示，**人机协同方案全部算子性能优于 FlashInfer 
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/04.png)
 
-::: image-caption图2：FlashInfer-Bench架构。依托LLM智能体与人类专家协同产出内核方案，汇总内核定义、算子方案、跑分数据存入FlashInfer Trace，落地生成FlashInfer-Bench实测数据集；数据集提炼真实业务负载接入LLM推理引擎，经由`flashinfer_bench.apply()`自动筛选最优内核部署上线，线上真实负载再反向回流扩充数据集。跑分结果同步汇总至性能榜单，持续反哺内核迭代，构建从方案生成、基准测试到工程落地的数据闭环，持续迭代优化推理内核性能。
+::: image-caption
+图2：FlashInfer-Bench架构。依托LLM智能体与人类专家协同产出内核方案，汇总内核定义、算子方案、跑分数据存入FlashInfer Trace，落地生成FlashInfer-Bench实测数据集；数据集提炼真实业务负载接入LLM推理引擎，经由`flashinfer_bench.apply()`自动筛选最优内核部署上线，线上真实负载再反向回流扩充数据集。跑分结果同步汇总至性能榜单，持续反哺内核迭代，构建从方案生成、基准测试到工程落地的数据闭环，持续迭代优化推理内核性能。
 :::
 
 ### 1.3 本文方法
@@ -93,7 +101,8 @@ B200 GPU 实测显示，**人机协同方案全部算子性能优于 FlashInfer 
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/05.png)
 
-::: image-caption图3：LLM4Kernel通过数据构建、有监督微调、强化学习与领域适配，预训练基座大模型依托指令数据集开展 SFT 监督微调，还可基于偏好数据集选配 RL 强化学习优化，最终产出 Kernel 专用指令大模型。推理阶段依托内核任务描述，由模型批量生成候选 CUDA 内核代码，产出内容分两路校验：一方面接入基准数据集做性能 Benchmark 评测，另一方面执行单元测试核验计算正确性，通过双维度验证筛选可用优化内核，形成从模型微调、代码生成到功能与性能核验的完整自动化管线。
+::: image-caption
+图3：LLM4Kernel通过数据构建、有监督微调、强化学习与领域适配，预训练基座大模型依托指令数据集开展 SFT 监督微调，还可基于偏好数据集选配 RL 强化学习优化，最终产出 Kernel 专用指令大模型。推理阶段依托内核任务描述，由模型批量生成候选 CUDA 内核代码，产出内容分两路校验：一方面接入基准数据集做性能 Benchmark 评测，另一方面执行单元测试核验计算正确性，通过双维度验证筛选可用优化内核，形成从模型微调、代码生成到功能与性能核验的完整自动化管线。
 :::
 
 这条路线的优势是可以把内核知识内化到模型参数中，但它通常需要高质量训练数据、稳定的奖励设计和较高训练成本。
@@ -106,14 +115,16 @@ B200 GPU 实测显示，**人机协同方案全部算子性能优于 FlashInfer 
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/06.png)
 
-::: image-caption图4：Agent4Kernel围绕内核优化，重点聚焦迭代精调、进化搜索、外部存储器、硬件性能剖析以及多智能体协同调度。顶层包含迭代精修、进化算法两类学习机制，持续迭代优化内核方案；主体采用单主 Agent 搭配 Coder、Tester、Profiler、Planner 组成多智能体协作集群。Agent 可双向检索外部存储的代码案例库与结构化知识，智能体生成内核送入硬件性能剖析模块，硬件侧输出硬件规格、性能指标与剖析反馈回传系统；经测试调优后的最优内核再落回外部知识库沉淀，形成算法迭代、多角色分工、硬件反馈、知识库沉淀的全闭环自动化内核优化链路。
+::: image-caption
+图4：Agent4Kernel围绕内核优化，重点聚焦迭代精调、进化搜索、外部存储器、硬件性能剖析以及多智能体协同调度。顶层包含迭代精修、进化算法两类学习机制，持续迭代优化内核方案；主体采用单主 Agent 搭配 Coder、Tester、Profiler、Planner 组成多智能体协作集群。Agent 可双向检索外部存储的代码案例库与结构化知识，智能体生成内核送入硬件性能剖析模块，硬件侧输出硬件规格、性能指标与剖析反馈回传系统；经测试调优后的最优内核再落回外部知识库沉淀，形成算法迭代、多角色分工、硬件反馈、知识库沉淀的全闭环自动化内核优化链路。
 :::
 
 这种思路也和 Meta 提出的 **KernelEvolve** （Liao et al., 2025[8]）这样的工业系统相呼应。:mdnice-bold-italic[KernelEvolve 强调持久化知识库、检索增强的提示构造、跨硬件编程抽象]，以及面向真实生产算子的持续优化。
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/07.jpg)
 
-::: image-caption图5：KernelEvolve系统总览。该系统融合持久化存储、检索机制、进化搜索与硬件适配评估，实现智能内核编码在量产算子场景下的规模化落地。架构图分为上下两层，完整呈现 Triton Kernel 自动化生成全链路：下层从用户 Prompt 启动树形搜索，经多类大模型完成内核生成，依次通过 TritonBench 精度核验、多平台工具性能评测，更新持久知识库后由 Prompt 合成器输出最终内核；上层依托自演化状态机驱动树搜索分支，区分正误内核节点，代码生成器对接 MTIA、NVIDIA、AMD 三类硬件分析工具，评测数据汇入动态提示词模块，调度内外多系列 LLM，评测结果、内核源码与硬件知识统一存入元数据仓库与持久知识库，实现评测反馈、知识沉淀与迭代生成的闭环。
+::: image-caption
+图5：KernelEvolve系统总览。该系统融合持久化存储、检索机制、进化搜索与硬件适配评估，实现智能内核编码在量产算子场景下的规模化落地。架构图分为上下两层，完整呈现 Triton Kernel 自动化生成全链路：下层从用户 Prompt 启动树形搜索，经多类大模型完成内核生成，依次通过 TritonBench 精度核验、多平台工具性能评测，更新持久知识库后由 Prompt 合成器输出最终内核；上层依托自演化状态机驱动树搜索分支，区分正误内核节点，代码生成器对接 MTIA、NVIDIA、AMD 三类硬件分析工具，评测数据汇入动态提示词模块，调度内外多系列 LLM，评测结果、内核源码与硬件知识统一存入元数据仓库与持久知识库，实现评测反馈、知识沉淀与迭代生成的闭环。
 :::
 
 ::: block-1
@@ -126,7 +137,8 @@ GPU 内核智能体的难点是让它在复杂硬件、复杂负载和严格验�
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/08.png)
 
-::: image-caption该表格从人类介入、搜索方式、状态管理三个维度，对比 Agent-Assisted 辅助智能体与 Full-Agent 全自主智能体两种内核优化模式。辅助方案中人类全程深度参与，负责策略设计、优化筛选，依托经验与性能结论做局部定向优化，项目状态依靠人工文档归档维护；全自主模式仅需人类下发初始任务、约束条件与工具，智能体自主循环完成规划、执行、评测、沉淀的全链路长程搜索
+::: image-caption
+该表格从人类介入、搜索方式、状态管理三个维度，对比 Agent-Assisted 辅助智能体与 Full-Agent 全自主智能体两种内核优化模式。辅助方案中人类全程深度参与，负责策略设计、优化筛选，依托经验与性能结论做局部定向优化，项目状态依靠人工文档归档维护；全自主模式仅需人类下发初始任务、约束条件与工具，智能体自主循环完成规划、执行、评测、沉淀的全链路长程搜索
 :::
 
 ### 2.1 Agent-Assisted
@@ -135,7 +147,8 @@ GPU 内核智能体的难点是让它在复杂硬件、复杂负载和严格验�
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/09.jpg)
 
-::: image-caption图6 面向B200内核优化的智能体辅助闭环测试框架。该工作流依托算子定义、负载分布、参考基准、性能采样信号以及明确的择优迭代策略完成智能体的基础配置。 Shui et al., 2026
+::: image-caption
+图6 面向B200内核优化的智能体辅助闭环测试框架。该工作流依托算子定义、负载分布、参考基准、性能采样信号以及明确的择优迭代策略完成智能体的基础配置。 Shui et al., 2026
 :::
 
 > Agent-Assisted harness 主要分成四层：
@@ -151,7 +164,8 @@ GPU 内核智能体的难点是让它在复杂硬件、复杂负载和严格验�
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/10.jpg)
 
-::: image-caption图7 改进版LoongFlow全智能体架构。智能体依次循环执行规划、代码生成、效果评估、总结归纳与数据库更新流程，将失效的候选方案转化为可供后续迭代检索的上下文信息。Ma et al., 2026
+::: image-caption
+图7 改进版LoongFlow全智能体架构。智能体依次循环执行规划、代码生成、效果评估、总结归纳与数据库更新流程，将失效的候选方案转化为可供后续迭代检索的上下文信息。Ma et al., 2026
 :::
 
 Full-Agent 路线使用框架 **LoongFlow** （Wan et al., 2025[16]）的计划-执行-总结范式，其类似 **OpenEvolve** （Sharma, 2025[17]）这类演化搜索系统。它把一次内核搜索拆成规划、执行、评测、总结和存储五步，并把每个候选的来源、性能结果和失败原因等摘要写入持久数据库。
@@ -180,12 +194,14 @@ $$
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/11.png)
 
-::: image-caption该表格统计DSA Attention、DSA Indexer等五类算子在Agent-Assisted、Full-Agent、FlashInfer基线三种方案的运行延迟与加速倍率，加速分别对标PyTorch原生与FlashInfer基准。整体上Agent-Assisted辅助优化方案全算子延迟最低、提速最优，DSA Indexer相对PyTorch最高提速494.13倍；Full-Agent全自主智能体性能普遍弱于辅助方案，MoE FP8场景甚至慢于FlashInfer基准，仅部分算子优于PyTorch。FlashInfer作为性能基准，多数场景性能介于两种智能体方案之间，印证人工参与引导的Agent-Assisted在内核优化上收益更突出。
+::: image-caption
+该表格统计DSA Attention、DSA Indexer等五类算子在Agent-Assisted、Full-Agent、FlashInfer基线三种方案的运行延迟与加速倍率，加速分别对标PyTorch原生与FlashInfer基准。整体上Agent-Assisted辅助优化方案全算子延迟最低、提速最优，DSA Indexer相对PyTorch最高提速494.13倍；Full-Agent全自主智能体性能普遍弱于辅助方案，MoE FP8场景甚至慢于FlashInfer基准，仅部分算子优于PyTorch。FlashInfer作为性能基准，多数场景性能介于两种智能体方案之间，印证人工参与引导的Agent-Assisted在内核优化上收益更突出。
 :::
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/12.png)
 
-::: image-caption图8：该柱状图展示Agent-Assisted方案相较FlashInfer基线在五类大模型算子的加速倍数，结果基于本地Modal B200设备运行的平均时延测算得出，纵轴为性能提速倍率。DSA Attention优化收益最高，达到29.68倍；DSA Top-k索引算子次之，提速18.05倍；GDN Prefill取得13.70倍加速；MoE FP8、GDN Decode提升相对平缓，分别为1.62倍与1.12倍。整体可见注意力与索引类算子优化空间最大，稀疏MoE、解码阶段算子受硬件与访存约束优化幅度偏低，人工辅助智能体针对访存密集型算子的优化收益最为显著。Shui et al., 2026
+::: image-caption
+图8：该柱状图展示Agent-Assisted方案相较FlashInfer基线在五类大模型算子的加速倍数，结果基于本地Modal B200设备运行的平均时延测算得出，纵轴为性能提速倍率。DSA Attention优化收益最高，达到29.68倍；DSA Top-k索引算子次之，提速18.05倍；GDN Prefill取得13.70倍加速；MoE FP8、GDN Decode提升相对平缓，分别为1.62倍与1.12倍。整体可见注意力与索引类算子优化空间最大，稀疏MoE、解码阶段算子受硬件与访存约束优化幅度偏低，人工辅助智能体针对访存密集型算子的优化收益最为显著。Shui et al., 2026
 :::
 
 ::: block-1
@@ -199,10 +215,12 @@ $$
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/13.png)
 
-::: image-caption图9：五张子折线图，分别展示MoE FP8、DSA Top-k、DSA稀疏Attention、GDN Decode、GDN Prefill五类算子随迭代版本提升、相对FlashInfer基线的加速变化，虚线为1倍性能基准，圆圈标注关键优化拐点、红星是最优留存版本。各算子依托分段Wmma、专家打包、CuTe预处理、分块调度等专项优化，性能随迭代持续抬升；DSA稀疏Attention最终提速29.68倍为全组最优，DSA Top-k、GDN Prefill依次达到18.05倍、13.70倍，MoE与GDN Decode优化上限偏低，仅小幅超越基线，直观体现不同算子的优化空间与关键内核优化手段带来的性能跃升。Shui et al., 2026
+::: image-caption
+图9：五张子折线图，分别展示MoE FP8、DSA Top-k、DSA稀疏Attention、GDN Decode、GDN Prefill五类算子随迭代版本提升、相对FlashInfer基线的加速变化，虚线为1倍性能基准，圆圈标注关键优化拐点、红星是最优留存版本。各算子依托分段Wmma、专家打包、CuTe预处理、分块调度等专项优化，性能随迭代持续抬升；DSA稀疏Attention最终提速29.68倍为全组最优，DSA Top-k、GDN Prefill依次达到18.05倍、13.70倍，MoE与GDN Decode优化上限偏低，仅小幅超越基线，直观体现不同算子的优化空间与关键内核优化手段带来的性能跃升。Shui et al., 2026
 :::
 
-::: block-1从轨迹可以看到，**性能提升并不是平滑发生的，而是长期平台期之后出现少数几次明显跃迁**。:mdnice-bold-italic[有效的 Agent-Assisted kernel 优化不是单纯依赖提示词，而是依赖可测量的系统闭环]：把算子约束、评测脚手架、性能分析反馈和历史轨迹组织成可复用流程，再让智能体在其中生成、验证和保留候选。**这个过程需要人类持续设计和维护 harness。**
+::: block-1
+从轨迹可以看到，**性能提升并不是平滑发生的，而是长期平台期之后出现少数几次明显跃迁**。:mdnice-bold-italic[有效的 Agent-Assisted kernel 优化不是单纯依赖提示词，而是依赖可测量的系统闭环]：把算子约束、评测脚手架、性能分析反馈和历史轨迹组织成可复用流程，再让智能体在其中生成、验证和保留候选。**这个过程需要人类持续设计和维护 harness。**
 :::
 
 ### 3.3 Full-Agent 优化轨迹
@@ -211,7 +229,8 @@ $$
 
 ![文章插图](/articles/2026-06-05-gpu-kernel-mlsys-2026-flashinfer-9498c9ff/images/14.png)
 
-::: image-caption图10：该组五张子图展示Full-Agent全自主智能体迭代优化五类算子时，相对FlashInfer基线的性能变化，横轴为迭代轮次，虚线是1倍基准，实线为迭代最优性能、灰点是单次有效候选、红星标记最优迭代点。DSA Attention优化效果最优，29轮迭代最高提速14.54倍；DSA Indexer经16轮迭代达到3.81倍；GDN Prefill小幅超出基线至1.03倍；MoE FP8、GDN Decode全程未超越基准，最优仅分别为0.32倍、0.83倍。整体可见全自主模式在注意力类算子优化收效可观，但MoE、解码算子优化受限，多数候选方案性能波动大、大量候选劣于基线。 Ma et al., 2026
+::: image-caption
+图10：该组五张子图展示Full-Agent全自主智能体迭代优化五类算子时，相对FlashInfer基线的性能变化，横轴为迭代轮次，虚线是1倍基准，实线为迭代最优性能、灰点是单次有效候选、红星标记最优迭代点。DSA Attention优化效果最优，29轮迭代最高提速14.54倍；DSA Indexer经16轮迭代达到3.81倍；GDN Prefill小幅超出基线至1.03倍；MoE FP8、GDN Decode全程未超越基准，最优仅分别为0.32倍、0.83倍。整体可见全自主模式在注意力类算子优化收效可观，但MoE、解码算子优化受限，多数候选方案性能波动大、大量候选劣于基线。 Ma et al., 2026
 :::
 
 ::: block-1
@@ -232,7 +251,8 @@ Full-Agent 轨迹来自动搜索日志。它也能在部分算子上找到有效
 AutoKernel 整体架构图。A 阶段对模型做性能剖析并提取性能瓶颈算子；B 阶段执行自主优化循环：智能体修改 kernel.py 内核代码，基准测试模块通过五级校验规则完成正确性核验，调度器判定保留、回滚代码或切换至下一个待优化内核；C 阶段从端到端维度验证优化后模型的正确性与加速收益。三段分层解耦设计把算子定位、代码迭代、全量验证拆分，兼顾优化效率与工程落地可靠性，也是其能同时兼容 Triton、CUDA 双后端的底层保障。
 :::
 
-::: block-1系统应先用性能剖析器找出模型里的 GPU 瓶颈，再抽取独立 Triton/CUDA 内核，并用 Amdahl's law 决定下一轮优先优化哪个内核。
+::: block-1
+系统应先用性能剖析器找出模型里的 GPU 瓶颈，再抽取独立 Triton/CUDA 内核，并用 Amdahl's law 决定下一轮优先优化哪个内核。
 :::
 
 ### 4.2 实验管理与独立验证器
@@ -249,52 +269,95 @@ AutoKernel 整体架构图。A 阶段对模型做性能剖析并提取性能瓶�
 
 团队凭借人机协同方案拿下两项季军、全自主方案拿下一项亚军，实测数据清晰暴露了**纯 AI 搜索的致命短板**：全自主 Agent 仅能在简单算子上实现提速，在 MoE、GDN Decode 等复杂场景下性能甚至不如官方基线，而人机协同方案凭借人类对优化方向的把控和可验证的评测闭环，实现了全算子超越，最高提速达 29.68 倍。
 
-::: block-1这证明 **Kernel 自动化的核心瓶颈不是代码生成能力，而是如何将人类经验转化为可复用的搜索约束，并构建能沉淀失败教训的持久化记忆系统。**
+::: block-1
+这证明 **Kernel 自动化的核心瓶颈不是代码生成能力，而是如何将人类经验转化为可复用的搜索约束，并构建能沉淀失败教训的持久化记忆系统。**
 :::
 
 参考资料
 
-[1] FlashInfer Contest, 2026a: *https://mlsys26.flashinfer.ai/*
+[1]
 
-[2] Shui et al., 2026: *https://github.com/syhya/mlsys26-flashinfer-contest/blob/main/agent-assisted/report.pdf*
+FlashInfer Contest, 2026a: *https://mlsys26.flashinfer.ai/*
 
-[3] Ma et al., 2026: *https://github.com/syhya/mlsys26-flashinfer-contest/blob/main/full-agent/FULL_AGENT_WRITEUP.pdf*
+[2]
 
-[4] mlsys26-flashinfer-contest: *https://github.com/syhya/mlsys26-flashinfer-contest*
+Shui et al., 2026: *https://github.com/syhya/mlsys26-flashinfer-contest/blob/main/agent-assisted/report.pdf*
 
-[5] Ouyang et al., 2025: *https://arxiv.org/abs/2502.10517*
+[3]
 
-[6] Xing et al., 2026: *https://arxiv.org/abs/2601.00227*
+Ma et al., 2026: *https://github.com/syhya/mlsys26-flashinfer-contest/blob/main/full-agent/FULL_AGENT_WRITEUP.pdf*
 
-[7] Yu et al., 2026: *https://arxiv.org/abs/2601.15727*
+[4]
 
-[8] Liao et al., 2025: *https://arxiv.org/abs/2512.23236*
+mlsys26-flashinfer-contest: *https://github.com/syhya/mlsys26-flashinfer-contest*
 
-[9] Self-Evolving Agents: */zh/posts/2026-02-20-self-evolving-agents/*
+[5]
 
-[10] Lopopolo, 2026: *https://openai.com/index/harness-engineering/*
+Ouyang et al., 2025: *https://arxiv.org/abs/2502.10517*
 
-[11] Rajasekaran, 2026: *https://www.anthropic.com/engineering/harness-design-long-running-apps*
+[6]
 
-[12] skills: *https://github.com/syhya/mlsys26-flashinfer-contest/tree/main/agent-assisted/skills*
+Xing et al., 2026: *https://arxiv.org/abs/2601.00227*
 
-[13] 评测脚手架: *https://github.com/syhya/mlsys26-flashinfer-contest/tree/main/agent-assisted/scripts*
+[7]
 
-[14] OpenAI, 2026a: *https://developers.openai.com/codex/skills*
+Yu et al., 2026: *https://arxiv.org/abs/2601.15727*
 
-[15] OpenAI, 2026b: *https://developers.openai.com/codex/concepts/subagents*
+[8]
 
-[16] Wan et al., 2025: *https://arxiv.org/abs/2512.24077*
+Liao et al., 2025: *https://arxiv.org/abs/2512.23236*
 
-[17] Sharma, 2025: *https://github.com/algorithmicsuperintelligence/openevolve*
+[9]
 
-[18] Ye et al., 2025: *https://arxiv.org/abs/2501.01005*
+Self-Evolving Agents: */zh/posts/2026-02-20-self-evolving-agents/*
 
-[19] Xing et al., 2026: *https://arxiv.org/abs/2601.00227*
+[10]
 
-[20] Jaber et al., 2026: *https://arxiv.org/abs/2603.21331*
+Lopopolo, 2026: *https://openai.com/index/harness-engineering/*
 
-[21] FlashInfer Contest, 2026b: *https://github.com/flashinfer-ai/mlsys26-contest/tree/main/writeups*
+[11]
+
+Rajasekaran, 2026: *https://www.anthropic.com/engineering/harness-design-long-running-apps*
+
+[12]
+
+skills: *https://github.com/syhya/mlsys26-flashinfer-contest/tree/main/agent-assisted/skills*
+
+[13]
+
+评测脚手架: *https://github.com/syhya/mlsys26-flashinfer-contest/tree/main/agent-assisted/scripts*
+
+[14]
+
+OpenAI, 2026a: *https://developers.openai.com/codex/skills*
+
+[15]
+
+OpenAI, 2026b: *https://developers.openai.com/codex/concepts/subagents*
+
+[16]
+
+Wan et al., 2025: *https://arxiv.org/abs/2512.24077*
+
+[17]
+
+Sharma, 2025: *https://github.com/algorithmicsuperintelligence/openevolve*
+
+[18]
+
+Ye et al., 2025: *https://arxiv.org/abs/2501.01005*
+
+[19]
+
+Xing et al., 2026: *https://arxiv.org/abs/2601.00227*
+
+[20]
+
+Jaber et al., 2026: *https://arxiv.org/abs/2603.21331*
+
+[21]
+
+FlashInfer Contest, 2026b: *https://github.com/flashinfer-ai/mlsys26-contest/tree/main/writeups*
 
 ::: related-title
 **相关推荐**

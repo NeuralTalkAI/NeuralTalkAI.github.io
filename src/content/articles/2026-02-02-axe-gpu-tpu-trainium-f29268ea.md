@@ -7,7 +7,8 @@
 - 分布式框架（如 PyTorch DTensor、GSPMD）负责设备间的数据分片与复制；
 - 设备级 DSL（如 Triton、CuTe）则专注于 GPU 线程块和寄存器级别的数据排布与计算映射。
 
-::: block-1这种**割裂的抽象** 导致跨层优化困难，程序难以移植，更无法应对 GPU、TPU、Trainium 等**异构硬件** 带来的挑战。
+::: block-1
+这种**割裂的抽象** 导致跨层优化困难，程序难以移植，更无法应对 GPU、TPU、Trainium 等**异构硬件** 带来的挑战。
 :::
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/01.png)
@@ -28,19 +29,22 @@
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/02.png)
 
-::: image-caption图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。Axe 布局以 Iter 为核心构建逻辑索引与硬件资源的映射，D、R、O 协同实现多场景适配。D 将逻辑张量拆解到硬件轴（如 GPU 的 lane、warp），像在张量核心计算中，可把矩阵行、列维度分别映射到 lane 和 warp 轴，保证线程级数据分配合理；R 解决数据复用，如在多 warp 协作时，让不同 warp 持有相同数据块，减少通信开销；O 能避开硬件资源冲突，例如将数据部署到特定编号 warp。这种设计打破传统布局局限，为跨设备、跨内存层级映射提供统一框架，是实现硬件感知能力的关键。
+::: image-caption
+图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。Axe 布局以 Iter 为核心构建逻辑索引与硬件资源的映射，D、R、O 协同实现多场景适配。D 将逻辑张量拆解到硬件轴（如 GPU 的 lane、warp），像在张量核心计算中，可把矩阵行、列维度分别映射到 lane 和 warp 轴，保证线程级数据分配合理；R 解决数据复用，如在多 warp 协作时，让不同 warp 持有相同数据块，减少通信开销；O 能避开硬件资源冲突，例如将数据部署到特定编号 warp。这种设计打破传统布局局限，为跨设备、跨内存层级映射提供统一框架，是实现硬件感知能力的关键。
 :::
 
 > 实验表明，基于 Axe 生成的代码，性能可逼近手工调优的高性能内核，同时在编程效率和硬件覆盖率上实现了巨大飞跃。**更多性能数据见后文**。
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/03.png)
 
-::: image-caption图 11 | Qwen3-30B MoE 层延迟对比。在不同输入 token 数量下，Axe（橙色线）的延迟始终低于 FlashInfer（蓝色线）和 SGLang（深蓝线）。MoE 层是 LLM 关键组件，计算密集且数据依赖复杂，传统编译器难优化。Axe 通过细粒度流水线优化和高效算子复用提升性能，在 MoE 层 “门控选择 - 专家计算 - 结果聚合” 流程中，部分专家计算完成后即可启动下部分，减少等待时间，且统一布局复用算子。实验显示，Axe 在所有输入 token 数量下均优于 FlashInfer 和 SGLang，短输入场景比 FlashInfer 快 1.20 - 1.36 倍，长输入场景优势更显著，因 Axe 合理分配张量到 GPU 内存层级，预加载长输入数据，实现 “计算 - 传输” 重叠。Axe 开发成本低，对 LLM 推理服务快速迭代部署意义重大。
+::: image-caption
+图 11 | Qwen3-30B MoE 层延迟对比。在不同输入 token 数量下，Axe（橙色线）的延迟始终低于 FlashInfer（蓝色线）和 SGLang（深蓝线）。MoE 层是 LLM 关键组件，计算密集且数据依赖复杂，传统编译器难优化。Axe 通过细粒度流水线优化和高效算子复用提升性能，在 MoE 层 “门控选择 - 专家计算 - 结果聚合” 流程中，部分专家计算完成后即可启动下部分，减少等待时间，且统一布局复用算子。实验显示，Axe 在所有输入 token 数量下均优于 FlashInfer 和 SGLang，短输入场景比 FlashInfer 快 1.20 - 1.36 倍，长输入场景优势更显著，因 Axe 合理分配张量到 GPU 内存层级，预加载长输入数据，实现 “计算 - 传输” 重叠。Axe 开发成本低，对 LLM 推理服务快速迭代部署意义重大。
 :::
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/04.png)
 
-::: image-caption图 12 | 多 GPU GEMM+Reduce-Scatter 延迟对比。该图显示，在不同问题规模下，Axe（红色）的延迟远低于 cuBLAS+NCCL（橙色）和 Triton-distributed（蓝色）。GEMM + Reduce - Scatter 是 LLM 分布式训练核心任务，传统方案将计算与通信串行执行，延迟高；Triton - distributed 因 GEMM 性能优化不足，延迟也较高。Axe 通过 “计算 - 通信融合” 策略，在 GEMM 计算中同步传输部分结果，实现细粒度重叠，大幅减少总延迟；且统一分布式张量表示，编译器自动推断数据分布规则，减少开发成本与错误风险。实验中 Axe 在所有权重形状下延迟最低，比 cuBLAS + NCCL 提速 1.20 - 1.40 倍，比 Triton - distributed 提速 1.08 - 1.32 倍。TP=8 的设置模拟中大规模 LLM 分布式训练场景，Axe 低延迟性能提升训练吞吐量，缩短周期，且开发成本低，为大规模 LLM 分布式训练提供高效方案。
+::: image-caption
+图 12 | 多 GPU GEMM+Reduce-Scatter 延迟对比。该图显示，在不同问题规模下，Axe（红色）的延迟远低于 cuBLAS+NCCL（橙色）和 Triton-distributed（蓝色）。GEMM + Reduce - Scatter 是 LLM 分布式训练核心任务，传统方案将计算与通信串行执行，延迟高；Triton - distributed 因 GEMM 性能优化不足，延迟也较高。Axe 通过 “计算 - 通信融合” 策略，在 GEMM 计算中同步传输部分结果，实现细粒度重叠，大幅减少总延迟；且统一分布式张量表示，编译器自动推断数据分布规则，减少开发成本与错误风险。实验中 Axe 在所有权重形状下延迟最低，比 cuBLAS + NCCL 提速 1.20 - 1.40 倍，比 Triton - distributed 提速 1.08 - 1.32 倍。TP=8 的设置模拟中大规模 LLM 分布式训练场景，Axe 低延迟性能提升训练吞吐量，缩短周期，且开发成本低，为大规模 LLM 分布式训练提供高效方案。
 :::
 
 ## 本文目录
@@ -74,7 +78,13 @@
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/05.png)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
 
 ## 零、 关键问题
 
@@ -122,7 +132,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/02.png)
 
-::: image-caption图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。Axe 布局以 Iter 为核心构建逻辑索引与硬件资源的映射，D、R、O 协同实现多场景适配。D 将逻辑张量拆解到硬件轴（如 GPU 的 lane、warp），像在张量核心计算中，可把矩阵行、列维度分别映射到 lane 和 warp 轴，保证线程级数据分配合理；R 解决数据复用，如在多 warp 协作时，让不同 warp 持有相同数据块，减少通信开销；O 能避开硬件资源冲突，例如将数据部署到特定编号 warp。这种设计打破传统布局局限，为跨设备、跨内存层级映射提供统一框架，是实现硬件感知能力的关键。
+::: image-caption
+图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。Axe 布局以 Iter 为核心构建逻辑索引与硬件资源的映射，D、R、O 协同实现多场景适配。D 将逻辑张量拆解到硬件轴（如 GPU 的 lane、warp），像在张量核心计算中，可把矩阵行、列维度分别映射到 lane 和 warp 轴，保证线程级数据分配合理；R 解决数据复用，如在多 warp 协作时，让不同 warp 持有相同数据块，减少通信开销；O 能避开硬件资源冲突，例如将数据部署到特定编号 warp。这种设计打破传统布局局限，为跨设备、跨内存层级映射提供统一框架，是实现硬件感知能力的关键。
 :::
 
 ### 1.1 分布式执行（Inter-Device）
@@ -144,7 +155,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 硬件的世界并非只有 GPU。Google 的 TPU、AWS 的 Trainium 等 AI 加速器有着与 GPU 截然不同的内存架构（如多维暂存器、存储体约束）。:mdnice-bold-italic[即便在 NVIDIA 家族内部，从 Ampere 到 Hopper 再到 Blackwell，Tensor Core 的片上数据格式和要求也在不断变化。编译器必须为每种硬件生成定制化代码，同时为程序员提供相对统一的体验。]
 
-::: block-1现有的工作往往只聚焦于某一层：
+::: block-1
+现有的工作往往只聚焦于某一层：
 
 - `GSPMD`、`Alpa`擅长分布式；
 - `Triton`、`CuTe`专注于 GPU 内核开发；
@@ -161,7 +173,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/02.png)
 
-::: image-caption图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。
+::: image-caption
+图 1 | Axe Layout 组成要素示意图。该图展示了 Axe Layout 的三个组成部分：分片部分 D（由多个 Iter 组成的列表）、副本部分 R（一组 Iter）、偏移量 O。一个 Iter 定义了在某个轴上的线性带步长访问（范围，步长，轴）。
 :::
 
 ### 2.1 分片（D - Shard）
@@ -192,7 +205,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/06.png)
 
-::: image-caption图 2 | 不同场景下的 Axe 布局示例。该图从左至右展示了三个场景：左) 将 8x16 逻辑块映射到 4 个 GPU warp（32 lane/线程）和 2 个寄存器；中) 在 2x2 GPU 网格上分布式共享一个 64x128 矩阵；右) 映射到 AI 加速器的 2D 分区 SRAM 和 NVIDIA Blackwell 的 2D 张量内存。所有场景均使用同一套(D, R, O)语法描述。
+::: image-caption
+图 2 | 不同场景下的 Axe 布局示例。该图从左至右展示了三个场景：左) 将 8x16 逻辑块映射到 4 个 GPU warp（32 lane/线程）和 2 个寄存器；中) 在 2x2 GPU 网格上分布式共享一个 64x128 矩阵；右) 映射到 AI 加速器的 2D 分区 SRAM 和 NVIDIA Blackwell 的 2D 张量内存。所有场景均使用同一套(D, R, O)语法描述。
 :::
 
 上图左列，中列、右列分别代表不同场景：
@@ -213,7 +227,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/07.png)
 
-::: image-caption图 3 | Axe 编译器概述。该图展示了 Axe 编译器的工作流程。左侧是用 Axe DSL 编写的 GEMM 内核代码，其中高亮显示了执行作用域、带 Axe 布局的张量以及算子。程序使用了加载和 GEMM 宏，以及一个三阶段流水线。右侧展示了张量在共享内存和寄存器中的布局，以及`copy.async`算子如何根据布局被 lowering 为线程绑定的循环，发出具体的硬件指令。
+::: image-caption
+图 3 | Axe 编译器概述。该图展示了 Axe 编译器的工作流程。左侧是用 Axe DSL 编写的 GEMM 内核代码，其中高亮显示了执行作用域、带 Axe 布局的张量以及算子。程序使用了加载和 GEMM 宏，以及一个三阶段流水线。右侧展示了张量在共享内存和寄存器中的布局，以及`copy.async`算子如何根据布局被 lowering 为线程绑定的循环，发出具体的硬件指令。
 :::
 
 - 左侧：GEMM 内核代码通过执行作用域明确硬件层级，kernel 覆盖所有线程，cta 限定线程块内操作，warp 针对线程束级计算。带 Axe 布局的张量定义是关键，共享内存张量确保线程块内数据高效共享，寄存器张量适配 warp 内线程访问模式，让编译器自动推断数据位置。
@@ -275,7 +290,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/03.png)
 
-::: image-caption图 11 | Qwen3-30B MoE 层延迟对比。在不同输入 token 数量下，Axe（橙色线）的延迟始终低于 FlashInfer（蓝色线）和 SGLang（深蓝线）。MoE 层是 LLM 关键组件，计算密集且数据依赖复杂，传统编译器难优化。Axe 通过细粒度流水线优化和高效算子复用提升性能，在 MoE 层 “门控选择 - 专家计算 - 结果聚合” 流程中，部分专家计算完成后即可启动下部分，减少等待时间，且统一布局复用算子。实验显示，Axe 在所有输入 token 数量下均优于 FlashInfer 和 SGLang，短输入场景比 FlashInfer 快 1.20 - 1.36 倍，长输入场景优势更显著，因 Axe 合理分配张量到 GPU 内存层级，预加载长输入数据，实现 “计算 - 传输” 重叠。Axe 开发成本低，对 LLM 推理服务快速迭代部署意义重大。
+::: image-caption
+图 11 | Qwen3-30B MoE 层延迟对比。在不同输入 token 数量下，Axe（橙色线）的延迟始终低于 FlashInfer（蓝色线）和 SGLang（深蓝线）。MoE 层是 LLM 关键组件，计算密集且数据依赖复杂，传统编译器难优化。Axe 通过细粒度流水线优化和高效算子复用提升性能，在 MoE 层 “门控选择 - 专家计算 - 结果聚合” 流程中，部分专家计算完成后即可启动下部分，减少等待时间，且统一布局复用算子。实验显示，Axe 在所有输入 token 数量下均优于 FlashInfer 和 SGLang，短输入场景比 FlashInfer 快 1.20 - 1.36 倍，长输入场景优势更显著，因 Axe 合理分配张量到 GPU 内存层级，预加载长输入数据，实现 “计算 - 传输” 重叠。Axe 开发成本低，对 LLM 推理服务快速迭代部署意义重大。
 :::
 
 上图表示了不同输入 token 数量下 Qwen3 - 30B - A3B（FP16 精度）混合专家（MoE）层的延迟（ms，毫秒），数值越低表示性能越好。
@@ -288,7 +304,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/04.png)
 
-::: image-caption图 12 | 多 GPU GEMM+Reduce-Scatter 延迟对比。该图显示，在不同问题规模下，Axe（红色）的延迟远低于 cuBLAS+NCCL（橙色）和 Triton-distributed（蓝色）。GEMM + Reduce - Scatter 是 LLM 分布式训练核心任务，传统方案将计算与通信串行执行，延迟高；Triton - distributed 因 GEMM 性能优化不足，延迟也较高。Axe 通过 “计算 - 通信融合” 策略，在 GEMM 计算中同步传输部分结果，实现细粒度重叠，大幅减少总延迟；且统一分布式张量表示，编译器自动推断数据分布规则，减少开发成本与错误风险。实验中 Axe 在所有权重形状下延迟最低，比 cuBLAS + NCCL 提速 1.20 - 1.40 倍，比 Triton - distributed 提速 1.08 - 1.32 倍。TP=8 的设置模拟中大规模 LLM 分布式训练场景，Axe 低延迟性能提升训练吞吐量，缩短周期，且开发成本低，为大规模 LLM 分布式训练提供高效方案。
+::: image-caption
+图 12 | 多 GPU GEMM+Reduce-Scatter 延迟对比。该图显示，在不同问题规模下，Axe（红色）的延迟远低于 cuBLAS+NCCL（橙色）和 Triton-distributed（蓝色）。GEMM + Reduce - Scatter 是 LLM 分布式训练核心任务，传统方案将计算与通信串行执行，延迟高；Triton - distributed 因 GEMM 性能优化不足，延迟也较高。Axe 通过 “计算 - 通信融合” 策略，在 GEMM 计算中同步传输部分结果，实现细粒度重叠，大幅减少总延迟；且统一分布式张量表示，编译器自动推断数据分布规则，减少开发成本与错误风险。实验中 Axe 在所有权重形状下延迟最低，比 cuBLAS + NCCL 提速 1.20 - 1.40 倍，比 Triton - distributed 提速 1.08 - 1.32 倍。TP=8 的设置模拟中大规模 LLM 分布式训练场景，Axe 低延迟性能提升训练吞吐量，缩短周期，且开发成本低，为大规模 LLM 分布式训练提供高效方案。
 :::
 
 ### 4.3 能否支持异构硬件后端？
@@ -301,7 +318,8 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 
 ![文章插图](/articles/2026-02-02-axe-gpu-tpu-trainium-f29268ea/images/08.png)
 
-::: image-caption图 13 | FP16 GEMM 和多头注意力的测试结果。FP16 GEMM 在方形形状上测试，MHA 在不同输入长度且无因果掩码的情况下测试，数值越高表示性能越好（纵轴 “Rel. perf.（×）” 为相对性能倍数）。该图显示，Axe（橙色）在左图 FP16 GEMM 上性能与手工 NKI（蓝色）持平，在右图 MHA 上性能显著优于手工 NKI。
+::: image-caption
+图 13 | FP16 GEMM 和多头注意力的测试结果。FP16 GEMM 在方形形状上测试，MHA 在不同输入长度且无因果掩码的情况下测试，数值越高表示性能越好（纵轴 “Rel. perf.（×）” 为相对性能倍数）。该图显示，Axe（橙色）在左图 FP16 GEMM 上性能与手工 NKI（蓝色）持平，在右图 MHA 上性能显著优于手工 NKI。
 :::
 
 - 左图 FP16 GEMM 实验在 Trainium 1 AI 加速器上进行，:mdnice-bold-italic[Axe 在所有方形矩阵形状下均匹配手写 NKI 库性能，体现其对 AI 加速器硬件特性的适配能力。Axe 通过布局优化将矩阵块映射到加速器计算单元，适配硬件指令要求，充分利用硬件资源。]
@@ -339,4 +357,10 @@ Axe 在保持统一抽象的同时，通过其灵活的轴映射机制避免了�
 - [无需手动构建MegaKernels！Luminal 编译生成 MegaKernels：解决 GPU SM 负载不均，消除内核启动开销与内存气泡，适配任意架构！](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447896119&idx=1&sn=80dce399f083de55a8cded74e2a54c3d&scene=21#wechat_redirect)
 - [性能相比SGLang/vLLM最高提升1.7倍！Mirage Persistent Kernel：首个自动巨核化多GPU LLM推理的编译器-运行时系统，细粒度计算-通信重叠](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447895728&idx=1&sn=88a267756d2f2057f868d43f0500841f&scene=21#wechat_redirect)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群

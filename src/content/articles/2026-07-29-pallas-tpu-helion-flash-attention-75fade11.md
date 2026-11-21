@@ -43,7 +43,8 @@ Helion 给出的答案是，让开发者写熟悉的 PyTorch 风格代码，由�
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/03.png)
 
-::: image-caption图 1：TPU 计算与内存层次结构，自上而下依次为 MXU 与向量计算单元、VREGs（最快、片上）、VMEM（快速、片上）、HBM（大容量、片外）。这张图也揭示了 TPU 编程的核心矛盾：计算单元只直接消费 VREGs 与 VMEM 中的数据，而模型数据栖身于 HBM，二者之间的搬运必须由内核显式编排。一个高性能 Pallas 内核的本质，就是让这条搬运链路与计算在时间轴上严丝合缝地重叠，任何空隙都是算力的浪费。
+::: image-caption
+图 1：TPU 计算与内存层次结构，自上而下依次为 MXU 与向量计算单元、VREGs（最快、片上）、VMEM（快速、片上）、HBM（大容量、片外）。这张图也揭示了 TPU 编程的核心矛盾：计算单元只直接消费 VREGs 与 VMEM 中的数据，而模型数据栖身于 HBM，二者之间的搬运必须由内核显式编排。一个高性能 Pallas 内核的本质，就是让这条搬运链路与计算在时间轴上严丝合缝地重叠，任何空隙都是算力的浪费。
 :::
 
 值得注意的是，尽管架构哲学迥异，当代 TPU 与 GPU 的原始性能已经高度可比。:mdnice-bold-italic[TPU7x 与 NVIDIA B200 在 BF16 计算 TFLOPS 和 HBM 带宽上非常接近。硬件指标趋同，意味着竞争的胜负手转移到软件栈：谁能把硬件峰值更稳定地释放出来，谁就能在成本敏感的算力市场占据主动]。这正是 Helion 切入的位置。
@@ -62,7 +63,8 @@ Helion 给出的答案是，让开发者写熟悉的 PyTorch 风格代码，由�
 
 这三类场景的共性，是**把"硬件专家知识"从内核开发的必要前提，变成编译器内建的能力**。这个思路与主流内核 DSL 在 GPU 上的成功路径一脉相承：:mdnice-bold-italic[保留高级语言表达，把硬件细节交给编译器。如今 TPU 后端编译到 Pallas，Helion 在朝着"硬件异构内核编写"的愿景演进]，这也是标题中 Towards Hardware Heterogeneous Kernel Authoring 的含义所在。
 
-::: block-1总而言之，:mdnice-highlight[Helion 的价值主张是双重的：向下屏蔽 Pallas 的复杂性，向上保留 PyTorch 的表达习惯，横向打通 GPU 与 TPU 的内核维护]，其本质是把硬件专业知识沉淀进编译器与自动调优器。
+::: block-1
+总而言之，:mdnice-highlight[Helion 的价值主张是双重的：向下屏蔽 Pallas 的复杂性，向上保留 PyTorch 的表达习惯，横向打通 GPU 与 TPU 的内核维护]，其本质是把硬件专业知识沉淀进编译器与自动调优器。
 :::
 
 ## 三、从 add 内核看懂 Helion 的 Pallas 代码生成
@@ -95,7 +97,8 @@ def _helion_add(x, y, out):    out[:] = x[:] + y[:]def add(x: torch.Tensor, 
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/04.png)
 
-::: image-caption图 2：add 内核流水线执行时序，内存时间轴上依次执行加载分块 0 至 3，计算时间轴上相应执行分块 0 至 3 的加法，二者错开半个节拍持续重叠。这张图直观地展示了软件流水线的收益形态：除了流水线启动和排空的短暂首尾阶段，内存通道与计算单元始终都有活干。这正是 TPU 编程中最难手工做好的部分，而 Helion 用户写下的只是一个普通的分块循环。
+::: image-caption
+图 2：add 内核流水线执行时序，内存时间轴上依次执行加载分块 0 至 3，计算时间轴上相应执行分块 0 至 3 的加法，二者错开半个节拍持续重叠。这张图直观地展示了软件流水线的收益形态：除了流水线启动和排空的短暂首尾阶段，内存通道与计算单元始终都有活干。这正是 TPU 编程中最难手工做好的部分，而 Helion 用户写下的只是一个普通的分块循环。
 :::
 
 回顾第一章的内存层次图，可以把这里发生的事理解为一个注水模型：HBM 是水库，VMEM 是蓄水池，计算单元是水轮机。拙劣的内核让水轮机空转等水，优秀的内核则在发电的同时预热下一段水流。**Helion 生成的启动器代码，本质上就是一个自动化的水闸调度系统，而调度参数由自动调优器通过实测确定，无需开发者拍脑袋。**
@@ -127,7 +130,8 @@ def _helion_attention(q_VMEM, k_HBM, v_HBM, out_VMEM):    acc = ...    this
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/05.png)
 
-::: image-caption图 3：emit_pipeline 方案下 Flash Attention 的流水线时序，内存轴上 Q0 之后依次加载 KV0、KV1、KV2，随后 Q1 与又一轮 KV0、KV1、KV2，计算轴上相应执行各组 Q 与 KV 分块的计算。当然，这张图暴露了该方案的结构性弱点：每当新的 Q 分块到来，整套 KV 分块都要从 HBM 重新加载，而在抓取第 0 个 KV 分块的窗口内，计算单元无活可干，形成清晰可见的气泡。其根源在于 KV 数据没有被跨 Q 分块复用。
+::: image-caption
+图 3：emit_pipeline 方案下 Flash Attention 的流水线时序，内存轴上 Q0 之后依次加载 KV0、KV1、KV2，随后 Q1 与又一轮 KV0、KV1、KV2，计算轴上相应执行各组 Q 与 KV 分块的计算。当然，这张图暴露了该方案的结构性弱点：每当新的 Q 分块到来，整套 KV 分块都要从 HBM 重新加载，而在抓取第 0 个 KV 分块的窗口内，计算单元无活可干，形成清晰可见的气泡。其根源在于 KV 数据没有被跨 Q 分块复用。
 :::
 
 ### 4.2 备选方案 unroll：用 VMEM 容量换零气泡
@@ -145,7 +149,8 @@ def _helion_attention(q_VMEM, k_VMEM_FULL, v_VMEM_FULL, out_VMEM):    acc = .
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/06.png)
 
-::: image-caption图 4：unroll 方案流水线时序，内存轴上先一次性加载完整 KV，之后仅需依次加载 Q0、Q1 等查询分块，计算轴上各组 Q 与 KV 分块的计算首尾相接。与图 3 对照可以一眼看出差异：计算流水线上的气泡彻底消失，Q0 与 Q1 的计算批次之间不再隔着 KV 重载的空窗。代价同样直观——内存轴前端那次完整 KV 加载意味着 VMEM 必须装得下整个 K 与 V 序列。
+::: image-caption
+图 4：unroll 方案流水线时序，内存轴上先一次性加载完整 KV，之后仅需依次加载 Q0、Q1 等查询分块，计算轴上各组 Q 与 KV 分块的计算首尾相接。与图 3 对照可以一眼看出差异：计算流水线上的气泡彻底消失，Q0 与 Q1 的计算批次之间不再隔着 KV 重载的空窗。代价同样直观——内存轴前端那次完整 KV 加载意味着 VMEM 必须装得下整个 K 与 V 序列。
 :::
 
 代价可以用一个简单式子刻画。设序列长度为 $S$，头维度为 $D$，每个元素占 $b$ 字节，则单个批量、单个注意力头分片下，完整驻留 K 与 V 所需的 VMEM 为：
@@ -158,7 +163,8 @@ $$
 
 这解释了给出的对照数据：在批量 8、头数 32、头维度 256 的负载上，序列长 8k 时 unroll 跑出 892 TFLOPs，显著高于 `emit_pipeline` 的 653 TFLOPs；但序列长 32k 时，unroll 直接显存溢出，`emit_pipeline` 则以 695 TFLOPs 成为唯一可行解。
 
-::: block-1于是 Helion 自动调优的价值闭环浮现出来：**短序列时，它选择 unroll，充分利用可用 VMEM 生成零气泡的流水线代码；长序列时，它回退到 emit_pipeline，后者可以扩展到任意上下文长度**。这个按输入形状切换代码生成策略的能力，正是 Helion 即便面对 Tokamax 这类高度优化的实现也能占据上风的根源。
+::: block-1
+于是 Helion 自动调优的价值闭环浮现出来：**短序列时，它选择 unroll，充分利用可用 VMEM 生成零气泡的流水线代码；长序列时，它回退到 emit_pipeline，后者可以扩展到任意上下文长度**。这个按输入形状切换代码生成策略的能力，正是 Helion 即便面对 Tokamax 这类高度优化的实现也能占据上风的根源。
 :::
 
 ## 五、性能数字：838 TFLOPs、4.45 倍加速与 1.55 倍几何平均
@@ -174,7 +180,8 @@ $$
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/07.png)
 
-::: image-caption图 5：Helion 注意力内核与 Pallas 参考实现（JAX 仓库）、Tokamax、纯 JAX（无 Pallas）在不同序列长度下的前向速度对比，测试条件为非因果前向、批量 8、头数 32、头维度 256、BF16。这条曲线的关键信息有两层：其一，Helion 在 8192 及以内全面领先并于 8192 处达到 892 TFLOPs 峰值，这是 unroll 策略吃满 VMEM 后的零气泡红利；其二，16384 与 32768 处 Helion 回落至 695 TFLOPs 附近，被 Tokamax 的 726 与 748 TFLOPs 反超，说明回退到 emit_pipeline 后 Helion 的长序列流水线效率仍有提升空间，这也呼应了博客"进一步性能改进"的在研方向。
+::: image-caption
+图 5：Helion 注意力内核与 Pallas 参考实现（JAX 仓库）、Tokamax、纯 JAX（无 Pallas）在不同序列长度下的前向速度对比，测试条件为非因果前向、批量 8、头数 32、头维度 256、BF16。这条曲线的关键信息有两层：其一，Helion 在 8192 及以内全面领先并于 8192 处达到 892 TFLOPs 峰值，这是 unroll 策略吃满 VMEM 后的零气泡红利；其二，16384 与 32768 处 Helion 回落至 695 TFLOPs 附近，被 Tokamax 的 726 与 748 TFLOPs 反超，说明回退到 emit_pipeline 后 Helion 的长序列流水线效率仍有提升空间，这也呼应了博客"进一步性能改进"的在研方向。
 :::
 
 作者提到，:mdnice-bold-italic[自动调优器按输入长度切换循环与流水线策略的能力，正是 Helion 即便面对 Tokamax 这类高度优化实现也能占据上风的根源——这句话在 8k 以内的区间完全成立，在更长序列上则更多是"保持第一梯队"而非"保持第一"。]
@@ -183,7 +190,8 @@ $$
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/08.png)
 
-::: image-caption图 6：Helion 与 TorchTPU eager、torch.compile 在 16 个内核上的性能对比图表。全表呈明显的两极分布：attention、rms_norm 反向、bmm 等融合或复杂模式内核上 Helion 大幅领先，而 layer_norm、rms_norm、cross_entropy 等标准算子上 XLA 仍占优。这张图实际上是一份编译器能力地图，标出了 Helion 自动调优当前的射程与 XLA 成熟优化的腹地，也为用户选择工具链提供了直接依据。
+::: image-caption
+图 6：Helion 与 TorchTPU eager、torch.compile 在 16 个内核上的性能对比图表。全表呈明显的两极分布：attention、rms_norm 反向、bmm 等融合或复杂模式内核上 Helion 大幅领先，而 layer_norm、rms_norm、cross_entropy 等标准算子上 XLA 仍占优。这张图实际上是一份编译器能力地图，标出了 Helion 自动调优当前的射程与 XLA 成熟优化的腹地，也为用户选择工具链提供了直接依据。
 :::
 
 ![文章插图](/articles/2026-07-29-pallas-tpu-helion-flash-attention-75fade11/images/09.jpg)
@@ -195,7 +203,8 @@ $$
 
 同样值得注意的是硬币的另一面：在 matmul、layer_norm、rms_norm、cross_entropy 等**标准算子上，Helion 相对 torch.compile 的加速比在 0.68 倍到 0.96 倍之间，均落于下风**。
 
-::: block-1作者对此的解释：Helion 的最大优势体现在那些采用融合或特定优化模式、而 XLA 难以自动识别的内核上，Flash Attention 是典型代表；对于 matmul 和 layer_norm 等标准操作，XLA 编译器已能生成高质量代码，Helion 的性能与之相当。:mdnice-highlight[这组数据明确了 Helion 当前的适用边界：它专精于复杂融合内核的优化，尚无法全面替代 XLA 对标准算子的优化能力。]
+::: block-1
+作者对此的解释：Helion 的最大优势体现在那些采用融合或特定优化模式、而 XLA 难以自动识别的内核上，Flash Attention 是典型代表；对于 matmul 和 layer_norm 等标准操作，XLA 编译器已能生成高质量代码，Helion 的性能与之相当。:mdnice-highlight[这组数据明确了 Helion 当前的适用边界：它专精于复杂融合内核的优化，尚无法全面替代 XLA 对标准算子的优化能力。]
 :::
 
 ## 行业意义与未来路线

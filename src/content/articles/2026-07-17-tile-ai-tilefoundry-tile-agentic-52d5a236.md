@@ -24,7 +24,8 @@
 
 **TileFoundry 试图在二者之间架起一座“可编译的桥”**：用户用 Python DSL 描述张量意图，系统把它解析为高层 HIR，再经 Pass 降到 TIR，最终拆分生成 CUDA device module 与 CPU host wrapper，并通过运行时加载为可直接调用的 Python 对象。
 
-::: block-1它当前还是 Alpha 阶段，但代码已经展示出:mdnice-highlight[一个严肃编译器项目的骨架：明确的 IR 分层、注册式 Op Schema、PassManager、代码生成模板、运行时 ABI，以及围绕 spec 的工程纪律。]
+::: block-1
+它当前还是 Alpha 阶段，但代码已经展示出:mdnice-highlight[一个严肃编译器项目的骨架：明确的 IR 分层、注册式 Op Schema、PassManager、代码生成模板、运行时 ABI，以及围绕 spec 的工程纪律。]
 :::
 
 ## 本文目录
@@ -191,7 +192,8 @@ Op 系统则通过 `OpSchema` 注册表提供统一入口。`tf` dialect 对应 
 
 这很值得注意。很多编译器项目一开始就试图把 buffer reuse、shared memory packing、liveness analysis 做到复杂而精巧，结果主线难以稳定。TileFoundry 这里先把接口边界切出来：`LifetimeCollector` 负责收集生命周期，`BufferScheduler` 负责 placement。当前策略保守，但未来可以替换为真正的复用调度器，而不必改变 pass 外部契约。
 
-::: block-1换句话说，它先造“插槽”，再逐步插入更聪明的调度策略。这是编译器架构中非常重要的可演进性。
+::: block-1
+换句话说，它先造“插槽”，再逐步插入更聪明的调度策略。这是编译器架构中非常重要的可演进性。
 :::
 
 ## 六、代码生成与链接：split pipeline 的关键价值
@@ -290,7 +292,9 @@ auto-alloc 的实现会从输入 torch.Tensor 推断 device，再按 ABI 中记�
 
 参考资料
 
-[1] `docs/develop.md`: *https://github.com/tile-ai/TileFoundry/blob/main/docs/develop.md*
+[1]
+
+`docs/develop.md`: *https://github.com/tile-ai/TileFoundry/blob/main/docs/develop.md*
 
 ::: related-title
 **相关推荐**

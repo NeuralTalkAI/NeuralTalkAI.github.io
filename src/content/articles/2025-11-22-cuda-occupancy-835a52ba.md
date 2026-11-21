@@ -20,12 +20,19 @@
 
 需注意，**占用率是性能优化手段而非目标**，需通过代码剖析验证优化效果，最终解锁 GPU 计算潜力。
 
-::: block-1本文将**深入探讨占用率的定义、重要性，以及 GPU 流多处理器（SM）上的资源限制对占用率的影响**。我们还将探讨:mdnice-bold-italic[如何通过理解资源分配]，帮助 CUDA 开发人员编写更高效的 GPU Kernel 函数。
+::: block-1
+本文将**深入探讨占用率的定义、重要性，以及 GPU 流多处理器（SM）上的资源限制对占用率的影响**。我们还将探讨:mdnice-bold-italic[如何通过理解资源分配]，帮助 CUDA 开发人员编写更高效的 GPU Kernel 函数。
 :::
 
 ![文章插图](/articles/2025-11-22-cuda-occupancy-835a52ba/images/02.png)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
 
 ## 本文目录
 
@@ -51,7 +58,13 @@
 
 ![文章插图](/articles/2025-11-22-cuda-occupancy-835a52ba/images/03.png)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
 
 ## 关键问题
 
@@ -59,7 +72,8 @@
 
 > 在 A100 SM（2048 线程槽、32 块槽、65536 寄存器）场景下，若内核**同时面临“块槽不足** （如 32 线程/块时仅能跑 32 块）”**与“寄存器压力** （如单线程需 40 寄存器）”的双重限制，**应优先调整块大小还是优化寄存器 usage，才能以【最低开发】成本实现占用率最大提升？**
 
-::: block-1应**优先调整块大小，再针对性优化寄存器 usage**，这是兼顾“低开发成本”与“占用率提升”的核心路径。
+::: block-1
+应**优先调整块大小，再针对性优化寄存器 usage**，这是兼顾“低开发成本”与“占用率提升”的核心路径。
 :::
 
 从 A100 SM 硬件参数看，其支持 2048 线程槽、32 块槽及 65536 寄存器：
@@ -82,7 +96,8 @@
 1. **判断是否为寄存器溢出代价**：用编译器 flag `-Xptxas -v` 查看寄存器溢出情况，若输出“spilled to local memory”，说明溢出导致额外内存访问延迟（与作者提到的“寄存器溢出虽可能提占用率但增延迟”一致）；
 2. **排查其他资源瓶颈**：
 
-::: block-1修正方向：
+::: block-1
+修正方向：
 
 - 若为溢出，可通过`__launch_bounds__`提示编译器优化寄存器分配；
 - 若为内存模式问题，需调整块大小以适配 GPU 内存合并访问规则，确保“占用率提升”与“执行效率”同步。
@@ -105,7 +120,8 @@
 
 为什么要追求高占用率？最主要的原因是为了**隐藏延迟**。
 
-::: block-1像访问全局内存（global memory，GPU 中容量较大但访问速度较慢的内存区域）这类操作，可能需要数百个时钟周期才能完成。在这段时间里，对应的线程束会处于停滞状态，等待数据返回。
+::: block-1
+像访问全局内存（global memory，GPU 中容量较大但访问速度较慢的内存区域）这类操作，可能需要数百个时钟周期才能完成。在这段时间里，对应的线程束会处于停滞状态，等待数据返回。
 
 NeuralTalk 注：这里要进一步量化需要多少 ops 可以隐藏延迟，可以参考 Little's Law，以及要隐藏访存和计算指令的延迟，需要多少个 warp，后文补充。
 
@@ -235,7 +251,8 @@ Vasily Volkov 的博士论文中，对 Maxwell 架构的 GPU，应用 Little's L
 - 此时活跃线程数变为：3 个线程块 × 512 线程/线程块 = 1536 个。
 - 实际使用的寄存器数量为：1536 个线程 × 33 个寄存器/线程 = 50688 个，远低于寄存器池上限。
 
-::: block-1然而，**仅仅因为添加了两个变量，你的占用率就从 100%（2048 个线程）骤降到 75%（1536 个线程）！**
+::: block-1
+然而，**仅仅因为添加了两个变量，你的占用率就从 100%（2048 个线程）骤降到 75%（1536 个线程）！**
 
 活跃线程束数量的减少会严重影响延迟隐藏能力，进而对性能造成显著冲击。
 :::
@@ -272,7 +289,8 @@ NVIDIA 提供了一个基于电子表格的工具——CUDA 占用率计算器�
 
 你只需输入目标 GPU 架构、核函数的资源使用情况（每个线程块的线程数、每个线程的寄存器数、每个线程块的共享内存量），**该工具就能计算出理论占用率，并识别出限制占用率的关键因素。**
 
-::: block-1在进行大量性能分析前，这是一个非常有价值的分析工具。
+::: block-1
+在进行大量性能分析前，这是一个非常有价值的分析工具。
 :::
 
 ## 总结
@@ -281,24 +299,37 @@ NVIDIA 提供了一个基于电子表格的工具——CUDA 占用率计算器�
 
 占用率由以下因素共同决定：核函数的配置（线程块大小）、核函数的资源需求（每个线程的寄存器数、每个线程块的共享内存量），以及 GPU 流多处理器（SM）的特定硬件限制（最大线程数、最大线程块数、寄存器总量、共享内存总量）。
 
-::: block-1通过理解 SM 资源的动态分配方式，以及不同限制如何制约活跃线程束数量，开发人员可以更明智地选择线程块大小和管理资源使用。**虽然最大化占用率通常是有益的，但要记住，占用率只是实现目标的手段——最终目标是更高的性能**。
+::: block-1
+通过理解 SM 资源的动态分配方式，以及不同限制如何制约活跃线程束数量，开发人员可以更明智地选择线程块大小和管理资源使用。**虽然最大化占用率通常是有益的，但要记住，占用率只是实现目标的手段——最终目标是更高的性能**。
 :::
 
 因此，**【务必】通过性能分析工具（如 NVIDIA Nsight）验证**：为提高占用率而进行的代码修改，是否真的能缩短执行时间。使用 CUDA 占用率计算器这类工具，可以为优化工作提供指导，帮助你充分释放 GPU 的计算潜力。
 
 参考资料
 
-[1] Stream-K: Work-centric Parallel Decomposition for Dense Matrix-Matrix Multiplication on the GPU: *https://arxiv.org/pdf/2301.03598*
+[1]
 
-[2] Little's Law: *https://modal.com/gpu-glossary/perf/littles-law*
+Stream-K: Work-centric Parallel Decomposition for Dense Matrix-Matrix Multiplication on the GPU: *https://arxiv.org/pdf/2301.03598*
 
-[3] Quantitative System Performance: *https://homes.cs.washington.edu/~lazowska/qsp/Images/Chap_03.pdf*
+[2]
 
-[4] Understanding Latency Hiding on GPUs: *https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf*
+Little's Law: *https://modal.com/gpu-glossary/perf/littles-law*
 
-[5] CUDA Pro Tip: Minimize the Tail Effect: *https://developer.nvidia.com/blog/cuda-pro-tip-minimize-the-tail-effect/*
+[3]
 
-[6] CUDA Pro Tip: Minimize the Tail Effect: *https://developer.nvidia.com/blog/cuda-pro-tip-minimize-the-tail-effect/*
+Quantitative System Performance: *https://homes.cs.washington.edu/~lazowska/qsp/Images/Chap_03.pdf*
+
+[4]
+
+Understanding Latency Hiding on GPUs: *https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf*
+
+[5]
+
+CUDA Pro Tip: Minimize the Tail Effect: *https://developer.nvidia.com/blog/cuda-pro-tip-minimize-the-tail-effect/*
+
+[6]
+
+CUDA Pro Tip: Minimize the Tail Effect: *https://developer.nvidia.com/blog/cuda-pro-tip-minimize-the-tail-effect/*
 
 更多推荐
 
@@ -306,4 +337,10 @@ NVIDIA 提供了一个基于电子表格的工具——CUDA 占用率计算器�
 - [移动端GPU矩阵乘优化](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447885554&idx=1&sn=7f3078d27555c151e05aa967b5de68b8&scene=21#wechat_redirect)
 - [代码开源！OSDI'25 通过类 eBPF 探测实现可编程细粒度 GPU 内核分析工具 Neutrino：跨厂商GPU剖析工具！](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447892532&idx=1&sn=446017b09eaec1e92fb6d77ed8301908&scene=21#wechat_redirect)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群

@@ -6,7 +6,8 @@
 
 ![文章插图](/articles/2026-09-30-mlc-tirx-harness-gpu-compiler-ba3fdfea/images/01.jpg)
 
-::: image-caption面向 GPU 内核开发的 TIRx Harness 智能编译框架。左侧 Agent 工作流依托大模型，从 TIRx Harness 知识库读取内核与硬件资料，调用领域编译器分析内核、获取诊断信息；TIRx 底层提供稳定可扩展 IR，基准测试服务器在 GPU 上运行测试，校验正确性并使用 NCU、IKET 做性能剖析。智能体持续收集迭代数据，进入自优化环节，沉淀演化记录与优化内核，形成闭环，持续迭代产出更高质量的 GPU 计算内核。
+::: image-caption
+面向 GPU 内核开发的 TIRx Harness 智能编译框架。左侧 Agent 工作流依托大模型，从 TIRx Harness 知识库读取内核与硬件资料，调用领域编译器分析内核、获取诊断信息；TIRx 底层提供稳定可扩展 IR，基准测试服务器在 GPU 上运行测试，校验正确性并使用 NCU、IKET 做性能剖析。智能体持续收集迭代数据，进入自优化环节，沉淀演化记录与优化内核，形成闭环，持续迭代产出更高质量的 GPU 计算内核。
 :::
 
 ![文章插图](/articles/2026-09-30-mlc-tirx-harness-gpu-compiler-ba3fdfea/images/02.jpg)
@@ -36,7 +37,8 @@
 
 我们将这些环节整合称为**编译支撑框架（Compiler Harness）**：围绕编译基础打造的、面向智能体的开发环境，包含特定领域的分析与诊断工具、针对中间表示（IR）的知识体系，以及基准测试与评估工具。随着智能体编程将更多工作从编写代码转向塑造智能体运行的环境，我们预计这一层级将变得愈发重要。
 
-::: block-1这一框架的设计灵感来源于当前多个 AI 导向的系统设计方向，其中CAKE[2]明确提出了编译器与智能体协同设计的理念，而OpenAI 的 Jalapeño 项目[3]则体现了相关的全栈设计原则：将编程目标本身设计得足够清晰、可预测，让 AI 能够有效开展优化。
+::: block-1
+这一框架的设计灵感来源于当前多个 AI 导向的系统设计方向，其中CAKE[2]明确提出了编译器与智能体协同设计的理念，而OpenAI 的 Jalapeño 项目[3]则体现了相关的全栈设计原则：将编程目标本身设计得足够清晰、可预测，让 AI 能够有效开展优化。
 
 **[陈天奇团队提出 CAKE：编译器与智能体协同进化，可进化 IR 让 KDA 提速 2.05 倍](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447904925&idx=1&sn=ab085dc1e9e6c73917c8853a398775d7&scene=21#wechat_redirect)**
 
@@ -149,7 +151,8 @@ KCoral 将智能体开发与 GPU 执行分离，并对测量任务进行集中�
 
 TIRx 贴近硬件的编程接口还让智能体可以直接针对硬件资源做权衡。
 
-::: block-1在 KDA 反向传播中，智能体将转置、对角缩放和逐行点积运算都迁移到了张量核心（Tensor Core）路径上。:mdnice-bold-italic[对于点积运算，它计算了完整的 64×64 矩阵后只保留对角元素，刻意通过增加张量核心的运算量，来消除繁忙线程束（warp）中的共享内存中间结果与规约操作。这种反直觉的权衡——利用利用率较低的硬件路径执行更多算术运算，来缓解瓶颈路径的压力——将延迟降低了约 15%。]
+::: block-1
+在 KDA 反向传播中，智能体将转置、对角缩放和逐行点积运算都迁移到了张量核心（Tensor Core）路径上。:mdnice-bold-italic[对于点积运算，它计算了完整的 64×64 矩阵后只保留对角元素，刻意通过增加张量核心的运算量，来消除繁忙线程束（warp）中的共享内存中间结果与规约操作。这种反直觉的权衡——利用利用率较低的硬件路径执行更多算术运算，来缓解瓶颈路径的压力——将延迟降低了约 15%。]
 :::
 
 ### 2.2 迁移优化策略
@@ -210,21 +213,36 @@ TIRx Harness 智能体生成内核相对参考实现的加速比。纵轴是相�
 
 参考资料
 
-[1] TIRx Harness: *https://github.com/mlc-ai/TIRx-harness*
+[1]
 
-[2] CAKE: *https://arxiv.org/abs/2608.12629*
+TIRx Harness: *https://github.com/mlc-ai/TIRx-harness*
 
-[3] OpenAI 的 Jalapeño 项目: *https://x.com/cdleary/article/2094878051238887834*
+[2]
 
-[4] Humanize 2 的 flame chase 工作流: *https://humanfia.ai/*
+CAKE: *https://arxiv.org/abs/2608.12629*
 
-[5] TIRx-kernels: *https://github.com/mlc-ai/tirx-kernels*
+[3]
 
-[6] GitHub 仓库: *https://github.com/mlc-ai/TIRx-harness*
+OpenAI 的 Jalapeño 项目: *https://x.com/cdleary/article/2094878051238887834*
 
-[7] 《Agentic GPU Programming for MLSys（机器学习系统智能体 GPU 编程）》: *https://mlc.ai/agentic-gpu-programming-for-mlsys/*
+[4]
 
-::: related-title相关推荐
+Humanize 2 的 flame chase 工作流: *https://humanfia.ai/*
+
+[5]
+
+TIRx-kernels: *https://github.com/mlc-ai/tirx-kernels*
+
+[6]
+
+GitHub 仓库: *https://github.com/mlc-ai/TIRx-harness*
+
+[7]
+
+《Agentic GPU Programming for MLSys（机器学习系统智能体 GPU 编程）》: *https://mlc.ai/agentic-gpu-programming-for-mlsys/*
+
+::: related-title
+相关推荐
 :::
 
 ::: related-links

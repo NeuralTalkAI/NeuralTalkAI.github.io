@@ -41,7 +41,7 @@
 
 ## 本文目录
 
-- 一、钱花在哪了：82% 的会话在用最贵的模型干最便宜的活
+- **交流加群请在 NeuralTalk 公众号后台回复：加群**一、钱花在哪了：82% 的会话在用最贵的模型干最便宜的活
 - 二、Smart Routing：在任务开始前就定好用哪个模型
   - 2.1 为什么选"任务级路由"而不是"请求级路由"
   - 2.2 路由器怎么判断任务难度
@@ -58,9 +58,7 @@
 
 ![文章插图](/articles/2026-08-23-agent-databricks-model-harness-56-1559fe11/images/02.webp)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
-
-## 一、钱花在哪了：82% 的会话在用最贵的模型干最便宜的活
+## **交流加群请在 NeuralTalk 公众号后台回复：加群**一、钱花在哪了：82% 的会话在用最贵的模型干最便宜的活
 
 > Databricks 就智能路由（Smart Routing）发布文章《Smart Routing in Unity AI Gateway: Match frontier quality with 30%+ lower cost per task》[1]里先放了一张模型发布时间线图。
 

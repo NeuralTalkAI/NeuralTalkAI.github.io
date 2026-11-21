@@ -1,6 +1,7 @@
 关键词：**MegaKernels**、Luminal编译器、:mdnice-bold-italic[GPU推理优化]、动态调度、**符号工作队列**、推理编译
 
-::: block-1只要 GPU 没有在加载数据，就是在浪费带宽；只要 GPU 没有在执行计算，就是在浪费算力。
+::: block-1
+只要 GPU 没有在加载数据，就是在浪费带宽；只要 GPU 没有在执行计算，就是在浪费算力。
 :::
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/01.png)
@@ -20,7 +21,8 @@
 
 传统内核模式存在三大性能间隙：内核启动开销、流多处理器（SM）间的波量化效应（负载不均），以及操作间由初始权重加载引发的内存气泡。:mdnice-bold-italic[Luminal 通过借鉴解释器的设计思想，引入动态调度与增量-递减屏障机制，实现了操作的极细粒度融合与交错执行。]
 
-::: block-1本文详细阐述了 Luminal 的完整编译流程：将算子重写为分块形式、推导数据与屏障的步长关系、构建符号化工作队列，最终生成能适配任意模型架构与动态维度的单一巨型内核。
+::: block-1
+本文详细阐述了 Luminal 的完整编译流程：将算子重写为分块形式、推导数据与屏障的步长关系、构建符号化工作队列，最终生成能适配任意模型架构与动态维度的单一巨型内核。
 
 该方案从编程模型层面消除了不必要的同步等待，让 GPU 的计算与带宽资源得以持续饱和利用。
 :::
@@ -38,7 +40,13 @@
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/02.jpg)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
 
 ## 一、瓶颈问题
 
@@ -46,7 +54,8 @@
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/03.png)
 
-::: image-caption一个典型Transformer前向传播的简化示意图
+::: image-caption
+一个典型Transformer前向传播的简化示意图
 :::
 
 我们立刻就能发现两个问题：
@@ -64,7 +73,8 @@
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/04.png)
 
-::: image-caption分块矩阵乘法的数据访问模式，来源：《工程师矩阵乘法指南》| 皮特·沃登（Pete Warden）博客
+::: image-caption
+分块矩阵乘法的数据访问模式，来源：《工程师矩阵乘法指南》| 皮特·沃登（Pete Warden）博客
 :::
 
 该运算无需等待张量 A 或张量 B 的全部数据加载完成再开始计算，因为它每次只需要从 A 和 B 中读取一个分块条带。只要这个条带准备就绪，我们就可以开始计算张量 C 的一个分块了！**这种完全同步的要求，是由标准内核执行模型强制规定的，而非数学运算本身的需求。**
@@ -73,7 +83,8 @@
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/05.png)
 
-::: image-caption单个SM执行过程的简化示意图
+::: image-caption
+单个SM执行过程的简化示意图
 :::
 
 现在我们可以看到，:mdnice-bold-italic[在开始计算之前，有大量时间被消耗在初始权重的加载上。这段时间里，我们昂贵的张量核心一直处于空闲状态！] 即便内核由专家编写，且在执行过程中能完美利用带宽，也无法解决这个问题。可编程依赖启动（Programmatic Dependent Launch）[3] 这类技术能起到一定缓解作用，它**允许下一个内核在当前内核运行时就开始准备工作（加载权重），但这种机制是在设备层面实现的**，而非针对单个 SM，因此仍然会留下明显的空闲间隙。
@@ -109,10 +120,12 @@
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/06.png)
 
-::: image-caption融合巨核在多个SM上执行时的性能剖析图
+::: image-caption
+融合巨核在多个SM上执行时的性能剖析图
 :::
 
-::: block-1从图中可以看到，当前指令的执行阶段和下一条指令的执行阶段存在重叠。我们还能观察到，在相同的时间范围内，部分 SM 能够执行多条指令，而部分 SM 只能执行一条指令，**这表明指令的延迟具有显著的可变性！**
+::: block-1
+从图中可以看到，当前指令的执行阶段和下一条指令的执行阶段存在重叠。我们还能观察到，在相同的时间范围内，部分 SM 能够执行多条指令，而部分 SM 只能执行一条指令，**这表明指令的延迟具有显著的可变性！**
 :::
 
 还有一个我们尚未讨论的关键问题：同步机制。正如前文所述，传统内核的一大缺陷是，下一个操作必须等待**所有** SM 完成当前内核的任务后才能启动。:mdnice-bold-italic[但换个角度看，这种机制也有一个优势：在下一个内核启动时，我们可以确保所有数据都已准备就绪]。一旦我们允许在前一个操作未完全结束时就启动后续操作，这个数据就绪的保证就不复存在了。**因此，我们需要实现一套细粒度的同步机制，确保在启动下一个操作时，其所需的输入数据已经准备就绪。**
@@ -181,7 +194,8 @@ __device__ void mk_op(    OpPayload payload, // 算子专属的负载结构
 
 ![文章插图](/articles/2026-01-14-megakernels-luminal-megakernels-gpu-sm-3d30fdbe/images/07.png)
 
-::: image-caption我们希望避免这种情况！流水线技术（Pipelining）能够在一定程度上缓解这个问题，但最好的方案是从根本上避免重建队列的操作
+::: image-caption
+我们希望避免这种情况！流水线技术（Pipelining）能够在一定程度上缓解这个问题，但最好的方案是从根本上避免重建队列的操作
 :::
 
 ::: block-1
@@ -214,19 +228,33 @@ Luminal 给出的解决方案是：在工作队列中存储**指令本身**，�
 
 参考资料
 
-[1] CUDA Graphs: *https://developer.nvidia.com/blog/cuda-graphs/*
+[1]
 
-[2] Hazy Research 在其首篇关于融合巨核的文章: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
+CUDA Graphs: *https://developer.nvidia.com/blog/cuda-graphs/*
 
-[3] 可编程依赖启动（Programmatic Dependent Launch）: *https://docs.nvidia.com/cuda/cuda-c-programming-guide/#programmatic-dependent-launch-and-synchronization*
+[2]
 
-[4] Hazy Research 在去年率先提出: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
+Hazy Research 在其首篇关于融合巨核的文章: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
 
-[5] Luminal编译器代码仓库: *https://github.com/luminal-ai/luminal*
+[3]
 
-[6] 我们正在招聘！欢迎给我发私信: *https://x.com/joefioti*
+可编程依赖启动（Programmatic Dependent Launch）: *https://docs.nvidia.com/cuda/cuda-c-programming-guide/#programmatic-dependent-launch-and-synchronization*
 
-[7] Hazy Research团队: *https://hazyresearch.stanford.edu/*
+[4]
+
+Hazy Research 在去年率先提出: *https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles*
+
+[5]
+
+Luminal编译器代码仓库: *https://github.com/luminal-ai/luminal*
+
+[6]
+
+我们正在招聘！欢迎给我发私信: *https://x.com/joefioti*
+
+[7]
+
+Hazy Research团队: *https://hazyresearch.stanford.edu/*
 
 更多推荐
 
@@ -234,4 +262,10 @@ Luminal 给出的解决方案是：在工作队列中存储**指令本身**，�
 - [端到端 LLM 编译器 nncase：基于 e-graph 的异构存储架构高性能统一编译框架](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447895279&idx=1&sn=cfe132ed7791edfd649561561681c72d&scene=21#wechat_redirect)
 - [性能相比SGLang/vLLM最高提升1.7倍！Mirage Persistent Kernel：首个自动巨核化多GPU LLM推理的编译器-运行时系统，细粒度计算-通信重叠](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447895728&idx=1&sn=88a267756d2f2057f868d43f0500841f&scene=21#wechat_redirect)
 
-交流加群请在 NeuralTalk 公众号后台回复：加群
+交流加群请在
+
+NeuralTalk 公众号
+
+后台回复：
+
+加群
