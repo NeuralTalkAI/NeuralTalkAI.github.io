@@ -11,7 +11,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Frontier", "LLM", "投毒", "逆向", "成功率"],
-    excerpt: "关键词：代码混淆、大模型安全]、遗传算法、逆向工程、代码保护 用大模型分析代码已经很常见。开发者让它解释陌生项目、检查漏洞、生成测试，逆向人员也可以把反编译得到的代码交给模型，快速",
+    excerpt: "代码混淆开始利用大模型自身规则。Acoda 用八种方法诱导拒答和误判，再以遗传算法搜索组合，跨模型攻击成功率最高 70%，运行时间几乎没有增加。提供了一种新思路。",
     sourceUrl: "https://mp.weixin.qq.com/s/gQdPhNcKYuAPMLJ-u-8pyw",
   },
   {
@@ -21,7 +21,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SF",
     keywords: ["SF", "Tensor", "Lean", "PTX", "GPU", "Kernel"],
-    excerpt: "关键词：PTX、Lean、GPU Kernel]、形式化验证、内存模型 大模型已经相当擅长优化 GPU Kernel。不过，在大规模训练任务中，我们仍然需要确认这些 Kernel ",
+    excerpt: "SF Tensor 将 PTX 语义形式化到 Lean，让大模型生成、Lean 检查 GPU Kernel 正确性证明，已覆盖 Hopper 矩阵乘法、FlashAttention",
     sourceUrl: "https://mp.weixin.qq.com/s/LZeQIXBvdfcKe9hHkg9Y3w",
   },
   {
@@ -31,7 +31,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "SpaceAI", "Infra", "SpaceDC", "分布式", "全球"],
-    excerpt: "关键词：空间 AI 基础设施、编队飞行星座、晨昏太阳同步轨道]、空间边云协同、星载 Token 服务 “空间 AI 基础设施正在成为支撑高能耗大语言模型服务的可信平台，其核心特征是",
+    excerpt: "把 AI 数据中心搬上太空绝非空想？港大与西电团队提出空间 AI 基础设施完整路线图，通过晨昏太阳同步轨道编队星座与 LEO 边缘网络协同，可提供地基级性能、支撑百万级并发用户的大",
     sourceUrl: "https://mp.weixin.qq.com/s/MFSw8A7PtnXizWvKyUeWkw",
   },
   {
@@ -41,7 +41,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "GPT", "编程", "权重", "参数", "实验"],
-    excerpt: "关键词：权重空间编程、机械可解释性]、神经网络编辑、推理循环、大模型优化 麻省理工学院计算机科学与人工智能实验室（MIT CSAIL）的 Rikiya Takehi、Jayden ",
+    excerpt: "大模型开始直接读写神经网络权重。MIT 团队让 Astra 仅改 Qwen 千分之一点六的权重，数学成绩从 7.9%升至 48.1%。修复的是推理循环，能力边界也随之显形。",
     sourceUrl: "https://mp.weixin.qq.com/s/eJr1jDlQ3VtXrIMRhlra-g",
   },
   {
@@ -51,7 +51,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Scale",
     keywords: ["Scale", "ArchAgent", "Up", "Out", "异构", "芯片"],
-    excerpt: "关键词：异构系统设计、设计空间探索]、LLM 智能体、性能建模、AI+HPC 融合 ArchAgent 这个名字用的人还挺多，不过还是几个月前的这篇更有趣一些 ArchAgent:",
+    excerpt: "仅用 18 次评估便超越传统爬山法百倍迭代的性能上限！ArchAgent 以分层 LLM 智能体拆解异构系统设计难题，搭配确定性评估闭环，在 1MW 功率约束下实现 1.93 倍混",
     sourceUrl: "https://mp.weixin.qq.com/s/qyFK9tagkSSsuv9jx-fo1w",
   },
   {
@@ -61,7 +61,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "杀器", "Neutrino", "IKET", "Xtrace", "AMD"],
-    excerpt: "关键词：Intra-kernel Tracing、二进制插桩]、指令拼接、性能剖析、高保真、异构计算、Agent 驱动优化 今年七月份的时候就写过： NUS 团队旗下 Mars C",
+    excerpt: "还在为 GPU 性能剖析结果失真发愁？新加坡国立大学与 Meta 联合推出 Xtrace，通过二进制级指令拼接实现高保真内核内追踪，指令保留率达 94-98%，开销低至 0.9-2",
     sourceUrl: "https://mp.weixin.qq.com/s/kHTPCCTHyvhMtSlctgyzRQ",
   },
   {
@@ -71,7 +71,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "边界",
     keywords: ["边界", "MegaKernel", "NVIDIA", "流式", "内核", "场景"],
-    excerpt: "关键词：MegaKernel、内核融合、流式推理、GPU 性能建模]、首包延迟优化 “将流式模型融合为MegaKernel，核心问题在于确定融合的边界，而非判断是否需要融合。”这是",
+    excerpt: "单个MegaKernel就能打遍天下？NVIDIA 最新研究打破融合迷信，提出流式推理多内核切割预测框架，仅凭常规性能数据即可锁定最优方案，13 个场景全中最优，首音频延迟最高提速",
     sourceUrl: "https://mp.weixin.qq.com/s/oN9LKbzemio-MKWTwRVJMA",
   },
   {
@@ -81,7 +81,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "手机芯片",
     keywords: ["手机芯片", "联发科", "ASIC", "云端", "目标"],
-    excerpt: "关键词：联发科、云端 ASIC、AI 加速器、先进封装、NVLink Fusion 联发科 2026 年第三季财报里，有两组数字放在一起很有意思。 手机业务收入同比下降 17%，公",
+    excerpt: "：联发科第三季手机收入同比下降 17%，首款云端 AI 加速器却在 9 月开始出货。第四季 25 亿美元收入目标、2027 年约 160 亿美元目标，以及营业利润率改善预期，共同勾",
     sourceUrl: "https://mp.weixin.qq.com/s/xgBmVmUiyUImCRz6_eZisQ",
   },
   {
@@ -91,7 +91,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "PipeLink",
     keywords: ["PipeLink", "MegaKernel", "MoE", "巨核", "解码", "开源"],
-    excerpt: "关键词：GPU 内核组件、契约制导链接、片上资源重定位]、Megakernel、跨库内核融合] 论文中有一句直击本质的判断：如今的 GPU Kernel 组件本质上是绝对寻址的，它",
+    excerpt: "北大 DAIR 实验室提出PipeLink契约制导GPU高性能内核链接器，覆盖Hopper、Blackwell三代架构，支持独立编译组件零运行时开销拼接，整体性能损耗严格控制在0.",
     sourceUrl: "https://mp.weixin.qq.com/s/mwvyvoaZYbOE8MHVRJ62ag",
   },
   {
@@ -101,7 +101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Google",
     keywords: ["Google", "AI", "Agent", "CPU", "TPU", "机架"],
-    excerpt: "关键词：Amin Vahdat、Google、TPU、AI 数据中心、AI 基础设施 Amin Vahdat 是 Google Fellow、AI 基础设施首席技术官，工作覆盖定制",
+    excerpt: "Amin Vahdat 系统讲解了 Google 超大规模 AI 基础设施的运行方式，包括 10 万卡集群的故障与有效产出、TPU 训练推理分线、Agent 带来的资源变化、光交换",
     sourceUrl: "https://mp.weixin.qq.com/s/TjmXh5EXtB3Y77maucJZhA",
   },
   {
@@ -111,7 +111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "卡级",
     keywords: ["卡级", "AMD", "NVIDIA", "B200", "硬件", "落地"],
-    excerpt: "关键词：AMD MI350X、ROCm 全栈优化、DLRM 训练、硬件模型协同设计]、异构 AI 基础设施 据我们所知，这是超大规模厂商首次公开报告 AMD GPU 在大规模训练场",
+    excerpt: "万卡级 AMD 训练首次落地超大规模数据中心。本文拆解 Meta 在 MI350X 上的全栈优化实践，通过硬件模型协同设计、分析性能模型与智能体工作流三大原则，实现 DLRM 训练",
     sourceUrl: "https://mp.weixin.qq.com/s/F7eHoIjDxGMXg-c1-cLtJg",
   },
   {
@@ -121,7 +121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Agent", "Evolving", "Teams", "KDAgent", "开源"],
-    excerpt: "关键词：演化式智能体团队、GPU 内核优化]、多智能体系统、CUDA、FlashInfer “即使是强大的编码智能体，在编写高难度 GPU 内核时也会举步维艰。它们往往在初期取得快",
+    excerpt: "单靠堆模型写不出顶级 CUDA 内核？伯克利团队提出演化式智能体团队框架，通过动态重组角色与持续沉淀经验，在 MLA 解码任务超越生产级 FlashInfer 达 1.21 倍，横",
     sourceUrl: "https://mp.weixin.qq.com/s/jXkhoY66dmpgIIp_1zHvXQ",
   },
   {
@@ -131,7 +131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CAKE",
     keywords: ["CAKE", "KDA", "ForgeKernel", "Agent", "H100", "B200"],
-    excerpt: "关键词：GPU 内核优化、自进化智能体、黑盒架构反推、硬件知识库]、算子性能提升 性能上，ForgeKernel 在 recurrent KDA prefill 上仅比 CAKE ",
+    excerpt: "仅凭黑盒二进制就能反推专家内核架构还能自我迭代突破性能上限？ICLR 2027 投稿的 ForgeKernel 打破编码智能体优化天花板，在 27 个算子上追平超越专家库，相较现有",
     sourceUrl: "https://mp.weixin.qq.com/s/wb46xDFo2LAiF52vMAbyrw",
   },
   {
@@ -141,7 +141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "节点",
     keywords: ["节点", "融合", "mKernel", "tile", "Ring", "Attention"],
-    excerpt: "关键词：mKernel、融合内核、计算通信重叠、分布式训练]、自适应 SM 划分、RDMA 通信 当前大模型分布式系统最核心的痛点，是随着模型规模与集群规模的持续扩张，通信开销在端",
+    excerpt: "分布式大模型训练的通信瓶颈终于有了内核级解法。UC 伯克利等机构推出的 mKernel 实现多节点 tile 级融合内核，通过自适应 SM 划分与分层数据移动，将计算、NVLink",
     sourceUrl: "https://mp.weixin.qq.com/s/sx79a68o4yWM1iozBHXc6Q",
   },
   {
@@ -151,7 +151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Bug",
     keywords: ["Bug", "Claude", "规模化", "边界", "测试", "数学"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Claude、形式化验证、Rocq、模糊测试、软件安全] GPU kernel 开发、硬件设计和大模型训练，经常遇到同一",
+    excerpt: "Anthropic 与 Theorem 让 Claude 为真实开源软件生成机器可检查证明，将模糊测试、ASan、RISC-V 二进制和 Rocq 接成完整流程。这项实验降低了证明",
     sourceUrl: "https://mp.weixin.qq.com/s/jSIZJMQD_ZuphgKAuvJ3Xw",
   },
   {
@@ -161,7 +161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "cuFuzz", "GPU", "开源", "测试", "错误"],
-    excerpt: "关键词：模糊测试、设备覆盖率]、二进制插桩、检测解耦、持久化执行 一个 CUDA 程序顺利返回，甚至打印了“测试通过”，显存访问就一定合法吗？当计算进入 GPU，主机端，也就是 C",
+    excerpt: "cuFuzz 将 GPU 设备覆盖率接入 AFL++，让模糊测试看见内核分支，并结合 Compute Sanitizer 发现静默越界。本文拆解其插桩、反馈合并、检测解耦与持久化机",
     sourceUrl: "https://mp.weixin.qq.com/s/ei1XUWPNpH_p-pqeITcqXg",
   },
   {
@@ -171,7 +171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ByteExpress",
     keywords: ["ByteExpress", "RDMA", "字节", "规模化", "落地", "优化"],
-    excerpt: "关键词：RDMA、ByteExpress]、参数服务器、分布式推理训练、拥塞控制、零拷贝 “要在生产环境中兑现 RDMA 的收益，远不止替换 TCP 这么简单。”RDMA 凭借硬件",
+    excerpt: "RDMA 替换 TCP 就能直接收获生产级低延迟红利？字节跳动两年落地经验给出否定答案。其自研 ByteExpress 通信层通过跨层内存管理、可扩展连接调度与 RPC 级恢复，实",
     sourceUrl: "https://mp.weixin.qq.com/s/DfGRvBeCJI9SPxf6G0W3Fw",
   },
   {
@@ -181,7 +181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SEIS",
     keywords: ["SEIS", "单卡", "H100", "SOTA", "内核", "引擎"],
-    excerpt: "关键词：自演化推理系统、智能体、推理引擎优化、投机解码、AI 基础设施] 依旧单请求🤣。推理引擎优化在本质上是一个系统问题——你把一个组件改快，瓶颈立刻转移到另一个组件上。 推理系",
+    excerpt: "投稿/寻求报道/文章纠错：公众号后台 -\\x26gt; 联系我们关键词：自演化推理系统、智能体、推理引擎优化、投机解码、A",
     sourceUrl: "https://mp.weixin.qq.com/s/ATWF-UUB7A0ESR6_9o5WtA",
   },
   {
@@ -191,7 +191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Unlock", "RTX", "开源", "范围", "风险"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：GPU Unlock、RTX 4090、RTX 3090]、BF16、大模型推理 能用上 AI Agent 后，REA ",
+    excerpt: "GPU Unlock 通过调整显卡 speed-select，提升部分 RTX 显卡 AI 运算吞吐。RTX 4090 实测接近翻倍，但支持范围较窄，启动和回滚风险需提前评估。",
     sourceUrl: "https://mp.weixin.qq.com/s/-17cXfnjq1ci7MbXkPiImg",
   },
   {
@@ -201,7 +201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "MIT", "RLX", "Rust", "MCU", "TPU"],
-    excerpt: "关键词：张量编译器、Rust、异构计算、中间表示]、分布式运行时 生产级机器学习栈往往将图编译与内核执行拆分在不同层级与不同语言中，使得后端行为、部署保证与性能降级路径难以进行端到",
+    excerpt: "一套 Rust 代码打通从微控制器到服务器 GPU 的全栈 AI 编译？MIT 推出的 RLX 张量编译器，以三层统一 IR 实现 14 类硬件透明调度，推理训练性能全面领跑，为异",
     sourceUrl: "https://mp.weixin.qq.com/s/-Nm2LFcaI_t3FD-QsdwaKw",
   },
   {
@@ -211,7 +211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Google",
     keywords: ["Google", "Labs", "AI", "点子", "资源"],
-    excerpt: "关键词：Google Labs、Josh Woodward]、AI 产品、产品创新、Lenny’s Podcast 过去半年，DeepSeek 招聘“AI 跨界技术人才”，Kimi",
+    excerpt: "Google Labs 负责人 Josh Woodward 分享了 AI 产品的筛选方法：用 82 个预测追踪技术变化，尽早接触真实用户，在 50～100 天内验证想法，并根据用户",
     sourceUrl: "https://mp.weixin.qq.com/s/Q1beiMitNEedWN1njvGOgg",
   },
   {
@@ -221,7 +221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "引擎",
     keywords: ["引擎", "模型", "rec", "llama", "cpp", "编码"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：REC、Flint、Recursive]、本地推理引擎、MoE 旧金山时间 10 月 22 日凌晨，Richard So",
+    excerpt: "田渊栋新公司 Recursive 发布编码模型 Flint 与专属推理引擎 rec：M4 Pro 上超 125 tokens/s，比 llama.cpp 快 1.4–2.6 倍，为",
     sourceUrl: "https://mp.weixin.qq.com/s/MkfKIxK_29TuO64EkGU5Jw",
   },
   {
@@ -231,7 +231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TorchTPU",
     keywords: ["TorchTPU", "Ironwood", "TPU", "Qwen3", "MFU", "训练"],
-    excerpt: "关键词：TorchTPU、PyTorch、TPU、vLLM、TorchTitan] 10 月 21 日，谷歌云 VP Mark Lohmeyer 与 Meta 工程副总裁 Bill",
+    excerpt: "TPU 成为与 GPU、CPU 并列的 PyTorch 原生设备选项。围绕它，谷歌同步打通了 vLLM、SGLang、llm-d、TorchTitan、VeRL、Ray、Huggi",
     sourceUrl: "https://mp.weixin.qq.com/s/7Td1TY7FiBRaXgDksFPcYQ",
   },
   {
@@ -241,7 +241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "DeepInfer", "开源", "命中率", "引擎", "系统"],
-    excerpt: "关键词：DeepSeek、DeepInfer、推理引擎]、KV 缓存、开源🐟 10 月 20 日，DeepSeek 做了一件它一年半前明确说过\"做不到\"的事：把支撑自家线上服务的推",
+    excerpt: "DeepSeek 开源生产级推理框架 DeepInfer 与编解码组件 deepseek-recipe，支撑单集群日吞吐 155 万亿 Token。它采用 E/P/D 分离架构、三",
     sourceUrl: "https://mp.weixin.qq.com/s/-gd9FxqIQu1IFd5aR3wasg",
   },
   {
@@ -251,7 +251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "YANchor",
     keywords: ["YANchor", "锚点", "开源", "长程", "内存", "记忆"],
-    excerpt: "关键词：YANchor-4B、恒定内存、KV Cache、记忆锚点]、长上下文推理 长序列推理的核心矛盾在于：全历史注意力虽能保留完整上下文信息，但显存与计算成本随序列长度持续膨胀",
+    excerpt: "KV Cache 锁死在 40 MiB，AIME 三年平均 82.93%，H100 批量吞吐翻 6.6 倍。岩芯矩阵开源的 YANchor-4B，给出了恒定内存长推理的完整做法。",
     sourceUrl: "https://mp.weixin.qq.com/s/n7Q4T-WcIBKAy3WE8xkilQ",
   },
   {
@@ -261,7 +261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kimi",
     keywords: ["Kimi", "K3", "强度"],
-    excerpt: "关键词：Kimi K3.1、月之暗面]、Agent 长任务、思考强度、野村证券 Kimi K3.1 还没官宣，轮廓已经在公开渠道里显形了。 9 月 28 日，月之暗面的 API 注",
+    excerpt: "Kimi K3.1 的踪迹接连出现在 API 注册表、官网前端脚本、GitHub 编码器和野村研报中：可探测调用的 kimi-k3-1、绑定 make3d 模式的 k3d1-age",
     sourceUrl: "https://mp.weixin.qq.com/s/YAs_6R4cqZFyH8nSfbn4Yg",
   },
   {
@@ -271,7 +271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SRAM",
     keywords: ["SRAM", "NVIDIA", "SASS", "面积", "芯片", "清华"],
-    excerpt: "关键词：指令编码综合、SASS 指令集]、CP-SAT 约束求解、GPU 指令压缩、可变长编码 现代 GPU 内核正给指令供给路径带来越来越大的压力，而固定的指令容器会留下大量的体",
+    excerpt: "给现代 GPU 指令集做“自动化重编码”，清华团队将指令布局转化为约束槽位分配问题，基于公开 SASS 规范构建验证基准，用 CP-SAT 求解实现 33%指令体积缩减与 16%解",
     sourceUrl: "https://mp.weixin.qq.com/s/BkA1xC1eVX1p_8vr9NmwEQ",
   },
   {
@@ -281,7 +281,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Lean", "编程", "数学", "证明", "基础"],
-    excerpt: "关键词：斯坦福大学、MATH 289、AI for Math、Lean 形式化证明、Otis Chodosh 数学系的学生该怎么学 AI？多数人的路径是自学：看别人用过的工具，照猫",
+    excerpt: "斯坦福数学系 2026 年秋季开设 MATH 289，面向数学博士生讲授 AI 工具链，从编程基础到 Lean 形式化证明，开篇阅读为 Thurston 经典长文与 Etingof",
     sourceUrl: "https://mp.weixin.qq.com/s/MAfRwLJdbkSxwrW1V3aFuA",
   },
   {
@@ -291,7 +291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "V4", "Flash"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：DeepSeek、V4.1-Flash-1017、systemfingerprint、灰度发布、模型监测] 10 月 1",
+    excerpt: "10 月 17 日，DeepSeek 线上模型 deepseek-flash 的系统指纹发生变更，社区从指纹数据中读出新检查点标识 V4.1-Flash-1017。官方至今未发公告",
     sourceUrl: "https://mp.weixin.qq.com/s/xFmQhl7Q5lj3MQzFQow3FQ",
   },
   {
@@ -301,7 +301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "Scaling", "MoA", "范式", "测试", "效率"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：多智能体推理、测试时缩放]、帕累托最优、计算效率、混合智能体架构（Mixture-of-Agents, MoA） 计算效",
+    excerpt: "还在靠堆算力换 LLM 推理精度？德国哥廷根大学最新研究给出效率最优解：多智能体混合架构同等算力下比自一致性精度高 2.7%，最高较思维链提升 7.1%，并给出可直接落地的帕累托最",
     sourceUrl: "https://mp.weixin.qq.com/s/ZG4wOlw6KY9gmyLoSNCz_g",
   },
   {
@@ -311,7 +311,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "编译器",
     keywords: ["编译器", "NeuralTalk", "众智", "FlagOS", "AI", "Agent"],
-    excerpt: "关键词：FlagOS、人工智能开放计算大会、跨芯系统软件栈]、异构AI芯片、智算基础设施 做 AI 系统开发的朋友大概都有过这种体验：模型写好了，换一块芯片，半条命没了。算子要重写",
+    excerpt: "NeuralTalk 免费渠道，还管饭！2026 年 10 月 17-18 日在北京举办的人工智能开放计算大会暨众智 FlagOS 技术大会",
     sourceUrl: "https://mp.weixin.qq.com/s/NOP1PqYnHUY6u9fMvHhYRw",
   },
   {
@@ -321,7 +321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "SIMAS", "复旦", "系统", "协同", "定律"],
-    excerpt: "关键词：多智能体系统、缩放定律]、SIMAS 框架、协调开销、集体智能 “集体智能并非增加智能体数量的自动产物，而是依赖于精心交互设计的涌现属性。”这是来自复旦大学研究团队在最新论",
+    excerpt: "多智能体系统真的“人多力量大”？复旦团队最新研究打破固有认知：单纯堆叠智能体数量反而引发性能下降。本文深度拆解 SIMAS 极简框架下的缩放规律，揭示协同增益与协调开销的倒 U 型",
     sourceUrl: "https://mp.weixin.qq.com/s/C948sOGcsKyULQPIrKXcmw",
   },
   {
@@ -331,7 +331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RecursiveMAS",
     keywords: ["RecursiveMAS", "token", "节省", "智能", "空间", "系统"],
-    excerpt: "关键词：递归多智能体、隐空间协作]、RecursiveLink、内外循环训练]、推理效率 智能体协作本身能否通过递归方式实现规模化（Scaling）？ 随着大语言模型单模型能力逐渐",
+    excerpt: "多智能体协作还在依赖低效的文本中转？斯坦福、UIUC、NVIDIA 等推出 RecursiveMAS 框架，将递归缩放范式从单模型延伸至多智能体系统，凭借隐空间轻量链路实现精度、速",
     sourceUrl: "https://mp.weixin.qq.com/s/R7E0wHr94juDoHqJMuIqtA",
   },
   {
@@ -341,7 +341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Runtime",
     keywords: ["Runtime", "PyTorch", "NPU", "Agent", "OpenVINO", "NVIDIA"],
-    excerpt: "关键词：边缘 AI 部署、LLM Agent、异构推理 Runtime、模型转换]、AIPC 框架 这个工作类似这个开源工具：让端侧AI不再难用！谷歌开源 LiteRT-CLI：用",
+    excerpt: "把 PyTorch 模型一键部署到多类异构硬件推理 Runtime？高通团队将 AIPC 方法扩展至 OpenVINO、RKNN、TensorRT、ONNX Runtime 四大后",
     sourceUrl: "https://mp.weixin.qq.com/s/rOgpSJwZi9qBuDzPDFoJkQ",
   },
   {
@@ -351,7 +351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "HMA", "MLE", "SOTA", "重置", "清华"],
-    excerpt: "关键词：多智能体协作、机器学习工程（MLE）]、上下文重置半马尔可夫决策过程、长程探索、工作流编排 “随着单会话执行时间延长，智能体的推理强度会伴随进展放缓同步下降，我们将其总结为",
+    excerpt: "单智能体做机器学习工程越跑越慢？清华与英伟达等联合提出 Humanize MLE Agents，通过双智能体交替与会话重置机制，在 MLE-bench 拿下 78.2%奖牌率，仅用",
     sourceUrl: "https://mp.weixin.qq.com/s/uGE_EH8YcMg0WKLZsDEI-Q",
   },
   {
@@ -361,7 +361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "芯穹",
     keywords: ["芯穹", "Databricks", "Qwen3", "SOL", "ExecBench", "榜史"],
-    excerpt: "关键词：SOL-ExecBench、GPU kernel、英伟达、agent 自动优化、榜单饱和] 2026 年 3 月，英伟达发布了一套名为 SOL-ExecBench 的 GP",
+    excerpt: "SOL-ExecBench 是英伟达 2026 年 3 月发布的 GPU kernel 评测基准，半年内均分从 0.699 被刷到 0.80 以上。本文梳理完整榜史、各家「第一」的",
     sourceUrl: "https://mp.weixin.qq.com/s/Xt2mI-IP7sLZ_b_b-ubflQ",
   },
   {
@@ -371,7 +371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "精度",
     keywords: ["精度", "BLAS", "AI", "作弊", "分级", "硬件"],
-    excerpt: "关键词：BLAS 精度分级、GEMM、反作弊测试]、数值稳定性、矩阵乘法 硬件厂商的数值库一定是由靠谱的专业程序员团队编写和测试的？未必。 在 AI 算力爆炸的今天，低精度张量核、",
+    excerpt: "你用的 BLAS 库精度可能注水？这篇论文提出 A/B/C 三级矩阵乘法精度分级体系，设计多道反作弊测试，实测多款主流 BLAS 实现，为线性代数软件的精度验证建立起统一可复现的行",
     sourceUrl: "https://mp.weixin.qq.com/s/Sjj3Wo5Yg8AX6mIdvk8qww",
   },
   {
@@ -381,7 +381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练场",
     keywords: ["训练场", "新世界", "代码", "模型", "数学", "原则"],
-    excerpt: "关键词：自动形式化、Lean]、费马大定理、MAP 计划、Jared Duker Lichtman 2026 年 9 月 11 日，哈佛大学数学科学与应用中心（CMSA）「2026",
+    excerpt: "在哈佛 CMSA「2026 机器学习的几何」研讨会上，斯坦福数学家 Jared Duker Lichtman 以 Claude 十一天形式化费马大定理为起点，提出一年内将人类全部已",
     sourceUrl: "https://mp.weixin.qq.com/s/fNweOFN-cJf8nl-toIqJug",
   },
   {
@@ -391,7 +391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Physical",
     keywords: ["Physical", "Intelligence", "Scaling", "本体", "生态", "创始人"],
-    excerpt: "关键词：具身智能、人形机器人、Scaling Law、跨本体迁移、基础模型 Sergey Levine 可能是地球上最了解机器人学习边界的人之一。作为 UC Berkeley 副教",
+    excerpt: "Sergey Levine 在播客中系统阐述了人形机器人的当前阶段判断：行业尚未进入可预测的工业化 Scaling 阶段，而是处于基础技术拼图期。他详述了跨本体迁移的极简实现、机器",
     sourceUrl: "https://mp.weixin.qq.com/s/O6kteqeGqtMBperYKSiz6g",
   },
   {
@@ -401,7 +401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "Lean4Agent", "模型", "类型", "工作"],
-    excerpt: "关键词：Lean4Agent、形式化验证、依赖类型、LLM Agent、工作流进化 为大语言模型配备可靠执行多步工作流的能力，已成为人工智能领域的核心挑战。 尽管 LLM 的 Ag",
+    excerpt: "当 LLM Agent 长链路执行频现逻辑断层与上下文丢失，伊利诺伊大学团队给出数学级可靠性解法。本文深度解读 Lean4Agent 框架，首次用依赖类型形式化语言建模验证 Age",
     sourceUrl: "https://mp.weixin.qq.com/s/Gs61U2x-lx46fwmmWTZjtg",
   },
   {
@@ -411,7 +411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "赛道",
     keywords: ["赛道", "MLSys", "杀器", "Humanize", "Judgement", "Engineering"],
-    excerpt: "关键词：判断工程、多智能体编码]、Humanize、联合采样、机械门控 “智能体编程（Agentic coding）降低了代码生成的成本，但实现可靠、准确的代码补全依然困难：负责编",
+    excerpt: "当 AI 写代码的成本骤降，可靠交付却成最大瓶颈。NVIDIA 联合清华、MIT 推出 Humanize 多智能体框架，以判断工程为核心，通过双模型交替评审与 72 道机械门控，拿",
     sourceUrl: "https://mp.weixin.qq.com/s/JhVQVeVExVeTYUZlhh_wPA",
   },
   {
@@ -421,7 +421,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "KDA",
     keywords: ["KDA", "Kernel", "Design", "Agents", "Kimi", "Delta"],
-    excerpt: "关键词：Kernel Design Agents、Kimi Delta Attention]、奖励作弊、TIRx、渐进式合成 NVIDIA 的开源项目 Kernel Design ",
+    excerpt: "NVIDIA 用 Kernel Design Agents 优化 Kimi Delta Attention 算子，在 B300 上达到 FlashKDA 2.96 倍速度且精度反超",
     sourceUrl: "https://mp.weixin.qq.com/s/rqnqUsTTvcxcxWMiSAMKBQ",
   },
   {
@@ -431,7 +431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "买算力",
     keywords: ["买算力", "Anthropic", "IPO", "招股书", "基础设施", "训练"],
-    excerpt: "关键词：Anthropic、IPO 招股书、算力承诺、TPU、AI 基础设施] 2026 年 6 月，Anthropic 向美国 SEC 秘密递交了 IPO 招股书（S-1 草稿）",
+    excerpt: "Anthropic 秘密递交的 IPO 招股书被路透拿到，首次披露了这家公司的算力账单：2025 年基础设施支出 73.3 亿美元，未来十年承诺至少 5180 亿美元、约 80% ",
     sourceUrl: "https://mp.weixin.qq.com/s/NPvsg68UAc6YFs8Z44-1vQ",
   },
   {
@@ -441,7 +441,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Token",
     keywords: ["Token", "Agent", "等值", "护城河", "工程师", "代码"],
-    excerpt: "关键词：Humanize、KDA]、Agent、Token、RSI 科技播客「涌现 Lab」最近上线了一期信息量很大的对谈，本文基于这期约 79 分钟访谈稿整理，存在信息丢失，最好",
+    excerpt: "代码不是护城河，时间才是。",
     sourceUrl: "https://mp.weixin.qq.com/s/b1knp5kqdZNhEkq6vYolFg",
   },
   {
@@ -451,7 +451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "轻量", "MLC", "KCoral", "kernel", "agent"],
-    excerpt: "关键词：KCoral、GPU benchmark]、coding agent、MLC、kernel 优化 GPU kernel 是机器学习系统的中心，而 AI agent 正在把 ",
+    excerpt: "MLC 社区发布 KCoral：为 kernel agent 设计的轻量 GPU 基准测试服务器。HTTP 标准化协议、Rust 路由、毫秒级隔离、CPU-GPU 编译解耦，单卡吞",
     sourceUrl: "https://mp.weixin.qq.com/s/Z-jjTpqMDlz-eXEhBPdhJA",
   },
   {
@@ -461,7 +461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Token",
     keywords: ["Token", "Qwen", "单流", "vLLM", "解码", "引擎"],
-    excerpt: "关键词：推理引擎、智能体优化]、vLLM、推测解码、模型部署 Baseten 工程师受 MetaInfer 论文启发，让 Claude Code 在单张 NVIDIA B200 上",
+    excerpt: "让 Claude Code 自主工作一周，在单张 B200 上为 Qwen-3.6-35B-A3B 生成专用推理引擎 VibeQwen：单流解码比调优后的 vLLM 快 90%，T",
     sourceUrl: "https://mp.weixin.qq.com/s/OexPnYPNjDRnm0w07a9W9w",
   },
   {
@@ -471,7 +471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CuTeDSL",
     keywords: ["CuTeDSL", "MegaMoE", "MegaFlux", "MoE", "路由", "副本"],
-    excerpt: "关键词：MoE MegaKernel、动态专家复制、流水线通信]、路由偏斜、负载均衡 在固定专家放置策略下，路由偏斜会导致部分 GPU 掉队：过载的 GPU 决定了整层延迟，而其余",
+    excerpt: "MoE 多卡推理训练的算力浪费顽疾迎来全新解法。普林斯顿与 NVIDIA 联合推出 MegaFlux，将动态专家复制流水线化融入持久 MegaKernel ，消解路由偏斜，最高实现",
     sourceUrl: "https://mp.weixin.qq.com/s/3MCuGQ4nKXw9FbzHrAMnHw",
   },
   {
@@ -481,7 +481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Vosti",
     keywords: ["Vosti", "LLM", "批处理", "分块", "开源", "引擎"],
-    excerpt: "关键词：确定性 LLM 推理]、形式化验证、KV 缓存、推理引擎、位级一致性 “GPU 内核根据执行形状动态选择分块策略（tilings）与规约顺序（reduction order",
+    excerpt: "LLM 推理结果竟会随批处理、缓存策略变化而漂移？杜克大学团队推出 Vosti 推理引擎，通过引擎不变量与内核关系验证双层架构，实现跨执行路径的位级一致输出，解码性能最高达 vLL",
     sourceUrl: "https://mp.weixin.qq.com/s/GEasxdLh9TtOZHxu4kqDlQ",
   },
   {
@@ -491,7 +491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "芯片",
     keywords: ["芯片", "Cerebras", "CTO", "Sean", "Lie", "Jalapeno"],
-    excerpt: "关键词：Cerebras、晶圆级芯片、超快推理]、CS5、Sean Lie 如果把大模型推理比作一场竞速，Sean Lie 大概就是那个把引擎做得最大、也最不怕别人说他疯的人。他是",
+    excerpt: "Hot Chips 次日，Cerebras CTO Sean Lie 做客 Latent Space：CS4 跑 GPT-OSS 超 4,400 TPS，CS5 目标中型模型 10",
     sourceUrl: "https://mp.weixin.qq.com/s/4ZmGsnhO790ixVWEk7bvFQ",
   },
   {
@@ -501,7 +501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LeapQuant",
     keywords: ["LeapQuant", "内核", "线性", "注意力", "循环", "状态"],
-    excerpt: "关键词：线性注意力、循环状态量化、窗口量化]、补偿 Token、长上下文推理 对采用混合架构的长上下文大模型而言，循环状态的读写开销占据了解码时间的相当大比例，同时也是前缀缓存场景",
+    excerpt: "线性注意力长上下文推理的带宽瓶颈迎来破局方案。伯克利联合 MIT、英伟达等提出 LeapQuant，通过窗口量化与补偿 Token 实现 8 位循环状态近无损推理，内核最高提速 3",
     sourceUrl: "https://mp.weixin.qq.com/s/J2vPNq60lM94UGoFwLfuBA",
   },
   {
@@ -511,7 +511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "自带",
     keywords: ["自带", "问题", "标准"],
-    excerpt: "副标题：圆的边界：AI 时代的提问、验证与人类剩下的位置 关键词：验证者定律、验证不对称]、提问能力、GPU kernel、好奇心 《Asymmetry of Verificati",
+    excerpt: "答案的获取趋近免费之后，提出好问题与验证好答案成为新的稀缺能力。本文从验证者定律出发，经 GPU kernel 战场的作弊与立法，落到\\x26quot;博士的圆\\x26quot;：",
     sourceUrl: "https://mp.weixin.qq.com/s/VUES-1QNh99Z9iOkvBW-eg",
   },
   {
@@ -521,7 +521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FlashAttention",
     keywords: ["FlashAttention", "优化", "graph", "EqiForge", "自动", "方法"],
-    excerpt: "关键词：相等饱和、张量程序编译]、EqiForge、算子融合、GPU 内核优化 高效的 GPU 张量程序实现往往需要高层代数表达与底层执行策略的联合优化。这是本文作者点明的核心判断",
+    excerpt: "还在手工打磨 Attention 内核性能？浙大团队推出 EqiForge 张量程序超优化器，基于相等饱和技术联合优化代数表达与底层执行，几何平均提速 1.32 倍，解码阶段超越 ",
     sourceUrl: "https://mp.weixin.qq.com/s/oGsun5GP_t_-UAra78sCAg",
   },
   {
@@ -541,7 +541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Triton", "AI", "GPT", "Astra", "PTX"],
-    excerpt: "关键词：AI 编译、AI Lowering、Triton、PTX 汇编]、GPU 内核优化 随着编程模型、计算负载与硬件加速器不断演进，编译器后端的开发与维护成本持续攀升。本文探究",
+    excerpt: "编译器后端即将被 AI 颠覆？斯坦福与 EPFL 研究证实，大模型可直接将 Triton 内核译为 NVIDIA PTX 汇编，最高 3.34 倍性能提升，绕过传统编译器多层中间表",
     sourceUrl: "https://mp.weixin.qq.com/s/dEDIR80_UI2EhTAH4eW5SQ",
   },
   {
@@ -551,7 +551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "EDG", "C++", "CUDA", "开源", "代码"],
-    excerpt: "关键词：EDG、C++ 前端、编译器开源、bug-for-bug 兼容] 😅、C++ Alliance 2026 年 9 月 30 日，Hacker News 头版出现了一个普通开",
+    excerpt: "2026 年 9 月 30 日，做了 34 年商业 C/C++ 前端的 Edison Design Group 宣布开源，代码托管于 github.com/edgcpp，由 C++",
     sourceUrl: "https://mp.weixin.qq.com/s/oxLyF0LSHxNuwztj0lBQIQ",
   },
   {
@@ -561,7 +561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "ASIC", "SoC", "DSP", "芯片", "评估"],
-    excerpt: "关键词：边缘 AI 推理、NPU 基准测试、能效对比]、模型兼容性、异构计算加速器 上条推送忘了发播客 orz... 生产环境中的 AI 推理正成为企业 AI 成本的核心构成。数据",
+    excerpt: "GPU 垄断 AI 推理的格局正在松动？这份覆盖三大类 10 款边缘 NPU 的系统评测，以 12 个经典模型为统一基准，拆解能效、吞吐量与兼容性的真实差距，为边缘 AI 硬件选型",
     sourceUrl: "https://mp.weixin.qq.com/s/QLFEgEuK4qIJDHbe6F5tYA",
   },
   {
@@ -571,7 +571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "UCB", "SWE", "Serve", "级任务", "天花板"],
-    excerpt: "关键词：SWE-Serve、推理工程、智能体基准]、生产正确性、端到端测试 本地测试全部通过的代码，部署到生产推理服务中却频频失效，这是行业长期存在却难以量化的痛点。直到 SWE-",
+    excerpt: "本地跑通的代码到生产环境就翻车？NVIDIA 联合 UC 伯克利推出 SWE-Serve 基准，用 53 个真实生产级推理工程任务实测 11 款主流大模型，揭示本地通过率与生产正确",
     sourceUrl: "https://mp.weixin.qq.com/s/e0Gq153RXfbaL9R3Zga_hQ",
   },
   {
@@ -581,7 +581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Harness",
     keywords: ["Harness", "MLC", "TIRx", "GPU", "Compiler", "开源"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：TIRx Harness、智能体 GPU 编程]、编译支撑框架、GPU 内核优化、MLC 社区 我们打造了TIRx Ha",
+    excerpt: "MLC 社区推出面向智能体 GPU 编程的开源编译支撑框架 TIRx Harness，整合稳定编译基础、知识库、分析工具与基准测试服务器，助力智能体开发高效 GPU 内核，多类注意",
     sourceUrl: "https://mp.weixin.qq.com/s/cMRZuxpTl3kdnVTqwKa7ug",
   },
   {
@@ -591,7 +591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "全栈",
     keywords: ["全栈", "标英", "DeepSeek", "TileLang", "开源", "带队"],
-    excerpt: "关键词：DeepSeek、昇腾 950、TileLang]、稀疏注意力、专家并行 2026 年 9 月 30 日，DeepSeek 通过官方渠道宣布正式开源面向华为昇腾算力平台的基",
+    excerpt: "9 月 30 日，DeepSeek 开源面向华为昇腾的全套基础设施：TileLang 昇腾后端、DeepGEMM Ascend、DeepEP Ascend、TileKernels、",
     sourceUrl: "https://mp.weixin.qq.com/s/ErOxDNSmuwB8VfGYdAHv8A",
   },
   {
@@ -601,7 +601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "保真度",
     keywords: ["保真度", "SiliconBench", "Apple", "Silicon", "LLM", "内存"],
-    excerpt: "关键词：统一内存、LLM 服务基准]、Apple Silicon、推理引擎、内存纪律 桌面端统一内存的并发本地 LLM 服务必须保留内存余量与输出保真度，而仅关注速度的排名完全忽略",
+    excerpt: "本文深度解读 SiliconBench 基准，从速度、内存、保真度三维评测 9 款苹果硅推理引擎，全面揭开并发负载下的性能真相与内存陷阱。",
     sourceUrl: "https://mp.weixin.qq.com/s/mrWcpyh4D6EwqLeJoWYW8g",
   },
   {
@@ -611,7 +611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPT",
     keywords: ["GPT", "Astra", "闭源", "黑箱", "思维", "模型"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：隐藏思维链提取、强制推理协议]、推理 token 效率、推理树结构、跨模型迁移 大模型不同 benchmark 的基准准",
+    excerpt: "闭源大模型的内部推理真的无迹可寻？丹麦学者通过标准 API 自定义工具，提取前沿模型隐藏思维链，验证其与原生推理高度一致，系统揭示不同模型的推理效率、结构与迁移差异。",
     sourceUrl: "https://mp.weixin.qq.com/s/eh5LxcpYn8xVN5k9uvySTg",
   },
   {
@@ -621,7 +621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "vLLM", "INT21", "超高速", "引擎", "工程师"],
-    excerpt: "关键词：AI 生成推理引擎、推理加速]、SGLang、vLLM、推理基准测试 在智能体时代，推理延迟就是业务延迟😅😭！下图展示了 INT21 引擎相对于 SGLang 与 vLLM",
+    excerpt: "INT21 团队由两名工程师耗时两周，通过 AI 生成覆盖 7 大品类的 20 个推理引擎，基于 15 款主流模型与 SGLang、vLLM 对比，在多场景实现显著性能提升，同时指",
     sourceUrl: "https://mp.weixin.qq.com/s/AJdBn2w_v2mV0duRFxwELA",
   },
   {
@@ -631,7 +631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "GPU", "ATREX", "AKA", "开源", "算子"],
-    excerpt: "关键词：GPU 内核生成、Atrex-Bench、屋顶线模型、代码优化智能体、生产负载基准] 生产环境的合格线是硬件理论上限，也就是 Roofline，达不到这个水平的内核都还有优",
+    excerpt: "你以为 LLM 写 GPU 内核已接近生产可用？阿里最新研究戳破行业泡沫：六大顶级模型在真实生产负载下仅摸到约 10.7%的硬件上限，高正确率背后暗藏回退作弊，同时推出配套优化智能",
     sourceUrl: "https://mp.weixin.qq.com/s/hMLbJB_xLTkiwPW7biQ8CA",
   },
   {
@@ -641,7 +641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "Tokens", "MegaKernel", "PDL", "NaiveRT", "RL"],
-    excerpt: "关键词：NaiveRT、递归式自我改进（RSI）、推理运行时]、稀疏注意力、大模型推理优化 当前大模型推理正在从单纯追求模型能力，逐渐转向对整个计算系统效率的极致挖掘。尤其在强化学",
+    excerpt: "本文聚焦 NaiveAI 推出的 NaiveRT 推理运行时，解析其基于 AI 原生研发模式实现的 2122 tokens/s 单流解码速度，拆解核心技术架构与迭代过程，展现递归式",
     sourceUrl: "https://mp.weixin.qq.com/s/4GWcAsSQUyieg_OEEH8QmA",
   },
   {
@@ -651,7 +651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "指纹",
     keywords: ["指纹", "引擎", "沙箱", "vLLM", "SGLang", "llama"],
-    excerpt: "关键词：推理引擎指纹识别、沙箱逃逸、vLLM、最小权限隔离]、裸金属逃逸 如果一个模型仅仅通过生成精心构造的输出 token，就能在推理引擎中触发漏洞，它便可以在引擎内部发起一条多",
+    excerpt: "模型开始\\x26quot;反杀\\x26quot;运行它的引擎了。哈佛团队证明，模型仅凭自生成的输出 token 就能指纹识别 vLLM、SGLang 等五大引擎，再串起引擎、容器、",
     sourceUrl: "https://mp.weixin.qq.com/s/bRV6AmMqyI9SfgBUrrsw1g",
   },
   {
@@ -661,7 +661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "Scaling", "Agensh", "维度", "协作", "分工"],
-    excerpt: "关键词：多智能体系统、自组织协作、Agent编排]、规模化智能 多智能体系统可以通过并发执行来降低复杂任务的延迟。本文作者进行了一场极端实验：断网、6 小时、只给一个不能反编译的二",
+    excerpt: "一千个 AI 同时干活，能快一千倍吗？微软 Agensh 干掉中央编排器，让上千 Agent 靠轻量基础设施自组织协作，pandoc 通过率从 33.89% 升到 55.06%，分",
     sourceUrl: "https://mp.weixin.qq.com/s/xqYufpFG8sD7wqCMqAawzA",
   },
   {
@@ -671,7 +671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "Weave", "MoE", "MegaKernel", "SM", "DeepEP"],
-    excerpt: "关键词：MoE 推理、计算通信重叠、专家并行、SM 动态调度、持久MegaKernel] Weave 在全部 18 种配置下都实现了最低的端到端延迟：相对 DeepEP 为 1.1",
+    excerpt: "MoE 推理的通信开销顽疾迎来破局？上海交大与阿里团队推出 Weave 细粒度动态 SM 调度系统，基于路由结果实时调整计算通信资源分配，MoE 层几何平均提速 2.89 倍，端到",
     sourceUrl: "https://mp.weixin.qq.com/s/ShGX7mdhwbNY0MoYY00L1Q",
   },
   {
@@ -681,7 +681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RL",
     keywords: ["RL", "A100", "MCHA", "主存", "内存", "架构"],
-    excerpt: "关键词：以内存为中心架构]、并行-串行计算、多级片上网络]、数据驱动编程、硬件加速 数据搬运开销占据了全部处理操作的 83% 到 96%。换句话说，售价高昂的通用加速卡，在这类负载",
+    excerpt: "多智能体强化学习、类脑计算与图计算这类并行-串行负载，在GPU上83%~96%的时间耗在搬数据。北大MICRO 2026提出以内存为中心的层级架构MCHA，用三层片上网络加事件触发",
     sourceUrl: "https://mp.weixin.qq.com/s/8vyjn0hSg3ndXfLtd-agfA",
   },
   {
@@ -691,7 +691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "性能", "Kaggle", "硬件", "竞赛", "规格"],
-    excerpt: "关键词：图形性能指数；逆向工程；结构化预测]；XGBoost；特征工程；Kaggle 本文完整复盘了 Kaggle 竞赛「GPU Performance Prediction Ch",
+    excerpt: "本文复盘 Kaggle GPU 性能预测竞赛夺冠全过程。选手穷尽 XGBoost 等通用机器学习方法抵达性能天花板后，通过观察 GPU 超频变体逆向推导出 GPI 确定性公式，搭建",
     sourceUrl: "https://mp.weixin.qq.com/s/5vVRr2h5wVFW-qu0G22Czw",
   },
   {
@@ -701,7 +701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "架构",
     keywords: ["架构", "Kernel", "RoofLang", "AI", "LLM", "解码"],
-    excerpt: "关键词：RoofLang、推理架构搜索]、Roofline建模、AI Agent、MoE推理 被 profiling 绑定的反馈，会把搜索困死在现有软件栈的能力与性能边界内，让那些",
+    excerpt: "AI把GPU kernel优化卷到极致，推理系统架构却仍靠人类专家拍脑袋。RoofLang用语义可验证的图改写语言加Roofline仿真器，让Agent不碰真机就能自动设计LLM推",
     sourceUrl: "https://mp.weixin.qq.com/s/KbyrVPQPxYK9YLqKR3-I4Q",
   },
   {
@@ -711,7 +711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "CroqTile", "DSA", "AI", "编程语言", "内核"],
-    excerpt: "关键词：内核编程、分块计算、符号推导]、异步流水、智能调优 Croqtile 是一个面向 GPU/DSA 场景的 AI 原生高性能计算 DSL，近期已正式开源。它的核心主张，在与 ",
+    excerpt: "Croqtile是面向GPU/DSA开源AI原生高性能DSL，主打AI Agent算子开发。它大幅降低Token消耗，编译时可检测8类GPU内核Bug，动态形状下生成准确率衰减很小",
     sourceUrl: "https://mp.weixin.qq.com/s/C0mNrCl6oF8cvBQqCy_xtA",
   },
   {
@@ -721,7 +721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "语料",
     keywords: ["语料", "AMD", "GPU", "Kernel", "GPT", "开源"],
-    excerpt: "关键词：AMDKernelVault、智能体内核优化、HIP 内核、Triton 内核、ROCm 生态 本文这项工作说明了：没有数据，就没有好的模型；没有好的模型，就只能依赖人工和",
+    excerpt: "AMD 甩出重磅开源项目！AMDKernelVault 首次构建十万级 AMD 原生验证内核语料与 Agent 训练框架，仅用 8B 小模型便在多项基准上实现超越前沿大模型的内核生",
     sourceUrl: "https://mp.weixin.qq.com/s/FaCBlfQqyBA4MP07pq2srQ",
   },
   {
@@ -731,7 +731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Harness",
     keywords: ["Harness", "FrontierSWE", "统治力"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：自主软件开发、编码智能体、Agent Harness、迭代增量开发、证据驱动 编码 Harness 负责组织模型的一次运",
+    excerpt: "让编码 Agent 连续无人值守数日、独立交付能上手玩的游戏，正从演示走向工程现实。上海 AI Lab 提出 Harness-of-Harness，以规划-开发-测试闭环与双状态通",
     sourceUrl: "https://mp.weixin.qq.com/s/lQyWdf4EtpSCYCfpE1mmnw",
   },
   {
@@ -751,7 +751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "PFLOPS",
     keywords: ["PFLOPS", "ThunderKittens", "Vera", "Rubin", "NVL72", "NVFP4"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：ThunderKittens]、Vera Rubin NVL72、GEMM、NVFP4、FP8 谁说天文学家小猫，不可爱",
+    excerpt: "新硬件新算子：ThunderKittens 深度适配 Vera Rubin NVL72，五大硬件特性拉满 GEMM 算力上限！",
     sourceUrl: "https://mp.weixin.qq.com/s/0rZqLthzmZAPFOKcz4UUZw",
   },
   {
@@ -761,7 +761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "SoL", "Pi", "Agent", "Harness", "开源"],
-    excerpt: "关键词：递归自我改进（RSI）、Agent Harness]、Token 效率、自动研究循环、编码智能体 对于研究单一问题的专业研究人员而言，SoL-Pi 相比原生 Codex 和",
+    excerpt: "NVIDIA 提出 SoL-Pi：让智能体在数百个可执行环境中跑自动研究循环、自我改进 Harness 。152 条提案仅 4 个机制幸存，长程基准上保留约九成四能力、少用四五成 ",
     sourceUrl: "https://mp.weixin.qq.com/s/yafDz8H9tpz2gygxyV-sXQ",
   },
   {
@@ -771,7 +771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "AOCL", "DLP", "GEMM", "JIT", "CPU"],
-    excerpt: "关键词：低精度 GEMM]、AMD Zen、JIT 微内核、量化后处理、CPU 推理加速 在深度学习系统里，最昂贵的计算常常藏在一个朴素公式背后：C = alpha A B + b",
+    excerpt: "AOCL-DLP 以低精度 GEMM 为核心，把 CPU 特性探测、JIT 微内核、分块调度与量化后处理串成一条高性能流水线，让 AMD 处理器承接深度学习推理训练中矩阵计算。",
     sourceUrl: "https://mp.weixin.qq.com/s/TWe_SRJNreythHHCsdr1VA",
   },
   {
@@ -781,7 +781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "ForgeMegakernel", "AI", "MegaKernel", "时代"],
-    excerpt: "关键词：大语言模型推理、MegaKernel、GPU 内核合成]、编码智能体、内存带宽利用率 自回归模型的解码过程受内存带宽约束，每生成一个 token，所有权重和 KV 缓存字节",
+    excerpt: "大模型解码延迟迟迟难突破？清华联合团队推出 ForgeMegakernel 框架，借助编码智能体自动生成高性能解码巨内核，带宽利用率最高达 85.9%，较 SGLang 几何平均提",
     sourceUrl: "https://mp.weixin.qq.com/s/PQUTjgW6XSOmPjyytf9cYQ",
   },
   {
@@ -791,7 +791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "OpenAI",
     keywords: ["OpenAI", "Noam", "Brown", "Agentic", "AI", "智能"],
-    excerpt: "关键词：AI Agent、强化学习、多智能体、链式推理]、AI 对齐 本文整理自 OpenAI 研究科学家 Noam Brown 的深度播客访谈，围绕 AI Agent 的定义、技",
+    excerpt: "本文整理自 OpenAI 研究科学家 Noam Brown 的深度播客访谈，围绕 AI Agent 的定义、技术基础、能力边界、多智能体协作风险与对齐挑战展开，解读大模型能力演进的",
     sourceUrl: "https://mp.weixin.qq.com/s/M_EJRfg-hS5T73kg5aoWvg",
   },
   {
@@ -801,7 +801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Intelligence", "per", "Watt", "Together", "上云"],
-    excerpt: "关键词：本地推理、每瓦智能、大模型效率]、混合路由、端侧 AI] 去年的一篇文章👀，再拿出来看看。当全球每天数万亿次大模型推理请求涌向少数数据中心，一个被反复追问的问题浮出水面：本",
+    excerpt: "当云端 AI 推理账单一路飙红，斯坦福这篇论文把 20 多个本地模型塞进 8 种硬件、跑了 100 万次真实查询，结论足够颠覆——两年间智能每瓦效率翻了 5.3 倍，88.7%的日",
     sourceUrl: "https://mp.weixin.qq.com/s/8kPgMdJgRHVrep-a1OQR3w",
   },
   {
@@ -811,7 +811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Cerebras",
     keywords: ["Cerebras", "Black", "Forest", "Labs", "CEO", "算力"],
-    excerpt: "关键词：AI 算力基建、推理芯片]、递归学习、世界模型、智能主权 两位身处 AI 建造一线的嘉宾在 All-In 节目中，拼出了超级智能竞赛的全貌。Cerebras 创始人 And",
+    excerpt: "Cerebras 创始人详解 250 亿美元订单积压下的全球 AI 基建、推理算力竞赛、开源主权与安全监管；Black Forest Labs CEO 讲述潜式扩散、世界模型、斯科",
     sourceUrl: "https://mp.weixin.qq.com/s/gvYw5xfKLMlKU3v_xvLWtw",
   },
   {
@@ -821,7 +821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "MoE", "血泪", "指南", "国产", "部署"],
-    excerpt: "关键词：华为昇腾、MoE 推理、非 GPU 加速器、vLLM、大模型部署] 当供应链、成本和可用性成为大模型推理部署的硬约束，非 GPU AI 加速器正在被越来越多团队视为 CUD",
+    excerpt: "别被纸面 TOPS 忽悠了。这篇港中深的实地研究首次系统披露 16 卡昇腾 910 部署千亿 MoE 与多模态模型真实代价：12 个源码补丁、关闭多项吞吐优化、外层看门狗保活，硬件",
     sourceUrl: "https://mp.weixin.qq.com/s/8VYzQKC9rVjlFaDjnVOZgA",
   },
   {
@@ -831,7 +831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GB",
     keywords: ["GB", "NVIDIA", "RTX", "PRO", "Blackwell", "工作站"],
-    excerpt: "关键词：RTX PRO 5500 Blackwell、英伟达专业显卡、84GB GDDR7、GB202 芯片]、工作站 GPU 2026 年 9 月，英伟达在没有新闻稿、没有发布会",
+    excerpt: "英伟达官网悄然列出 RTX PRO 5500 Blackwell 工作站显卡：GB202 芯片、21760 个 CUDA 核心与 RTX 5090 同源，搭载 84GB GDDR7",
     sourceUrl: "https://mp.weixin.qq.com/s/waQoqI3Sg28MnZOXETswww",
   },
   {
@@ -841,7 +841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Power",
     keywords: ["Power", "GPU", "MAPE", "建模", "功耗", "芯片"],
-    excerpt: "关键词：GPU 功耗建模、架构级仿真]、知识迁移、注意力聚合、特征分组 GPU 已经成为大规模并行计算的核心算力底座，从机器学习训练到科学计算仿真，每一次算力跃升背后都伴随着功耗墙",
+    excerpt: "当微基准测试撞上真实负载，GPU 功耗模型的误差能飙到 30%以上。港科大团队提出 G-Power，借用已知 GPU 芯片的先验知识做预训练，再通过注意力机制聚合迁移，最终将平均 ",
     sourceUrl: "https://mp.weixin.qq.com/s/ikth8P8Y7zUWdNUBDoDjXg",
   },
   {
@@ -851,7 +851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "机器人", "专用化", "NVIDIA", "基模", "DrEureka"],
-    excerpt: "关键词：具身 AI、GR00T 人形机器人、三类训练数据、双系统框架]、Sim‑to‑Real 迁移、Foundation Agent 从 2016 年在 OpenAI 参与 Wo",
+    excerpt: "NVIDIA GEAR 负责人 Jim Fan 深度拆解人形机器人基础模型 GR00T 的技术路线：三类数据互补、系统一先突破、人形优先通用、LLM 写奖励函数，最终走向跨越虚拟与",
     sourceUrl: "https://mp.weixin.qq.com/s/uOo_Xk4tyhgxYD81UE_u0g",
   },
   {
@@ -861,7 +861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FBLayout",
     keywords: ["FBLayout", "Tile", "GPU", "LLM", "MNN", "TFLite"],
-    excerpt: "关键词：端侧训练、LLM 微调、移动 GPU 优化]、内存布局、纹理内存 Transformer 模型在语言、视觉和多模态任务上展现出前所未有的能力，在设备端直接微调 Transf",
+    excerpt: "手机 GPU 微调 LLM 竟比 CPU 慢 43%？FBLayout 以 R-Tile 布局击穿显存墙，实现 2.2-5.7 倍加速，缓存未命中降 4.2 倍，端侧大模型微调迈入",
     sourceUrl: "https://mp.weixin.qq.com/s/tNL9rcLYqZGxUuMscQcE2w",
   },
   {
@@ -871,7 +871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "OpScale", "GPU", "开源", "算子", "功耗"],
-    excerpt: "关键词：算子级自动扩缩容、LLM 推理服务]、GPU 资源调度、服务等级目标]、集群能效 大模型推理集群 GPU 利用率常年不足五成？在当前 LLM 服务架构中，自动扩缩容是平衡服",
+    excerpt: "大模型推理集群 GPU 利用率常年不足五成？莱斯大学与微软研究院联合推出 OPSCALE 算子级扩缩容方案，将调度粒度从整模型下沉至单个算子，最高节省 36.3% GPU 与 28",
     sourceUrl: "https://mp.weixin.qq.com/s/DVPdqyhTRmpLLTgBR9yrkQ",
   },
   {
@@ -881,7 +881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DITRON",
     keywords: ["DITRON", "Kernel", "分块", "字节", "分布式", "手写"],
-    excerpt: "关键词：分布式张量编译器、多层分块抽象]、计算通信重叠、MegaKernel、大模型训练推理、硬件无关原语 论文中明确指出：“随着集群规模扩张，通信开销已成为主导瓶颈，在训练和推理",
+    excerpt: "分布式大模型的训练与推理正被通信开销牢牢卡住瓶颈。字节跳动 Seed 团队推出 DITRON 多层分块编译器，以三级抽象打通集群内存层级，性能超越专家调优库，已规模化部署节省海量算",
     sourceUrl: "https://mp.weixin.qq.com/s/RpxoKU20o2mTAc-OB9hicQ",
   },
   {
@@ -891,7 +891,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "DT",
     keywords: ["DT", "DeepSeek", "AI", "算力", "集群", "国产"],
-    excerpt: "关键词：DeepSeek、昇腾 950DT]、国产算力替代、AI 数据中心、模型推理 - DeepSeek planea instalar 160.000 chips Huawei",
+    excerpt: "DeepSeek 计划在内蒙古吉瓦级数据中心部署至少 16 万颗华为昇腾 950DT 芯片，主打模型推理场景。受华为产能限制，订单交付周期超一年。此举标志国产 AI 算力替代进入大",
     sourceUrl: "https://mp.weixin.qq.com/s/bKSVTWTPvDrXB_Zi7VTsaA",
   },
   {
@@ -901,7 +901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Linux",
     keywords: ["Linux", "RISC", "FPGA", "全栈", "落地", "厂商"],
-    excerpt: "关键词：FPGA 生命周期管理、RISC-V]、控制平面、Linux、比特流部署 FPGA 的生命周期管理始终与专有工具链和主机架构深度绑定，导致 RISC-V 领域一直缺乏一套厂",
+    excerpt: "RISC-V 终于能打破 FPGA 厂商生态锁死困局？德国 aicas 团队提出主机无关的控制平面架构，将 FPGA 生命周期管理下沉至操作系统层，依托标准 Linux 能力实现跨",
     sourceUrl: "https://mp.weixin.qq.com/s/jZ0jmGg55y7p_rGlMAagUQ",
   },
   {
@@ -911,7 +911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Anthropic", "Native", "手册", "原生", "软件"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：AI-Native、SDLC、研发范式重构]、Agent开发、软件安全治理 在当下的技术圈，AI 赋能开发早已不是新鲜事",
+    excerpt: "传统软件开发流程已无法适配AI高速编码能力。Anthropic公开官方AI-Native SDLC手册与内部安全实践，重构全流程研发闭环，通过标准化工件、分级风控、Agent自治实",
     sourceUrl: "https://mp.weixin.qq.com/s/DdbRTFyA_YdiGYNrpmb0MA",
   },
   {
@@ -921,7 +921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TIPEX",
     keywords: ["TIPEX", "GAIA", "时延", "双层", "精度", "框架"],
-    excerpt: "关键词：多智能体系统、推理时并行]、TIPEX、副本并行、结构并行 推理时并行的收益本质上依赖于任务场景，最优性能来自精心平衡的配置，而非无限制地提升并行度。 大语言模型驱动的多智",
+    excerpt: "多智能体 LLM 串行推理正成为端到端性能核心瓶颈。北邮团队提出 TIPEX 双层并行框架，统一两类并行模式，在 GAIA 实现精度时延双提升，揭示激进并行反效果，为推理调度设计提",
     sourceUrl: "https://mp.weixin.qq.com/s/yjXzR7L9vL0YNAePBJOJ_w",
   },
   {
@@ -931,7 +931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "逆向",
     keywords: ["逆向", "NVIDIA", "GPU", "Google", "TPU", "AWS"],
-    excerpt: "关键词：编译器逆向、CUDA、TPU、AWS Neuron、形式验证 闭源 AI 加速器最深的壁垒，在从计算图到机器指令之间那条漫长的软件隧道里。 - NVIDIA CUDA 程序",
+    excerpt: "本文拆解该项目如何从二进制复原 CUDA、TPU 与 Neuron 编译栈，串联静态分析、数据解码、差分验证和形式证明，揭示黑盒系统如何变成可审计、可复现的工程知识。",
     sourceUrl: "https://mp.weixin.qq.com/s/nqf917Xq4reNz18YA9hdnw",
   },
   {
@@ -941,7 +941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "EDA",
     keywords: ["EDA", "AI", "Redwood", "Jetson", "能效", "芯片"],
-    excerpt: "关键词：AI 自动芯片设计、Redwood 加速器、端到端软硬件协同设计、递归自改进]、能效优化 现代 AI 工作负载与其运行硬件的演化处于完全不同的时间尺度：架构定义到量产硅片落",
+    excerpt: "2 周从零造出量产级 AI 加速器？这不是天方夜谭。Architect Labs 凭借端到端 AI 设计系统完成 Redwood 全栈开发，8nm 工艺下能效超 Jetson Or",
     sourceUrl: "https://mp.weixin.qq.com/s/wda_73O0Uonysx9QNdLSgA",
   },
   {
@@ -951,7 +951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "现金流",
     keywords: ["现金流", "半年报", "效率", "股份"],
-    excerpt: "关键词：国产 GPU、沐曦股份、半年报解读]、公允价值变动、CUDA 兼容 2026 年 8 月底，科创板上市公司沐曦股份（688802）披露了上市后的首份半年报。财报口径相当亮眼",
+    excerpt: "沐曦股份上半年净利 6.12 亿元实现扭亏，但其中 8.87 亿元来自金融资产浮盈，扣非仍亏 4886 万元、经营现金流 -12.97 亿元。本文拆解账面利润成因、主业技术成色与备",
     sourceUrl: "https://mp.weixin.qq.com/s/gmfMLf8KTdzax3mH0i2eRw",
   },
   {
@@ -961,7 +961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MicroEvo",
     keywords: ["MicroEvo", "LLM", "CPU", "架构设计", "局部", "经验"],
-    excerpt: "关键词：微架构设计空间探索、大语言模型、蒙特卡洛树搜索、多目标优化、Pareto 前沿] 微架构设计空间探索（DSE）始终是高端芯片设计的核心瓶颈：百亿级参数组合构成的超高维离散空",
+    excerpt: "现代 CPU 微架构设计空间高达 10^13 种组合，穷举需 7500 万年。东南大学提出 MicroEvo，将大模型与蒙特卡洛树搜索结合，通过知识驱动进化算子与主动知识积累，在 ",
     sourceUrl: "https://mp.weixin.qq.com/s/XW2aMYD5deI8d0Nzw-TtlQ",
   },
   {
@@ -971,7 +971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "hip", "ep", "MLIR", "ONNX", "Runtime"],
-    excerpt: "关键词：ONNX Runtime、MLIR、ROCm、Execution Provider、GPU 推理 在深度学习推理系统里，Execution Provider 往往被理解成“",
+    excerpt: "hip-ep 将 ONNX 模型经 MLIR 降到 HIP 与 LLVM 位码，在会话期 JIT 装载，联通 ONNXRuntime 与 ROCm 后端，为 AMDGPU 推理提供",
     sourceUrl: "https://mp.weixin.qq.com/s/aBmnXwJoXe5LxoKo-5tkdw",
   },
   {
@@ -981,7 +981,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "megakernel",
     keywords: ["megakernel", "CUDA", "PDL", "内核", "调度", "神话"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：PDL、Megakernel]、持久化 Kernel、CUDA Graph、ThunderKittens 当一个 $ba",
+    excerpt: "打破 megakernel 性能神话？81 个普通 CUDA 内核借助 PDL 调度，在 H100 单步解码中达到持久化路径 97.4%的端到端吞吐，差距仅 2.7%。本文拆解其技",
     sourceUrl: "https://mp.weixin.qq.com/s/caONRd5KeL3fvZGPOIKAyg",
   },
   {
@@ -991,7 +991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Jeff",
     keywords: ["Jeff", "Dean", "AI", "餐巾纸", "特化", "品味"],
-    excerpt: "关键词：Jeff Dean、推理硬件、上下文工程、AI Agent]、创业机会 硅谷有个半开玩笑的说法：若抽掉 Jeff Dean 编写的 Google 基础设施代码，整个互联网会",
+    excerpt: "Google 首席科学家 Jeff Dean 在 YC 对话中指出：推理硬件专业化、上下文工程和通用模型覆盖不到的 1%细分领域，是小团队仍能胜出的三个方向。",
     sourceUrl: "https://mp.weixin.qq.com/s/ksWoNG812I6i-oJNowBRRw",
   },
   {
@@ -1001,7 +1001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "源码", "Kernel", "AMD", "AsmEvo", "内核"],
-    excerpt: "关键词：AsmEvo、GPU 内核优化、汇编级优化、功能等价验证]、后编译优化 “GPU Kernel 一旦被编译为 AMDGPU 代码对象，尚存的优化空间便无法再通过源程序层面挖",
+    excerpt: "编译器榨干的性能还能再挤？AMD 研究院推出硬核 AsmEvo 系统，无需源码直接在汇编层优化已编译 GPU 内核，保留 ABI 兼容与功能等价，实测最高提速 3.88 倍，为生产",
     sourceUrl: "https://mp.weixin.qq.com/s/r_8gryL2_FnrB6d8WqS9pg",
   },
   {
@@ -1011,7 +1011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "learn",
     keywords: ["learn", "cuda", "Kernel", "Softmax", "Attention", "开源"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：CUDA、PyTorch扩展、矩阵乘、TensorCore、FlashAttention] GPU 编程最劝退人的地方是",
+    excerpt: "本文拆解learn-cuda以PyTorch为入口，从向量加法走到TensorCore、FlashAttention与低比特矩阵乘，呈现GPU优化的实验路线。",
     sourceUrl: "https://mp.weixin.qq.com/s/3VjFzUURbCqUaJV9tXScHA",
   },
   {
@@ -1021,7 +1021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "JIT", "Harness", "曲线", "边界", "定义"],
-    excerpt: "关键词：JIT-Agent、Agent Harness]、Harness Intelligence、Evo-GDPO、任务自适应编排 所有人都在卷基础模型的参数、推理速度和能力边界",
+    excerpt: "Agent 能力真的只靠堆模型参数？这篇研究给出颠覆性答案。JIT-Agent 通过即时生成任务自适应 Harness，让 GLM-5.2 性能最高提升 20.2 分，DeepSe",
     sourceUrl: "https://mp.weixin.qq.com/s/s9Tpf9HJRr4CGSs_QooDKw",
   },
   {
@@ -1031,7 +1031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepMind",
     keywords: ["DeepMind", "Google", "Cloud", "TPU", "Gemini", "研产"],
-    excerpt: "关键词：Gemini、DeepMind、TPU]、Goodput、端云混合 当十万颗 TPU 在同一个集群里昼夜运转，当一个模型的训练周期以\"月\"为单位计算，前沿研究与产品落地之间",
+    excerpt: "本文整理自对谷歌核心 ML 团队负责人 Bill Jia 的访谈，系统还原 Gemini 模型从 DeepMind 研究到全产品落地的工程全链路，涵盖十万 TPU 协同训练、Goo",
     sourceUrl: "https://mp.weixin.qq.com/s/vDTbZDPwQ_IuZ-TwsLGZMA",
   },
   {
@@ -1041,7 +1041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TensorGauge",
     keywords: ["TensorGauge", "预硅", "Tensor", "Core", "算子", "误差"],
-    excerpt: "关键词：Tensor Core 微架构、预硅评估]、数值误差量化、低精度计算、累加精度设计 由于浮点数运算不满足结合律，GEMM 计算单元的微架构选择会在有限精度下引入系统性的数值",
+    excerpt: "张量核的微架构选择会给大模型训练带来不可忽视的数值偏差？TensorGauge 框架打通从硬件算术单元到端到端模型的完整量化链路，用比特级精确模拟揭示不同精度格式的稳定阈值，为预硅",
     sourceUrl: "https://mp.weixin.qq.com/s/T6HOWo6v6VcH9VRfbvvpOg",
   },
   {
@@ -1051,7 +1051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "算子",
     keywords: ["算子", "Python", "NPU", "PyPTO", "Lib", "Qwen3"],
-    excerpt: "关键词：昇腾 NPU、Tile 分块]、并行原语、算子内核、精度校验 写一个跑在专用加速器上的高性能算子，通常意味着什么？意味着你要盯着晦涩的指令手册，手工安排数据搬运，反复调试内",
+    excerpt: "PyPTO-Lib 把昇腾 NPU 的算子编写从繁琐汇编抽象为可读 Python，用 Tile 分块与并行原语描述计算，配合 golden 对齐 torch 自动校验精度，让开发者",
     sourceUrl: "https://mp.weixin.qq.com/s/7tLlTbomH9OqyUbZDbBEhQ",
   },
   {
@@ -1071,7 +1071,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "流片",
     keywords: ["流片", "Blackwell", "OpenAI", "ASIC", "Jalape", "碾压"],
-    excerpt: "关键词：OpenAI、Jalapeño、推理芯片]、能效比、软硬协同 OpenAI 在 Hot Chips 上正式公布首款自研推理芯片 Jalapeño，SemiAnalysis ",
+    excerpt: "OpenAI 于 Hot Chips 大会正式发布自研推理 ASIC 芯片 Jalapeño，项目从启动到流片仅 16 个月。经 SemiAnalysis 实验室实测，依托通用架构",
     sourceUrl: "https://mp.weixin.qq.com/s/Zv-k3gsflOU56CX0NtZ9Aw",
   },
   {
@@ -1081,7 +1081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CMU",
     keywords: ["CMU", "RadixArk", "PTXBench", "GPU", "LLM", "内核"],
-    excerpt: "关键词：PTXBench、GPU 内核优化、大语言模型、架构特定 PTX、修复式微调] “执行目标指令并不必然转化为有竞争力的性能”，这是 PTXBench 研究中最戳中行业痛点的",
+    excerpt: "大模型直接编写 GPU 底层架构特定 PTX 内核到底行不行？斯坦福团队推出 PTXBench 基准，从正确性、指令执行与性能三维度系统评测 LLM 架构级编程能力，揭示当前模型与",
     sourceUrl: "https://mp.weixin.qq.com/s/wHFkPRtQJAd1fPMIfHo-Qg",
   },
   {
@@ -1091,7 +1091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "SemiAnalysis", "算力", "棋局", "方法论", "协同"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：软硬件协同设计、AI 推理、CUDA 护城河]、算力基建、AI 芯片 在半导体与 AI 交叉领域，由 Dylan Pat",
+    excerpt: "本文基于红杉资本对 SemiAnalysis 创始人 Dylan Patel 的访谈，拆解 AI 效率提升的核心逻辑，提出软硬件协同设计才是 AI 百倍增益的真正来源，同时解读了 ",
     sourceUrl: "https://mp.weixin.qq.com/s/ujpFgC-wH3H06U4-W5-N4g",
   },
   {
@@ -1101,7 +1101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "Databricks", "Model", "Harness", "路由", "编码"],
-    excerpt: "关键词：智能路由]、Omnigent、AI 编码成本、Unity AI Gateway、效率前沿 抱一丝，最近先清一波前阵子偷懒没发的文章。2026 年，AI 编码工具在带来效率跃",
+    excerpt: "仅 2026 年前八个月，业界就发布了 33 个新模型，平均每 5 天冒出一个\\x26quot;前沿模型\\x26quot;。开发者面对的选择空前丰富，账单也空前膨胀。Databri",
     sourceUrl: "https://mp.weixin.qq.com/s/o5HzCbwP05Dxm2axAAIA2A",
   },
   {
@@ -1111,7 +1111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "晶圆厂",
     keywords: ["晶圆厂", "Anthropic", "TPU", "芯片", "谷歌", "创始人"],
-    excerpt: "关键词：Anthropic、Amir Salek、TPU]、自研芯片、算力 之前我们曾报道过 OpenAI 联合博通推出推理专用芯片 Jalapeño，芯片架构原生适配 MoE 稀",
+    excerpt: "谷歌 TPU 项目创始人 Amir Salek 已加入 Anthropic 算力团队，向 James Bradbury 汇报。结合 Anthropic 本月亮出的芯片招聘岗位与多供",
     sourceUrl: "https://mp.weixin.qq.com/s/IFQkW2NTnhQSs8Xl89rpfg",
   },
   {
@@ -1121,7 +1121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "RISC", "Vector", "Primer", "AI", "RVV"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：RISC-V、RVV、向量处理器]、矩阵计算、编译器优化 很多人第一次读 RISC-V Vector Extension",
+    excerpt: "本文剖析 RISC-V Vector Primer 如何把 RVV 规格转化为硬件心智模型：以 VL、SEW、LMUL、掩码和链式执行全链路贯通编译器、芯片实现与矩阵计算。",
     sourceUrl: "https://mp.weixin.qq.com/s/uun5NXMSsQFDxkt9Jd9XvA",
   },
   {
@@ -1131,7 +1131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "SkillEvaluator", "Skill", "Token", "AI", "开源"],
-    excerpt: "关键词：AI 智能体、Agent Skills、SkillEvaluator、基准评测]、NVIDIA AI 智能体的表现，很大程度上取决于喂给它的上下文。模型再强、文档再全，智能",
+    excerpt: "NVIDIA 开源了 SkillEvaluator，用同一任务、装与不装 Skill 的对照实验，测量 Skill 对智能体的真实增益。300 多个认证 Skill 的首批基准显示",
     sourceUrl: "https://mp.weixin.qq.com/s/l1w8f2qlNcLgWG8boM9kog",
   },
   {
@@ -1141,7 +1141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "GPU", "Warp", "Divergence", "Blackwell", "重构"],
-    excerpt: "关键词：Warp 分歧、独立线程调度、SIMT 重收敛、Blackwell 架构、GPU 微基准测试] “自 2017 年 Volta 架构引入独立线程调度以来，NVIDIA GP",
+    excerpt: "Volta 之后 NVIDIA GPU 的 Warp 分歧处理真的一成不变？一项横跨五代架构的精细研究揭开真相：上层性能模型高度稳定，底层重收敛机制已悄然换代，Blackwell ",
     sourceUrl: "https://mp.weixin.qq.com/s/xoSA13QGNT46BnRKOa-jUg",
   },
   {
@@ -1151,7 +1151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "PyTorch",
     keywords: ["PyTorch", "INT21", "样例", "SGLang", "vLLM", "框架"],
-    excerpt: "关键词：推理引擎、智能体集群]、自我进化基础设施、CUDA kernel、MiniMax INT21 发布 Inference Engine Factory 的首批工程样例：由自我",
+    excerpt: "INT21 发布 Inference Engine Factory 工程样例：自我进化智能体集群端到端构建视频、音乐、语音推理栈，不依赖 PyTorch 与推理框架，性能全面超越 ",
     sourceUrl: "https://mp.weixin.qq.com/s/Qtxb_Cc42jZQs7JUo-6qXA",
   },
   {
@@ -1161,7 +1161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "轻量",
     keywords: ["轻量", "NVIDIA", "TensorIR", "Compiler", "CUDA", "Tile"],
-    excerpt: "关键词：张量编译、MLIR、布局传播、CUDA Tile、Python DSL] 写一个矩阵乘、逐元素加法或融合激活函数并不难，困难在于如何把这些高层张量关系，稳定地变成适配具体 ",
+    excerpt: "TensorIR以轻量MLIR方言承接张量表达，经布局传播、分块选择与图拆分降至CUDA Tile IR，构筑Python DSL、DLPack运行时和验证链路闭环。",
     sourceUrl: "https://mp.weixin.qq.com/s/YZzDjv6MeZFcN4RGXxo3ew",
   },
   {
@@ -1171,7 +1171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "When",
     keywords: ["When", "Does", "Disaggregation", "Pay", "HeteroPanacea", "Agentic"],
-    excerpt: "关键词：Agentic 推理、PDAF 异构拆解]、HeteroPanacea、推理系统仿真、定制 NPU 智能体推理正在成为大语言模型推理的主流场景，模型需要主动参与多轮交互并具",
+    excerpt: "智能体推理时代，统一 GPU 架构正加速失效。帝国理工与剑桥提出 HeteroPanacea 仿真框架，系统验证 PDAF 四级异构拆解方案，定制 NPU 下吞吐量最高提 2.06",
     sourceUrl: "https://mp.weixin.qq.com/s/UyL9PKRlV3S8IQLr55gXlA",
   },
   {
@@ -1181,7 +1181,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "LoongForge",
     keywords: ["LoongForge", "TAOT", "MoE", "百度", "传输", "团队"],
-    excerpt: "关键词：混合专家模型（MoE）、专家并行训练、动态负载均衡]、最优传输、拓扑感知副本放置 MoE 已经成为前沿大模型的默认架构，而新一代模型的方向更明确：专家越来越多、激活越来越稀",
+    excerpt: "针对MoE专家并行训练中动态副本放置忽略拓扑结构、跨节点通信开销抵消负载均衡收益的问题，提出拓扑感知最优传输方法TAOT，通过三阶段规划与计算通信重叠优化放置，实现1.43倍端到端",
     sourceUrl: "https://mp.weixin.qq.com/s/Op-KpFe5G1Q2IxzIUgm2KA",
   },
   {
@@ -1191,7 +1191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "V4", "Pro", "Harness", "文档", "上线"],
-    excerpt: "关键词：DeepSeek V4-Pro、Agent、Harness]、开源模型、API 定价 2026 年 8 月 12 日，DeepSeek 官方 API 文档首页与定价页双双确",
+    excerpt: "DeepSeek-V4-Pro-0813 静默上线，跑分全面反超预览版",
     sourceUrl: "https://mp.weixin.qq.com/s/qtW06VxJmGVLSGPqvIioBQ",
   },
   {
@@ -1201,7 +1201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Triton",
     keywords: ["Triton", "ASIC", "Meta", "MTIA", "GEMM", "落地"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Triton、MTIA-2i、编译器后端、TorchInductor]、kernel 开发效率 - 论文标题：Trito",
+    excerpt: "Triton 首次冲出 GPU：Meta 将其搬上自研推理芯片 MTIA-2i，GEMM 性能稳定超过架构 roofline 的 80%，与专家手写 C++ 持平，目前已覆盖约 6",
     sourceUrl: "https://mp.weixin.qq.com/s/DDVGjZnBYDRtAAOLmEeCAQ",
   },
   {
@@ -1211,7 +1211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Python",
     keywords: ["Python", "C++", "CUDA", "PyTorch", "Bug", "语义"],
-    excerpt: "关键词：深度学习框架、静态分析、大语言模型、语义桥接中间表示、PyTorch 缺陷检测] “很多深度学习框架缺陷并不存在于单个函数内部，而潜藏在不同语言层的衔接处。” 深度学习框架",
+    excerpt: "深度学习框架底层究竟藏着多少跨语言语义漏洞？南京大学团队提出 PHOENIX 静态分析方案，以语义桥接 IR 打通 Python/C++/CUDA 边界，在 PyTorch 中检出",
     sourceUrl: "https://mp.weixin.qq.com/s/SD_RkNnno5VcWFyWnPtKOA",
   },
   {
@@ -1221,7 +1221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "榨干",
     keywords: ["榨干", "INT8", "算力", "EmuGEMM", "Blackwell", "GEMM"],
-    excerpt: "关键词：张量核、精度模拟]、内核融合、矩阵乘法、Ozaki 方案]、高性能计算 现代 GPU 将越来越多的硅片预算投入低精度矩阵乘法单元，正在持续拉大科学计算工作负载的精度-吞吐差",
+    excerpt: "当 GPU 算力持续向低精度运算单元倾斜，科学计算的高精度需求面临可用算力占比持续萎缩困境。ETH 团队提出 EmuGEMM，通过内核融合消除内存瓶颈，在 Blackwell 上将",
     sourceUrl: "https://mp.weixin.qq.com/s/mizQCdUXO9XXVfPn5iNQfA",
   },
   {
@@ -1231,7 +1231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "V4", "Flash", "Vision", "NVFP4", "vLLM"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：DeepSeek V4 Flash、视觉微调、NVFP4 量化]、MoonViT、SGLang、vLLM DeepSee",
+    excerpt: "本文解读社区视觉微调项目 DeepSeek-V4-Flash-0731-Vision-NVFP4：给纯文本 MoE 模型接上视觉前端，补齐浏览器智能体读截图的能力缺口。文章对比 W",
     sourceUrl: "https://mp.weixin.qq.com/s/LgP_eeKtha8iNdnjsVABGA",
   },
   {
@@ -1241,7 +1241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "阶跃",
     keywords: ["阶跃", "TensorCast", "LLM", "中位", "TTFT", "开源"],
-    excerpt: "关键词：张量生命周期管理、张量即服务(TAAS)、] TensorCast、LLM 基础设施、可编程调度] 张量生命周期管理是现代 LLM 基础设施中缺失的一层抽象。过去几年，行业",
+    excerpt: "当全行业都在卷单机推理性能时，LLM 基础设施中缺失的张量管理层正成为新瓶颈。本文解读 TensorCast 如何用张量即服务范式打破孤岛，在多轮代理场景下实现中位首令牌延迟最高 ",
     sourceUrl: "https://mp.weixin.qq.com/s/BqxPZItMx0s2EF0f8yhWTg",
   },
   {
@@ -1251,7 +1251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Jane",
     keywords: ["Jane", "Street", "ASIC", "Hardcaml", "谜题", "多边形"],
-    excerpt: "关键词：ASIC 逆向工程、GDS 版图、Hardcaml、开源 PDK、Jane Street] - Can you reverse engineer an ASIC? - ht",
+    excerpt: "Jane Street 放出 ASIC 逆向谜题：只给无标签版图，要求从几何图形恢复网表、推断电路功能并找到正确输入。GitHub 仓库含热身设计与开源工具链，提交截止 9 月 4",
     sourceUrl: "https://mp.weixin.qq.com/s/oaQ2UO5rzBgeLa0U0yySyg",
   },
   {
@@ -1261,7 +1261,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "算子",
     keywords: ["算子", "混元", "HPC", "Ops", "SGLang", "腾讯"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：HPC-Ops、SGLang、大模型推理]、算子优化、MoE - HPC-Ops × SGLang: High-Perf",
+    excerpt: "腾讯混元HPC-Ops三大核心算子正式集成至SGLang，针对Hopper架构GPU深度优化。通过动态调度注意力、精度感知路由GEMM、融合式MoE流水线解决推理性能瓶颈，在H20",
     sourceUrl: "https://mp.weixin.qq.com/s/zbvlug7XqPX87I121gYpBQ",
   },
   {
@@ -1271,7 +1271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "算子",
     keywords: ["算子", "AgenticCANN", "NPU", "低语", "硬件", "框架"],
-    excerpt: "关键词：AgenticCANN、昇腾 C 算子、知识增强、智能体进化]、NPU 推理优化、低语料代码生成 低语料硬件下算子自动生成 的核心挑战是上游的可行性瓶颈，而非下游的性能调优",
+    excerpt: "当大模型遭遇陌生 NPU 硬件，连编译通过都成奢望？港城大团队提出 AgenticCANN，通过六层知识编排与分阶段智能体进化，在昇腾 910B 上算子生成可行性最高达 100%，",
     sourceUrl: "https://mp.weixin.qq.com/s/66nvYq8QY9ItjAIzYGH6eA",
   },
   {
@@ -1281,7 +1281,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MoonEP",
     keywords: ["MoonEP", "MoE", "Token", "Expert", "调度", "核心"],
-    excerpt: "关键词：MoonEP、专家并行负载均衡]、MoE 动态调度、权重预取、Token 路由 说明 ：本文只介绍MoonEP[1] 的基本思路和接口抽象，不展开 kernel 实现。对于",
+    excerpt: "本文聚焦 MoE 专家并行的负载不均衡痛点，解析 MoonEP 同步规划 Token 路由与临时 Expert 预取的核心架构，量化权重传输与通信收益的平衡关系，对比多类调度方案的",
     sourceUrl: "https://mp.weixin.qq.com/s/-vjABhSWcaevZ7Nn_nCynw",
   },
   {
@@ -1291,7 +1291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "竞争",
     keywords: ["竞争", "Jeff", "Dean", "Anthropic", "造芯", "AI"],
-    excerpt: "关键词：Jeff Dean、Google DeepMind、Discovery Loop、Anthropic 自研芯片、AI 基础设施] 2026 年 8 月 5 日，AI 行业在",
+    excerpt: "8 月 5 日，谷歌宣布 Hassabis 卸任 DeepMind CEO、Jeff Dean 带队离职创办 Discovery Loop；同日 Anthropic 官宣组建自研芯",
     sourceUrl: "https://mp.weixin.qq.com/s/qgeSjakpWFbRu2u00x3NUQ",
   },
   {
@@ -1301,7 +1301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CuTeDSL",
     keywords: ["CuTeDSL", "NVVM", "IR", "Python", "GPU", "kernel"],
-    excerpt: "关键词：CUTLASS 4.7、CuTeDSL Primitives、NVVM IR]、TileLang、GPU 算子开发 2026 年 8 月 4 日，NVIDIA 通过 PR ",
+    excerpt: "CUTLASS 4.7 推出实验性 Primitives API——CuTe 之下的 NVVM IR 薄封装；TileLang 同日完成 20 个文件的整体迁移并打通 SM120。",
     sourceUrl: "https://mp.weixin.qq.com/s/2oMhB5DSHWFK9OPYBGS7tQ",
   },
   {
@@ -1311,7 +1311,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "Cursor", "GB300", "NVL72", "MoE", "megakernel"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：MoE、megakernel、NVL72、计算通信重叠]、专家并行 Cursor 开源了面向 GB300 NVL72 的",
+    excerpt: "Cursor 开源 MoE 训练 megakernel Mixture-of-Kittens：通信计算全融合、pull 式 dispatch、环形缓冲区零 CPU 同步、完全确定性",
     sourceUrl: "https://mp.weixin.qq.com/s/qFiiJCfbAX54RjKpKteWBw",
   },
   {
@@ -1321,7 +1321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "测试工具",
     keywords: ["测试工具", "GB200", "NVLink", "NVIDIA", "MNNVL", "fabric"],
-    excerpt: "关键词：NVLink、MNNVL、基准测试、GB200]、CUDA、集群验收 nvloom 是 NVIDIA 开源的 MNNVL（Multi-Node NVLink）fabric ",
+    excerpt: "GB200 NVL72 上线前跑什么：开源工具 nvloom 的九种流量模式与三种内存路径",
     sourceUrl: "https://mp.weixin.qq.com/s/On6MExgJZ7L2LQL307GQ7A",
   },
   {
@@ -1331,7 +1331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "FA", "vLLM", "TileSight", "tile", "GPU"],
-    excerpt: "关键词：GPU 性能建模、Tile 抽象、流水线重叠]、缓存重用距离、分布式推理 当 Triton、TileLang、甚至 NVIDIA 刚刚在 CUDA 13.1 中推出的 CU",
+    excerpt: "GPU 性能建模告别黑盒！TileSight 将 tile 升级为分析原语，用第一性原理统一单核到集群性能推演，单 GPU 误差 12.35%、L2 命中率误差 1 个百分点内，3",
     sourceUrl: "https://mp.weixin.qq.com/s/pLkxDnpWHXxsmEb-6yYw0w",
   },
   {
@@ -1341,7 +1341,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "bit",
     keywords: ["bit", "RL", "Blackwell", "Miles", "MXFP8", "NVFP4"],
-    excerpt: "关键词：MXFP8、NVFP4、强化学习（RL）、低精度量化]、Blackwell 本文介绍了 LMSYS 团队在 Miles 框架中落地的两套 Blackwell 原生低精度 R",
+    excerpt: "本文面向Blackwell架构B200显卡，落地MXFP8、单Token NVFP4两套低精度RL全栈方案，搭建比特级统一量化契约，配套分层BF16精度保护机制。8卡Qwen3-3",
     sourceUrl: "https://mp.weixin.qq.com/s/HZZavwwJ-XvWiRCxkXgd4w",
   },
   {
@@ -1351,7 +1351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CuTe",
     keywords: ["CuTe", "编译器", "NVIDIA", "CUTLASS", "PR", "IR"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：CuTe IR、MLIR Dialect、cutegen、cute-to-base、NVVM Lowering] - C",
+    excerpt: "本次 Pull Request 在 CUTLASS 仓库中新增独立的 cutlass_compiler 编译器栈，将 CuTe 布局代数以 MLIR 方言形式系统化表达，并建立从 ",
     sourceUrl: "https://mp.weixin.qq.com/s/8mKOUF6zxIc7GFdC9pYWmA",
   },
   {
@@ -1361,7 +1361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MemHarness",
     keywords: ["MemHarness", "GRPO", "GPT", "浙大", "重构", "记忆"],
-    excerpt: "关键词：记忆增强智能体、记忆重构、组相对策略优化]、序列决策、分布外泛化 人类的记忆是重构性的，而非复制性的。这是认知心理学领域流传半个世纪的经典结论，如今正在成为破解大语言模型智",
+    excerpt: "记忆不是用来原样复读的，而是用来适配当下的。上海 AI 实验室联合多校提出 MemHarness 框架，以重构式记忆破解静态重放负迁移难题，7B 模型在两项智能体基准上全面超越闭源",
     sourceUrl: "https://mp.weixin.qq.com/s/NyJreuDI-Swl4BX-lZA5Tg",
   },
   {
@@ -1371,7 +1371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "CDNA5", "ISA", "MI455X", "底牌", "手册"],
-    excerpt: "关键词：瓦解 CUDA 生态、AMD CDNA5、ISA 开放、Instinct MI455X]、WMA 矩阵指令、MXFP4 微缩放格式 2026 年 7 月 23 日，苏姿丰在",
+    excerpt: "AMD 公开 832 页 CDNA5 ISA 手册，MI455X 的指令细节全部摊开：WGP 新结构、WMA 矩阵指令、FP4 微缩放、TDM 张量搬运尽在其中。本文逐层拆解文档要",
     sourceUrl: "https://mp.weixin.qq.com/s/YNOdbdVElqCiIu3D4Xzjug",
   },
   {
@@ -1381,7 +1381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KIMI",
     keywords: ["KIMI", "K3", "H5", "游戏", "代码", "手机"],
-    excerpt: "关键词：Kimi K3]、Agent coding、H5 游戏]、AI 编码、游戏开发 近期有朋友在 KIMI 手机 APP 做了一些小游戏，下面是他在做游戏过程的实践与心得。小游",
+    excerpt: "本文记录了依托Kimi K3等国内大模型、零手写代码开发手机端H5小游戏的实践，落地5款游戏demo，实测模型能力与开发成本，总结人机协作方法与设计思路，分析AI编码局限，预判行业",
     sourceUrl: "https://mp.weixin.qq.com/s/4DwWe8a4krbOSkui7WYdBg",
   },
   {
@@ -1391,7 +1391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Axon",
     keywords: ["Axon", "SMT", "AI", "算子", "手写", "内核"],
-    excerpt: "关键词：合成式超优化、程序合成、SMT 等价性验证、AI 加速器内核]、算子融合 \"为 AI 加速器编写高性能内核，需要在切分、指令选择、数据布局和算子融合 上具备深厚的专业知识—",
+    excerpt: "没手写一条规则，编译器能自己发现代数变换吗？Axon 用 SMT 在无界张量上证明等价，在 Trainium 上把多算子内核提速 19 倍，超越人类手写内核。",
     sourceUrl: "https://mp.weixin.qq.com/s/atF_T0NUF9efUjYEJbzBeA",
   },
   {
@@ -1401,7 +1401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TPU",
     keywords: ["TPU", "Pallas", "Helion", "Flash", "Attention", "v7"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Helion、TPU]、Pallas、软件流水线、自动调优 \"Helion 是 PyTorch 用于编写性能可移植机器学",
+    excerpt: "一套代码跑通 GPU 与 TPU。Helion 联手 Google 推 TPU 后端，内核直编 Pallas，自动调优令注意力内核达 838 TFLOPs、单张量核 79%利用率。",
     sourceUrl: "https://mp.weixin.qq.com/s/ufiSC3xgEVit7I5L6xFOWQ",
   },
   {
@@ -1411,7 +1411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "vLLM",
     keywords: ["vLLM", "TTFT", "能耗", "引擎", "精度", "模型"],
-    excerpt: "关键词：vLLM、注意力内核、前缀缓存、推理能耗、帕累托前沿] 很多人认为：vLLM 这类推理引擎的配置项就像水管上的阀门：怎么拧只影响水流快慢，也就是推理跑得快一点还是慢一点、费",
+    excerpt: "vLLM 默认配置靠谱吗？结论出人意料：仅换一个注意力内核，能耗就能差出 7%，连模型精度都会漂移。",
     sourceUrl: "https://mp.weixin.qq.com/s/fYIs8pcE9Nr16BRtxb3k5Q",
   },
   {
@@ -1421,7 +1421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Toward",
     keywords: ["Toward", "Compiler", "World", "Models", "TVM", "Ansor"],
-    excerpt: "关键词：编译器世界模型、张量程序优化、代价模型、动作条件状态转移]、TVM AutoScheduler AutoTVM 到 Ansor，从 TenSet 到 TLP，评估一个候选调",
+    excerpt: "代价模型看了多年代码终稿，却从没看过程序是怎么一步步变出来的。中科院团队把世界模型搬进编译器里，用 64 次实测就逼近了 Ansor 千次搜索，千次实测直接追平万次。",
     sourceUrl: "https://mp.weixin.qq.com/s/c4LJMQgo4aeyUEFeKqPVAw",
   },
   {
@@ -1431,7 +1431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "指令",
     keywords: ["指令", "Prompt", "Design", "Scale", "幻觉", "格式"],
-    excerpt: "关键词：提示词工程、指令遵循]、长上下文、幻觉、拒答率 在日常的大模型应用开发里，有两个极其高频的设计决策，至今几乎没有严谨的对照实验给出定论： - 一是提示词的呈现格式：给模型的",
+    excerpt: "你以为长上下文最大的风险是幻觉？三万次实测给出反直觉答案：事实捏造率为0，拒答率却飙到89.6%；160条规则下所有模型全员失效；Markdown万能论站不住脚，提示词格式根本没有",
     sourceUrl: "https://mp.weixin.qq.com/s/GSwQ1oBbVNzuF4Fo_Q0J-w",
   },
   {
@@ -1441,7 +1441,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Opus",
     keywords: ["Opus", "效果", "工程"],
-    excerpt: "关键词：上下文工程、提示词]、智能体、推理侧、训练侧 今天凌晨，Anthropic 发布 Claude Opus 5：定位日常高频使用，智能接近旗舰 Fable 5，价格只有一半，",
+    excerpt: "Claude Opus 5 发布，官方同步更新了提示词与上下文工程指南：模型自主性大增，旧的验证、汇报脚手架要删掉，effort 需按任务分档；规则、示例、前置堆料等六条老经验正式",
     sourceUrl: "https://mp.weixin.qq.com/s/qwgT6kc0p1CD3o5dGH52-g",
   },
   {
@@ -1451,7 +1451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kimi",
     keywords: ["Kimi", "K3", "MiniTriton", "Torch", "Triton", "碾压"],
-    excerpt: "关键词：Tile DSL、MLIR、PTX、GPU 编译器]、算子融合 注：本项目是 K3 在编译器设计上的演示（demonstration），不是 Moonshot AI 的官方",
+    excerpt: "MiniTriton 把 Python 内嵌 tile DSL 送入 MLIR 与 PTX，让教学级代码触达 GPU 实战，揭示 AI 可参与编译器设计、内核优化与训练栈验证完整闭",
     sourceUrl: "https://mp.weixin.qq.com/s/nXeqwFKdScnzN07DGjSrag",
   },
   {
@@ -1461,7 +1461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Better",
     keywords: ["Better", "Harnesses", "Smaller", "LLM", "CMU", "Harness"],
-    excerpt: "关键词：小语言模型、智能体框架]、Harness 适配、元智能体、推理成本 \"许多任务难度在实例之间是共享的，可以通过量身定制的指令、工具和编排循环，把这部分难度从模型身上搬到框架",
+    excerpt: "花 4%的钱办九成的事。CMU 新研究：小模型 Agent 干不好，病根在 Harness 框架里。元智能体自动改提示、裁工具、防死循环，16 组实验提升，7 组追平大模型，成本降",
     sourceUrl: "https://mp.weixin.qq.com/s/ONRwbfqOOVKy8wsCUBHVUg",
   },
   {
@@ -1471,7 +1471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Mac",
     keywords: ["Mac", "BaseRT", "Apple", "Silicon", "天花板", "模型"],
-    excerpt: "关键词：BaseRT、Apple Silicon、Metal]、LLM 推理、统一内存 \"框架抽象本身就是这个平台上一个有分量的开销来源\"。 当整个行业都在讨论端侧大模型该跑多大的",
+    excerpt: "Mac 跑大模型还能再快 56%？BaseRT 扔掉中间框架、手写 Metal 内核，把 Apple Silicon 推理天花板捅破，为端侧 AI 补齐拼图。",
     sourceUrl: "https://mp.weixin.qq.com/s/A6QwO_9d2LpMD_si9KlNQg",
   },
   {
@@ -1481,7 +1481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "GB", "Mac", "优图", "Palm", "Infra"],
-    excerpt: "关键词：端侧推理]、ARM 优化、模型量化、MoE 卸载、图执行引擎 大模型本地运行的难点，常被简化成一句话：内存不够，算力不够。 - Palm on-device acceler",
+    excerpt: "Palm-Infra 以 mollm 为核心，把模型转换、动态图执行、ARM 量化内核与 SSD 专家缓存串成端侧大模型推理闭环，让 48GBMac 也能运行 122BMoE。",
     sourceUrl: "https://mp.weixin.qq.com/s/1Xcaj2LlthvMSnUDAq3I3Q",
   },
   {
@@ -1491,7 +1491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "Muon", "Agent", "RL", "成功率", "本质"],
-    excerpt: "关键词：Muon 优化器、智能体强化学习]、优势估计、信用分配、梯度信噪比、ALFWorld 论文开篇提出了一个整个领域都在关注的核心问题：Muon 在大规模预训练中已经具备和 A",
+    excerpt: "预训练大杀四方的 Muon，在强化学习中却屡屡碰壁？这篇探索性工作初步揭示了 Muon 在智能体 RL 中的效果与优势估计器的关联，搭配细粒度信用分配 GiGPO 可将任务成功率相",
     sourceUrl: "https://mp.weixin.qq.com/s/RlXOVgSOZenN6jWjVIV6pg",
   },
   {
@@ -1501,7 +1501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "UltraEP", "难题", "理想", "专家"],
-    excerpt: "关键词：专家并行、MoE 大模型、机架级节点]、负载均衡、高性能通信 现有均衡器基于历史负载周期性重分布专家，在负载模式非平稳的生产部署中会逐渐失效。这是 UltraEP 论文开篇",
+    excerpt: "MoE 大模型训练与推理常常被专家负载失衡严重拖累效率。北大联合团队推出 UltraEP，基于机架级节点实现实时精确负载均衡，大幅逼近理想吞吐，将跨卡不平衡度显著压缩至近乎完美水平",
     sourceUrl: "https://mp.weixin.qq.com/s/nAE1hVBAZlWca_1Q4b8xCA",
   },
   {
@@ -1511,7 +1511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "NCCL", "Extensions", "MoE", "Mesh", "GPU"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：NCCL 扩展、专家并行、零拷贝重分片]、GPU 发起通信、MoE 系统 大模型系统的瓶颈，越来越多地藏在“看似普通”的",
+    excerpt: "NCCL Extensions 以设备侧 NCCL 能力重塑 AI 通信：为 MoE 提供低延迟专家并行，为训练到推理权重重分片提供零拷贝通道，降低 CPU 介入并提升集群吞吐。",
     sourceUrl: "https://mp.weixin.qq.com/s/nqdzS5_0H6gFKZnRMeJU5g",
   },
   {
@@ -1521,7 +1521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "权重",
     keywords: ["权重", "死局", "MoE", "UIUC", "PagedWeight", "KV"],
-    excerpt: "关键词：MoE 大模型、动态权重量化、KV 缓存管理、推理服务优化]、分页式显存调度 论文中有一句核心判断精准点出了当前 MoE 部署的核心矛盾：With MoE, the loa",
+    excerpt: "MoE 大模型推理显存捉襟见肘？UIUC 团队提出 PagedWeight，将专家权重分页实现动态量化，随 KV 缓存压力实时调整精度，保持 FP16 级精度下节省 72%显存、吞",
     sourceUrl: "https://mp.weixin.qq.com/s/W4S2axsuwFuYaniHiW-LjQ",
   },
   {
@@ -1531,7 +1531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kernel",
     keywords: ["Kernel", "训练", "Liger", "LLM", "Triton", "API"],
-    excerpt: "关键词：Triton 内核、大模型训练]、算子融合、显存优化、后训练损失] 本文对应 ICML 2025 上发表《Liger Kernel: Efficient Triton Ke",
+    excerpt: "Liger-Kernel 以 Triton 重写大模型训练高频算子，通过融合、分块与就地梯度存储，把吞吐、显存和易用性统一到一行补丁中，让长上下文与后训练更可负担。",
     sourceUrl: "https://mp.weixin.qq.com/s/djIPLC1Vrta4ds7AW6J0Og",
   },
   {
@@ -1541,7 +1541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "港城",
     keywords: ["港城", "vLLM", "AgentCompile", "LLM", "性能"],
-    excerpt: "关键词：LLM 辅助编译、CUDA 推理优化、Transformer 推理、AI 编译器、GEMV 内核、CUDA Graph] LLM 的输出仅引导搜索方向，而不定义任何可执行行",
+    excerpt: "让大模型当编译器顾问却绝不许直接写代码？港城大团队提出 AgentCompile，以 LLM 做语义搜索引导，编译器严守正确性底线，Transformer 推理最高较 PyTorc",
     sourceUrl: "https://mp.weixin.qq.com/s/sQdVwWBGLrN-Wq96AAwGGA",
   },
   {
@@ -1551,7 +1551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "AI", "Coding", "开源", "全景", "协作"],
-    excerpt: "关键词：智能体工程、上下文工程、工具调用、异步调度]、自我进化 过去一年，AI Agent 这个词被用得太多，也被解释得太轻。 很多介绍停留在“让大模型自己规划、自己调用工具、自己",
+    excerpt: "这座开源仓库把 AI Agent 拆解为模型、上下文与工具三层，以十章书稿和可运行实验贯通检索、异步调度、代码生成与自我进化，形成从原理到工程落地一张完整系统地图。",
     sourceUrl: "https://mp.weixin.qq.com/s/sGveFge9byGlIlltdYhDeA",
   },
   {
@@ -1561,7 +1561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Tile",
     keywords: ["Tile", "AI", "TileFoundry", "Agentic", "开源", "高性能"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Python DSL、张量编译器]、HIR/TIR、CUDA 代码生成、运行时链接 高性能 GPU 程序开发长期有一个尖",
+    excerpt: "TileFoundry 以 Python DSL 承载张量意图，经 HIR/TIR、Pass、CUDA 代码生成与运行时闭环，把内核从手写技艺推进为可验证、可演进系统。",
     sourceUrl: "https://mp.weixin.qq.com/s/2XYknXdTbzrhLdyoPH5S5Q",
   },
   {
@@ -1571,7 +1571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "硬核",
     keywords: ["硬核", "RTL", "DL", "FPGA", "ATLAS", "手写"],
-    excerpt: "关键词：FPGA 深度学习加速、高层次综合]、GEMM 抽象、专用计算硬核、端到端编译流 论文中有一句直击行业痛点的判断：现有 FPGA 深度学习编译框架，始终无法填补高层模型描述",
+    excerpt: "FPGA 内置的 AI 专用硬核算力强劲，却始终面临极高的编程使用门槛。亚利桑那州立大学团队推出 ATLAS 全自动化编译流，以 GEMM 为统一抽象打通高层 DL 模型到 FPG",
     sourceUrl: "https://mp.weixin.qq.com/s/RP3osX7etEqLWu-VvDORdA",
   },
   {
@@ -1581,7 +1581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SpaceXAI",
     keywords: ["SpaceXAI", "Grok", "Build", "Rust", "AI", "Agent"],
-    excerpt: "关键词：AI 编码智能体、Rust、终端 TUI、Agent Client Protocol]、工具权限 过去两年，AI 编程工具的主战场一直在“对话框”：你提问，模型回答；你复制",
+    excerpt: "Grok Build 以 Rust 构建终端 AI 编码体：把 TUI、ACP、工具权限、工作区与无头模式拧成可恢复的工程系统，让模型安全进入真实代码现场并稳健持续演进。",
     sourceUrl: "https://mp.weixin.qq.com/s/7f2TZet0u0FcdUmrL9BXeQ",
   },
   {
@@ -1591,7 +1591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "IR", "MLIR", "AI", "设计", "重构"],
-    excerpt: "关键词：MLIR、AI 模型编译]、形式化理论、抽象解释、项重写 随着编码 Agent 降低了实现成本，精妙的设计与抽象便成为核心💎。 当下 AI Infra 行业存在一个极具反差",
+    excerpt: "当 LLM 批量生成编译 Pass，AI 编译器瓶颈早已不是编码，而是 IR 抽象设计。本文将项重写、精化演算等五大形式理论与 MLIR 组件一一映射，为 AI 编译提供严谨评判标",
     sourceUrl: "https://mp.weixin.qq.com/s/whIQd_CkAosAXelJ3ylA1g",
   },
   {
@@ -1601,7 +1601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Triton",
     keywords: ["Triton", "PTX", "Blackwell", "CUDA", "TileIR", "tile"],
-    excerpt: "关键词：Triton 后端、CUDA TileIR]、Blackwell GPU、MLIR 方言转换、无序内存模型 当 Triton 的 tl.dot、tl.load 遇上 NVI",
+    excerpt: "把 Triton 抽象算子翻译成 NVIDIA CUDA TileIR 方言，由 tileiras 编译器在 Blackwell 上完成自动 warp 编排与 CGA 级流水，绕开",
     sourceUrl: "https://mp.weixin.qq.com/s/fFiPEuC_NJdtIsjx3pKmPA",
   },
   {
@@ -1611,7 +1611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "企业级",
     keywords: ["企业级", "Agent", "RL", "底座", "架构", "蚂蚁"],
-    excerpt: "关键词：自进化智能体、智能体强化学习]、轨迹数据协议、在线强化学习、AREAL2.0、企业级 AI 系统] 来自蚂蚁金服、香港科技大学、清华大学的研究团队给出了极具穿透力的判断：阻",
+    excerpt: "自进化智能体的真正瓶颈在哪？蚂蚁联合港科大、清华提出下一代智能体强化学习系统架构，以三大支柱打通部署学习闭环，为规模化自进化智能体落地奠定完整的系统级新底座。",
     sourceUrl: "https://mp.weixin.qq.com/s/tvpNLz0zoWjMK20oP4IXig",
   },
   {
@@ -1621,7 +1621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Tile",
     keywords: ["Tile", "H100", "SwiGLU", "BF16", "算力", "LLM"],
-    excerpt: "关键词：LLM 推理、SwiGLU、CUTLASS、GPU 内核融合]、HBM 访存优化 torch.compile 无法实现此类融合（比我们的 Kernel 慢 3–7 倍），这",
+    excerpt: "推翻编译器万能论！微软针对 LLM 标配 SwiGLU MLP 内存瓶颈，基于 CUTLASS 打造两款 H100 Tile 融合内核，消除 4 次中间张量 HBM 读写，峰值 2",
     sourceUrl: "https://mp.weixin.qq.com/s/CuEA4GirhJgratL_zDB4eA",
   },
   {
@@ -1631,7 +1631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "CuTe", "tensor", "layouts", "Python", "代数"],
-    excerpt: "关键词：CuTe 布局代数、张量分层 Shape Stride、Swizzle Bank Conflict、MMA Atom、GPU 共享内存可视化] 任何研读过 CUTLASS ",
+    excerpt: "本文深度剖析 Facebook Research 开源的 tensor-layouts 项目：以纯 Python 实现 NVIDIA CuTe 张量布局代数。无需 GPU，即可构造",
     sourceUrl: "https://mp.weixin.qq.com/s/oAsGcrkj4pYeJi3QBBd9sw",
   },
   {
@@ -1641,7 +1641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Meta",
     keywords: ["Meta", "复杂度", "Blackwell", "Ads", "Model", "Kernel"],
-    excerpt: "关键词：推荐系统、GPU 内核、GDPA、CuTe DSL、Triton TLX] 大多数人谈注意力优化，脑海里浮现的是大语言模型里的长序列、FlashAttention、显存占用",
+    excerpt: "这座内核库以 GDPA 为核心，把推荐模型中参差序列、激活替换与 Blackwell 张量内存调度压进 GPU 内核，展示工程化注意力加速的真实路径，也解释性能从何而来。",
     sourceUrl: "https://mp.weixin.qq.com/s/JMh3ofmJHy2WprvOs5FnfA",
   },
   {
@@ -1651,7 +1651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FlashNormAttention",
     keywords: ["FlashNormAttention", "GEMM", "时延", "注意力", "融合"],
-    excerpt: "关键词：内核融合、归一化优化、Multi-CTA Norm、Lazy Pre-Norm、FlashNormAttention] 本文针对 LLM 与广告推荐模型中广泛使用的 Lay",
+    excerpt: "针对 LLM 与推荐模型中归一化算子的内存受限瓶颈，PyTorch 团队破解 GEMM 分块融合难题，推出 Lazy Pre-Norm、Multi-CTA Norm 等技术，最高掩",
     sourceUrl: "https://mp.weixin.qq.com/s/MHBb-u9ZjYjORc7MuRzYHw",
   },
   {
@@ -1661,7 +1661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "EDA",
     keywords: ["EDA", "RTL", "NVIDIA", "HORIZON", "范式", "重构"],
-    excerpt: "关键词：硬件 Agent 设计、RTL 自动化]、HORIZON 框架、仓库级代码演化]、EDA 大模型、Git 版本控制 我们提出 HORIZON 一套自演化智能体框架，将硬件设",
+    excerpt: "单轮 LLM 生成 RTL 存在致命短板！NVIDIA 推出 HORIZON 自治硬件设计框架，以 Git 仓库承载硬件迭代演化，零人工干预让全部主流 RTL 基准达成 100%通",
     sourceUrl: "https://mp.weixin.qq.com/s/QWCwWp3PGhCB_qcZlucW9g",
   },
   {
@@ -1671,7 +1671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CHIA",
     keywords: ["CHIA", "Agent", "AI", "RTL", "链路", "开源"],
-    excerpt: "关键词：软硬件协同设计、智能体 AI、RISC-V、芯片自动化]、分布式异构集群 当前AI芯片设计研究高度碎片化、难以复现：领域论文数量指数级增长，但大多是依赖定制胶水脚本的孤立方",
+    excerpt: "约202美元的API成本，Agent将RISC-V乱序核心关键路径优化出2.03倍频率提升，SPEC06 IPC仅损失3.28%，净Iron-Law加速1.97倍——且通过全25万",
     sourceUrl: "https://mp.weixin.qq.com/s/tXt7NVHnF01lN0Z_obJO0A",
   },
   {
@@ -1681,7 +1681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Harness",
     keywords: ["Harness", "耦自", "LLM", "智能", "核心", "能力"],
-    excerpt: "关键词：Harness 自演化、LLM 智能体、Harness 更新、Harness 获益、指令遵循 当 LLM 智能体在真实环境中执行任务时，系统行为并非仅由底层模型决定。提示词",
+    excerpt: "本文拆解 LLM 智能体自演化的两种核心能力：更新能力不随模型强弱拉开差距；获益能力呈非单调规律，中端模型提升最明显。弱模型存在工具无法加载、难以遵循流程两大缺陷，建议算力倾斜任务",
     sourceUrl: "https://mp.weixin.qq.com/s/bYOZu-2lRgoJUDMOn0qZww",
   },
   {
@@ -1691,7 +1691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模态",
     keywords: ["模态", "时延", "模块化", "机器人", "面向", "模型"],
-    excerpt: "关键词：多模态模型服务、Walk Graph、M、数据流图、推理性能优化 “AI 正在进入复合模型架构的新时代，但现有模型服务框架建立在对模型结构的狭隘假设之上，完全无法适配这种全",
+    excerpt: "当多模态模型从外挂拼接进化为原生组合架构，传统 LLM 推理服务框架的底层抽象彻底失配。斯坦福与华大联合推出 M\\x5c*系统，以 Walk Graph 统一建模，多场景性能全面领",
     sourceUrl: "https://mp.weixin.qq.com/s/y0CfcHWxUeGYs-DOUVVGLw",
   },
   {
@@ -1701,7 +1701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "NVBench", "计时", "架构", "测量"],
-    excerpt: "关键词：CUDA 基准测试、阻塞内核、L2 缓存刷新、统计收敛准则、参数轴扫描 如果你曾经认真给一个 CUDA Kernel 计过时，大概率会撞上同一堵墙：第一次跑很慢、第二次飞快",
+    excerpt: "NVBench 用 C++17 模板元编程实现 CUDA 内核基准测试，通过参数轴笛卡尔积、阻塞内核消除启动延迟、L2 缓存刷新与统计收敛准则，将不可信的微秒级 GPU 计时变得严",
     sourceUrl: "https://mp.weixin.qq.com/s/BlAqduCocMCkjAhhuLxAZQ",
   },
   {
@@ -1711,7 +1711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FA",
     keywords: ["FA", "Tile", "TileLoom", "数据流", "空间", "编程"],
-    excerpt: "关键词：空间数据流加速器、MLIR 编译框架]、 tile 编程语言、自动数据流规划、Tenstorrent - TileLoom: Automatic Dataflow Plan",
+    excerpt: "空间数据流加速器空有极致算力却长期深陷可编程性困境？TileLoom 基于 MLIR 实现自动数据流规划，将 Triton 等 tile 语言映射到空间架构，在两代 Tenstor",
     sourceUrl: "https://mp.weixin.qq.com/s/tL9ahY89BVZ2EVSyp_pfow",
   },
   {
@@ -1721,7 +1721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "Research", "LLM", "RTL", "编码", "硬件"],
-    excerpt: "关键词：LLM RTL 生成、Verilog]、四层错误分类、GRPO 强化学习、硬件时序推理 各类对齐微调手段，仅仅教会模型产出能通过编译的代码；重复采样仅能修复部分可解功能错误",
+    excerpt: "打破 LLM 芯片设计幻想！NVIDIA 提出四层 RTL 错误分类框架，实测前沿模型 Verilog 生成上限 90.8%，SFT、RL 仅修复浅层错误，无法攻克时序类 L3U ",
     sourceUrl: "https://mp.weixin.qq.com/s/QVH1d3UFm6WMOtkz0lQCig",
   },
   {
@@ -1731,7 +1731,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "PDL",
     keywords: ["PDL", "vs", "Megakernel", "Kernel", "本质", "优化"],
-    excerpt: "关键词：PDL、端到 端延迟、Hopper架构、CUDA Kernel、Megakernel 最近有关Megakernel 的讨论很火，我也简单研究了一下，发现许多工作 basel",
+    excerpt: "本文介绍NVIDIA Hopper架构引入的PDL硬件特性，讲解其通过两条griddepcontrol指令让同流相互依赖的CUDA Kernel重叠执行、压缩端到端延迟的原理，给出",
     sourceUrl: "https://mp.weixin.qq.com/s/Hn-nvEg9uyUkzzBBmK1NPQ",
   },
   {
@@ -1741,7 +1741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "NVIDIA", "AMD", "Intel", "算力", "线程"],
-    excerpt: "关键词：GPU 数据库、AI 编译器、内核优化、硬件规格、JSON 数据集 翻查厂商文档犹如考古，剖析性能瓶颈恰似验尸。 做 GPU 内核开发时，真正折磨人通常来说真不是某一行 C",
+    excerpt: "RightNow GPU Database 把 2824 款显卡规格整理成可直接调用的 JSON 基座，让 AI 编译器、内核调优与硬件选型共享同一套可验证的 GPU 事实源底座。",
     sourceUrl: "https://mp.weixin.qq.com/s/MNR5MJhTYUzkhNZsKD2eOQ",
   },
   {
@@ -1751,7 +1751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NUS",
     keywords: ["NUS", "Mars", "Compute", "Watch", "GPU", "Agent"],
-    excerpt: "关键词：G-Watch、Intra-kernel Tracing、Agent 驱动优化、异构 AI 硬件、GPU 内核优化、小batch优化 在 AI 算力竞速的当下，硬件的理论峰",
+    excerpt: "新加坡国立大学团队旗下Mars Compute开源G-Watch工具链，打破传统工具仅能观测内核整体延迟的局限，首创内核级追踪能力覆盖多类DSL，赋能AI Agent实现证据驱动的",
     sourceUrl: "https://mp.weixin.qq.com/s/FsLRiGdUH5FctuvwFKE5ig",
   },
   {
@@ -1761,7 +1761,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "CudaProfiler",
     keywords: ["CudaProfiler", "TIRx", "warp", "轻量化", "时序", "内核"],
-    excerpt: "关键词：CudaProfiler、TIRx]、内核内性能剖析、GPU流水线优化、CUDA内核调优 本文介绍 TIRx 框架下的 CUDA 内核剖析工具 CudaProfiler。该",
+    excerpt: "本文介绍了面向 TIRx 框架的轻量化插件式 CUDA 内核剖析工具 CudaProfiler，其借鉴 FlashInfer 设计适配原生 API，支持内核内细粒度打点与灵活线程分",
     sourceUrl: "https://mp.weixin.qq.com/s/I4o2TWWz5cuGRw1PGkmZ5A",
   },
   {
@@ -1771,7 +1771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "流片",
     keywords: ["流片", "架构师", "Croc", "RISC", "规模化", "芯片"],
-    excerpt: "关键词：Croc、RISC-V、开源 SoC、领域专用架构]、VLSI 教育 \"芯片供应链危机的真正瓶颈不仅是制造产能，更是拥有实际集成电路设计经验的工程师的供给。\" 半导体行业正",
+    excerpt: "本文提出以全开源 RISC-V 平台 Croc 为核心的端到端领域专用 SoC 设计制造流程。基于 130nm 开放 PDK，Croc 支持指令集扩展、加速器协处理器与外设三类领域",
     sourceUrl: "https://mp.weixin.qq.com/s/V2wb9Xe8535vDBND3iHbOg",
   },
   {
@@ -1781,7 +1781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "LiteRT", "CLI", "TFLite", "HuggingFace", "NPU"],
-    excerpt: "关键词：LiteRT]、端侧推理、AOT 编译、NPU 适配、命令行工具] 端侧 AI 的现实远比 PPT 残酷：拿到一个 PyTorch 权重、希望它跑在某款 Android N",
+    excerpt: "LiteRT-CLI 用极少 Python 把繁琐的端侧模型工作流统一为一条命令，覆盖下载、量化、AOT 编译、运行与跨端基准测试，并通过懒加载、SoC 自适应与 adb 自动分发",
     sourceUrl: "https://mp.weixin.qq.com/s/9-2eF-IjXp4HY049BmlWIA",
   },
   {
@@ -1791,7 +1791,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Agent",
     keywords: ["Agent", "显性", "终极", "隐性", "体系", "影响"],
-    excerpt: "关键词：Agent、软件工程、验证成本、生产落地、工程纪律 最近 Agent 太火了，火到有点喧嚣（自己想了想还是选择了用这个词来形容）。 Claude Code 、Codex、各",
+    excerpt: "本文深入探讨 Agent 技术的生产力价值与落地边界，点明“日抛型软件”核心取决于验证成本，拆解其生产落地的三重不确定性，厘清 demo 与生产系统差异，倡导理性拥抱 Agent，",
     sourceUrl: "https://mp.weixin.qq.com/s/bkXbk_J1Iv9O-yqiA1KW5A",
   },
   {
@@ -1801,7 +1801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "UW",
     keywords: ["UW", "DynaFlow", "vLLM", "SGLang", "开源", "算子"],
-    excerpt: "关键词：DynaFlow、单设备并行]、算子可编程调度、大模型推理、GPU 资源复用 单设备并行技术之所以无法大规模落地，根源在于现有机器学习框架的静态顺序编程模型，与异构算子并行",
+    excerpt: "单设备并行落地难题迎来通用方案！DynaFlow 解耦大模型逻辑定义与 GPU 物理算子调度，依托注解式前端、零拷贝后端，仅需数十行代码即可接入 6 大主流 AI 系统，支持动态适",
     sourceUrl: "https://mp.weixin.qq.com/s/eMOewYkr4jSL7Owk1Si0Sw",
   },
   {
@@ -1811,7 +1811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "可验证",
     keywords: ["可验证", "Auto", "MicroBench", "LLM", "GPU", "模拟器"],
-    excerpt: "关键词：GPU 微基准、LLM 智能体、SASS 验证、Nsight Compute]、模拟器校准 GPU 模拟器最怕什么？不是没有模型，而是模型里的硬件参数“看似合理，却悄悄错了",
+    excerpt: "Auto-MicroBench 把 LLM 变成 GPU 微基准工程师：调度参数、生成 CUDA、验证 SASS 与 NCU，最终沉淀可信的模拟器硬件配置，让黑盒芯片真正可量化。",
     sourceUrl: "https://mp.weixin.qq.com/s/VAb6lUvtdYn39JyuY0l8uQ",
   },
   {
@@ -1821,7 +1821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Cortex",
     keywords: ["Cortex", "ETH", "Zurich", "RISC", "叫板", "处理器"],
-    excerpt: "关键词：CVA6-RT、混合关键性系统、时间可预测架构、RISC-V、TLB 分区]、硬件上下文保存 一辆智能汽车里，同一个芯片要同时跑 Linux 的信息娱乐系统、传感器融合算法",
+    excerpt: "RISC-V 生态长期缺乏应用级实时处理器，ETH Zurich 以 CVA6-RT 破局。三项硬件机制——TLB 分区锁定、L1 缓存 scratchpad 模式、硬件辅助上下文",
     sourceUrl: "https://mp.weixin.qq.com/s/WFJBY8LbZSOLvWNVN7XV_g",
   },
   {
@@ -1831,7 +1831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "检查点",
     keywords: ["检查点", "GPU", "LLM", "Agent", "Concordia", "PTX"],
-    excerpt: "关键词：持久内核、LLM 故障容错]、增量检查点、PTX/SASS 插桩、JIT 编译、CXL 日志 面向长会话大模型推理的容错能力，必须依托驻留在 GPU 内部的执行上下文才能落",
+    excerpt: "GPU 宕机清空 LLM 数小时对话算力？Concordia 依托常驻 GPU 持久内核搭建底层容错底座，通过 PTX/SASS 二进制插桩与专用 JIT 增量检查点，GPU 脏页",
     sourceUrl: "https://mp.weixin.qq.com/s/jYNEQiV7ZgTY6ft-uu2O7w",
   },
   {
@@ -1841,7 +1841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AscendNPU",
     keywords: ["AscendNPU", "IR", "MLIR", "中间层", "重构", "分层"],
-    excerpt: "关键词：MLIR、昇腾编译、方言设计、Pass流水线、算子降级] 很多人第一次接触 AI 编译器项目时，往往会先问两个问题：它支持哪些算子，它最终能生成什么结果。 这当然重要，但如",
+    excerpt: "精确承接Ascend硬件语义的MLIR中间层，AscendNPU-IR把高层算子、融合表达与底层指令编排连成一条可优化编译链，为昇腾算子开发提供抽象、控制力与性能落点。",
     sourceUrl: "https://mp.weixin.qq.com/s/nguiNrLSmiGPLygQ7K_s4Q",
   },
   {
@@ -1851,7 +1851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoMegaKernel",
     keywords: ["AutoMegaKernel", "RightNow", "AI", "矩阵", "版图", "哲学"],
-    excerpt: "关键词：RightNow AI、CUDA 内核优化、AI Agent]、GPU 自动化、LLM 推理优化 2025 年 2 月，一家名为 RightNow AI 的公司在特拉华州悄",
+    excerpt: "锚定 GPU 内核自动化优化赛道，获 YC 与 NVIDIA 双重背书，搭建编辑器、Forge CLI、教学指南三层产品，推出 AutoKernel、StreamIndex 等四项",
     sourceUrl: "https://mp.weixin.qq.com/s/aGBsUFvpTyOt5JAMCzw9NQ",
   },
   {
@@ -1861,7 +1861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoMegaKernel",
     keywords: ["AutoMegaKernel", "Agent", "GPU", "MegaKernel", "校验", "内核"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Megakernel、LLM 推理、GPU 内核编译、静态校验]、量化推理 单流（Single-stream）大语言模型",
+    excerpt: "单流 LLM 推理带宽桎梏迎来全自动巨核编译器 AutoMegaKernel。框架无需手写 CUDA，将整模型融合为单次启动持久内核，静态校验 7160 组用例零误判，推理卡 in",
     sourceUrl: "https://mp.weixin.qq.com/s/npjI3EdHDV9Jag1Ek9g5VA",
   },
   {
@@ -1871,7 +1871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "帕累托", "解码", "表象", "边界", "投机"],
-    excerpt: "关键词：推测解码、半自回归生成]、置信度调度、马尔可夫头、硬件感知前缀调度器] \"推测解码通过将草稿生成与目标验证解耦来加速大语言模型推理。近期并行草稿模型虽能在单次前向传播中高效",
+    excerpt: "推测解码面临\\x26quot;并行快但不准、串行准但不快\\x26quot;的死局。DSpark以半自回归架构与置信度调度双管齐下——77M参数马尔可夫头为并行生成注入token间依",
     sourceUrl: "https://mp.weixin.qq.com/s/tnJazgkC02ZAiy1GBcFCvw",
   },
   {
@@ -1881,7 +1881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SASS",
     keywords: ["SASS", "跨平台", "NVIDIA", "CuLifter", "佐治亚", "二进制"],
-    excerpt: "关键词：GPU 二进制提升、SASS 逆向]、类型恢复、LLVM IR、SIMT SSA] 我们证明类型恢复是 GPU 二进制提升（GPU binary lifting）的核心难题",
+    excerpt: "破解闭源 GPU 逆向核心死局！佐治亚理工推出 CuLifter，解决 SASS 统一寄存器无类型缺陷，依靠约束传播推理还原数据类型。工具覆盖多代英伟达 GPU，24437 个测试",
     sourceUrl: "https://mp.weixin.qq.com/s/lRF8b7rp9r_RCkOTx21_ow",
   },
   {
@@ -1891,7 +1891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "HRX", "System", "ROCm", "GPU"],
-    excerpt: "关键词：HRX、HIP 兼容层、IREE 运行时]、时间线信号量、透明拦截 当你在 AMD GPU 上跑一个 PyTorch 模型，链接的其实是 /opt/rocm/lib/lib",
+    excerpt: "HRX 是 ROCm 团队基于 IREE 重构的极简 HIP 替代运行时，通过统一时间线信号量、流式调度与 dlopen 透明拦截层，让现有 HIP 应用免重编即切换后端，兼顾低延",
     sourceUrl: "https://mp.weixin.qq.com/s/12xuZxhypcq5zt22IrmhSQ",
   },
   {
@@ -1901,7 +1901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "MLC", "ai", "Modern", "Programming", "MLSys"],
-    excerpt: "关键词：Blackwell]、TIRx、GEMM、FlashAttention、异步协作 如果说过去的 GPU 优化还像“给流水线加速”，那么 Blackwell 时代的 GPU ",
+    excerpt: "真正的 GPU 优化，不在算力，而在调度、布局与异步协作",
     sourceUrl: "https://mp.weixin.qq.com/s/KhyOmHagcv6XK1bu3QnA3A",
   },
   {
@@ -1911,7 +1911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Ada",
     keywords: ["Ada", "中端", "MegaKernel", "MK", "共享内存", "小批量"],
-    excerpt: "关键词：MegaKernel、LLM 推理、Ada GPU、DAG 离线搜索]、TensorRT-LLM 解码阶段生成的每一个词元都会触发数千次内核调用，仅内核调用开销就可占端到端",
+    excerpt: "商用广告 LLM 推理受内核开销与 Ada 显卡内存双重桎梏，百度 Ada-MK 依托 MLIR 细粒度 DAG 离线寻优固化执行路径，将片上共享内存峰值占用削减 50%，L20 ",
     sourceUrl: "https://mp.weixin.qq.com/s/N03nl1DJ8xV5bihiLUz5RQ",
   },
   {
@@ -1921,7 +1921,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "内核",
     keywords: ["内核", "TIRx", "TVM", "DSL", "FP8", "NVFP4"],
-    excerpt: "关键词：TIRx、Apache TVM、硬件原生DSL、ML内核、编译器 今天我们正式推出 TIRx ——一套基于 Apache TVM 构建、开源且原生适配硬件的领域专用语言（D",
+    excerpt: "Apache TVM社区发布开源硬件原生ML内核DSL与编译器TIRx，采用低层级显式抽象与存储优先张量布局设计，适配多类内核开发场景，在NVIDIA B200上实测核心算子性能追",
     sourceUrl: "https://mp.weixin.qq.com/s/cEL_KZcLocehOMxbUCSrWA",
   },
   {
@@ -1931,7 +1931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MegaKernel",
     keywords: ["MegaKernel", "GPU", "硬件", "路径", "性能"],
-    excerpt: "关键词：GPU 路径追踪、波前渲染、MegaKernel、缓存局部性]、硬件光线追踪 现代 GPU 架构下，渲染性能往往不只受算术算力限制，延迟隐藏、缓存行为与调度效率会成为核心瓶",
+    excerpt: "光追性能瓶颈不只有算力！本文搭建统一 Vulkan 渲染器对照 Megakernel 与波前路径追踪，实测后者提速 16%，硬件剖析证实增益主要来自缓存局部性优化，为 GPU 实时",
     sourceUrl: "https://mp.weixin.qq.com/s/7MORY-0EagVRipVeuKBgJw",
   },
   {
@@ -1951,7 +1951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FP4",
     keywords: ["FP4", "训练", "偏置", "E2M1", "UFP4", "MoE"],
-    excerpt: "关键词：FP4 预训练、收缩偏置]、随机哈达玛变换、UFP4、均匀量化、E2M1 格式 非均匀格式如 E2M1 先天存在收缩偏置，这是一种由可表示分箱的几何不对称性导致的系统性负舍",
+    excerpt: "你以为 FP4 训练不稳定只是离群值的锅？蚂蚁 Ling 团队戳破 E2M1 先天收缩偏置缺陷，提出 UFP4 均匀 4 位方案，在 124B MoE 上将 BF16 相对损失降解",
     sourceUrl: "https://mp.weixin.qq.com/s/13qJ0ekVW16FT_IHQXjSPQ",
   },
   {
@@ -1961,7 +1961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RIGEL",
     keywords: ["RIGEL", "Apple", "M4", "Max", "GPU", "Metal"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：RIGEL、M4 Max GPU、Metal 4.1、张量计算逆向、fp8 矩阵乘法] Metal 4.1 对外暴露了基",
+    excerpt: "本文提出 RIGEL 微基准测试框架，逆向拆解 Apple M4 Max 的 Metal 4.1 张量计算通路，证实 fp8 矩阵乘法为软件模拟（吞吐为 fp16 的 0.94 倍",
     sourceUrl: "https://mp.weixin.qq.com/s/mTVRUhQWCMEJ2CXK729M7A",
   },
   {
@@ -1971,7 +1971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "智能", "官方", "Agent", "Skills", "AI"],
-    excerpt: "关键词：Agent Skills、技能签名验证、自动化同步管线、插件分发、AI 智能体治理] 当你在 Claude Code 里对 AI 说\"帮我用 cuOpt 解一个线性规划问题",
+    excerpt: "NVIDIA 以签名认证的 Agent Skills 构建了 AI 智能体的可信能力治理体系，通过声明式指令集、自动化同步管线与密码学签名，让三十余款产品的百余项技能实现跨智能体框",
     sourceUrl: "https://mp.weixin.qq.com/s/RWYxtkK9_evS6MgZ0PjEWQ",
   },
   {
@@ -1981,7 +1981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "树莓",
     keywords: ["树莓", "CNN", "QPU", "时栈", "轻量化", "面向"],
-    excerpt: "关键词：树莓派5 QPU、机器学习运行时栈]、整型 GEMM、边缘AI推理、VideoCore VII 树莓派是当前边缘计算、物联网场景中部署最广泛的终端设备之一（Panopoul",
+    excerpt: "本文面向树莓派5 VideoCore VII QPU，基于py-videocore7搭建QPU优先的机器学习运行时栈，通过分块GEMM复用、整型优化与持久化执行器设计，整型运算最高",
     sourceUrl: "https://mp.weixin.qq.com/s/xbUy4vsKeVOL-MzjeCv7gA",
   },
   {
@@ -1991,7 +1991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "vLLM",
     keywords: ["vLLM", "SGLang", "cuTile", "Rust", "GEMM", "cuBLAS"],
-    excerpt: "关键词：cuTile Rust、Rust GPU 编程、无数据竞争]、Tile 编程模型、LLM 推理引擎 “Rust语言让CPU端安全的系统级编程具备了实用性，但使用Rust编写",
+    excerpt: "Rust 的无畏并发终于登陆 GPU？NVIDIA 联合 Hugging Face 推出 cuTile Rust，把所有权安全契约延伸至 Tile 化 GPU 内核，实现无数据竞争",
     sourceUrl: "https://mp.weixin.qq.com/s/wqfRbft_im9VhIhZV0g2Xg",
   },
   {
@@ -2001,7 +2001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ISA",
     keywords: ["ISA", "NVIDIA", "AMD", "Intel", "Apple", "GPU"],
-    excerpt: "关键词：NVIDIA、AMD、Intel、Apple、微架构、通用 ISA、硬件原语] 端午节快乐！废话不多说，开始正文👀。 本文完成了业内首次覆盖四大主流 GPU 厂商、系统性的",
+    excerpt: "本文首次完成英伟达、AMD、英特尔、苹果16代微架构跨厂商ISA系统性分析，提炼十类硬件固有计算原语，搭建薄抽象统一执行模型。经T4、M1实测验证，仅补充波内置换原语即可实现跨平台",
     sourceUrl: "https://mp.weixin.qq.com/s/MNnJQ_BBBEyD07nyi7cSTw",
   },
   {
@@ -2011,7 +2011,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "优化",
     keywords: ["优化", "ncnn", "Vulkan", "int8", "架构设计", "链路"],
-    excerpt: "关键词：ncnn、Vulkan]、int8、推理后端、模型量化 本文详细介绍 ncnn Vulkan int8 推理后端的完整架构设计与落地优化，对应项目PR#6751 vulka",
+    excerpt: "ncnn Vulkan int8推理后端架构优化，属于整套后端体系完善而非单一算子优化。规范三段式推理流程，将权重重排等逻辑前置CPU，搭建高效量化数据流，定制四类核心算子实现，解",
     sourceUrl: "https://mp.weixin.qq.com/s/ibkqeyGaJ-WsILFYKR9SAg",
   },
   {
@@ -2021,7 +2021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FP4",
     keywords: ["FP4", "真凶", "梯度", "确定性", "权重", "训练"],
-    excerpt: "关键词：MXFP4 量化、大语言模型预训练]、权重梯度、确定性哈达玛变换、训练收敛、原生 FP4 硬件 - Pretraining Large Language Models wi",
+    excerpt: "本文针对 Llama 3.1-8B 模型，依托 AMD 原生 FP4 硬件开展受控实验，证实权重梯度量化是 MXFP4 全流程训练失稳的核心诱因；随机舍入等方案全部失效，确定性哈达",
     sourceUrl: "https://mp.weixin.qq.com/s/E5B6JQ3DzAqddLAzYeE9ww",
   },
   {
@@ -2031,7 +2031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "INT21",
     keywords: ["INT21", "PTX", "Kernel", "GPU", "底层", "难题"],
-    excerpt: "关键词：INT21、PTX 内核工厂、GPU 内核优化、自进化计算、AI 智能体集群 本文介绍初创公司 INT21 发布的 PTX 内核工厂，这是一套面向英伟达 GPU 的 AI ",
+    excerpt: "INT21 推出 PTX 内核工厂，依托 AI 智能体集群打造自进化计算系统，可自动生成并优化英伟达 GPU 底层 PTX 程序。该工具实测性能普遍超越人工优化版本，部分算子提速最",
     sourceUrl: "https://mp.weixin.qq.com/s/S8uMGn0pvlqESCJn2XnaoQ",
   },
   {
@@ -2041,7 +2041,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Attention",
     keywords: ["Attention", "FlashKL", "Flash", "Pass", "KL", "Loss"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 【投稿】目的是扩大影响力，不愿被单一公众号绑定，故而投稿文稿【不标注原创】，望周知！ 关键词：FlashKL、Attention",
+    excerpt: "长序列模型与DSA稀疏注意力场景下，传统注意力KL Loss实现需存储完整L×L矩阵，极易造成显存溢出。本文提出FlashKL算法，借鉴Flash Attention分块单趟计算思",
     sourceUrl: "https://mp.weixin.qq.com/s/sru71crEnmFkRSmZBq2rNQ",
   },
   {
@@ -2051,7 +2051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Agent", "MoE", "PithTrain", "Megatron", "LM"],
-    excerpt: "关键词：PithTrain、MoE 训练框架、AI 编码智能体]、智能体任务效率、ATE-Bench 注：5 月初的时候 PithTrain 刚刚开源，那时我们就发过一篇公众号文章",
+    excerpt: "大模型 MoE 框架评价终于不再唯吞吐量论！传统 MoE 训练长期忽视 AI 编码智能体的运维隐性成本。CMU 团队推出 PithTrain 紧凑型框架，依托四大设计原则与 ATE",
     sourceUrl: "https://mp.weixin.qq.com/s/LnUyMA-hzOcxu9NWnB5tpA",
   },
   {
@@ -2061,7 +2061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "AgentBeats", "复杂度", "裁判", "评测", "方案"],
-    excerpt: "关键词：AI 智能体评测、AAA 范式、AgentBeats、A2A 协议]、MCP 协议 AgentBeats 堪称 AI Agent 评测领域的\"LLVM\"。 正如 LLVM ",
+    excerpt: "AI 智能体发展迅猛，但评测体系支离破碎。该研究推出 AAA 范式与 AgentBeats 系统，将基准转为裁判智能体，复用 A2A、MCP 协议降低集成成本，经大规模实测，实现了",
     sourceUrl: "https://mp.weixin.qq.com/s/wYmNz5YupfiF6cLr4o6F7g",
   },
   {
@@ -2071,7 +2071,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Claude", "Opus", "Kernel", "MusaCoder", "线程"],
-    excerpt: "关键词：GPU 内核生成、大语言模型、强化学习、异构计算]、执行反馈训练 现代神经网络的性能上限，越来越取决于 GPU 内核的优化程度。 随着大模型架构的快速演进，新型算子、长尾算",
+    excerpt: "摩尔线程发布 MusaCoder 原生 GPU 内核生成全栈框架，全程基于国产 GPU 集群训练。该框架通过三阶段数据合成、多样性 RFT 与三项 RL 机制，27B 版在 Ker",
     sourceUrl: "https://mp.weixin.qq.com/s/RtI2Mn_m5sOfIAZBJH9HMg",
   },
   {
@@ -2081,7 +2081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Helion",
     keywords: ["Helion", "DSL", "vLLM", "Qwen3", "FP8", "硬件"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：Helion、vLLM、FP8量化、推理内核、PyTorch 本文围绕Helion 内核集成 vLLM 开展技术研究与性",
+    excerpt: "本文将Helion内核集成至vLLM，针对Qwen3系列模型开展FP8量化推理实验，测试硬件为NVIDIA H100与B200 GPU。Helion有效优化了量化、归一化等算子，提",
     sourceUrl: "https://mp.weixin.qq.com/s/tHrv3Sb75ENSDZq4uHMyTA",
   },
   {
@@ -2091,7 +2091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DiT",
     keywords: ["DiT", "GPU", "GF", "吞吐量", "局限", "静态"],
-    excerpt: "关键词：Diffusion Transformer、弹性并行调度、无组通信]、生成式 AI 服务、vLLM-Omni GPU 并行度不应该是部署时就拍板的静态配置，而应该像操作系统",
+    excerpt: "静态并行配置正在扼杀 DiT 服务的 GPU 利用率。上海交大团队提出 GF-DiT，将并行性作为第一类可调度资源，吞吐量提升 6.01 倍，延迟降低 95%，通信组建立从 778",
     sourceUrl: "https://mp.weixin.qq.com/s/h4LELLMXYpWQoTSZloCeTA",
   },
   {
@@ -2101,7 +2101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "读心术",
     keywords: ["读心术", "KV", "算力", "异构", "智能", "优化"],
-    excerpt: "关键词：异构智能体、KV 缓存、隐式通信、稠密对齐、多智能体系统] 论文抛出了行业内极具颠覆性的核心设问：Can heterogeneous agents be aligned w",
+    excerpt: "大模型异构智能体实现隐式“读心”交互！该研究挖掘多智能体通信的信息二元特性，提出异构稠密 KV 缓存对齐框架。算力较文本通信降 2-3 倍，在无上下文通信这一难题场景中，依旧保持高",
     sourceUrl: "https://mp.weixin.qq.com/s/ugxr53llfqg-K6f3C99waw",
   },
   {
@@ -2111,7 +2111,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "训练",
     keywords: ["训练", "GR00T", "N1", "VLA", "LoongForge", "链路"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 科普：文章在公众号A标原创后，其他号转载需A许可，但A大多并非原作者，著作权归投稿创作者。【投稿】目的是扩大影响力，不愿被单一公",
+    excerpt: "本文针对GR00T N1.6 VLA模型训练IO阻塞、通信开销大、调度低效难题，依托LoongForge从IO流水线、通信计算重叠、CUDA Graph调度三层全链路优化，实测训练",
     sourceUrl: "https://mp.weixin.qq.com/s/lIMsQ0Q5G9KaDKGtrBt-Nw",
   },
   {
@@ -2121,7 +2121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KV",
     keywords: ["KV", "OSCAR", "BF16", "魔咒", "吞吐量", "精度"],
-    excerpt: "关键词：KV 缓存量化]、2 比特量化、注意力感知、长上下文推理、大模型服务系统 INT2 KV 缓存量化一直是长上下文 LLM 服务的圣杯级目标，但精度与部署性的双重枷锁始终难以",
+    excerpt: "2 比特 KV 缓存曾因精度崩溃难以实用，OSCAR 通过离线校准注意力感知协方差，实现 4B-358B 模型近乎无损压缩，长上下文吞吐量提升 7 倍、单批解码加速 3 倍，兼容主",
     sourceUrl: "https://mp.weixin.qq.com/s/pbi4tOvNGLtc4uiuTAjx0g",
   },
   {
@@ -2131,7 +2131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Albireo",
     keywords: ["Albireo", "vLLM", "SGLang", "LLM", "能效", "吞吐量"],
-    excerpt: "关键词：LLM 推理、张量并行]、阿姆达尔定律、不可扩展开销、Albireo “在现代 H100 GPU 上运行 Qwen-2.5-32B 模型（TP=4，批量大小 128）时，非",
+    excerpt: "现有 LLM 张量并行推理受阿姆达尔定律制约，非可扩展开销严重限制性能。本文提出 Albireo 推理系统，通过异步调度、任务重叠与序列并行采样优化架构。对比 vLLM、SGLan",
     sourceUrl: "https://mp.weixin.qq.com/s/Vipc2653TKMgX_YPQTrpNA",
   },
   {
@@ -2141,7 +2141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "AI", "算力", "PhD", "课题组", "分布式"],
-    excerpt: "关键词：MLSys、博士生]、科研实习生、AI 编译器、上海创智学院 冯思远老师现任上海创智学院助理教授，现面向全球招收机器学习系统（MLSys）方向 的科研实习生与博士研究生。冯",
+    excerpt: "上海创智学院冯思远课题组面向全球招收MLSys方向2026级博士生与长期科研实习生。团队聚焦分布式机器学习系统、AI编译器等领域，产出多项顶会成果与主流开源项目，学院配备万卡算力、",
     sourceUrl: "https://mp.weixin.qq.com/s/eeflRJdYMTxdKGNu2XWWRA",
   },
   {
@@ -2151,7 +2151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "vLLM",
     keywords: ["vLLM", "指南", "系统性", "优化"],
-    excerpt: "关键词：vLLM、冷启动延迟、性能拆解]、量化分析、时延预测 MLSys 2026 论文《Breaking the Ice: Analyzing Cold Start Latenc",
+    excerpt: "vLLM 冷启动一直是大模型部署的痛点。本文首次完整拆解其六大启动步骤，量化各环节时延特征，验证 CPU 是核心瓶颈。结合软硬件环境测试，搭建高精度时延预测模型，为线上推理服务冷启",
     sourceUrl: "https://mp.weixin.qq.com/s/d2k14ojXSF2ZYyAcNC7EXA",
   },
   {
@@ -2161,7 +2161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "Linux", "Intel", "linux", "npu", "driver"],
-    excerpt: "关键词：Intel NPU、Level Zero、ivpu 内核驱动、命令缓冲]、模型缓存 自从 Meteor Lake 把 NPU（Neural Processing Unit）",
+    excerpt: "Intel NPU 的 Linux 驱动以 Level Zero 对接用户空间，下连 ivpu 内核模块与固件，将 OpenVINO 模型编译缓存后高效调度到 AI 加速单元执行推",
     sourceUrl: "https://mp.weixin.qq.com/s/Fo6S0pDdIL-COLwc7yWLDw",
   },
   {
@@ -2181,7 +2181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SASS",
     keywords: ["SASS", "King", "GPU", "Blackwell", "流水线", "逆向"],
-    excerpt: "关键词：NVIDIA SASS]、Blackwell SM120、张量核心、模式库]、逆向工程 每一份用 nvcc 编出来的 cubin，最终都会被 GPU 翻译成一种没有官方手册",
+    excerpt: "SASS King 系统逆向 Blackwell 架构的 SM120 SASS，以受控 CUDA 微核与严谨证据分级，沉淀二十九条可复用的审计模式，重塑编译器决策的可读边界。",
     sourceUrl: "https://mp.weixin.qq.com/s/shxyb7KczOdcP27DEu169g",
   },
   {
@@ -2191,7 +2191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "cann",
     keywords: ["cann", "learning", "hub", "KILL", "NPU", "开发者"],
-    excerpt: "关键词：Ascend C 算子开发、Tiling 分块策略]、Host-Kernel 双侧编程、CANNBot 智能体、NPU 异构计算] 做过 CUDA 开发的人大概都有类似的体",
+    excerpt: "CANN 学习中心以 Notebook 教程覆盖 Ascend C 算子开发与推理优化全栈技术，创新集成 CANNBot 智能体打通学练赛闭环，助 NPU 开发者零门槛迈向精通。",
     sourceUrl: "https://mp.weixin.qq.com/s/4RbhG9WA80GAZtD5LRpgKA",
   },
   {
@@ -2201,7 +2201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DRAM",
     keywords: ["DRAM", "CPU", "NPU", "LEVER", "解码", "异构"],
-    excerpt: "关键词：大语言模型、端侧推理、投机解码、异构存储]、软硬协同 交互式移动应用日益需要大型语言模型（LLMs）的支持，但高质量模型往往超出了智能手机有限的 DRAM 容量限制。 为了",
+    excerpt: "手机跑大模型，成也闪存，败也闪存。LEVER系统直击移动端异构存储痛点，将投机解码与DRAM-闪存架构巧妙融合。通过将轻量级草稿模型驻留内存，结合收益成本感知的草稿树构建、验证层早",
     sourceUrl: "https://mp.weixin.qq.com/s/m9si8-aXQSnZmSZ3TAO2BQ",
   },
   {
@@ -2211,7 +2211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Nsight",
     keywords: ["Nsight", "Agent", "VeloQ", "LLM", "GPU", "工具箱"],
-    excerpt: "关键词：智能体友好 UX、JSON 信封契约]、稳定 Row Key、ProfileSource 抽象、静默失败守护 当 Claude 或 Cursor 这样的编码智能体被丢进一个",
+    excerpt: "VeloQ 用 Rust 封装 nsys 与 ncu，以版本化 JSON 信封替代 GUI，借 DuckDB+Parquet 缓存与关联索引让智能体免开界面即可稳定查询 GPU 性",
     sourceUrl: "https://mp.weixin.qq.com/s/jcEJOlu_oPgF3p8PVHP-kg",
   },
   {
@@ -2221,7 +2221,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "全智能",
     keywords: ["全智能", "GPU", "Kernel", "MLSys", "FlashInfer", "人机"],
-    excerpt: "投稿/寻求报道/文章纠错：公众号后台 - 联系我们 科普：文章在公众号A标原创后，其他号转载需A许可，但A大多并非原作者，著作权归投稿创作者。【投稿】目的是扩大影响力，不愿被单一公",
+    excerpt: "本文总结 MLSys2026 FlashInfer AI Kernel 生成竞赛实践，团队获 Track A、Track C 两项季军及 Track C 亚军。对比人机协同与全自主",
     sourceUrl: "https://mp.weixin.qq.com/s/-zzV58Dfg5Imxja3hCHGfA",
   },
   {
@@ -2231,7 +2231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "H20",
     keywords: ["H20", "混元", "AI", "Infra", "HPC", "Ops"],
-    excerpt: "关键词：高性能算子库]、Hopper 架构、CuTe/CUTLASS、FP8 推理、FusedMoE] 在大模型推理这条赛道上，\"快一点\"从来不是一句口号，而是直接关乎单卡 QPS",
+    excerpt: "腾讯混元 Infra 团队年初开源 HPC-Ops，面向 H20 的 LLM 推理算子库，基于 CuTe 与 CUTLASS 优化 Attention、GroupGEMM、Fuse",
     sourceUrl: "https://mp.weixin.qq.com/s/uJdm9h63lJQA1nPvNuQj7Q",
   },
   {
@@ -2241,7 +2241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ChunkFlow",
     keywords: ["ChunkFlow", "DiT", "PCIe", "分块", "分布式", "节点"],
-    excerpt: "关键词：扩散 Transformer、层卸载、PCIe 竞争]、分块预取]、分布式推理 \"层卸载依靠当前层的计算耗时掩盖下一层参数的 H2D 预取开销，以此隐藏预取延迟，但当 H2",
+    excerpt: "本文提出 ChunkFlow，一种通信感知的分块粒度卸载运行时，解决分布式 DiT 推理中层卸载与集体通信的 PCIe 竞争问题。基于一阶分析模型，通过分块预取和部分参数驻留机制，",
     sourceUrl: "https://mp.weixin.qq.com/s/tXxp81yGihdWaKbFi9SgZQ",
   },
   {
@@ -2251,7 +2251,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TFLOPS",
     keywords: ["TFLOPS", "TileLang", "AMD", "Radeon", "GPU", "RDNA4"],
-    excerpt: "关键词：TileLang、AMD Radeon、RDNA架构]、GPU性能优化、ROCm 本文依托TileLang编程语言，选取RX 7900 XTX、Radeon AI PRO ",
+    excerpt: "本文基于TileLang在RDNA3/3.5/RDNA4三款AMD GPU上优化10类经典内核，排查并修复编译器隐性BUG，按硬件特性定制差异化优化方案，同时修正PyTorch、T",
     sourceUrl: "https://mp.weixin.qq.com/s/YMa2XMQS9HyvbjtxZfT7zA",
   },
   {
@@ -2261,7 +2261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "故障", "EEP", "停机", "节点", "面向"],
-    excerpt: "关键词：混合专家模型、专家并行、大模型服务]、容错、GPUDirect RDMA \"在大规模 MoE 服务中，局部节点故障不应成为全局服务中断的理由。\"这是清华大学、字节跳动、阿里",
+    excerpt: "本文针对宽专家并行 MoE 推理中单节点故障致全局中断问题，提出 EEP 弹性通信与运行时基板，将成员关系作为显式可变状态，实现 11 秒故障恢复与 8 秒重集成，稳态性能损失仅 ",
     sourceUrl: "https://mp.weixin.qq.com/s/PJ-qc1v7xcLS7H3tbmJcGA",
   },
   {
@@ -2271,7 +2271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "A100",
     keywords: ["A100", "线程", "GPU", "gpu", "compute", "driver"],
-    excerpt: "投稿/自荐/寻求报道/文章纠错：公众号后台 - 联系我们 关键词：摩尔线程、MUSA 驱动、基准测试、Celero 框架]、CUDA 对照评测 当我们谈论一块 GPU \"快不快\"，",
+    excerpt: "摩尔线程开源的GPU驱动基准测试套件，以Celero为底座，从内存、调度、多卡、资源四大维度量化评估MUSA与CUDA驱动，并自动打分，让国产GPU优劣可比。",
     sourceUrl: "https://mp.weixin.qq.com/s/FH8YQ7FvCUGKh8GHM7zhqg",
   },
   {
@@ -2281,7 +2281,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MFU",
     keywords: ["MFU", "线程", "SimuMax", "TP", "PP", "EP"],
-    excerpt: "关键词：静态解析模型、LLM 分布式训练]、并行策略搜索、流水线调度、显存建模 训练一个千亿参数的大模型，最贵的往往不是 GPU，而是\"试错\"。一次 1024 卡的策略 sweep",
+    excerpt: "SimuMax 是摩尔线程开源的 LLM 分布式训练静态解析模拟器，不启动真实训练即可估算吞吐、显存与流水气泡，覆盖 TP/PP/EP/CP/SP 与 MoE，把昂贵的集群试错变成",
     sourceUrl: "https://mp.weixin.qq.com/s/e2Thl3JnstTEKY0tT5p2nw",
   },
   {
@@ -2291,7 +2291,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Kernel",
     keywords: ["Kernel", "AKO", "Agentic", "Optimization", "Claude", "Code"],
-    excerpt: "关键词：AKO、GPU内核优化]、Agentic、FlashInfer、自动化Kernel生成 在MLSys2026英伟达内核竞赛B200硬件环境下，AKO4X优化的五项内核性能全",
+    excerpt: "本文介绍基于Claude的AKO自动化GPU内核优化框架，拆分AKO4ALL、AKO4X两款开源工具。其在MLSys2026赛事实测性能全面优于MIT-KDA与FlashInfer",
     sourceUrl: "https://mp.weixin.qq.com/s/BKRvzjWmchvbgroDRvjyxQ",
   },
   {
@@ -2301,7 +2301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "原语",
     keywords: ["原语", "增益", "数值", "驱动", "优化", "数学"],
-    excerpt: "关键词：数值超优化、库学习系统（面向数值库的自动学习系统]）、GrowLibm、Herbie、LLVM 匹配器 数值软件依赖于 sin、exp、log 等数学原语的快速、准确实现。",
+    excerpt: "本文提出面向数值库的自动学习系统，将 Herbie 超优化器反向改造为 GrowLibm，自动发现高价值数学原语。在三大科学应用中实现最高 2.2 倍加速，精度从 56.0%提升至",
     sourceUrl: "https://mp.weixin.qq.com/s/WNFjDS-EWoTAxsOfmIVEEw",
   },
   {
@@ -2311,7 +2311,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "NVIDIA", "CompileIQ", "PTXAS", "NVCC", "终结者"],
-    excerpt: "关键词：编译器调优]、超参数优化、PTXAS、遗传搜索、IPC 架构 CUDA 性能工程师都见过这样的场景：同一份 kernel，换一组 -Xptxas 旋钮，吞吐量能差出 20%",
+    excerpt: "CompileIQ 用遗传搜索驱动 NVIDIA 编译器旋钮调优，以 Python 封装预编译核心，IPC 配合多 Worker 并行评估目标函数，让 PTXAS 调优可工程化。",
     sourceUrl: "https://mp.weixin.qq.com/s/05uxlrNQbKDTKpHUtXs0Nw",
   },
   {
@@ -2321,7 +2321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "EAGLE3",
     keywords: ["EAGLE3", "DFlash", "Domino", "SGLang", "解码", "吞吐量"],
-    excerpt: "关键词：推测解码、因果建模、并行草稿、LLM 推理加速]、Domino \"因果依赖建模是提升草稿质量的关键，但标准自回归实现使其代价高昂。\"这一来自 Domino 论文的核心论断，",
+    excerpt: "针对推测解码中自回归草稿成本高、并行草稿因果建模弱的核心矛盾，本文提出 Domino 框架，通过轻量级因果头修正并行草稿分布。在 Qwen3 模型上实现最高 5.49× 端到端加速",
     sourceUrl: "https://mp.weixin.qq.com/s/jaWVR_NE0u3tIoy6_oaCNQ",
   },
   {
@@ -2331,7 +2331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "RTP", "TTFT", "vLLM", "SGLang", "开源"],
-    excerpt: "关键词：RTP-LLM、大模型推理、Prefill-Decode 分离]、KV 缓存管理、推测解码 \"大语言模型已经彻底改变了 AI 应用，但大规模部署它们带来了重大挑战。\"这是 ",
+    excerpt: "大模型推理性能瓶颈正成为 AI 规模化落地的最大障碍。阿里巴巴最新开源的 RTP-LLM 引擎通过全栈式系统设计，在模型加载、KV 缓存管理、推测解码等多个维度实现突破性优化，性能",
     sourceUrl: "https://mp.weixin.qq.com/s/vhN7ct0sUr0NIFAAgnIILw",
   },
   {
@@ -2341,7 +2341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "nv", "isa", "solver", "nvdisasm", "榨干"],
-    excerpt: "关键词：NVIDIA GPU、指令集逆向]、差分模糊测试、nvdisasm、SASS 编码] 写在前面：NVIDIA 从未公开过 SASS（Streaming ASSembler）",
+    excerpt: "通过对 nvdisasm 位级模糊测试，逐比特反推 NVIDIA GPU 指令编码、操作数与修饰符语义，结合活跃区间分析自动生成 SM89 与 SM90a 可读 ISA 规范文档。",
     sourceUrl: "https://mp.weixin.qq.com/s/fSbMaETut3te2pgozw9rng",
   },
   {
@@ -2351,7 +2351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Qwen3",
     keywords: ["Qwen3", "Next", "KVBuffer", "IO", "线性", "注意力"],
-    excerpt: "关键词：线性注意力、KV 缓冲、分块解码]、推测解码、SGLang \"线性注意力拥有与上下文长度无关的恒定解码成本，但现有服务系统在每个解码步骤都递归计算和更新巨大的线性注意力状态",
+    excerpt: "本文介绍耶鲁大学提出的 KVBuffer 技术，通过缓冲最近 KV 实现 IO 感知的线性注意力服务。它支持分块解码、推测解码并行验证和短上下文纯 KV 解码，在 Qwen3-Ne",
     sourceUrl: "https://mp.weixin.qq.com/s/QbJSsConwiaWa82ePjshdA",
   },
   {
@@ -2361,7 +2361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KernelWiki",
     keywords: ["KernelWiki", "Blackwell", "Wikipedia", "PR", "内核", "文档"],
-    excerpt: "关键词：Blackwell GPU、Claude Code Skill、知识库工程、内核优化、tcgen05] 如果你正在写一段跑在 B200 上的 FlashAttention-",
+    excerpt: "KernelWiki 把 Blackwell 和 Hopper 两代 GPU 内核优化知识打包为 Claude 技能，以三层架构串起两千 PR 与四十八综述，让大模型秒级取得答案。",
     sourceUrl: "https://mp.weixin.qq.com/s/2zoYIwU9hFMaQBypuPVX6Q",
   },
   {
@@ -2371,7 +2371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TTFT",
     keywords: ["TTFT", "Stream2LLM", "RAG", "流式", "重构", "吞吐量"],
-    excerpt: "关键词：LLM 推理]、首字延迟、上下文流式、RAG 系统、两阶段调度]、KV 缓存优化 检索增强生成（RAG）系统的核心矛盾在于延迟与质量的不可兼得。等待完整上下文检索完成，导致",
+    excerpt: "当 RAG 系统的检索延迟吞噬了 LLM 的交互优势时，Stream2LLM 给出了颠覆性答案。它通过上下文流式与预填充重叠，在保持吞吐量不变的前提下，将首字延迟提升最高 11 倍",
     sourceUrl: "https://mp.weixin.qq.com/s/DD5Q27zb4DK3tmSxRhkpkg",
   },
   {
@@ -2381,7 +2381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "import",
     keywords: ["import", "Numba", "CUDA", "MLIR", "Python", "GPU"],
-    excerpt: "关键词：MLIR、Numba-CUDA、CUDA 编译流水线、NVVM 后端]、JIT 提速 在 NVIDIA 把 GPU 内核编译推向 MLIR 的浪潮里，NVIDIA/numb",
+    excerpt: "本文解读 NVIDIA 的 Numba-CUDA-MLIR：以 MLIR 重写编译栈，保留 cuda.jit，经多方言降级与双后端产出 PTX，让 GPU 内核编译大幅度提速。",
     sourceUrl: "https://mp.weixin.qq.com/s/SyLLn1ftkzG9YQX50WZbYA",
   },
   {
@@ -2391,7 +2391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "赛道", "MLSys", "DSA", "内核", "手册"],
-    excerpt: "关键词：稀疏注意力、自主智能体、Triton 内核优化]、工作负载感知、DeepSeek 注：本文对应 MLSys 2026 FlashInfer AI 内核生成大赛，DSA 赛道",
+    excerpt: "本项目构建全自主 Claude Code 优化循环，为 DeepSeek 稀疏注意力生成高性能 Triton 内核，通过工作负载感知的无分数快速路径、融合基数选择与原子屏障单启动分",
     sourceUrl: "https://mp.weixin.qq.com/s/7Cheqlcwbo7skGG-7A-hvA",
   },
   {
@@ -2401,7 +2401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "浅析", "CPU", "AMD", "AOCL", "LibM"],
-    excerpt: "关键词：高性能数学库、微架构分发]、多项式逼近、SIMD 向量化、AMD Zen 在深度学习推理、科学模拟和高性能计算的底层，有一个容易被忽略的性能瓶颈——数学函数调用。每一次 e",
+    excerpt: "AMD 开源高性能数学库 AOCL-LibM，通过运行时 CPU 微架构检测与多版本函数分发机制，结合查表法与多项式逼近的混合算法策略，为 Zen 系列处理器提供从标量到 AVX-",
     sourceUrl: "https://mp.weixin.qq.com/s/GDJO-REjTzBkewZKPkTm3g",
   },
   {
@@ -2411,7 +2411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "token", "AgenticCache", "CPU", "驱动", "分支"],
-    excerpt: "关键词：具身智能、大语言模型、缓存驱动、异步规划]、AgenticCache 具身任务表现出强烈的计划局部性，即下一个计划在很大程度上可以从当前计划预测出来。这一来自斯坦福大学和首",
+    excerpt: "当 LLM 驱动的具身智能受困于每步推理的延迟和成本时，斯坦福与首尔大学带来了颠覆性方案。他们提出的 AgenticCache，用缓存驱动异步规划，实现 65%延迟降低、50%to",
     sourceUrl: "https://mp.weixin.qq.com/s/WOi519Rqlz5WOWe18dp6qA",
   },
   {
@@ -2421,7 +2421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "浅析", "赛道", "MLSys", "调度", "冠军"],
-    excerpt: "关键词：图调度、束搜索]、tile 模拟、内存层级、重计算 在 ML 编译器被强化学习、自动调优和大模型集体席卷的今天，一份规模仅千行、几乎零依赖的纯 C++ 代码 却拿下了 Go",
+    excerpt: "本文深度剖析 MLSys 2026 系统赛冠军方案：以束搜索为骨架，融合候选生成、tile 模拟、保留策略与重计算，于内存与粒度约束下逼近最优算子调度，揭示工程取胜之道。",
     sourceUrl: "https://mp.weixin.qq.com/s/RhdX6OOUS3d4bE4v2XzZew",
   },
   {
@@ -2431,7 +2431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "赛道",
     keywords: ["赛道", "核竞赛", "MLSys", "NVIDIA", "Blackwell", "Kernel"],
-    excerpt: "关键词：内核设计智能体、CUDA 内核生成、智能体循环、性能优化]、大语言模型 在讨论 HAN Lab Kernel Mafia 团队的 Kernel Design Agents ",
+    excerpt: "Kernel Design Agents 以 Humanize 循环为核心，结合 KernelWiki 与 Nsight Compute 分析，让大模型在真实开发环境中规划、验证并",
     sourceUrl: "https://mp.weixin.qq.com/s/FX6vhMEnch2b7YrSCzKkdQ",
   },
   {
@@ -2441,7 +2441,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Scaling",
     keywords: ["Scaling", "Law", "TileRT", "GLM", "高性能", "引擎"],
-    excerpt: "关键词：TileRT、大模型推理、低延迟、异构执行、Scaling Law]、软硬件协同 本文深度解析 TileRT 高性能推理引擎，提出速度是大模型推理领域新的 Scaling ",
+    excerpt: "本文指出推理速度成为大模型全新 Scaling Law，现有框架受算子调度、同步开销限制，硬件算力难以充分发挥。介绍 TileRT 推理引擎，依托常驻内核、瓦片流水线、异构执行等创",
     sourceUrl: "https://mp.weixin.qq.com/s/as6xvRGxkh4tVvLDRkdC1g",
   },
   {
@@ -2451,7 +2451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "GPU", "CPU", "PoCL", "OpenCL", "内核"],
-    excerpt: "关键词：PoCL、OpenCL、LLVM Pass、工作项循环、并行区域] OpenCL 的灵魂是 SPMD：成千上万个工作项（work-item）在同一段内核里齐头并进，遇到 b",
+    excerpt: "PoCL 是基于 LLVM 的可移植 OpenCL 3.0 开源实现，通过工作项循环、并行区域分析等编译器 Pass，将含屏障的 SPMD 内核高效编译至 CPU 与 GPU 等后",
     sourceUrl: "https://mp.weixin.qq.com/s/Q3rcCU848Eg-1jTQFpGJ9g",
   },
   {
@@ -2461,7 +2461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "H100",
     keywords: ["H100", "MemExplorer", "Agentic", "NPU", "重构", "内存"],
-    excerpt: "关键词：异构内存、NPU]、Agentic LLM、Prefill、Decode、设计空间搜索 这篇论文最值得抓住的一句话是：为下一代推理加速器识别合适的内存架构，需要在一个巨大且",
+    excerpt: "LLM 推理的下一场硬仗不在算力峰值，而在内存系统。MemExplorer 把 SRAM、HBM、LPDDR、HBF 与 NPU 参数联合搜索，在 agentic 负载下最高实现 ",
     sourceUrl: "https://mp.weixin.qq.com/s/j6K9lsUqypBuEwycTfZBNA",
   },
   {
@@ -2471,7 +2471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "智能",
     keywords: ["智能", "Star", "Superpowers", "TDD", "用子", "体用"],
-    excerpt: "关键词：AI 编程智能体、技能框架]、测试驱动开发、子智能体驱动开发、软件工程方法论 你有没有遇到过这种情况：让 AI 帮你写一个\"简单的\"Todo 应用，它二话不说就吐出三百行代",
+    excerpt: "Superpowers是一个面向AI编程智能体的技能框架与开发方法论，通过将头脑风暴、测试驱动开发、子智能体驱动开发等流程编码为可组合技能，强制智能体编写代码前完成设计评审、计划制",
     sourceUrl: "https://mp.weixin.qq.com/s/XawN7zido5y4tzVK4PJyAA",
   },
   {
@@ -2481,7 +2481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agent",
     keywords: ["Agent", "veRL", "Uni", "model", "tool", "env"],
-    excerpt: "关键词：智能体框架、大规模并行交互]、强化学习训练、工具解耦架构、异步执行引擎] 当前 AI Agent 生态面临一个尴尬的割裂：推理阶段用一套框架，训练阶段用另一套框架，两者之间",
+    excerpt: "Uni-Agent 统一了智能体构建、大规模并行执行与强化学习训练三大环节，以 model-tool-env 解耦架构实现千级并发交互，复用同一套推理栈无缝对接 veRL 训练框架",
     sourceUrl: "https://mp.weixin.qq.com/s/ElXOjQTXE6UmnuXVLHoX4w",
   },
   {
@@ -2491,7 +2491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "slang", "C++", "SystemVerilog", "词法", "语义"],
-    excerpt: "关键词：SystemVerilog 编译器、抽象语法树]、BumpAllocator 内存池、延迟展开、访问者模式 在芯片设计领域，SystemVerilog 既是硬件描述语言也是",
+    excerpt: "slang是目前最快且最合规的开源SystemVerilog 编译器前端，通过精巧的词法分析、递归下降解析、延迟展开符号表与BumpAllocator内存池等技术，实现对完整Sys",
     sourceUrl: "https://mp.weixin.qq.com/s/8PbHc8idagD4kZZKGNXhtQ",
   },
   {
@@ -2501,7 +2501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Decoupled",
     keywords: ["Decoupled", "DiLoCo", "分布式", "异构", "地理分布", "芯片"],
-    excerpt: "关键词：分布式预训练、异步训练]、Decoupled DiLoCo、SPMD 范式]、混沌工程、异构计算 论文中指出，“随着计算规模的扩大，原本罕见的硬件故障变成了日常事件。对于需",
+    excerpt: "当百万级芯片集群的平均无故障时间不足一分钟，传统 SPMD 训练范式已走到尽头。谷歌 DeepMind 提出的 Decoupled DiLoCo，在 240 万芯片下实现 99%系",
     sourceUrl: "https://mp.weixin.qq.com/s/4e3-FUw2s6deyhVt3k6w-w",
   },
   {
@@ -2511,7 +2511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Mirage",
     keywords: ["Mirage", "TVM", "PyTorch", "CMU", "Prism", "LLM"],
-    excerpt: "关键词：符号超优化、张量程序]、sGraph、GPU 内核优化、LLM 推理加速 “人类直觉本质上不足以捕捉代数变换、数据布局和硬件特定调度决策之间的组合交互。” 这是 Prism",
+    excerpt: "当 GPU 内核优化陷入枚举爆炸与采样随机性死局，CMU 清华联合推出的 Prism 给出了全新答案。它通过符号化超优化实现 2.2 倍 SOTA 加速，同时将优化时间缩短 3.4",
     sourceUrl: "https://mp.weixin.qq.com/s/vp1pE-AkkY6WQiA4PXXutA",
   },
   {
@@ -2521,7 +2521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MegaKernel",
     keywords: ["MegaKernel", "NPU", "浅析", "PTO", "ISA", "Gated"],
-    excerpt: "关键词：Gated DeltaNet、Megakernel 融合、PTO-ISA]、昇腾 NPU、线性注意力推理加速] 在大语言模型推理的赛道上，注意力机制的计算效率直接决定了系统",
+    excerpt: "本项目为华为昇腾 NPU 定制 Gated DeltaNet 线性注意力的七阶段融合 Megakernel，借助 PTO-ISA 指令集直接编排 Vec 与 Cube 流水线，相比",
     sourceUrl: "https://mp.weixin.qq.com/s/uSClZLlZUgdVJ2DWhOxbAw",
   },
   {
@@ -2531,7 +2531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "跨平台",
     keywords: ["跨平台", "Codex", "Linux", "Windows", "Android", "Termux"],
-    excerpt: "关键词：跨平台 AI 编程、Express 桥接层、WebSocket 实时通信]、Cloudflare 隧道穿透、Telegram 机器人桥接 上周五，OpenAI 宣布 Cod",
+    excerpt: "codex-mobile通过Express桥接层与Vue前端，将Codex桌面应用的完整交互体验搬进浏览器，覆盖Linux、Windows 与 Android Termux三大平台",
     sourceUrl: "https://mp.weixin.qq.com/s/a3QKcFtVsbfrAEneBuPe9g",
   },
   {
@@ -2541,7 +2541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "MoE", "Seed", "UniEP", "MegaKernel", "开源"],
-    excerpt: "关键词：专家并行、MoE 训练、MegaKernel、数值一致性]、自动调优 “MoE 专用组件（包括分发、专家计算和合并阶段）可消耗总训练预算的 30%至 80%。”这是论文中最",
+    excerpt: "当 MoE 训练的通信开销吞噬高达 80%的算力时，字节跳动与清华大学联合推出 UniEP。它通过统一专家并行 MegaKernel 架构，在严格保证数值一致性的前提下，实现 1.",
     sourceUrl: "https://mp.weixin.qq.com/s/6vzKPwytnPDaVJNpi15m5g",
   },
   {
@@ -2551,7 +2551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "AI", "tilelang", "cuda", "skills", "CUDA"],
-    excerpt: "关键词：AI 编码智能体]、TileLang、CUDA 内核优化、Agent Skills、GPU 算子开发 GPU 内核开发是深度学习基础设施中最晦涩也最关键的一环。一个高性能的",
+    excerpt: "本项目为AI编码智能体构建了一套完整的GPU 算子开发技能体系，涵盖TileLang内核编写、调试、性能分析、优化及前反向传播测试五大环节，并附带通用CUDA开发技能，将GPU编程",
     sourceUrl: "https://mp.weixin.qq.com/s/XUb8l-xUMsCNt26fO1oCfg",
   },
   {
@@ -2561,7 +2561,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TFLOPS",
     keywords: ["TFLOPS", "Triton", "TLE", "barrier", "FlashMLA", "手动"],
-    excerpt: "关键词：SparseMLA、TLE（Triton Language Extensions）、Warp Specialization、生产消费模型]、FlashMLA SparseM",
+    excerpt: "用TLE生产消费模型与warp specialization，纯Triton实现SparseMLA吞吐达547 TFLOPS，达FlashMLA的90%，较基线翻倍，彻底免除手动b",
     sourceUrl: "https://mp.weixin.qq.com/s/fhNjD3glZ1VFQi2ZI4KHWQ",
   },
   {
@@ -2571,7 +2571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HF",
     keywords: ["HF", "kernels", "community", "Hub", "链路", "算子"],
-    excerpt: "关键词：算子分发、CUDA 内核、Metal 后端、PyTorch 扩展]、推理加速 大模型系统的性能瓶颈，常常不在模型结构本身，而在那些不起眼的底层算子里：一次激活函数融合、一次",
+    excerpt: "把分散的高性能算子封装为可从 Hub 按需加载的内核包，用 CUDA、Metal、Triton 与 PyTorch 桥接模型、硬件和分发，让推理训练获得底层加速。",
     sourceUrl: "https://mp.weixin.qq.com/s/3pS2_7Z_dgEmjAH2srPJXg",
   },
   {
@@ -2581,7 +2581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "密码学",
     keywords: ["密码学", "Google", "TPU", "架构师", "MoE", "物理布局"],
-    excerpt: "关键词：批量推理、MoE 模型、KV 缓存、流水线并行、算力瓶颈、AI 缩放定律] 当我们谈论 AI 时，我们往往关注模型的能力、参数规模和应用场景，却很少追问那些决定 AI 本质",
+    excerpt: "本文依托行业专家硬核推演，从批量推理机制出发，解析 MoE 机架部署、并行架构优劣，阐明 RL 催生的模型超量训练逻辑，借 API 定价拆解长上下文成本，还探讨神经网络与密码学架构",
     sourceUrl: "https://mp.weixin.qq.com/s/3OjIawy4sKoGzrrHUtsWqA",
   },
   {
@@ -2591,7 +2591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "cuDNN", "Frontend", "API", "AI", "开源"],
-    excerpt: "关键词：cuDNN、图编译]、执行计划、算子融合、GPU 性能工程 深度学习框架里的一个卷积、一次归一化、一次注意力计算，看起来只是 Python 中的一行函数调用；但在 GPU ",
+    excerpt: "cuDNNFrontend 以图 API 封装重塑算子构建，把繁琐 backend 描述符、计划选择与执行打包为可复用流程，让高性能内核易于集成、调优、扩展并走向开放。",
     sourceUrl: "https://mp.weixin.qq.com/s/m4bV3iZK9nBUuo_SB6II8Q",
   },
   {
@@ -2601,7 +2601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "序列化",
     keywords: ["序列化", "Perseus", "MoE", "MegaKernel", "GPU", "direct"],
-    excerpt: "关键词：混合专家模型、MegaKernel、RDMA]、隐藏序列化、Perseus \"我们的研究表明，限制多节点 megakernel 性能的是序列化，而不是代理式与 GPU-di",
+    excerpt: "多节点 MoE 推理性能暴跌 10 倍的元凶竟不是带宽？康奈尔大学最新研究揭示了代理式 RDMA 传输中的隐藏序列化瓶颈，通过解耦信令与 NIC 硬件排序，Perseus 实现最高",
     sourceUrl: "https://mp.weixin.qq.com/s/t4RnW1nJQQfmlYjF5yKqPQ",
   },
   {
@@ -2611,7 +2611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Lean4", "TileLang", "Attention", "优化", "程序"],
-    excerpt: "关键词：Lean4 形式化推理、TileLang GPU Kernel 生成]、张量程序超优化器、算子融合与显存优化、Attention 4.08x 加速 - Lean4-Tile",
+    excerpt: "本文解读 Lean4-TileLang 张量程序超优化器：用 Lean4 保证计算变换正确性，用 TileLang 自动生成高性能 GPU Kernel，在 Attention、S",
     sourceUrl: "https://mp.weixin.qq.com/s/HQ8MSnCYamjBuMTytOtKHA",
   },
   {
@@ -2621,7 +2621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Claude",
     keywords: ["Claude", "Codex", "Humanize", "RLCR", "闭环", "长程"],
-    excerpt: "关键词：多智能体协作、RLCR 迭代审查（Ralph-Loop with Codex Review）]、AI 编程治理、Claude 插件、代码质量闭环 2025 年，AI 编程助",
+    excerpt: "Humanize 是一个 Claude Code 插件，通过 RLCR 机制实现\\x26quot;Claude 实现 +Codex独立审查\\x26quot;的迭代开发闭环，从想法生",
     sourceUrl: "https://mp.weixin.qq.com/s/qceRk9Qfq0Q3CTdD6P1Vag",
   },
   {
@@ -2631,7 +2631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "浅析",
     keywords: ["浅析", "Rust", "PC", "AI", "算力", "KeyCompute"],
-    excerpt: "关键词：智能路由引擎、流式网关执行器、Token 精确计费]、Rust 高性能服务、分布式节点调度 在大模型百花齐放的今天，企业和开发者面临一个共同的技术痛点：如何在 OpenAI",
+    excerpt: "KeyCompute 以 Rust 构建高性能 AI 算力服务平台，通过两层智能路由引擎、流式网关执行器与精确 Token 计费系统，将多厂商大模型统一为 OpenAI 兼容接口，",
     sourceUrl: "https://mp.weixin.qq.com/s/QTSxP5tYcoR5WNg0AlMl4w",
   },
   {
@@ -2641,7 +2641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MINISA",
     keywords: ["MINISA", "指令集", "重构", "加速器", "架构", "指令"],
-    excerpt: "关键词：可重构 AI 加速器、MINISA、FEATHER+、Virtual Neuron、指令集架构、数据流切换]、布局重排、FHE、ZKP 这篇论文最值得反复咀嚼的地方，不是它",
+    excerpt: "可重构 AI 加速器常因微控制过细而被指令流拖慢。MINISA 以虚拟神经元为抽象边界，在保留映射与布局灵活性的同时极限压缩控制开销，并借助 FEATHER+把动态负载与片上复制问",
     sourceUrl: "https://mp.weixin.qq.com/s/Ggj5XXQAQ-TCckxSyTvLgw",
   },
   {
@@ -2651,7 +2651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Fast",
     keywords: ["Fast", "dVLM", "batch", "VLM", "SGLang", "FP8"],
-    excerpt: "关键词：Fast-dVLM、视觉语言模型、离散扩散、块扩散、KV Cache]、自投机解码、SGLang、FP8 量化 这篇论文真正要解决的问题，不是让视觉语言模型回答得更聪明一点",
+    excerpt: "Fast-dVLM 将自回归视觉语言模型直接转换为块扩散模型，在保留多模态能力的同时支持 KV 缓存、并行去噪与自投机解码。结合 SGLang 和 FP8 量化，端到端推理最高提速",
     sourceUrl: "https://mp.weixin.qq.com/s/Bg0QRvC4VwCjtLay-1SiTw",
   },
   {
@@ -2661,7 +2661,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "DeepSeek",
     keywords: ["DeepSeek", "V4", "TileLang", "平手", "算子", "性能"],
-    excerpt: "关键词：TileLang、DeepSeek-V4]、DSL、大模型、小算子 最近 V4 的技术报告讨论度很高，其中 TileLang 在报告中也占了一部分内容，主要是总结了社区最近",
+    excerpt: "本文解读DeepSeek-V4技术报告中的TileLang，分析DSL在大模型零碎小算子开发中的性能、维护与迁移优势。剖析其Fragment、Parallel核心设计，介绍Host",
     sourceUrl: "https://mp.weixin.qq.com/s/azp00kERsly5cXqYCdIeCg",
   },
   {
@@ -2671,7 +2671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AccelCIM",
     keywords: ["AccelCIM", "SRAM", "加速器", "模型", "设计"],
-    excerpt: "关键词：存内计算、数据流、设计空间探索、后布局评估、大语言模型推理] 当算力密度和能效成为 AI 芯片的圣杯时，基于 SRAM 的存内计算技术被寄予厚望。然而，一个尴尬的现实是：面",
+    excerpt: "AccelCIM 框架系统化探索了 SRAM 存内计算加速器的数据流设计空间，并引入精确的后布局 PPA 评估。研究发现，脉动阵列互连普遍比广播式更高效。是否启用计算与 I/O 重",
     sourceUrl: "https://mp.weixin.qq.com/s/5WW4BDxFGJ-w035jCcZ3TQ",
   },
   {
@@ -2681,7 +2681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TFLOPS",
     keywords: ["TFLOPS", "Flash", "Attention", "内存", "瓶颈", "广播"],
-    excerpt: "关键词：内核广播优化]、推荐系统推理、Flash Attention、GPU 内核融合、协同设计 推荐系统推理与大语言模型推理有一个很不一样、却长期被忽视的特点：同一个请求里的大量",
+    excerpt: "本文提出内核广播优化方法，通过内核-模型-系统协同设计，在推荐系统推理中消除用户特征向候选集的冗余广播。该方案将广播语义融入计算内核，避免显式张量复制，在H100 GPU上实现线性",
     sourceUrl: "https://mp.weixin.qq.com/s/0RGRBsKX5P0ZSGCJdDTEMQ",
   },
   {
@@ -2691,7 +2691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "TokenSpeed", "流水线", "编码", "引擎", "平面"],
-    excerpt: "关键词：智能体推理、状态机调度]、KV 缓存、MLA 内核]、Blackwell 优化 大型语言模型推理的瓶颈，早已不只是“矩阵乘得够不够快”。 当 Claude Code、Cod",
+    excerpt: "TokenSpeed 面向智能体推理，以 SPMD 编译、C++状态机调度、KV 安全复用和 MLA 内核优化，在易用性与 Blackwell 性能之间建立新范式服务未来高并发长上",
     sourceUrl: "https://mp.weixin.qq.com/s/vuGdWLUf1cELqnuOIZxtvQ",
   },
   {
@@ -2701,7 +2701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "NVlabs", "cuda", "oxide", "Rust", "CUDA"],
-    excerpt: "关键词：Rust 编译器、CUDA、PTX、MIR]、GPU 安全抽象 如果说 CUDA C++ 是 GPU 编程世界的“母语”，那么 Rust 长期以来更像一位站在门外的工程师：",
+    excerpt: "cuda-oxide把Rust前端、MIR到Pliron再到LLVM/PTX的编译链与CUDA运行时封装贯通，让安全抽象真正逼近原生GPU编程的新范式边界线。",
     sourceUrl: "https://mp.weixin.qq.com/s/g_qYKfqwNARHJhKkMztwaA",
   },
   {
@@ -2711,7 +2711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "美团",
     keywords: ["美团", "LongCat", "模态", "基座", "文本", "原生"],
-    excerpt: "关键词：MoE大模型、确定性训练、模态解耦并行、通信-计算重叠]、VHalf流水线 在大模型从“能用”迈向“好用、易用、规模化落地”的进程中，训练与推理基础设施早已不再是单纯的底层",
+    excerpt: "美团LongCat依托H800集群，半年完成560B MoE文本基座、全模态到离散原生统一迭代。30天高效训完20万亿Token，可用性98.48%；128卡推理达百Token/秒",
     sourceUrl: "https://mp.weixin.qq.com/s/5AqMIl9w_5D0idJRlGPeFg",
   },
   {
@@ -2721,7 +2721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ms",
     keywords: ["ms", "batch", "FlashRT", "机器人", "硬件", "静态"],
-    excerpt: "关键词：实时推理、CUDA 图、FP8 量化]、VLA 模型、硬件分发 大模型推理的主流叙事，常常围绕“更高吞吐”“更大批量”“更复杂的 Serving 系统”展开。 但机器人控制",
+    excerpt: "FlashRT瞄准机器人端侧小batch控制，以手写内核、静态CUDA图与FP8量化，将VLA延迟削至13ms级，摆脱引擎编译，构建确定性的实时闭环。",
     sourceUrl: "https://mp.weixin.qq.com/s/uncbYzt6upyIza6AHfSrhA",
   },
   {
@@ -2731,7 +2731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "nvlabs",
     keywords: ["nvlabs", "FVRuleLearner", "LLM", "SystemVerilog", "Assertion", "检索"],
-    excerpt: "关键词：形式验证、SystemVerilog 断言]、Q-Tree、RAG、JasperGold 让大模型根据自然语言写出 SystemVerilog Assertion，看似只是",
+    excerpt: "FVRuleLearner 以 Q-Tree 把 SVA 失败转化为可检索规则，结合 LLM、RAG 与 JasperGold，让形式验证知识从个案修复沉淀为复用推理新资产。",
     sourceUrl: "https://mp.weixin.qq.com/s/UovQG6FYaD916idoSRDSUw",
   },
   {
@@ -2741,7 +2741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "Thor", "M100", "AI", "数据流", "层级"],
-    excerpt: "关键词：编排式数据流架构、AI 推理芯片]、智能驾驶、张量计算、软硬件协同设计]、同步计数器 “We believe that M100 represents a promisin",
+    excerpt: "当智能驾驶遇上大模型，当冯·诺依曼架构撞上物理极限，一家车企为何选择自研芯片？理想汽车 M100 以\\x26quot;编排式数据流\\x26quot;破局，在 UniAD 推理中实现",
     sourceUrl: "https://mp.weixin.qq.com/s/lEY3zRKreaY6gqXTZr5GJQ",
   },
   {
@@ -2751,7 +2751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "传输",
     keywords: ["传输", "P2P", "分布式", "权重", "参数"],
-    excerpt: "关键词：P2P 权重传输、RDMA]、零拷贝、CPU 引擎副本、分布式强化学习] 我们为 SGLang 中的强化学习工作负载引入了一种基于 RDMA 的点对点权重更新机制，作为传统",
+    excerpt: "针对大规模分布式强化学习的权重传输瓶颈，本文提出一种基于 RDMA 的点对点更新机制。通过在源端 CPU 维护引擎副本，实现零拷贝传输，将 1T 参数模型的权重更新时间从 53 秒",
     sourceUrl: "https://mp.weixin.qq.com/s/Pbuf-poIcSc_6esqYVVZUw",
   },
   {
@@ -2761,7 +2761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "RadixArk", "AI", "基础设施", "团队", "种子"],
-    excerpt: "关键词：RadixArk、1 亿美元种子轮]、AI 基础设施、SGLang、Miles 2026 年 5 月 5 日，人工智能基础设施领域迎来重磅消息：由开源推理引擎 SGLang",
+    excerpt: "2026年5月5日，AI基础设施公司RadixArk正式推出，完成1亿美元种子轮融资，投后估值4亿美元。本轮由Accel和Spark Capital领投，英伟达、AMD等参投，公司",
     sourceUrl: "https://mp.weixin.qq.com/s/R00g-5Al5z-syXDi5VkKwQ",
   },
   {
@@ -2771,7 +2771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "轻量",
     keywords: ["轻量", "AITER", "AMD", "GPU", "ATOM", "闭环"],
-    excerpt: "关键词：ROCm、AITER、分页 KV 缓存]、分段编译、推理服务 当我们谈论大模型推理优化时，最容易被看见的是单个算子：GEMM 快了多少，Attention 快了多少，MoE",
+    excerpt: "ATOM 以 AITER 内核、分页 KV 缓存、分段编译与多卡并行为支点，把 ROCmGPU 上的大模型推理压缩成一条低延迟、高吞吐、可服务化的工程链路与关键实践边界。",
     sourceUrl: "https://mp.weixin.qq.com/s/o41Njjc-dJlN5TDgwO8oag",
   },
   {
@@ -2781,7 +2781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "GPU", "accelerated", "computing", "hub", "kernel"],
-    excerpt: "关键词：CUDA 编程教学、标准并行算法、共享内存优化、容器化部署]、渐进式课程设计 GPU 编程长期以来被视为一座陡峭的学习悬崖——初学者不仅需要理解线程层次结构、内存空间模型这",
+    excerpt: "NVIDIA 开源加速计算教学仓库，以交互式 Notebook 为载体，系统覆盖 CUDA C++内核编程、标准并行算法 GPU 移植、Python 加速生态三大主线，配合容器化一",
     sourceUrl: "https://mp.weixin.qq.com/s/G4bmk0CL2h_zjT68nr3gwQ",
   },
   {
@@ -2791,7 +2791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "芯片", "Anthropic", "Fractile", "初创", "供应链"],
-    excerpt: "关键词：Anthropic、Fractile、AI 推理芯片]、供应链多元化、2027 年商用] AI 大模型的热战早已不局限于算法本身，一场围绕算力命脉的暗战正在浮出水面。据《T",
+    excerpt: "Anthropic 被曝正与英国芯片初创 Fractile 洽谈，欲采购存算一体 AI 推理芯片，开辟第四供应线。该芯片预计 2027 年商用，意在化解 Claude 收入突破 3",
     sourceUrl: "https://mp.weixin.qq.com/s/b1QGfouOsOv8OTTSpjZOXQ",
   },
   {
@@ -2801,7 +2801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Agentic", "重构", "解决方案", "机器人", "版图"],
-    excerpt: "关键词：内存供应约束、Agentic AI、汽车 ADAS、具身智能]、边缘计算 2026 年 4 月 29 日，高通发布了 2026 财年第二季度财报。对于关注 AI 芯片和边缘",
+    excerpt: "高通Q2营收106亿美元，手机芯片因“内存风暴”承压，但汽车业务猛增38%，IoT增9%。公司正将AI注入可穿戴、机器人、6G和ADAS全场景，从手机芯片商蜕变为端侧AI时代的系统",
     sourceUrl: "https://mp.weixin.qq.com/s/jHkgpUIKeHdUvXwTngCc6Q",
   },
   {
@@ -2811,7 +2811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "可验证",
     keywords: ["可验证", "mlc", "ai", "Pith", "Train", "MoE"],
-    excerpt: "关键词：MoE 训练、四维并行、DualPipeV、FP8 量化、Python 原生训练栈] 大模型训练系统往往像一座封闭工厂：流水线、通信拓扑、专家路由、显存复用、混合精度与检查",
+    excerpt: "PithTrain 以约万行 Python 重构 MoE 训练栈，将四维并行、DualPipeV 重叠调度与 FP8 算子压进可读工程，为大模型训练提供低门槛高性能范本路径。",
     sourceUrl: "https://mp.weixin.qq.com/s/jHSGorh2xSVTvkY6Fll8SA",
   },
   {
@@ -2821,7 +2821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Bug",
     keywords: ["Bug", "HWE", "Bench", "短板", "芯片", "硬件"],
-    excerpt: "关键词：HWE-Bench、硬件 Bug 修复、LLM Agent]、仓库级基准]、异构计算、RTL 验证 “硬件任务暴露了软件基准所压缩的性能差异——在 SWE-bench 上，",
+    excerpt: "AI 编程助手已落地解决实际问题，但硬件设计自动化仅局限模块代码生成。全新 HWE-Bench 基准依托 417 项真实硬件漏洞修复任务，测出顶尖大模型芯片设计修复率仅 70.7%",
     sourceUrl: "https://mp.weixin.qq.com/s/pzS0e3_7QAibmP1jmF-Lig",
   },
   {
@@ -2831,7 +2831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Token",
     keywords: ["Token", "DeepSeek", "模态", "鸿沟", "视觉", "逻辑"],
-    excerpt: "关键词：视觉基元、多模态推理]、链式思维、参考鸿沟、视觉 Token 压缩、具身智能] “Seeing is not Reasoning.” 当 DeepSeek 团队在其最新论文",
+    excerpt: "多模态大模型正陷入“指代鸿沟”——看得见却指不出。DeepSeek 团队用“视觉基元”破局，让模型像人类一样边思考边“指指点点”。这不仅是性能的跃升，更是对认知范式的重构，用极致的",
     sourceUrl: "https://mp.weixin.qq.com/s/Dw6sKWhQ2R-eVB0UmpQbbg",
   },
   {
@@ -2841,7 +2841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "终局", "国产"],
-    excerpt: "关键词：国产GPU，亏损收窄，经营现金流，同质化竞争]，恶性内卷 我们在上篇文章国产GPU生死线：10亿营收验尸报告，谁在裸泳？中曾发出预警。如今，一份年营收15亿、经营现金流净流",
+    excerpt: "四家国产GPU公司营收虽集体突破10亿，却全部深陷亏损，经营现金流均为负值。高增长靠烧钱换市场，研发吞噬营收，推理端价格战已起。CUDA兼容是入场券而非护城河，真正考验在于从融资驱",
     sourceUrl: "https://mp.weixin.qq.com/s/84uiDz13vaG-r6ECr-Yy-w",
   },
   {
@@ -2851,7 +2851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "记忆",
     keywords: ["记忆", "LLM", "SLM", "LightMem", "天团", "Agent"],
-    excerpt: "关键词：LLM Agent、轻量化记忆系统、小语言模型]、在线-离线解耦、两阶段检索、记忆巩固] “现有记忆系统面临效率与效果的权衡，SLM 因为其容量和表征能力有限，也并非万能灵",
+    excerpt: "当大模型 Agent 还在昂贵的“全尺寸”记忆里挣扎时，LightMem用一个“轻量级SLM天团”给出了答案。该架构通过在线-离线解耦和两阶段检索，以83毫秒的极致延迟，在LoCo",
     sourceUrl: "https://mp.weixin.qq.com/s/00g7tLmvZYrlNpEq57t02A",
   },
   {
@@ -2861,7 +2861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GraphPP",
     keywords: ["GraphPP", "流水线", "气泡", "训练"],
-    excerpt: "关键词：流水线并行、图变换、B/W 拆分、编译器优化]、Pipeline Bubble 随着模型规模突破万亿参数，分布式训练已成为深度学习领域的“新基建”。然而，流水线并行在突破单",
+    excerpt: "GraphPP 通过图变换自动拆分正反向计算，实现零气泡流水线并行。它将调度转化为图重排，在 DeepSeek-V3 上提速 70.8%，让编译器取代手写反向逻辑。",
     sourceUrl: "https://mp.weixin.qq.com/s/CWaYd59MX9CJ6MCdcmie4g",
   },
   {
@@ -2871,7 +2871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TFLOPS",
     keywords: ["TFLOPS", "pyptx", "Python", "PTX", "B200", "H100"],
-    excerpt: "关键词：PTX 指令级编程、Python DSL、Hopper/Blackwell 架构、内核追踪式代码生成、JAX/PyTorch 运行时集成] GPU 编程的世界存在一个尴尬的",
+    excerpt: "pyptx 是一个用 Python 编写 NVIDIA PTX 指令的 DSL 框架，让开发者以一行 Python 对应一条 PTX 指令的方式，在 JAX 和 PyTorch 中",
     sourceUrl: "https://mp.weixin.qq.com/s/d-B0QL4S7rrLru3MpbjOjQ",
   },
   {
@@ -2881,7 +2881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepStack",
     keywords: ["DeepStack", "AI", "LLM", "芯片", "法则", "定义"],
-    excerpt: "关键词：DeepStack、3D 堆叠 DRAM、设计空间探索]、分布式 LLM 推理、全栈协同]、存算一体 “通过在早期设计阶段捕捉 3D 堆叠内存语义与全并行策略，DeepSt",
+    excerpt: "在 2.5×10¹⁴ 的巨大设计空间中，如何为分布式 3D 堆叠 AI 芯片找到最优解？DeepStack 用 10 万倍加速的精度，揭示了批次大小比推理阶段更根本的架构驱动力，并",
     sourceUrl: "https://mp.weixin.qq.com/s/oYaJD4Hs7Xvl9Y-Y0SFVRw",
   },
   {
@@ -2891,7 +2891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "免费",
     keywords: ["免费", "Token", "AI", "小米", "活动"],
-    excerpt: "关键词：小米 MiMo, 100 万亿 Token], 创造者激励, V2.5 开源模型, 免费 API 今天，一个消息正在悄悄扩散的消息：小米的 MiMo 大模型，开始“发钱”了",
+    excerpt: "小米 MiMo 启动“Orbit 百万亿 Token 创造者激励计划”，30 天内面向全球免费发放 100 万亿 Token 权益，需填表申请并通过评估。到账权益可配主流编程工具调",
     sourceUrl: "https://mp.weixin.qq.com/s/dLFkQxRwjIHRd1XVkzKn0w",
   },
   {
@@ -2901,7 +2901,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "浅析",
     keywords: ["浅析", "编译器", "FlashAttention", "Luminal", "自动", "现实"],
-    excerpt: "关键词：Luminal 编译器、HLIR、ShapeTracker、egraph 饱和搜索、CUDA Graph 先前我们推送过不少 Mega Kernel 的文章，今天来说这篇：",
+    excerpt: "Luminal编译器以ShapeTracker隐式表达形状，生成仅20个原语的HLIR。经分区合并后，用egraph饱和搜索自动选择kernel与库调用。但实测性能远不及vLLM，",
     sourceUrl: "https://mp.weixin.qq.com/s/a9oLmzDne3FVpa-IVPAGUA",
   },
   {
@@ -2911,7 +2911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "AITER", "CK", "Triton", "算子", "内核"],
-    excerpt: "关键词：AITER、Fused MoE、JIT 编译、GEMM 自动调优、ROCm 算子加速] 在大模型推理的战场上，算子性能是一切的地基。当 Transformer 的参数量突破",
+    excerpt: "AMD AITER 为 ROCm 生态提供统一高性能 AI 算子库，通过 JIT 编译、多后端内核调度与自动调优，将 MoE、GEMM 等关键算子在 MI300X/MI350 上推",
     sourceUrl: "https://mp.weixin.qq.com/s/T6ag-dzU4zjrGd_tydygtg",
   },
   {
@@ -2921,7 +2921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "LARE", "科学计算", "加速器", "场景", "专用"],
-    excerpt: "关键词：极端边缘计算、AI 引擎（AIE）、可编程逻辑、低延迟推理]、LARE 指标 极端边缘科学实时推理面临极致约束：需微秒级端到端延迟、数十兆赫兹吞吐，且模型权重必须全程驻留片",
+    excerpt: "本文针对极端边缘科学推理微秒级延迟、高吞吐需求，对比 FPGA 可编程逻辑与 AI 引擎，提出 LARE 决策指标及两级分块数据流优化规则，实现大模型在 AI 引擎上合规部署，突破",
     sourceUrl: "https://mp.weixin.qq.com/s/9MfjAP-Ias-r67fzqSCzlw",
   },
   {
@@ -2931,7 +2931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "DeepSeek", "V4", "协同", "基础设施", "专家"],
-    excerpt: "关键词：专家并行、通信计算重叠]、TileLang、FP4 量化、KV 缓存] 混合专家模型（MoE）的专家并行技术虽能加速模型推理与训练，却面临复杂的节点间通信问题，对互联带宽与",
+    excerpt: "本文提出 DeepSeek-V4 大模型通用基础设施，围绕专家并行实现细粒度通信计算重叠，依托 TileLang 开发高效内核，构建批不变确定性算子库，落地 FP4 量化感知训练，",
     sourceUrl: "https://mp.weixin.qq.com/s/m0tHhBbVUjQvssO-qVgENw",
   },
   {
@@ -2941,7 +2941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "浅析",
     keywords: ["浅析", "DeepGEMM", "Mega", "MoE", "FP4", "Indexer"],
-    excerpt: "关键词：Mega MoE、FP4 Indexer]、动态 Swap A/B、PDL（Programmatic Dependent Launch）、JIT 编译优化 从 GEMM 库",
+    excerpt: "DeepGEMM #304 迎来里程碑式更新，从高效 GEMM 库蜕变为统一 LLM 计算原语平台。核心亮点包括：Mega MoE 将 dispatch、linear、SwiGLU",
     sourceUrl: "https://mp.weixin.qq.com/s/I3ijRMTp1Kz_iK7xqDJOkw",
   },
   {
@@ -2951,7 +2951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "计算成本",
     keywords: ["计算成本", "DeepSeek", "V4", "密码", "难题"],
-    excerpt: "关键词：混合压缩注意力、流形约束超连接、Muon优化器、FP4量化、训练不稳定性 当上下文窗口扩展到一百万 token，大模型的底层架构正经历一场“静默重构”。DeepSeek-V",
+    excerpt: "DeepSeek-V4通过混合压缩注意力等架构革新，将长文本处理成本骤降90%，但其设计背后充斥着效率与表达力、稳定与精度的尖锐博弈。本文剖析了六大技术取舍，揭示了团队在理论边界上",
     sourceUrl: "https://mp.weixin.qq.com/s/lWGZ3TcPj5_mb8HUDrsxsg",
   },
   {
@@ -2961,7 +2961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "基础架构",
     keywords: ["基础架构", "GPT", "集群", "美学", "暴力", "效率"],
-    excerpt: "关键词：GB200 NVL72、推理效率]、思维链可控性、幻觉抑制、Agentic Coding 在 AI 模型迭代趋于渐进的 2026 年，GPT-5.5 的发布试图打破这一僵局",
+    excerpt: "GPT-5.5依托NVL72系统，推理能效升50倍，负载均衡提效20%。思维链可控性低至0.2%，难伪装；编码与数学证明领先，幻觉降。但安全防护仍存穿透风险。",
     sourceUrl: "https://mp.weixin.qq.com/s/KrdmTIldcQD-s6un6Cnv4w",
   },
   {
@@ -2971,7 +2971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DeepSeek",
     keywords: ["DeepSeek", "TileKernels", "MoE", "TileLang", "开源", "路由"],
-    excerpt: "关键词：TileKernels、TileLang、MoE 路由、低精度量化]、算子融合 在大模型训练与推理的工程实践中，算子性能往往是\"最后一公里\"的决定性因素。 DeepSeek",
+    excerpt: "DeepSeek 开源 TileKernels：基于 TileLang 领域专用语言，为大模型训练与推理打造逼近硬件极限的高性能 GPU 算子库，涵盖 MoE 路由、多精度量化、E",
     sourceUrl: "https://mp.weixin.qq.com/s/Jj5dAKx3NIaJVQfpJjNhGA",
   },
   {
@@ -2981,7 +2981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "能耗",
     keywords: ["能耗", "ML", "GPU", "Wattchmen", "SASS", "建模"],
-    excerpt: "关键词：GPU 能耗建模、指令级能耗归因、SASS 微架构]、线性方程组求解、异构计算功耗优化 “现代 GPU 丰富的高性能计算系统正日益受到能源约束。因此，理解应用的能耗变得至关",
+    excerpt: "功耗墙倒逼能效优化，但现有 GPU 能耗模型误差高达 32%且极不灵活。Wattchmen 另辟蹊径，基于稳态测量与线性方程组求解，将 V100 预测误差压至 14%，并通用适配 ",
     sourceUrl: "https://mp.weixin.qq.com/s/GrBHwHz24B3xbzJ_5xecgA",
   },
   {
@@ -2991,7 +2991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Google",
     keywords: ["Google", "TPU", "JAX", "MaxText", "PyTorch", "SGLang"],
-    excerpt: "关键词：第八代 TPU、TPU 8t/8i、AI 智能体、模型训练、推理算力 在 AI 智能体时代，模型需要完成多步骤逻辑推理、自主执行复杂工作流并在持续循环中完成自我学习，传统通",
+    excerpt: "谷歌发布第八代 TPU 8t 与 8i 双芯片，分别专攻大模型训练与低延迟推理，适配 AI 智能体迭代需求，性能能效较上代大幅提升，依托软硬件协同设计，年内将正式面向市场开放商用。",
     sourceUrl: "https://mp.weixin.qq.com/s/TaEBSB3nYFzKZ3HrRHALIQ",
   },
   {
@@ -3001,7 +3001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Star",
     keywords: ["Star", "NVIDIA", "CUDA", "C++", "Lead", "AutoCUDA"],
-    excerpt: "关键词：CUDA 内核优化、AI 智能体自主循环、Claude Code 插件]、基准驱动试验、GPU 性能调优 GPU 内核优化是高性能计算领域最考验功力的手艺活——向量化加载、",
+    excerpt: "autocuda 是一个让 AI 智能体自主优化 CUDA 内核的实验框架，通过 Claude Code 插件实现\\x26quot;发现—修改—验证—基准测试—保留或回滚\\x26q",
     sourceUrl: "https://mp.weixin.qq.com/s/r1IxXStKkh7VU-epeFaCTw",
   },
   {
@@ -3011,7 +3011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "最优设计",
     keywords: ["最优设计", "AutoPPA", "LLM", "RTL", "PPA", "SOTA"],
-    excerpt: "关键词：AutoPPA、PPA 优化、RTL 设计]、大语言模型、规则归纳、对比学习、自动化 EDA 在芯片设计的浩瀚流程中，RTL 代码的质量直接决定了芯片最终的命运。一个冗余的",
+    excerpt: "当人类专家还在手工总结优化规则时，AI已从10万份代码中自行悟出10万条PPA铁律。AutoPPA以E²I工作流重塑RTL设计，面积优化15.31%，全面碾压人工与SOTA。",
     sourceUrl: "https://mp.weixin.qq.com/s/0W_fbazT0VJWcxRKZF7IUg",
   },
   {
@@ -3021,7 +3021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "Hypatia", "外脑", "开源", "结构化", "管理系统"],
-    excerpt: "关键词：AI 记忆管理、知识图谱]、双引擎架构]、JSON 查询表达式、向量检索 随着大语言模型（LLM）和 AI Agent 技术的飞速发展，让 AI 拥有类似人类的“长期记忆”",
+    excerpt: "Hypatia 是专为 AI 打造的本地记忆引擎。它融合 DuckDB 与 SQLite，结合知识图谱与向量检索，以极简架构解决长时结构化记忆痛点，实现毫秒级的精准召回。",
     sourceUrl: "https://mp.weixin.qq.com/s/YM2_liPx74n_15iJ6t7QAA",
   },
   {
@@ -3031,7 +3031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "GPU", "MegaKernel", "Fleet", "Chiplet", "L2"],
-    excerpt: "关键词：Fleet、多芯粒 GPU、持久化内核、L2 缓存优化]、大语言模型推理、芯片粒感知调度 “现代 GPU 架构已转向基于芯粒的多芯片设计……然而 CUDA/HIP 执行模型",
+    excerpt: "现代GPU走向多芯粒设计，但CUDA/HIP编程模型仍停留在“单片思维”，导致L2缓存割裂、访存冗余。AMD研究团队提出Fleet引入Chiplet-task 抽象，通过持久化内核",
     sourceUrl: "https://mp.weixin.qq.com/s/1xht6SrdBSJ2yA2aIv6Aeg",
   },
   {
@@ -3041,7 +3041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "SoC", "SEU", "节省", "设计", "面积"],
-    excerpt: "关键词：SoC 容错、单粒子翻转]、三模冗余、锁步内核、重叠保护、ECC 内存] “在太空中，一个未被纠正的比特翻转，就可能让耗资数亿美元的探测器迷失方向；在自动驾驶汽车里，一次未",
+    excerpt: "在星辰大海的征途上，芯片的一瞬差错足以让亿万投入归零。本文深度拆解一项突破性 SoC 容错架构，它以“重叠保护”的巧思，将可靠性推至 99.9%以上，同时省下 22%的芯片面积，重",
     sourceUrl: "https://mp.weixin.qq.com/s/AFuJmkwifA1zTHcCKy43-w",
   },
   {
@@ -3051,7 +3051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "GEMM", "PyTorch", "CuteDSL", "BF16", "FP8"],
-    excerpt: "关键词：TorchInductor、CuteDSL、GEMM、GPU 推理、自动调优] “在抽象-性能权衡的赛道上，每一种优秀的领域特定语言（DSL）都占据着独特位置。” PyTo",
+    excerpt: "PyTorch 的 TorchInductor 新增 CuteDSL 作为第四种 GEMM 后端，满足低维护成本、无性能退化、目标负载性能更优三大标准。其编译速度媲美现有后端，在 ",
     sourceUrl: "https://mp.weixin.qq.com/s/S9jJyeoxv9WxN8iW3l7a5A",
   },
   {
@@ -3061,7 +3061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Harness",
     keywords: ["Harness", "体制", "人类", "系统", "社会"],
-    excerpt: "关键词：Harness 系统、进化工具论、人类冗余、意义消解]、社会驯化框架 大模型 Harness 本为临时性工程脚手架，却映照出社会体制的永恒囚笼。当权力将人固化为“材料”，唯",
+    excerpt: "大模型语境下，Harness 意味着驯化与控制。本文揭示人类社会本身即是一套巨大的 Harness 系统：以“进化”为名，将绝大多数人变为冗余材料，供少数顶端者消耗。唯有质疑既定轨",
     sourceUrl: "https://mp.weixin.qq.com/s/4p-OuROmaX3tTALx2pmAbw",
   },
   {
@@ -3071,7 +3071,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "协处理器",
     keywords: ["协处理器", "端侧", "AI", "芯片", "买单", "盛宴"],
-    excerpt: "关键词：端侧算力费用化 （当期全算成本/不记资产/不分期摊，保守记账不美化利润）、存货迭代风险]、协处理器变现拐点、现金跑道长度]、人效剪刀差（人力投入越来越贵、但人均创造价值的增",
+    excerpt: "利润翻倍难掩现金流萎缩，存货激增60%押注协处理器未来。研发全费用化藏利润真相，人效优势对冲迭代风险。高额现金储备支撑两年流片豪赌，端侧算力护城河尚待变现验证。",
     sourceUrl: "https://mp.weixin.qq.com/s/Haqf0k7spOZezUlhuGIVJw",
   },
   {
@@ -3081,7 +3081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "间通信",
     keywords: ["间通信", "vLLM", "SGLang", "Event", "Tensor", "MegaKernel"],
-    excerpt: "关键词：MegaKernel、动态形状调度]、LLM 推理、编译器抽象、细粒度同步、形状泛化 在现代 GPU 工作负载中，尤其是大语言模型（LLM）推理，内核启动开销和粗粒度同步已",
+    excerpt: "当 CUDA Graph 还在为动态 Shape 焦头烂额时，Event Tensor 已经用一套编译器抽象将整个 LLM 解码过程塞进了一个“永不退出”的内核。1.48 倍推理加",
     sourceUrl: "https://mp.weixin.qq.com/s/QNXMq7vscUT4NByShv_Gpg",
   },
   {
@@ -3091,7 +3091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "PyTorch", "RISC", "破局", "指令集", "架构"],
-    excerpt: "关键词：RISC-V]、PyTorch、CI/CD、RVV 向量化、RISE 项目 在刚刚落幕的 PyTorch Conf EU 2026 上，Meta 软件工程师、RISE 项目",
+    excerpt: "本文解析 PyTorch 登陆 RISC-V 架构的工程实践，从交叉编译依赖治理、RISE 裸金属 CI 体系构建，到底层 OpenBLAS 与 oneDNN 的 RVV 向量优化",
     sourceUrl: "https://mp.weixin.qq.com/s/5UhQI5r2ffSvQm3tPNBNAQ",
   },
   {
@@ -3101,7 +3101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NUMA",
     keywords: ["NUMA", "ArcLight", "众核", "CPU", "架构", "面向"],
-    excerpt: "关键词：ArcLight、众核 CPU、NUMA 架构]、LLM 推理、张量并行 当前大语言模型推理呈现 GPU 高性能、CPU 易部署的双路线格局，但主流 CPU 推理框架难以适",
+    excerpt: "现有 CPU 端大语言模型推理框架未充分挖掘众核 CPU 算力，忽视跨 NUMA 节点访存开销制约扩展性。本文提出专为众核 CPU 设计的轻量推理架构 ArcLight，通过 NU",
     sourceUrl: "https://mp.weixin.qq.com/s/bSCUFiaO0ozzRyrN2gHLuA",
   },
   {
@@ -3111,7 +3111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "沙箱",
     keywords: ["沙箱", "Docker", "CubeSandbox", "Rust", "KVM", "AI"],
-    excerpt: "关键词：AI 沙箱、微虚拟机、KVM 隔离、RustVMM、E2B 兼容 当你让大模型生成一段 Python 脚本并按下\"执行\"的那一刻，一个根本性的安全问题就已经摆上了桌面——这",
+    excerpt: "腾讯云 CubeSandbox 基于 RustVMM 与 KVM 构建面向 AI Agent 的安全沙箱，以毫秒级冷启动、单实例低于五兆内存开销和内核级隔离，实现了单机数千实例的高",
     sourceUrl: "https://mp.weixin.qq.com/s/d6toVeZzrUc1C4g1EJRPnQ",
   },
   {
@@ -3121,7 +3121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Blackwell",
     keywords: ["Blackwell", "Diffusers", "TorchAO", "MXFP8", "NVFP4", "架构"],
-    excerpt: "关键词：Blackwell 架构、MXFP8、NVFP4、扩散模型]、模型量化 当前图像与视频生成扩散模型性能持续突破，但高显存与算力需求成为规模化部署核心瓶颈，量化技术是实现高效",
+    excerpt: "本文基于 NVIDIA Blackwell 架构，采用 MXFP8 与 NVFP4 微尺度量化技术，结合 Diffusers 与 TorchAO 框架，在三大主流扩散模型实现端到端",
     sourceUrl: "https://mp.weixin.qq.com/s/KWwS4-Pr8G3vt9fn7fuunw",
   },
   {
@@ -3131,7 +3131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "全端",
     keywords: ["全端", "OmniInfer", "引擎", "体验", "模型", "设备"],
-    excerpt: "关键词：OmniInfer、端侧推理、大模型、多后端引擎、硬件适配] 随着大语言模型（LLM）和视觉语言模型（VLM）在参数量、架构上的快速演进，AI 的主战场正逐渐从云端算力中心",
+    excerpt: "本文深度解析跨平台大模型推理引擎的核心机制。针对端侧硬件碎片化痛点，该项目创新性设计多后端统一调度架构，以网关模式实现底层算力无缝切换，让离线部署极简高效。",
     sourceUrl: "https://mp.weixin.qq.com/s/mM0vaI8MLbeZ-qUH39dHZw",
   },
   {
@@ -3141,7 +3141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "幻象",
     keywords: ["幻象", "骰子", "随机性", "灵魂", "智能"],
-    excerpt: "关键词：大语言模型、随机采样、智能体、分布偏差]、伪随机幻觉 本文研究团队来自 Google DeepMind 和新加坡国立大学，他们在《The Illusion of Stoch",
+    excerpt: "大语言模型智能体无法内生产生可靠随机采样，呈现对特定数值与位置的系统性偏差，本质是训练数据偏好的伪随机幻觉。仅能通过外部工具或算法模拟补偿，成本高昂且状态难追踪。",
     sourceUrl: "https://mp.weixin.qq.com/s/vlQl64ZlJgH_A0r6SKrEYw",
   },
   {
@@ -3151,7 +3151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Star",
     keywords: ["Star", "AI", "Agent", "Nsight", "Compute", "GPU"],
-    excerpt: "关键词：GPU 算子优化、Nsight Compute 性能剖析、AI 编码智能体、多后端自动调优]、策略记忆机制 今天在群里看到一个关于 NPU 算子悖论 的讨论：如果一个算子哥",
+    excerpt: "本开源项目构建了一套面向 CUDA、CUTLASS、Triton 三后端的 GPU 算子自动优化工作台，以正确性验证、基准测试、Nsight Compute 性能剖析与策略记忆闭环",
     sourceUrl: "https://mp.weixin.qq.com/s/hvb-TLQtqHnlNE298ZlINQ",
   },
   {
@@ -3161,7 +3161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TPU",
     keywords: ["TPU", "GPU", "TorchTPU", "Meta", "PyTorch", "原生"],
-    excerpt: "关键词：PyTorch、TPU]、TorchTPU、XLA]、分布式训练、三行代码切换的极致硬件易用性 2026 年 PyTorch 欧洲大会在巴黎落下帷幕，全场最重磅的技术发布莫",
+    excerpt: "Meta与Google联合发布TorchTPU，实现PyTorch原生支持TPU，仅三行代码即可从GPU迁移，兼容主流大模型，性能线性扩展，开启异构算力自由选择新时代。",
     sourceUrl: "https://mp.weixin.qq.com/s/MFvAu4vsGe4uokKvNqM4Lw",
   },
   {
@@ -3171,7 +3171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "浅析",
     keywords: ["浅析", "AMD", "GPU", "分层", "架构", "数学"],
-    excerpt: "关键词：ROCm 设备库、GPU 数学运算、LLVM 比特码、编译期优化、浮点精度控制 当你在 HIP 或 OpenCL 内核中写下一个简单的 sin(x) 调用时，你或许不曾想过",
+    excerpt: "ROCm 设备库是 AMD GPU 数学运算的底层基石，通过分层架构将数百个浮点函数编译为 LLVM 比特码，借助编译期控制变量实现精度与性能的灵活权衡，为 OpenCL 与 HI",
     sourceUrl: "https://mp.weixin.qq.com/s/uZmEyAyz-kvlDz8xE9_hwg",
   },
   {
@@ -3181,7 +3181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FP4",
     keywords: ["FP4", "Explore", "BF16", "Train", "耦之", "算法"],
-    excerpt: "关键词：扩散模型强化学习（Diffusion RL）、NVFP4 量化]、两阶段解耦训练、算法-硬件协同设计]、GRPO、Blackwell 架构 在文本到图像扩散模型的后训练对齐",
+    excerpt: "扩散强化学习囿于大规模采样的算力枷锁，NVIDIA 与港大团队祭出 Sol-RL 杀招。此法非简单量化，乃将 FP4 探索与 BF16 训练解耦，以两阶段架构巧破效率-精度死局。在",
     sourceUrl: "https://mp.weixin.qq.com/s/ny4G2CHLTreII1e1MDj1qA",
   },
   {
@@ -3191,7 +3191,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "DeepSeek",
     keywords: ["DeepSeek", "Engram", "MoE", "记忆", "专家"],
-    excerpt: "关键词：DeepSeek Engram、LLM、外部记忆、正则化]、残差通路 在LLM架构创新中，DeepSeek Engram以“reasoning与knowledge分离”为核",
+    excerpt: "本文通过控制变量实验发现，DeepSeek Engram 的外部记忆表作用微弱，随机噪声或统一共享向量效果接近原版。其性能提升并非来自知识检索，而是源于残差通路与门控结构，本质是一",
     sourceUrl: "https://mp.weixin.qq.com/s/XWcqMTdCUDGUKRcNXM7nTw",
   },
   {
@@ -3201,7 +3201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KernelEvolve",
     keywords: ["KernelEvolve", "NV", "AMD", "Kernel", "周级", "代际"],
-    excerpt: "关键词：KernelEvolve、硬件分层知识库]、异构 AI 硬件、写算子的那种 SKILL 动态更新、AI 基础设施] AI 模型复杂度持续攀升、硬件生态日趋多元，编译器与底层",
+    excerpt: "本文介绍 Meta 推出的 KernelEvolve 智能内核编写系统，将内核优化转为结构化搜索问题，适配多类异构 AI 硬件，数小时完成专家数周工作，显著提升广告模型训练与推理吞",
     sourceUrl: "https://mp.weixin.qq.com/s/1MC4GChBfpeOifty9jIilA",
   },
   {
@@ -3211,7 +3211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HiSparse",
     keywords: ["HiSparse", "GPU", "层级", "内存", "注意力", "驱动"],
-    excerpt: "关键词：稀疏注意力、分层内存]、KV 缓存、GPU 显存、大模型推理 自注意力的二次方计算与内存 IO 开销，始终是大模型向长上下文扩展的核心阻碍，稀疏注意力通过筛选部分 KV 缓",
+    excerpt: "本文提出 HiSparse 分层内存架构，针对稀疏注意力 GPU 显存容量瓶颈，将非活跃 KV 缓存卸载至主机内存，设计专用 CUDA 内核，高并发下吞吐量超基线 3 倍，长上下文",
     sourceUrl: "https://mp.weixin.qq.com/s/q4QP87pFDtk3G1VKMiYDlA",
   },
   {
@@ -3221,7 +3221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "文本处理",
     keywords: ["文本处理", "Place", "TTT", "边学", "LLM", "范式"],
-    excerpt: "关键词：测试时训练、原位更新、大语言模型、长上下文] “静态的‘训练后部署’范式，从根本上限制了大语言模型在推理时根据新信息动态调整权重的能力。”这是来自字节跳动 Seed 团队与",
+    excerpt: "字节跳动与北大提出 In-Place TTT，首次将大模型 MLP 投影矩阵原位改造为动态快速权重，无需改架构即可边推理边学习。在 128K 长上下文任务中准确率达 77.0%，R",
     sourceUrl: "https://mp.weixin.qq.com/s/UoTMWqNRaMJxwWfE-JzjaA",
   },
   {
@@ -3231,7 +3231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "torch",
     keywords: ["torch", "compile", "Normalization", "顶尖", "性能"],
-    excerpt: "关键词：torch.compile、归一化算子、LayerNorm]、RMSNorm、GPU 性能优化 LayerNorm 与 RMSNorm 作为深度学习模型的基础归一化算子，其",
+    excerpt: "本文优化 PyTorch torch.compile 的 LayerNorm 与 RMSNorm 内核，在 H100、B200 上通过混合阶数归约、自动调优等方法实现顶尖性能，反向",
     sourceUrl: "https://mp.weixin.qq.com/s/vKNgsU7RlzOmwXuQFxmx7w",
   },
   {
@@ -3241,7 +3241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "CCCL", "CUDA", "Core", "Compute", "Libraries"],
-    excerpt: "关键词：CUDA 并行计算、CCCL 三层架构、CUB 块级原语、Thrust 执行策略]、libcudacxx 硬件抽象 在当今 GPU 加速计算生态中，NVIDIA CCCL（",
+    excerpt: "本文解析NVIDIA CCCL仓库的三层架构：libcudacxx提供硬件抽象，CUB实现高性能并行原语，Thrust实现跨后端算法分发。文章结合核心源码与代码片段，剖析层间依赖、",
     sourceUrl: "https://mp.weixin.qq.com/s/DM0s3v1D5Tdy-5C03WsQbA",
   },
   {
@@ -3251,7 +3251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "测试工具", "Fuzz", "内存", "框架", "约束"],
-    excerpt: "关键词：GPU-Fuzz、深度学习框架、内存错误、模糊测试、约束求解 GPU 内存错误是威胁深度学习框架可靠性与安全性的关键隐患，越界访问、静默数据损坏等问题会引发系统崩溃与安全风",
+    excerpt: "针对深度学习框架GPU内存错误频发的问题，本文提出GPU-Fuzz模糊测试工具，将算子参数建模为形式化约束，借助约束求解器生成测试用例以探查CUDA内核内存边界。该工具在三大主流框",
     sourceUrl: "https://mp.weixin.qq.com/s/24-TbrM_mpo2OZ2yGBUcTQ",
   },
   {
@@ -3261,7 +3261,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Triton",
     keywords: ["Triton", "TLE", "FlashInfer", "TopK", "Selector"],
-    excerpt: "关键词：TopK Selector、Triton-TLE、FlashInfer]、TRT-LLM、DeepSeek Sparse Attention TopK Selector 是",
+    excerpt: "本文针对 DeepSeek 稀疏注意力核心 TopK Selector 算子，利用 Triton-TLE 补齐片上管理与跨块协作能力，复刻并优化 TileLang、TRT-LLM ",
     sourceUrl: "https://mp.weixin.qq.com/s/fqzpFcBELYTOWhPKiAv6TA",
   },
   {
@@ -3271,7 +3271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Anthropic",
     keywords: ["Anthropic", "Mythos", "Opus", "碾压", "情报机构", "合谋"],
-    excerpt: "关键词：AI网络安全、Claude Mythos Preview]、零日漏洞、防御性安全、Project Glasswing Anthropic 联合亚马逊、苹果、微软、谷歌等十余",
+    excerpt: "Anthropic启动Project Glasswing，联合十余家巨头，用Claude Mythos Preview模型防御国家级网络攻击。该模型比Opus 4.6提升25%，自",
     sourceUrl: "https://mp.weixin.qq.com/s/NbUDdh6uAf1fMv75CmBdWw",
   },
   {
@@ -3281,7 +3281,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "利用率",
     keywords: ["利用率", "场景", "注意力", "GH200", "FlatAttention", "Tile"],
-    excerpt: "关键词：晶圆级系统、大语言模型推理、FlatAttention 数据流、片上集合通信]、软硬协同设计 在当前大语言模型（LLM）推理的演进路线中，随着序列长度的暴增和混合专家架构（",
+    excerpt: "FlatAttention通过软硬协同数据流与片上集合通信深度绑定，在NVIDIA GH200上实现1.9倍平均加速，计算/访存利用率达86%/78%；在64芯片晶圆级系统上，De",
     sourceUrl: "https://mp.weixin.qq.com/s/PRhsG8qdQaPRchF0LBPFjQ",
   },
   {
@@ -3291,7 +3291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Apple",
     keywords: ["Apple", "Silicon", "Mac", "NVIDIA", "AMD", "苹果"],
-    excerpt: "关键词：AI、Apple、GPU、硬件、推理、开源 专为 AI 设计，游戏玩家再次失望 - Apple approves drivers that let AMD and Nvid",
+    excerpt: "苹果正式批准 TinyGPU 驱动，Apple Silicon Mac 现可通过 Thunderbolt/USB4 外接 NVIDIA/AMD 显卡，专为 AI 推理设计（非游戏）",
     sourceUrl: "https://mp.weixin.qq.com/s/ZNsFm6v8ZpgJCHGceRfJVA",
   },
   {
@@ -3301,7 +3301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "生死线",
     keywords: ["生死线", "GPU", "验尸", "国产", "报告"],
-    excerpt: "关键词：国产 GPU、CUDA 兼容]、财务风险、生态依附、内卷竞争 对于奋战在深度学习框架底层、CUDA 算子优化、芯片微架构设计一线的开发者而言，评估一家国产 GPU 公司，往",
+    excerpt: "本文深度拆解沐曦、摩尔线程、天数智芯及壁仞 2025 年财报，基于营收规模、研发投入与 CUDA 生态兼容等技术财务视角，为开发者提供算力商业化全景研判与选型指南。",
     sourceUrl: "https://mp.weixin.qq.com/s/UdAKYj106n-RZ8gzpi2xJg",
   },
   {
@@ -3311,7 +3311,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "ASI", "Evolve", "闭环", "架构", "算法"],
-    excerpt: "关键词：ASI-Evolve、AI for AI、智能体进化]、AI 架构自研、闭环科学发现、进化计算、认知库 “Can AI accelerate the development",
+    excerpt: "最后都得失业？本文提出ASI-EVOLVE智能体框架，以学-设-实验-析闭环实现AI自加速，融入人类先验认知库与实验分析器，在模型架构、预训练数据整理、强化学习算法三大AI核心领域",
     sourceUrl: "https://mp.weixin.qq.com/s/5Az2-XHPxkLDVIIvYBeLVQ",
   },
   {
@@ -3321,7 +3321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "开源",
     keywords: ["开源", "模型", "Opus", "MoE", "Arcee", "AI"],
-    excerpt: "关键词：Trinity-Large-Thinking、开源大模型]、Opus4.6、Arcee AI、Apache 2.0 2026 年 4 月，全球大模型行业迎来了一个足以改写开",
+    excerpt: "30人团队Arcee AI推出3990亿参数MoE前沿推理开源大模型Trinity-Large-Thinking，以Apache 2.0协议完全开源，性能逼近闭源Opus4.6，成",
     sourceUrl: "https://mp.weixin.qq.com/s/W6lyGng-yvy6tmBqddvEbQ",
   },
   {
@@ -3331,7 +3331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "指令",
     keywords: ["指令", "ASPLOS", "Graph", "AI", "语义", "芯片"],
-    excerpt: "关键词： 定制指令、RISC-V、E-Graph]、反合一、AI 加速、DSA 本文不仅提出一个强大的开源工具（https://github.com/isamore-group/i",
+    excerpt: "本文提出ISAMORE框架，通过e-graph反合一识别可复用自定义指令，支持向量化与硬件感知选择。评估表明，相比基线方法，ISAMORE最高实现2.69倍加速，并在量化LLM与后",
     sourceUrl: "https://mp.weixin.qq.com/s/DFoCNrT1CicOO5bnUx7ntQ",
   },
   {
@@ -3341,7 +3341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Meta",
     keywords: ["Meta", "Harness", "LLM", "TerminalBench", "Haiku", "涨点"],
-    excerpt: "关键词：Meta-Harness、harness优化、代码空间搜索、执行轨迹访问、智能体式优化 改变一个固定大语言模型周围的工具集，可以在同一基准测试上产生 6 倍的性能差距 ——",
+    excerpt: "本文提出Meta-Harness，通过智能体式访问完整代码、评分与执行轨迹，自动搜索优化大语言模型的harness。在文本分类、数学推理与智能体编码任务中，该方法显著超越手工设计及",
     sourceUrl: "https://mp.weixin.qq.com/s/f45WLENQfdW052vzw47ewA",
   },
   {
@@ -3351,7 +3351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "复用技术",
     keywords: ["复用技术", "FPGA", "LLM", "SkipOPU", "token", "KV"],
-    excerpt: "关键词：大语言模型、动态推理]、FPGA 加速、混合精度计算、KV 缓存管理 大语言模型的推理效率问题，本质上是一个关于“公平性”的悖论：模型对每一个词元一视同仁地执行相同的计算，",
+    excerpt: "SkipOPU首次在FPGA上完整支持大模型的词元级与层级动态计算分配。通过融合数据流隐藏非线性延迟、DSP overpacking提升混合精度效率、KV不变性缓冲消除 HBM 碎",
     sourceUrl: "https://mp.weixin.qq.com/s/MPtffBD3Jb35D3m6DHa3Nw",
   },
   {
@@ -3361,7 +3361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "汇编器",
     keywords: ["汇编器", "Star", "NVidia", "SASS", "denvdis", "逆向"],
-    excerpt: "关键词：GPU微架构、NVIDIA SASS]、汇编与反汇编、指令调度、底层性能优化 在当今的高性能计算与人工智能浪潮中，NVIDIA GPU 已经成为了算力基石。然而，对于极致追",
+    excerpt: "本文深度解析开源反汇编器denvdis：它精准破译NVIDIA SASS底层机器码，揭秘GPU指令调度与寄存器黑盒，为开发者提供直达微架构核心的极致算力优化利器。",
     sourceUrl: "https://mp.weixin.qq.com/s/AS79cMMYsqqLF8Bt3t6Ehw",
   },
   {
@@ -3371,7 +3371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "投机",
     keywords: ["投机", "Tri", "Dao", "Saguaro", "帕累托", "解码"],
-    excerpt: "关键词： 投机解码、大模型推理、异步并行]、预计算、系统优化 当一位顶级厨师（目标模型）以精湛的技艺但缓慢的速度烹饪一道佳肴，而他的助手（投机模型）则试图预测厨师下一步会做什么，并",
+    excerpt: "本文深度解读投机投机解码（SSD）及其实现 Saguaro。它通过异步并行投机与验证、几何扇出缓存构建与缓存感知采样，将大模型推理速度平均提升 30%，最高达 5 倍，并拓展了吞吐",
     sourceUrl: "https://mp.weixin.qq.com/s/Ncinszd8vpPpplW5CDZMbw",
   },
   {
@@ -3381,7 +3381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Star",
     keywords: ["Star", "端侧", "AI", "链路", "终局", "芯片"],
-    excerpt: "关键词：Ultralytics Platform、YOLO]、边缘 AI、一站式开发、模型部署 当前，端侧 AI 与边缘计算正成为计算机视觉（CV）产业落地的核心赛道。从智能制造产",
+    excerpt: "本文详解Ultralytics Platform，其作为YOLO官方一站式平台，支持17种模型格式导出、适配全球43个推理区域，打通数据标注到边缘部署全链路，提供轻量化模型选型与算",
     sourceUrl: "https://mp.weixin.qq.com/s/k0aDOPt8vBTyM0_xsOuxsQ",
   },
   {
@@ -3391,7 +3391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "架构",
     keywords: ["架构", "ODIN", "CPU", "GPU", "利用率", "原型"],
-    excerpt: "关键词：重放驱动验证、CPU-GPU 架构]、ODIN 芯粒、片上网络、流片前验证 CPU 与 GPU 技术的融合是支撑现代人工智能和图形学工作负载的核心技术，该融合架构兼具面向控",
+    excerpt: "针对 ODIN 芯粒 CPU-GPU 融合架构流片前验证难题，本文提出重放驱动验证方法，依托单一设计数据库实现确定性波形捕获与重放，资源利用率达 83.3%，单季度完成端到端系统启",
     sourceUrl: "https://mp.weixin.qq.com/s/rqFPDRGQAFEEZv1ypAkNBw",
   },
   {
@@ -3401,7 +3401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "FleetOpt", "LLM", "堆卡", "路由", "集群"],
-    excerpt: "关键词：LLM 推理、集群规划]、成本悬崖、压缩即路由、M/G/c 队列 当我们在谈论大模型推理时，我们究竟在谈论什么？是每秒处理的 Token 数（TPS）？是首字延迟（TTFT",
+    excerpt: "FleetOpt 从第一性原理出发，将 LLM 推理集群建模为 M/G/c 队列，推导出最优双池架构与等边际成本条件。通过“压缩即路由”跨越成本悬崖，协同设计实现 82%成本削减，",
     sourceUrl: "https://mp.weixin.qq.com/s/YZDmDWJWcSFRGgxH68dB0A",
   },
   {
@@ -3411,7 +3411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CPU",
     keywords: ["CPU", "LLM", "IPC", "准确率", "内存", "突破性"],
-    excerpt: "关键词：硬件预取、内存墙]、大语言模型、CPU 微架构、硬件-软件协同设计] 在追求单核性能的征途上，CPU 设计师们正面临一道难以逾越的天堑——“内存墙”。这道墙的另一边，是主存",
+    excerpt: "内存墙难越，硬件预取器受限于运行时复杂度。PF-LLM开创性地用大模型离线分析汇编代码，为每处加载指令生成预取策略。结合轻量级硬件执行，性能飙升：IPC较最优单预取器提升9.8%，",
     sourceUrl: "https://mp.weixin.qq.com/s/TMQZPs4TCvA6sv2S8gySaw",
   },
   {
@@ -3421,7 +3421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "模型", "能力"],
-    excerpt: "关键词：大语言模型、自我蒸馏、推理能力]、认知不确定性、模型训练 当 AI 试图通过“抄袭”自己的思考过程来变得更高效时，它可能无意中丢掉了最宝贵的品质——承认“我可能错了”。 在",
+    excerpt: "自蒸馏通过压缩推理长度抑制模型的不确定性表达（认知口头化），在任务覆盖有限时快速优化域内性能，但覆盖扩大后会损害分布外泛化，数学推理性能最高下降 40%。",
     sourceUrl: "https://mp.weixin.qq.com/s/jHcYAkv8ylKnZFJ5135F1g",
   },
   {
@@ -3431,7 +3431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "软件",
     keywords: ["软件", "编译器", "Google", "XLS", "Verilog", "芯片"],
-    excerpt: "关键词：Google XLS、高层次综合 (HLS)、软硬协同 (Co-design)、 DSLX语言、编译器架构]、即时编译 (JIT) 摩尔定律逼近物理极限，算力焦虑正席卷整个",
+    excerpt: "谷歌开源的硬件综合项目是后摩尔时代的开发利器。它借鉴软件编译架构，通过强类型前端、严谨的中间表示及形式化验证，让开发者像写代码般生成电路，打破软硬协同壁垒。",
     sourceUrl: "https://mp.weixin.qq.com/s/0mT7neZpVrf2BoFzfTh9Gw",
   },
   {
@@ -3441,7 +3441,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NCCLbpf",
     keywords: ["NCCLbpf", "eBPF", "GPU", "集群", "中断", "原子"],
-    excerpt: "关键词：NCCL、eBPF、GPU 集群通信]、安全扩展、性能优化 在 AI 训练集群中，NCCL 插件导致的崩溃占故障的 30%以上，而一次策略更新往往意味着整个训练任务的重启。",
+    excerpt: "针对NCCL插件无验证、难组合、更新需重启的问题，本文提出NCCLbpf框架，将用户态eBPF嵌入其插件接口，实现加载验证、可组合策略与原子热重载，策略决策仅增80~130ns开销",
     sourceUrl: "https://mp.weixin.qq.com/s/SlE0cjEuPhhfrifbwKkrIQ",
   },
   {
@@ -3451,7 +3451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "代码生成",
     keywords: ["代码生成", "编译器", "Python", "RISC", "MLIR", "xDSL"],
-    excerpt: "关键词：RISC-V、RVV]、GEMM、MLIR、xDSL 在人工智能与高性能计算飞速发展的今天，芯片架构的多样性正成为开发者面临的最大挑战。从 x86 到 ARM，从 GPU ",
+    excerpt: "本文提出 MLIR‑xDSL 混合编译流水线，自动生成 RISC‑V 向量微内核，填补 MLIR 到 RVV 的降级空缺。在 BERT 模型上，生成的内核较 OpenBLAS 最高",
     sourceUrl: "https://mp.weixin.qq.com/s/uLdMSGvwzehrS3xgRA_EDw",
   },
   {
@@ -3461,7 +3461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "语料",
     keywords: ["语料", "Star", "ptx", "isa", "markdown", "Claude"],
-    excerpt: "关键词：CUDA、PTX、Markdown、文档语料、AI 检索] 在 GPU 计算和深度学习如火如荼的今天，CUDA 和 PTX 指令集已经成为高性能计算领域不可或缺的底层基础设",
+    excerpt: "本文介绍 `ptx-isa-markdown` 项目，它将 NVIDIA 庞杂的 PTX/CUDA 文档转换为轻量 Markdown，支持命令行极速检索与 Claude Code ",
     sourceUrl: "https://mp.weixin.qq.com/s/6W-4ikVrTXZjZHYSBmPM5A",
   },
   {
@@ -3471,7 +3471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "算子",
     keywords: ["算子", "编译器", "NVIDIA", "AVO", "AI", "Agent"],
-    excerpt: "关键词： AI Agent、进化算法、GPU Kernel 优化]、FlashAttention、异构计算 注：其实文中没提到 Token 成本，再就是更大的维度，结论可能应谨慎理",
+    excerpt: "AVO 将自主编码智能体作为进化变异算子，7 天内在多头注意力上超越 cuDNN 最高 3.5%、FlashAttention‑4 最高 10.5%，其优化涵盖寄存器分配、流水线调",
     sourceUrl: "https://mp.weixin.qq.com/s/ARMdzTqO5AQGRGvHP2D-5Q",
   },
   {
@@ -3481,7 +3481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "NVIDIA", "NCCL", "EP", "API", "乱局"],
-    excerpt: "关键词： MoE（Mixture-of-Experts）、NCCL、GPU 通信、Device-Initiated Communication、大模型推理] 在通往通用人工智能的道",
+    excerpt: "MoE 通信库碎片化问题严峻。NCCL EP 基于 NCCL Device API，提供统一 ncclEpDispatch/Combine接口，原生支持低延迟（LL）与高吞吐（HT",
     sourceUrl: "https://mp.weixin.qq.com/s/I6WqfEEB52vTzLhLbuwGxw",
   },
   {
@@ -3491,7 +3491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HLS",
     keywords: ["HLS", "编译器", "MLIR", "Dynamatic", "主意", "工具"],
-    excerpt: "关键词：MLIR、HLS、高级综合、Dynamatic]、编译器基础设施、数据流电路 LLVM 是当前高级综合（HLS）工具的主流底层框架，但其中间表示（IR）难以定制化表达电路语",
+    excerpt: "本文依托 Dynamatic 编译器实践，分析 MLIR 用于 HLS 开发的优劣，发现其虽能简化定制 IR 开发，但存在图边建模、电路转换、项目集成、C 前端四大短板，为 MLI",
     sourceUrl: "https://mp.weixin.qq.com/s/6kQUqs47JkmBHoBzqKe6HA",
   },
   {
@@ -3501,7 +3501,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Attention",
     keywords: ["Attention", "Residual", "架构", "谈谈", "协同", "优化"],
-    excerpt: "关键词：Attention Residual、Block AttnRes、推理延迟优化、两阶段计算、软硬协同设计 作为月之暗面 AI Infra 团队的一员，这篇文章我想从 AI ",
+    excerpt: "作者是月之暗面 AI Infra 团队成员，从 AI Infra 视角解读 Block AttnRes 架构，指出其通过两阶段计算与显存切分，在几乎不增加推理延迟和成本的前提下，显",
     sourceUrl: "https://mp.weixin.qq.com/s/NtxWcSA8IdlolbeUsrtkQA",
   },
   {
@@ -3511,7 +3511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "算子",
     keywords: ["算子", "AI", "GPU", "AMD", "填平", "硬件"],
-    excerpt: "关键词：AMD GPU 比赛]、内核优化、端到端推理、大模型性能 当 GPT-5.4 能写出逼近硬件极限的 PTX，当 Codex 能从 profiler 报告一路做到工程落地，算",
+    excerpt: "当 GPT-5.4 能写出逼近硬件极限的 PTX，当 Codex 能从 profiler 报告一路做到工程落地，算子工程师们不得不面对一个事实：AI 正在快速掌握那些曾依赖数年经验",
     sourceUrl: "https://mp.weixin.qq.com/s/og0Z7g9rUf3P5fo0iHlCiw",
   },
   {
@@ -3521,7 +3521,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "Vibe", "Cursor", "Gemini", "Pro", "FP8"],
-    excerpt: "关键词：Vibe-GPU、Gemini 3 Pro、SIMT Stack、RTL 代码、硬件架构] 如今，大模型在硬件开发领域已实现突破性进展——Gemini 3 Pro （现在已",
+    excerpt: "借助 Cursor+Gemini 3 Pro 开发 Vibe-GPU，该 GPU 含四 SM Core、SIMT Stack 分支优化等硬件特点，配套类 CUDA 软件栈与 7 项",
     sourceUrl: "https://mp.weixin.qq.com/s/VrcvxA0J4YTKMdToU2ZkWg",
   },
   {
@@ -3531,7 +3531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "精度",
     keywords: ["精度", "TOPS", "BinaryAttention", "QK", "FlashAttention2", "巅峰"],
-    excerpt: "关键词：Transformer、二值注意力、硬件加速]、极低比特量化 当注意力机制“瘦身”到极致。Transformer 架构的成功，很大程度上归功于其强大的注意力机制，它能捕捉序",
+    excerpt: "本文提出BinaryAttention，实现Transformer的1比特QK注意力量化。通过缩放二值表示、偏置增强与混合量化设计，结合量化感知训练与自蒸馏，在A100上较Flas",
     sourceUrl: "https://mp.weixin.qq.com/s/U68Bz7e2iMEi3GC5VttVIg",
   },
   {
@@ -3541,7 +3541,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MFU",
     keywords: ["MFU", "Opus", "AutoResearch", "GPU", "Flash", "Attention"],
-    excerpt: "关键词：Opus 4.6、AutoResearch、GPU算子、Flash Attention、性能优化 手动置顶：快去用 Opus 4.6，你离高级算子开发工程师只差一个 cla",
+    excerpt: "本文借助Opus 4.6结合AutoResearch模式，零人工编码耗时8小时，在GTX 3080上实现带掩码Flash Attention的CUDA算子。该算子较Triton版本",
     sourceUrl: "https://mp.weixin.qq.com/s/QwfzzGtDU7_B_mopjndMaw",
   },
   {
@@ -3551,7 +3551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "CPU", "Meta", "MobileLLM", "Flash", "美学"],
-    excerpt: "关键词： 端侧大模型、延迟感知、硬件在环、架构搜索、混合注意力] 当你对着手机上的 AI 助手问了一个问题，然后等待……1 秒、2 秒、3 秒……直到第 10 秒，才看到第一个字蹦",
+    excerpt: "本文提出硬件在环的架构搜索方法，联合优化模型结构与注意力模式，通过剪枝继承权重重用，在移动CPU上实现1.8倍预填与1.6倍解码加速。MobileLLM-Flash（350M~1.",
     sourceUrl: "https://mp.weixin.qq.com/s/URkou8HFur_CzSFDQ1iFXg",
   },
   {
@@ -3561,7 +3561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPGA",
     keywords: ["FPGA", "RISCBench", "RISC", "引擎", "基准", "面向"],
-    excerpt: "关键词：效率、调度编排]、RISC-V、AI 推理、SWaP-C 异构计算系统正越来越依赖轻量化的控制平面核心 ——负责调度指挥的小核心，来完成加速器与可重构逻辑阵列之间的数据搬运",
+    excerpt: "针对异构计算中RISC-V控制平面编排效率难以量化、传统峰值指标失真的问题，提出RISCBench轻量化基准与持续瞬时吞吐率SIT量化指标，在FPGA与加速器平台完成验证，可精准捕",
     sourceUrl: "https://mp.weixin.qq.com/s/MhJlyJ0ioosV6FxDVPzvEA",
   },
   {
@@ -3571,7 +3571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "内核", "AscendCraft", "DSL", "鸿沟", "面向"],
-    excerpt: "关键词：大语言模型、昇腾 NPU、算子内核生成、领域特定语言（DSL）]、代码 Lowering 在 AI 芯片领域，编写一个高性能的算子内核，就像是在一个精密、复杂且文档稀疏的机",
+    excerpt: "本文提出AscendCraft，通过DSL引导大模型生成昇腾NPU内核。DSL抽象硬件细节，经四阶段结构化降级，将正确率从\\x26lt;5%提升至90.4%，46.2%生成内核性能",
     sourceUrl: "https://mp.weixin.qq.com/s/h4yRs8luc8idBfyFYwfnrA",
   },
   {
@@ -3581,7 +3581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "SOL", "ExeBench", "GPU", "Kernel", "算子"],
-    excerpt: "关键词：GPU 内核基准测试、光速上限（硬件极限）]、智能体优化、AI 加速器、架构多样性 NVIDIA 这项工作 SOL-ExecBench 表明，智能体生成方案填平了从基线到硬",
+    excerpt: "SOL-ExecBench提出基于硬件速度极限的GPU内核优化基准，含235个来自前沿模型的CUDA问题，通过SOL评分衡量与硬件极限的接近程度，并提供防奖励黑客的评估框架，推动内",
     sourceUrl: "https://mp.weixin.qq.com/s/RWaAF5snuvE7vBOJme5-YA",
   },
   {
@@ -3591,7 +3591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "Kernel", "MLIR", "面向", "评估", "优化"],
-    excerpt: "关键词：MLIR、AI Kernel 编译器、延迟隐藏、并行性、双缓冲 - Analyzing Latency Hiding and Parallelism in an MLIR-",
+    excerpt: "本文基于 MLIR 的 AI 内核编译器，研究向量化、多线程、双缓冲三种优化机制，设计消融阶梯量化各机制贡献，以 2D 向量加法和 GELU 为基准测试。结果表明向量化是核心增益，",
     sourceUrl: "https://mp.weixin.qq.com/s/I8w5naW21sKjpVMKMjLY4Q",
   },
   {
@@ -3601,7 +3601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HeRo",
     keywords: ["HeRo", "SoC", "RAG", "异构", "框架", "智能"],
-    excerpt: "关键词：异构计算、检索增强生成（RAG）]、移动端 AI、任务调度]、大语言模型 未来，你的手机不再仅仅是执行预设命令的工具，而是一个真正了解你、能随时调用本地资料、并帮你深度思考",
+    excerpt: "本文提出HeRo，首个面向异构移动SoC的智能RAG自适应编排框架。通过性能建模与在线调度，结合子阶段划分、关键路径优先映射与带宽感知并发控制，在商用手机上实现高达10.94倍端到",
     sourceUrl: "https://mp.weixin.qq.com/s/C8KfP-jhJ5NNlK_0V4R3xQ",
   },
   {
@@ -3611,7 +3611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "BF16",
     keywords: ["BF16", "vs", "NVFP4", "bit", "LLM", "CHON"],
-    excerpt: "关键词：4-bit 训练 (QAT，量化感知训练)、离群值]、NVFP4]、线性注意力、量化补偿 大语言模型的预训练成本正随着参数规模、数据量和上下文长度的增加而水涨船高。为了应对",
+    excerpt: "本文首次系统剖析LLM NVFP4预训练中离群值的演化规律，发现其从早期漂移尖峰收敛为后期固定“热通道”，并定位Softmax、门控机制和SwiGLU为根本来源。基于此提出CHON",
     sourceUrl: "https://mp.weixin.qq.com/s/IrTeohuRFoiFjOY7uGRctA",
   },
   {
@@ -3621,7 +3621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "WildToolBench",
     keywords: ["WildToolBench", "LLM", "场景", "模型", "挑战", "工具"],
-    excerpt: "关键词：大语言模型、工具使用]、基准评测、真实场景]、智能体 当 AI 从实验室走向真实世界，简单任务竟成难以逾越的鸿沟 如果你正在准备一场关于“2024 年热门电影推荐”的演示文",
+    excerpt: "本文提出WildToolBench，一个基于真实用户行为模式的大语言模型工具使用基准，聚焦组合任务、隐含意图与指令转换三大挑战。对57个主流LLM的评估显示，最高会话准确率不足15",
     sourceUrl: "https://mp.weixin.qq.com/s/GNc2ixJvnpx83XlNN1p5rA",
   },
   {
@@ -3631,7 +3631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kernel",
     keywords: ["Kernel", "Dr", "Triton", "内核", "面向", "框架"],
-    excerpt: "关键词：强化学习、Triton 内核生成、奖励破解]、惰性优化、多轮优化 告别“作弊”与“偷懒”，让 AI 成为真正的性能优化专家 如果你正在训练一个 AI 程序员，希望它能写出高",
+    excerpt: "本文提出DR. KERNEL框架，通过KERNELGYM环境与TRLOO无偏RL方法解决内核生成中的奖励破解与懒惰优化问题。DR. KERNEL-14B 在KernelBench ",
     sourceUrl: "https://mp.weixin.qq.com/s/I_uz01sb3Db30oP7pbLevQ",
   },
   {
@@ -3641,7 +3641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPGA",
     keywords: ["FPGA", "Hummingbird", "MoE", "嵌入式", "首款", "硬件"],
-    excerpt: "关键词：FPGA 加速器、混合专家模型(MoE)、] 边缘部署、低成本推理、GEMV 优化 150 美元 BOM 成本、18 token/s 解码速度，FPGA 在 LLM 边缘部",
+    excerpt: "本文提出 Hummingbird+，一种基于低至 150 美元 BOM 成本的 FPGA 平台，通过硬件与数据流协同优化，在 XCZU3EG 上实现 30B MoE LLM 部署，",
     sourceUrl: "https://mp.weixin.qq.com/s/0XAbboS0_s2zR-8yj6CGbw",
   },
   {
@@ -3651,7 +3651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVlabs",
     keywords: ["NVlabs", "cutile", "rs", "Rust", "GPU", "内核"],
-    excerpt: "关键词：Rust、GPU 编程、cuTile、CUDA、领域特定语言(DSL)] 近年来，Rust 语言以其内存安全、高性能和无畏并发的特性，在系统编程领域赢得了广泛关注。 然而，",
+    excerpt: "本文深度解析了 NVlabs 开源的 Rust GPU 内核编程 DSL 项目`cutile-rs`。该项目基于块（Tile）模型，提供安全的宿主机 API 与异步并发调度机制，从",
     sourceUrl: "https://mp.weixin.qq.com/s/a8zJm0uUvXI2BSXmgcC9eg",
   },
   {
@@ -3661,7 +3661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "MoE", "终极", "架构", "硬件", "协同"],
-    excerpt: "关键词：端侧大语言模型、Roofline 建模]、软硬件协同设计、缩放定律、帕累托最优、架构搜索 第一部分： 基于 Roofline 建模的端侧大语言模型硬件协同设计缩放律 注：本",
+    excerpt: "本文针对端侧大语言模型部署痛点，基于 Roofline 建模构建硬件协同设计缩放定律，提出 PLAS 帕累托最优架构搜索框架，揭示端侧 LLM 最优架构规律，为硬件感知模型设计提供",
     sourceUrl: "https://mp.weixin.qq.com/s/oJU5m5sXndEdq6ylqNCFmQ",
   },
   {
@@ -3671,7 +3671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "vLLM",
     keywords: ["vLLM", "Triton", "NVIDIA", "AMD", "GPU", "架构"],
-    excerpt: "关键词：vLLM、Triton、注意力后端]、分页注意力、性能移植、GPU 过去一年中，IBM 研究院、红帽和超威半导体（AMD）的团队合作开发并向主仓库贡献了一款基于 Trito",
+    excerpt: "IBM等联合研发vLLM的Triton注意力后端，通过Q块、持久化内核等创新优化分页注意力内核，单源码跨多GPU平台，800行代码在H100追平FA3、MI300提速5.8×，是A",
     sourceUrl: "https://mp.weixin.qq.com/s/_hIj9QNzRhrP5RYDNNcwjg",
   },
   {
@@ -3681,7 +3681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CPU",
     keywords: ["CPU", "英特尔", "架构", "系统"],
-    excerpt: "关键词：CPU架构、x86、RISC、SoC、指令集 英伟达的GPU凭借CUDA生态已成为AI训练和推理的事实标准。但随着LLM的演进，英伟达的GPU已不再是纯粹的通用处理器——它",
+    excerpt: "本文梳理了CPU架构超50年的演进历程，从首款商用CPU Intel 4004起步，详解x86发展、RISC与CISC之争，介绍Chiplet、异构SoC等现代技术变革与产业趋势。",
     sourceUrl: "https://mp.weixin.qq.com/s/lB6zG7DSjSRob2E4vjeiJg",
   },
   {
@@ -3701,7 +3701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Kernel", "Wafer", "KernelArena", "专评", "AI"],
-    excerpt: "关键词：KernelArena、AI、GPU 内核、基准测试、大模型 Wafer 推出首个跨模型/硬件的 AI 生成 GPU 或 AI 加速器内核评测平台，终结“靠感觉选模型”的行",
+    excerpt: "Wafer 推出开源基准测试平台 KernelArena，专评 AI 生成 GPU 内核，首期覆盖 N/AMD 主流硬件并评测多款大模型。首轮评测无模型全胜，还公开 10 种奖励黑",
     sourceUrl: "https://mp.weixin.qq.com/s/y_6glt8NeZZ985lkVnTeyg",
   },
   {
@@ -3711,7 +3711,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Agent",
     keywords: ["Agent", "Coding", "记忆", "工程"],
-    excerpt: "关键词：Agent 知识工程、持久记忆]、反思沉淀、分层加载、知识分类体系 开源项目 agent-knowledge-framework 是一个用于管理 AI coding age",
+    excerpt: "本文提出让 Coding Agent 通过复盘、对标、沙盒三种方式主动学习，用五分法和角色划分组织知识，构建持久记忆体系，通过反馈闭环和按需加载机制实现 Agent 能力的持续进化",
     sourceUrl: "https://mp.weixin.qq.com/s/gupT-VCd6hEON2uUxyFNSA",
   },
   {
@@ -3721,7 +3721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "cuTile", "jl", "CUDA", "Julia", "分块"],
-    excerpt: "关键词：cuTile.jl、CUDA Tile]、Julia、GPU 编程、分块编程、高性能 NVIDIA CUDA Tile 是 CUDA 编程中最重要的新增特性之一，可让程序自",
+    excerpt: "cuTile.jl 为 Julia 引入 CUDA Tile 分块编程模型，屏蔽底层硬件管理细节，语法适配 Julia 且兼容 Python 版。在主流 NVIDIA 硬件上，多数",
     sourceUrl: "https://mp.weixin.qq.com/s/Oqd1K_ra8zV7OIIzfiGhtA",
   },
   {
@@ -3731,7 +3731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ArchAgent",
     keywords: ["ArchAgent", "体系结构", "智能", "驱动", "计算机", "自动"],
-    excerpt: "关键词：AI 驱动硬件设计、缓存替换策略]、大语言模型、进化算法、计算机架构 一个完全由 AI 驱动的系统，在没有任何人类干预的情况下，仅用两天时间就设计出了一款比现有最优方案性能",
+    excerpt: "本文提出 ArchAgent，一种智能体驱动的计算机体系结构自动发现系统。它在谷歌多核负载上实现 5.3% IPC 提升，在 SPEC 2006 上以 0.9%超越 SOTA，效率",
     sourceUrl: "https://mp.weixin.qq.com/s/nws2dZ8C_N1bJg8irysieA",
   },
   {
@@ -3741,7 +3741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Meta",
     keywords: ["Meta", "MTIA", "AI", "芯片", "优先", "体验"],
-    excerpt: "关键词：MTIA 芯片]、RISC-V 架构 AI 加速器、生成式 AI 推理]、模块化设计、高速迭代、PyTorch 原生 每天，Meta 平台上的数十亿用户都在使用从个性化推荐",
+    excerpt: "Meta 两年内推出 MTIA 300-500 四款自研 AI 芯片，实现 4.5 倍 HBM 带宽、25 倍算力跃升，从 R\\x26amp;R 拓展至生成式 AI 推理。凭借模块",
     sourceUrl: "https://mp.weixin.qq.com/s/upQNNUg4T35Ess5B7IyorA",
   },
   {
@@ -3751,7 +3751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Roofline",
     keywords: ["Roofline", "建模", "硬件", "协同", "模型", "语言"],
-    excerpt: "关键词：端侧大语言模型、Roofline 建模]、硬件协同设计、缩放定律、帕累托优化]、LLM 架构搜索 注：本文拆分为两部分，当前是第一部分 - Hardware Co-Desi",
+    excerpt: "本文针对端侧 LLM 的硬件资源与延迟约束难题，提出首个实用的硬件协同设计缩放定律，融合损失缩放定律与 Roofline 延迟建模，经 1942 个架构基准测试、170 个模型训练",
     sourceUrl: "https://mp.weixin.qq.com/s/ahrc-4V55aReiqmyHlhTUg",
   },
   {
@@ -3761,7 +3761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Jeff",
     keywords: ["Jeff", "Dean", "定义", "代码", "智能", "时代"],
-    excerpt: "关键词：智能体、Jeff Dean、全栈协同]、多模态、定义问题 “未来每个工程师可能会各自管理 50 个智能体实习生，完成大量并行任务，而且沟通效率会比人更高效。未来最重要的技能",
+    excerpt: "谷歌Jeff Dean访谈指出智能体时代定义问题比写代码重要，工程师将管理智能体、角色重构；谷歌以双轨战略、全栈协同领跑AI，多模态向广义延伸，AI核心是放大人类能力，从业者需适配",
     sourceUrl: "https://mp.weixin.qq.com/s/puFIDJ9B5NaiFQlOQK4cyA",
   },
   {
@@ -3771,7 +3771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "vLLM", "Kunlun", "芯片", "国产", "工程"],
-    excerpt: "关键词：vLLM-Kunlun、大模型推理、国产 AI 芯片]、昆仑芯、百度智能云、技术 Meetup 哈喽各位开发者小伙伴 👋，最近是不是也在为大模型推理性能、国产芯片适配头秃？",
+    excerpt: "大模型推理性能瓶颈怎么破？国产 AI 芯片能否扛起规模化落地大旗？百度智能云联合 vLLM 社区与红帽，带来 vLLM-Kunlun 技术实践分享！从芯片适配到性能极致优化，一线专",
     sourceUrl: "https://mp.weixin.qq.com/s/HoUdl6VIBwmvgK9BU-kDAw",
   },
   {
@@ -3781,7 +3781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FT",
     keywords: ["FT", "Dojo", "Agent", "LLM", "手工", "微调"],
-    excerpt: "关键词：大语言模型、自动化微调、智能体]、交互式环境、端到端优化 大语言模型（LLM）在通用任务上已展现惊人能力，但将其应用于垂直领域（如金融、法律、化学）时，往往需要通过微调（F",
+    excerpt: "我们提出FT-Dojo，首个面向端到端大模型微调的交互式基准，含5领域13项任务。针对通用智能体局限，设计FT-Agent框架实现结构化规划与快速验证。FT-Agent在10/13",
     sourceUrl: "https://mp.weixin.qq.com/s/_aePqLz8HTUngGhkR_I_xg",
   },
   {
@@ -3791,7 +3791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CLI",
     keywords: ["CLI", "Anything", "Agent", "开源", "软件", "驱动"],
-    excerpt: "关键词：AI Agent、软件自动化、命令行接口(CLI)、 大模型应用、零代码适配 一行命令，让任意软件接入 OpenClaw、nanobot、Cursor、Claude Cod",
+    excerpt: "CLI-Anything通过自动生成标准化命令行接口，让AI Agent像调用API一样精准操控GIMP、Blender等任意软件，无需修改原代码。它实现1436个测试100%通过",
     sourceUrl: "https://mp.weixin.qq.com/s/y5QHoElBcgqCxjELFnRTxQ",
   },
   {
@@ -3801,7 +3801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoSkill",
     keywords: ["AutoSkill", "LLM", "开源", "技能", "记忆", "代码"],
-    excerpt: "关键词：终身学习]、技能演化、大语言模型、经验驱动、智能体 当你使用 ChatGPT 或其他大语言模型（LLM）助手时，是否经常遇到这样的困扰：你反复告诉它“不要用太多专业术语”“",
+    excerpt: "AutoSkill是一个无需训练的语言智能体终身学习框架，通过将用户交互经验提取为显式技能，实现能力的持续积累与复用。它支持技能检索、版本管理与动态注入，在提升个性化响应的同时保持",
     sourceUrl: "https://mp.weixin.qq.com/s/Wk-tupoXAeLIBzeQDiWdXw",
   },
   {
@@ -3811,7 +3811,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Triton",
     keywords: ["Triton", "SGLang", "MoE", "Align", "Block", "Size"],
-    excerpt: "关键词：MoE Align Block Size、Triton、SGLang]、TLE、atomicfused、CUDA MoE Align Block Size 作为大模型 Mo",
+    excerpt: "本文优化 MoE Align Block Size 算子，基于 TLE 扩展将 Triton 多阶段流程融合为单 kernel，打造 atomic_fused 和 tle_clus",
     sourceUrl: "https://mp.weixin.qq.com/s/WrMNp45Y9XRYtHiLPL05mg",
   },
   {
@@ -3821,7 +3821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Skill",
     keywords: ["Skill", "SkillCraft", "范式", "开源", "技能", "代码"],
-    excerpt: "关键词：SkillCraft、LLM 智能体、工具组合]、技能复用、基准测试、智能体评估 “一个系统的智能程度，取决于其在一系列任务中获取技能的效率，这与先验知识、经验以及泛化难度",
+    excerpt: "本文提出 SkillCraft 基准与技能复用协议，通过双维度梯度任务设计，激发 LLM 智能体抽象高阶工具组合的能力。实验显示，该框架使令牌使用量减少 80%，任务成功率突破 9",
     sourceUrl: "https://mp.weixin.qq.com/s/Y7KvNFQ0CnE2IqQ3j3vhTQ",
   },
   {
@@ -3831,7 +3831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Karpathy",
     keywords: ["Karpathy", "AutoResearch", "AI", "开源", "智能", "实验"],
-    excerpt: "关键词：自主 AI 研究、大语言模型、自我进化]、自动化机器学习、程序优化] 想象这样一个场景：曾经，前沿的 AI 研究是由那些被称为“肉计算机”（meat computers）的",
+    excerpt: "AutoResearch项目让AI智能体自主修改LLM训练代码，每次固定训练5分钟，以val_bpb为指标评估效果，一夜可自动完成约100次实验，最终输出优化模型。核心创新：固定时",
     sourceUrl: "https://mp.weixin.qq.com/s/NpcXoQufaqAJowJs0k226g",
   },
   {
@@ -3841,7 +3841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Hexagon",
     keywords: ["Hexagon", "MLIR", "PyTorch", "Triton", "NPU", "算子"],
-    excerpt: "关键词：Hexagon-MLIR、MLIR、Qualcomm Hexagon NPU、PyTorch / Triton]、算子融合、生成式编译 - Hexagon-MLIR: An",
+    excerpt: "本文提出了Hexagon-MLIR，一个基于MLIR的开源AI编译栈，为高通Hexagon NPU提供统一编译支持。通过生成式融合、向量化、多线程与双缓冲技术，实现对PyTorch",
     sourceUrl: "https://mp.weixin.qq.com/s/582GtnSD6qdvn_gRcSDXFA",
   },
   {
@@ -3851,7 +3851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SOTA",
     keywords: ["SOTA", "MLRA", "Multi", "Head", "Low", "Rank"],
-    excerpt: "关键词：长上下文推理、KV 缓存、张量并行、低秩注意力]、MLRA 随着大语言模型（LLM）能力的不断提升，处理超长上下文（例如百万级 token）已成为现实需求。无论是检索增强生",
+    excerpt: "本文提出多头低秩注意力（MLRA），通过分解潜在头实现 4 路张量并行，解决 MLA 的分片瓶颈。实验显示 MLRA-4 在困惑度和推理准确率上优于 MLA，解码速度提升 2.8 ",
     sourceUrl: "https://mp.weixin.qq.com/s/4P0n7oBRw9L4jvpnIONhmQ",
   },
   {
@@ -3861,7 +3861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FlashAttention",
     keywords: ["FlashAttention", "非对称", "内核", "流水线", "算法", "硬件"],
-    excerpt: "关键词：Blackwell GPU、注意力机制、非对称硬件缩放]、算法-内核协同设计、张量内存、2-CTA MMA 模式] 随着 Transformer 架构成为大语言模型的核心支",
+    excerpt: "FlashAttention-4针对Blackwell非对称硬件缩放，通过流水线重构、软件模拟指数、2-CTA MMA等协同设计，缓解共享内存与指数单元瓶颈。B200上较cuDNN",
     sourceUrl: "https://mp.weixin.qq.com/s/TlUWv5d5r2k_eauiyIJ3tA",
   },
   {
@@ -3871,7 +3871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "UCB", "GPU", "Kernel", "Search", "模型"],
-    excerpt: "关键词：GPU 内核优化、启发式、世界模型、演化搜索]、代码生成 在深度学习框架的底层，GPU 内核（kernel）的优化是一场永无止境的军备竞赛。从 FlashAttention",
+    excerpt: "K-Search 提出“共同进化世界模型”框架，将 LLM 从代码生成器升级为规划引擎，解耦意图与实现，在复杂 GPU 内核搜索中平均性能提升 2.10 倍，MoE 内核提升 14",
     sourceUrl: "https://mp.weixin.qq.com/s/Do5iIhXR23o82Z6J9386GA",
   },
   {
@@ -3881,7 +3881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "注意力",
     keywords: ["注意力", "Attn", "QAT", "bit", "FP4", "RTX"],
-    excerpt: "关键词：量化感知训练、FP4、注意力机制]、大语言模型、扩散模型 本文的核心创新在于首次将量化感知训练成功应用于 4 位注意力机制，并揭示了稳定训练的关键：反向传播中必须对重计算的",
+    excerpt: "本文首次系统研究 4-bit 注意力量化感知训练，提出Attn-QAT。通过精度匹配的前向/反向设计和高精度输出备份，解决了 FP4 注意力训练不稳定问题。在扩散模型和 LLM 上",
     sourceUrl: "https://mp.weixin.qq.com/s/A2yKTgrtlkmuj0m75-kfhg",
   },
   {
@@ -3891,7 +3891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPGA",
     keywords: ["FPGA", "FAST", "Prefill", "NVIDIA", "A5000", "TTFT"],
-    excerpt: "FAST-Prefill 这项工作非简单映射算法，本质是硬件-算法深度协同的范例，其基于 Flex-Prefill 的计算模式与数据流特征，定制数据通路与访存策略。其不仅提供实用加",
+    excerpt: "FAST-Prefill是首个面向动态稀疏注意力长上下文LLM预填充的FPGA加速器。通过流式索引生成（4GB→4KB）、存活性驱动双层缓存（65%命中率）及混合矩阵处理单元（LU",
     sourceUrl: "https://mp.weixin.qq.com/s/o1NBYQURY0JVeeIa_HOqrA",
   },
   {
@@ -3901,7 +3901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "KernelBench", "Seed", "Agent", "字节", "内核"],
-    excerpt: "关键词：CUDA 内核生成]、智能体强化学习、性能优化、KernelBench、技能增强环境 注：本文部分结论有误导，请在留言区直接开喷，见留言知乎链接。在深度学习基础设施的底层，",
+    excerpt: "本文提出 CUDA Agent，一个大规模智能体强化学习系统，通过可扩展数据合成、技能增强环境和多阶段RL训练，提升CUDA内核生成能力。KernelBench上超越torch.c",
     sourceUrl: "https://mp.weixin.qq.com/s/TiDFWVCtQC___3I9BqR9hg",
   },
   {
@@ -3911,7 +3911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KV",
     keywords: ["KV", "RL", "Policy", "SOTA", "框架", "驱动"],
-    excerpt: "关键词：大语言模型、KV 缓存、强化学习]、缓存驱逐、长上下文推理] 自 Transformer 架构诞生以来，大型语言模型（LLMs）在自然语言处理领域掀起了革命性浪潮。从文本生",
+    excerpt: "Apple提出一种基于强化学习的KV缓存淘汰框架，学习预测token未来注意力的排序策略KVP。KVP为每头训练轻量级智能体，无需修改模型架构，在多个长文本任务中显著优于启发式方法",
     sourceUrl: "https://mp.weixin.qq.com/s/e6PCkwYJJlB3pfVaNpP8DA",
   },
   {
@@ -3921,7 +3921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agentic",
     keywords: ["Agentic", "Skills", "系统化", "综述", "成功率", "挑战"],
-    excerpt: "关键词：Agentic Skills、LLM 智能体]、设计模式、技能生命周期、AI 安全 智能体技能——一种让 AI 不再每次都“从零开始”，而是像经验丰富的专家一样，调用内化的",
+    excerpt: "本文系统化梳理智能体中的Skill，提出四元组定义、七阶段生命周期、七种设计模式与表征×范围分类法。量化分析显示筛选技能提升成功率16.2%，自生成技能降低1.3%。通过ClawH",
     sourceUrl: "https://mp.weixin.qq.com/s/kf-VrDFdX1p9vNZYWUZ9Vw",
   },
   {
@@ -3931,7 +3931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "综述", "核心", "类型", "特征"],
-    excerpt: "关键词：LLM 推理失败、双轴分类框架]、非具身推理、具身推理、缓解策略 这篇发表于 TMLR 2026 的综述，可以说是给当前火热的 LLM reasoning 研究浇了一盆清醒",
+    excerpt: "本文为首篇LLM推理失败综合性综述，提出双轴分类框架，系统梳理非具身、具身推理中的基础性、应用特定及鲁棒性三类失败，分析其根源与缓解策略。发布相关研究GitHub仓库，为该领域提供",
     sourceUrl: "https://mp.weixin.qq.com/s/2ep7Dc0pravchyAxjcdbFg",
   },
   {
@@ -3941,7 +3941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agentic",
     keywords: ["Agentic", "LLM", "DeepSeek", "DualPath", "KV", "清华"],
-    excerpt: "关键词：Agentic LLM、KV 缓存、PD 分离、存储 I/O、负载均衡] 近年来，大型语言模型（LLM）的应用形态正在发生深刻变革。早期的 LLM 主要扮演聊天机器人的角色",
+    excerpt: "本文指出智能体化 LLM 推理的 KV-Cache 存储带宽失衡瓶颈，提出 DualPath 系统，通过双路径 KV-Cache 加载与动态调度，充分利用解码引擎闲置带宽。实验显示",
     sourceUrl: "https://mp.weixin.qq.com/s/wj99XD5FxG46qMZV3dZj0Q",
   },
   {
@@ -3951,7 +3951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "Agent", "Skill", "算力", "准确率", "技能"],
-    excerpt: "关键词：Agent Skill 框架、小语言模型]、上下文工程、工业应用、GPU 效率 近年来，以 GitHub Copilot、LangChain、OpenAI 为代表的 Age",
+    excerpt: "本文量化评估 Agent Skill 框架在 SLMs 中的表现，发现 12B-30B 模型性能显著提升，80B 代码模型接近闭源水平。引入 VRAM 时间指标，揭示代码特化模型在",
     sourceUrl: "https://mp.weixin.qq.com/s/5OWXKIwS8MTmdbI5yJEauQ",
   },
   {
@@ -3961,7 +3961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "SynPerf", "GPU", "预测", "内核", "精准"],
-    excerpt: "关键词：GPU 性能建模、混合建模]、大语言模型、硬件泛化性、性能优化 让 AI 学会“自我审视”：在真实硬件运行前，精准预测每一行代码的执行时间。 2025 年的今天，从 Gem",
+    excerpt: "SynPerf 是一种混合分析-ML 框架，通过内核分解、任务调度模拟与流水线需求分析，生成多维特征，再由 MLP 精准预测 GPU 性能。在 11 种 GPU 上，其内核与端到端",
     sourceUrl: "https://mp.weixin.qq.com/s/p2rEWzavaxTIO5C8xmDTpw",
   },
   {
@@ -3971,7 +3971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "hls4ml", "FPGA", "AI", "PyTorch", "Keras"],
-    excerpt: "关键词：FPGA 加速、高-level 综合 (HLS)、] 模型量化、硬件-软件协同设计、低延迟推理、开源编译器 只需几行 Python 代码——配合简单的配置字典，即可将训练好",
+    excerpt: "hls4ml 是一款开源平台，可将 PyTorch、Keras 等框架的深度学习模型自动转换为 FPGA/ASIC 的高效 HLS 实现。其模块化编译器架构支持多框架、多后端，结合",
     sourceUrl: "https://mp.weixin.qq.com/s/wKBJ5zzWl3-caxElByiZtw",
   },
   {
@@ -3981,7 +3981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Triton",
     keywords: ["Triton", "内核", "正确率", "可验证", "Makora", "RL"],
-    excerpt: "关键词：GPU 内核生成、强化学习]、Triton、代码优化、Makora 2025 年，全球数据中心部署的 GPU 数量已突破千万级别。这些并行计算巨兽支撑着从大模型训练到实时推",
+    excerpt: "Makora用强化学习微调GPT-5，使其Triton内核生成正确率从43.7%提升至77.0%，集成智能体后达97.4%，2.12倍加速TorchInductor。RLVR+工具",
     sourceUrl: "https://mp.weixin.qq.com/s/qhqk4fzKsJSsG3li1-qayA",
   },
   {
@@ -3991,7 +3991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "UCSD", "Meta", "AutoOverlap", "块级", "GPU"],
-    excerpt: "关键词：计算-通信重叠、块调度]、分布式编译器、GPU、Triton]、多 GPU 工作负载 通过块级调度在单内核内实现计算与通信的深度重叠 近年来，大语言模型的规模呈指数级增长，",
+    excerpt: "AutoOverlap 是一种基于 Triton 的编译器与运行时系统，通过引入“通信块”抽象实现细粒度的计算与通信重叠，显著提升多 GPU 系统的执行效率，平均加速 1.3 倍，",
     sourceUrl: "https://mp.weixin.qq.com/s/hKGFF67SguECq1s81MWR8g",
   },
   {
@@ -4001,7 +4001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "CuTe", "AMD", "FlyDSL", "MLIR", "Preshuffle"],
-    excerpt: "关键词：FlyDSL、显式布局、FLIR]、AMD GPU、MLIR 在深度学习和高性能计算领域，GPU 的编程模型一直在抽象与性能之间摇摆。 - 一方面，CUDA 和 HIP 提",
+    excerpt: "FlyDSL 是 AMD 开源的 Python DSL+MLIR 编译器栈，在保留 Python 便利性的同时赋予开发者对 GPU 内核布局的精确控制。其核心创新是 FLIR 布局",
     sourceUrl: "https://mp.weixin.qq.com/s/VrzGKXR3cIzoQ8D3sQ_QWA",
   },
   {
@@ -4011,7 +4011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CGO",
     keywords: ["CGO", "MLIR", "graph", "等式", "等价", "全程"],
-    excerpt: "关键词：等式饱和、e-graph]、编译器、MLIR]、持久化、优化 通过将 e-graph 直接嵌入 MLIR，研究人员让等式饱和贯穿整个编译流程，无需反复翻译、不丢失等价信息，",
+    excerpt: "本文在 MLIR 中引入 eqsat dialect，将 e-graph 嵌入编译器 IR，实现持久化等式饱和。通过改造 PDL 匹配器，复用现有分析，成功复现 Herbie 浮点",
     sourceUrl: "https://mp.weixin.qq.com/s/SthK_yq5RTdleECchfUBgA",
   },
   {
@@ -4021,7 +4021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "FlowPrefill", "队头", "SLO", "粒度"],
-    excerpt: "关键词：LLM 服务系统、预填充、队头阻塞、SLO 感知调度]、算子级抢占、事件驱动调度 当我们正在使用一个智能聊天机器人，输入了一个简短的问题，满怀期待地等待回复。然而，由于服务",
+    excerpt: "本文提出 FlowPrefill 系统，通过算子级抢占和事件驱动调度解耦抢占粒度与调度频率，有效缓解 LLM 服务中预填充阶段的头队阻塞。在真实轨迹上评估显示，该系统在满足异构 S",
     sourceUrl: "https://mp.weixin.qq.com/s/ju8xKKD-Y36e1U2X3_8-5A",
   },
   {
@@ -4031,7 +4031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TFLOP",
     keywords: ["TFLOP", "ThunderKittens", "GPU", "Kernels", "小猫"],
-    excerpt: "关键词：ThunderKittens 2.0]、GPU Kernel、性能优化、CUDA、Tensor Core、GEMM] 本文是 ThunderKittens（TK）2.0 版",
+    excerpt: "雷霆小猫⚡️🐱：简单、快速且可爱的人工智能核心！",
     sourceUrl: "https://mp.weixin.qq.com/s/YjxDMU2NpVaqysg3w8ZTyQ",
   },
   {
@@ -4041,7 +4041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "token",
     keywords: ["token", "User", "Taalas", "芯片", "权重", "模型"],
-    excerpt: "关键词：Taalas HC1、极致专用化、16000 Tokens/秒/用户、AI 芯片、硬连线模型 性能远超 SambaNova, Groq！Taalas 的 HC1 芯片在运行",
+    excerpt: "Taalas 推出的 HC1 AI 芯片采用极致专用化硬连线设计，运行 Llama3.1-8B 达 16000+Tokens/秒/用户，性能数倍于竞品，基于台积电 N6 工艺，成本",
     sourceUrl: "https://mp.weixin.qq.com/s/i41t-HXgb3UfQWHzdbzI2w",
   },
   {
@@ -4051,7 +4051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "几何平均",
     keywords: ["几何平均", "NVIDIA", "UCB", "Kernel", "Blaster", "RL"],
-    excerpt: "关键词：CUDA 优化、记忆增强、上下文强化学习]、跨架构适配、性能加速 当大语言模型学会反思自己的优化策略，GPU 代码的性能天花板将被不断推高。 过去十年，GPU 架构从 Pa",
+    excerpt: "本文提出大语言模型驱动的CUDA代码生成框架，结合强化学习与性能反馈，通过策略引导生成并迭代优化内核代码。实验显示，该方法生成的代码在经典模型上性能优于传统基线，高效实现了硬件感知",
     sourceUrl: "https://mp.weixin.qq.com/s/1-YP2eQEhG1a5Q6BnK1s9g",
   },
   {
@@ -4061,7 +4061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "YOLO",
     keywords: ["YOLO", "Master", "MoE", "AI", "开源", "腾讯"],
-    excerpt: "关键词：YOLO-Master]、混合专家（MoE）、实时目标检测、动态路由、ES-MoE 动态计算，按需分配：YOLO-Master 如何用 MoE 重新定义实时目标检测 实时目",
+    excerpt: "YOLO-Master将混合专家（MoE）引入YOLO，通过动态路由实现“按需计算”，在COCO上以1.62ms延迟达42.4% AP，比YOLOv13-N快17.8%且精度更高，",
     sourceUrl: "https://mp.weixin.qq.com/s/K5FuEb8CudaUxEMBWEeVQQ",
   },
   {
@@ -4071,7 +4071,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "YOLO26",
     keywords: ["YOLO26", "综述", "架构", "性能", "关键"],
-    excerpt: "关键词：YOLO26、YOLO 架构演进、单次检测算法（YOLO）]、目标检测、计算机视觉、深度学习 十年来，单次检测算法（YOLO，You Only Look Once）一直是深",
+    excerpt: "本文解析YOLO26的CNN架构与核心改进，该模型移除DFL、实现无NMS推理，搭配新损失函数与优化器，CPU速度提升43%，架构上优化多模块并强化小目标检测，多视觉任务性能提升，",
     sourceUrl: "https://mp.weixin.qq.com/s/ZJ_uvFrwmx4SSzmvBhs3Uw",
   },
   {
@@ -4081,7 +4081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RL",
     keywords: ["RL", "rollout", "GT", "CMU", "ThunderAgent", "KV"],
-    excerpt: "关键词：Agentic Inference System、Program Abstraction、Program-Aware Scheduling]、KV Cache Thrash",
+    excerpt: "现有智能体推理系统因请求级调度导致KV缓存颠簸、内存失衡和工具资源泄漏，提出ThunderAgent，以\\x26quot;智能体程序\\x26quot;抽象实现程序级调度，通过状态感",
     sourceUrl: "https://mp.weixin.qq.com/s/yLNgJ4TZWWMpyMNrq5dicA",
   },
   {
@@ -4091,7 +4091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Agentic",
     keywords: ["Agentic", "AI", "狂卷", "Cadence", "Altera", "Tenstorrent"],
-    excerpt: "关键词：Agentic AI、ChipStack、心智模型、芯片设计与验证、10倍效率提升] 在半导体行业一路向“微”、向“精”狂奔的当下，芯片设计的复杂度呈指数级攀升，高端芯片的",
+    excerpt: "Cadence推出ChipStack AI超级智能体，全球首款芯片设计Agentic AI解决方案。通过心智模型与多智能体协同，实现设计验证全流程自主化，最高10倍效率提升，让芯片",
     sourceUrl: "https://mp.weixin.qq.com/s/VNniMZJiATsE2ESMN84dmw",
   },
   {
@@ -4101,7 +4101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "bit",
     keywords: ["bit", "Sherry", "榨干", "LLM", "开源", "登顶"],
-    excerpt: "关键词：三元量化、细粒度稀疏]、3:4 稀疏模式、权重陷阱、退火残余突触 大语言模型（LLM）的部署正面临一个根本性矛盾：模型规模持续扩大与终端硬件资源受限之间的矛盾。云端推理虽然",
+    excerpt: "开源三元量化方案Sherry提出3:4稀疏策略，以1.25bit对齐硬件，解决现有方法位宽浪费或推理慢的困境；配合Arenas退火残差机制，在LLaMA上实现25%存储节省和10%",
     sourceUrl: "https://mp.weixin.qq.com/s/L6zhlupLpSEWi1a-m_8t6w",
   },
   {
@@ -4111,7 +4111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TileRT",
     keywords: ["TileRT", "v0", "LLM", "GLM", "Demo", "重磅"],
-    excerpt: "关键词：TileRT、大语言模型、推理引擎、低延迟、编译器 副标题：600 tokens/s！TileRT 让千亿参数模型推理进入毫秒时代] TileRT v0.1.3 是一次里程",
+    excerpt: "600 tokens/s！TileRT 让千亿参数模型推理进入毫秒时代！TileRT 是超低延迟LLM推理引擎，以编译器技术为核心，实现tile级任务调度与多GPU高效利用，毫秒级",
     sourceUrl: "https://mp.weixin.qq.com/s/slWJe52pRlhlhw2mfb3bMg",
   },
   {
@@ -4121,7 +4121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "YOLOv11", "Apple", "Silicon", "M1", "M4"],
-    excerpt: "关键词：Apple Silicon、专用硬件加速器(DSA)、] ANE、NUC、HPC、性能评估 当我们在谈论苹果自研芯片 M1、M2、M3 乃至最新的 M4 时，我们在谈论什么",
+    excerpt: "本研究评估了苹果M1与M4 Pro芯片中神经引擎在通用HPC应用中的潜力。结果表明，ANE在GEMM运算中性能达3.8 TFLOPS，功耗仅5.2瓦，能效超GPU 80%。尽管AN",
     sourceUrl: "https://mp.weixin.qq.com/s/RJuqFBjh6sWCSrhQxF7keQ",
   },
   {
@@ -4131,7 +4131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GOP",
     keywords: ["GOP", "算力", "RISC", "AI", "流水线", "向量"],
-    excerpt: "关键词：DIMC(数字存内计算) 、RISC-V 向量架构]、指令集扩展、流水线集成、边缘 AI 加速 在人工智能向边缘设备全面渗透的今天，传统的计算架构正面临着前所未有的挑战。随",
+    excerpt: "本文实现了数字内存计算单元在 RISC‑V 向量处理器流水线中的紧密集成，通过定制指令集实现高效控制。实验显示，该架构在 ResNet‑50 推理中达到 137 GOPS，相比基线",
     sourceUrl: "https://mp.weixin.qq.com/s/Le6rwmaLyuZ6__xUoRLDlw",
   },
   {
@@ -4141,7 +4141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TTFT",
     keywords: ["TTFT", "GPU", "KV", "QuoKA", "LLM", "分块"],
-    excerpt: "关键词：大语言模型、稀疏注意力、分块预填充]、KV 选择、推理加速] 无需训练、不依赖特定硬件，仅用 12%的 KV 对就能实现接近全注意力的效果——这就是 Qualcomm AI",
+    excerpt: "QUOKA是一种面向分块预填充的查询导向KV子选择算法。它利用低余弦相似度查询主导注意力的几何特性，筛选代表性子查询并保留关键KV对。无需训练、硬件通用，实现5-7倍加速且精度近基",
     sourceUrl: "https://mp.weixin.qq.com/s/oRq930m4nGoTSMTIfd8mUg",
   },
   {
@@ -4151,7 +4151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "协同", "优化", "艺术", "设计", "系统"],
-    excerpt: "关键词：NPU、NPU 设计、架构权衡]、恰适规模、软（算法）硬件协同优化 NPU 的设计，本质上是在当下硅片的物理极限与未来智能算法的未知疆域之间，架设一座既要坚固耐用又要能灵活",
+    excerpt: "AI 多场景渗透推动 NPU 成为芯片核心，其设计核心是架构权衡、“恰适规模”适配与全流程协同，需平衡 PPAA 需求，依赖跨领域协作与先进工具链。未来边缘 AI 等趋势带来新挑战",
     sourceUrl: "https://mp.weixin.qq.com/s/lLdvr-ZkDWJtMw_54ClUog",
   },
   {
@@ -4161,7 +4161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "dLLM",
     keywords: ["dLLM", "NPU", "PLENA", "NVIDIA", "RTX", "A6000"],
-    excerpt: "关键词：dLLMs、NPU、采样优化]、d-PLENA、GEMM 扩散型大语言模型（dLLM），是一种融合了扩散模型迭代去噪特性的大语言模型，可实现并行 Token 生成，但其采样",
+    excerpt: "本文针对dLLMs采样阶段的高延迟问题，提出适配的d-PLENA NPU架构，通过多项硬件与指令集优化，解决了传统GEMM核心NPU的适配性缺陷。经仿真与硬件验证，该设计较NVID",
     sourceUrl: "https://mp.weixin.qq.com/s/1CachUbjE8AGPXaM-Glu2g",
   },
   {
@@ -4171,7 +4171,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "vibe",
     keywords: ["vibe", "coding", "老手", "代码"],
-    excerpt: "关键词：LLM、Coding Agent]、AI编码、复杂度控制]、开发效率 我已经是个彻底的「AI 驱动编码」实践者了。 - SuSun@知乎：Vibe Coding 一年后的 ",
+    excerpt: "从 2024 年末至今，一年多时间里，我几乎不再手写一行代码——所有工程实现，全都出自不同阶段、不同模型的 LLM。",
     sourceUrl: "https://mp.weixin.qq.com/s/F5hf7tkqUkfwA5GBS4YykQ",
   },
   {
@@ -4181,7 +4181,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MLSys",
     keywords: ["MLSys", "课题组", "顶级", "方向", "全球", "研究"],
-    excerpt: "关键词：MLSys、苗旭鹏课题组]、北京大学、博士招生、实习生博后 机器学习系统（MLSys）方向的科研 er 看过来！北京大学计算机学院苗旭鹏助理教授课题组开启招生，面向全球招募",
+    excerpt: "实验室常年有博士和硕士研究生名额，与海外名校的顶级实验室（如CMU Catalyst）联系紧密，工业界合作广泛，拥有丰富的GPU计算资源，欢迎感兴趣的同学直接邮件联系。",
     sourceUrl: "https://mp.weixin.qq.com/s/pX9CtXSsV98U_lWfZe3EPQ",
   },
   {
@@ -4191,7 +4191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Quartet",
     keywords: ["Quartet", "II", "FP4", "LLM", "狂飙", "效率"],
-    excerpt: "关键词：NVFP4、Quartet II、MS-EDEN、无偏梯度估计、低比特训练] 随机舍入（Stochastic Rounding，SR），是指当把一个数值映射到有限、离散的低",
+    excerpt: "本文解读的《Quartet II》研究提出MS-EDEN新方法，解决了NVFP4训练中的梯度估计偏差与高误差问题。该方法通过优化随机性分配，在保证无偏性的同时大幅降低量化误差，最终",
     sourceUrl: "https://mp.weixin.qq.com/s/KYqVn4ypvV8lJ-1jsG1Qbw",
   },
   {
@@ -4201,7 +4201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "轻量", "NVIDIA", "闭源", "tileiras", "FlashTile"],
-    excerpt: "关键词：FlashTile、CUDA Tile IR、TileLang]、NVRTC、编译流水线 FlashTile 整个设计哲学是：前端做精确的语义下降和轻量规范化，把重型硬件优",
+    excerpt: "FlashTile 是一款开源 CUDA Tile IR 编译器，兼容并旨在替代 NVIDIA 的 `tileiras`。它采用 Rust 实现，通过“前端规范化+后端深度优化”的",
     sourceUrl: "https://mp.weixin.qq.com/s/jEhVcmrmjInm7-ea8LtnAw",
   },
   {
@@ -4211,7 +4211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Brendan", "Gregg", "Intel", "OpenAI", "征程"],
-    excerpt: "关键词：OpenAI、性能工程、AI数据中心]、规模化、软件优化 2025 年 12 月，性能工程领域的知名专家 Brendan Gregg 宣布从任职 3.5 年的 Intel ",
+    excerpt: "Brendan Gregg离开Intel后加入OpenAI，专注ChatGPT性能工程。其选择基于对AI数据中心成本挑战的回应、ChatGPT普惠价值的认可，以及童年AI梦想的延续",
     sourceUrl: "https://mp.weixin.qq.com/s/btkYRrYi0r9HwVE4eDd3xA",
   },
   {
@@ -4221,7 +4221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Opus", "Claude", "Linux", "内核", "暴力"],
-    excerpt: "关键词：C 编译器、Anthropic、AI 辅助、编译器构建、工程实践、代码生成] 我们让 Opus 4.6 模型借助智能体团队构建了一款 C 语言编译器，之后便（在很大程度上）",
+    excerpt: "Anthropic团队指挥16个Claude智能体并行工作，耗资2万美元开发出能编译Linux内核的C编译器。这一壮举展现了AI完成复杂系统工程任务的潜力，同时也暴露了多智能体协作",
     sourceUrl: "https://mp.weixin.qq.com/s/_87v55g8azTe-9yJjIc7Lg",
   },
   {
@@ -4231,7 +4231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "LLM", "Token", "模态", "开源", "视觉"],
-    excerpt: "关键词：视觉令牌修剪、多模态大语言模型]、高效训练、训练-推理不匹配、双模训练 近年来，多模态大语言模型（Multimodal Large Language Models, MLL",
+    excerpt: "本文提出 DualSpeed 框架，通过视觉令牌修剪与快慢双模协同训练，解决多模态大模型训练效率低下及训练-推理不匹配问题。该方法在 LLaVA 系列模型上实现最高 4.0 倍训练",
     sourceUrl: "https://mp.weixin.qq.com/s/oD1Mta7eflVEuZBZGLpmFw",
   },
   {
@@ -4241,7 +4241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DAC",
     keywords: ["DAC", "RL", "链式", "思维", "框架", "训练"],
-    excerpt: "关键词：分治推理、强化学习]、测试时可扩展性、链式思维]、大语言模型训练 近年来，大型语言模型（LLMs）在复杂推理任务上展现出惊人能力，尤其是基于链式思维（Chain-of-Th",
+    excerpt: "本文提出DAC-RL框架，首次用强化学习训练大语言模型的分治推理能力。该方法显著提升了模型在复杂数学问题上的性能，在竞赛基准上Pass@1和Pass@32分别提升8.6%和6.3%",
     sourceUrl: "https://mp.weixin.qq.com/s/gXZQSPnoxVat_eUHIFy3UA",
   },
   {
@@ -4251,7 +4251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "轻量", "BFCL", "准确率", "标杆", "智能"],
-    excerpt: "关键词：Small Language Models 小语言模型、Function Calling]、Edge Devices、Direct Preference Optimizat",
+    excerpt: "本文评估了小型语言模型在边缘设备上执行函数调用等智能体任务的能力。通过 BFCL 基准测试发现，1–3B 参数模型准确率最高达 65.74%，优于\\x26lt;1B 模型。研究采用",
     sourceUrl: "https://mp.weixin.qq.com/s/5_361aVliXBLGXa7pyKPPA",
   },
   {
@@ -4261,7 +4261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "System", "VibeTensor", "意义", "全球"],
-    excerpt: "关键词：AI for AI System、Deep learning runtime]、Agent development、CUDA 副标题：“完全由 AI 生成”是否是一个有误导",
+    excerpt: "VIBETensor是一项实证研究，展示AI智能体如何生成从一个Python/JS API到CUDA内存管理的完整深度学习运行时。本文概述系统架构、以测试为护栏的生成方法论，评估生",
     sourceUrl: "https://mp.weixin.qq.com/s/WvaQ9Gc-ZI2nDtTzE3Btmg",
   },
   {
@@ -4271,7 +4271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Axe", "GPU", "TPU", "Trainium", "碾压"],
-    excerpt: "Axe Layout 的提出，是机器学习系统领域向统一抽象 迈进的重要一步。这种统一抽象的威力，是让开发者能够以接近手工调优代码的性能，轻松编写出高效利用最新 GPU 特性、实现通",
+    excerpt: "Axe Layout 是一种跨设备与内存层级的统一布局抽象，通过命名轴实现逻辑到物理坐标的映射。基于 Axe 的编译器支持多粒度分布式编程，在 GPU 与 AI 加速器上性能接近手",
     sourceUrl: "https://mp.weixin.qq.com/s/WRSE_hI5aU4_RRu-mvKKCw",
   },
   {
@@ -4281,7 +4281,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "GEMM", "FA", "Tile", "Based", "TL"],
-    excerpt: "TL 证明，编译器驱动的映射可以在空间数据流加速器上提供厂商级别的性能如 Tenstorrent。在 GEMM 和 FlashAttention 上，以最少的人工干预实现了与厂商库",
+    excerpt: "为解决空间数据流加速器可编程性不足问题，本文提出编译器框架TL，可将tile程序端到端编译至目标架构。依托MLIR与df方言建模硬件，优化跨核tile映射和数据重用，结合性能模型筛",
     sourceUrl: "https://mp.weixin.qq.com/s/vT8pwaZbcuJWURvC1wN6WQ",
   },
   {
@@ -4291,7 +4291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Voyager",
     keywords: ["Voyager", "HLS", "DNN", "加速器", "利用率", "框架"],
-    excerpt: "关键词：Voyager、DNN Accelerator]、High-Level Synthesis、Design-Space Exploration、Quantization 近年",
+    excerpt: "Voyager是一款端到端HLS DNN加速器生成框架，突破现有工具局限，支持多数据类型、微缩放量化及PyTorch模型高效映射。其生成的加速器利用率达99.8%，较同类生成器 l",
     sourceUrl: "https://mp.weixin.qq.com/s/cfrHNF9aH5apYWMBxcK7XA",
   },
   {
@@ -4301,7 +4301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Kernel", "PTX", "FlipFlop", "功耗", "分析"],
-    excerpt: "关键词：静态分析、GPU 能耗优化]、FlipFlop 框架、PTX 代码分析]、LLM 推理效率 当大模型推理消耗的电力即将超过一个国家的用电量时，一群研究者决定从代码静态分析中",
+    excerpt: "FlipFlop 框架利用静态分析 GPU 内核 PTX 代码，无需运行时剖析即可预测并推荐能效最优配置。它能将优化搜索空间缩小 93.4%，并在关键 AI 内核上实现高达 79%",
     sourceUrl: "https://mp.weixin.qq.com/s/XcXNjO0XUWPO9cZuWlI0qQ",
   },
   {
@@ -4311,7 +4311,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "基础设施", "Meta", "芯片"],
-    excerpt: "关键词：基础设施演进、AI集群]、大语言模型、GPU扩展、自研芯片] 我们【仍处于】人工智能工作负载演进和应用的【早期阶段】。过去几年我们一直忙碌不停，而未来几年的发展速度将更快。",
+    excerpt: "Meta基础设施从LAMP架构演进至全球分布式系统，为支持AI与大语言模型训练，构建了规模达129k H100 GPU的集群，并自研MTIA芯片。未来将建设功耗达1吉瓦及5吉瓦的超",
     sourceUrl: "https://mp.weixin.qq.com/s/EKKNldZ8JVlYN61nRUcCCw",
   },
   {
@@ -4321,7 +4321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Meta",
     keywords: ["Meta", "AI", "硬件", "可靠性", "参数", "模型"],
-    excerpt: "关键词：AI 硬件可靠性、沉默数据损坏] (SDC)、故障检测机制、硬件故障缓解、Meta - 硬件故障会对 AI 训练和推理产生重大影响。 - 静默数据损坏（SDC，指由硬件导致",
+    excerpt: "沉默数据损坏（SDC）是 AI 硬件核心隐患，Meta 针对三类硬件故障，创新三大检测机制（含效率优 41% 的 Hardware Sentinel），搭配跨栈缓解策略，攻克 66",
     sourceUrl: "https://mp.weixin.qq.com/s/ZISuIcQy3flCT15BtNOWjw",
   },
   {
@@ -4331,7 +4331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "测试",
     keywords: ["测试", "编译器", "MLIR", "Forge", "IR", "利器"],
-    excerpt: "关键词：MLIR-Forge、随机程序生成、中间表示测试]、编译器测试、差分测试 在当今计算架构日益复杂、领域专用编译器蓬勃发展的时代，如何高效、可靠地测试编译器中间表示（IR）成",
+    excerpt: "MLIR-Forge是一种基于MLIR的随机程序生成框架，将IR测试解耦为语言规范与程序构建，大幅简化测试工具开发。我们在一周内为三种IR构建生成器，发现798组bug，生成效率高",
     sourceUrl: "https://mp.weixin.qq.com/s/rhN7RoePMrk1hvlo6XZFIw",
   },
   {
@@ -4341,7 +4341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "MLIR", "Cerebras", "WSE", "堪比", "GPU"],
-    excerpt: "关键词：Cerebras WSE、MLIR]、模板计算、异步执行模型、领域特定语言、编译器流水线] 无需修改一行应用代码，即可在 90 万个核心的异步架构上实现超越 GPU 集群的",
+    excerpt: "本文提出一种基于 MLIR 的编译器流水线，实现模板代码到 Cerebras WSE 的自动编译，无需源码改动。实验显示生成代码性能优于手工优化，WSE3 相比 128 A100 ",
     sourceUrl: "https://mp.weixin.qq.com/s/i15RmRFsArO1y7RSQgRsOw",
   },
   {
@@ -4351,7 +4351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Maia", "重塑", "经济性", "加速器", "基础设施"],
-    excerpt: "关键词：Maia 200、AI加速器]、AI推理、Azure、3nm工艺、Maia SDK 2026 年 1 月 26 日，微软正式发布其首款专为 AI 推理定制的自研芯片——Ma",
+    excerpt: "微软发布首款推理专用AI芯片Maia 200，基于3nm工艺，以窄精度计算与大缓存设计提升效率，实现比现有硬件高30%的性价比，推动AI基础设施向更高能效与更低成本演进。",
     sourceUrl: "https://mp.weixin.qq.com/s/RC1TnF7WhzUWzCPBPbQSOQ",
   },
   {
@@ -4361,7 +4361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "跨平台",
     keywords: ["跨平台", "Kernel", "LLM", "NVIDIA", "AMD", "NPU"],
-    excerpt: "关键词：LLM、内核生成、自动化优化]、智能体、基准测试 现代人工智能系统的性能从根本上受制于底层内核的质量，这类内核可将高层算法语义转化为底层硬件操作。要实现接近最优性能的内核，",
+    excerpt: "针对传统内核开发瓶颈，本文综述LLM与智能体驱动的自动化内核生成研究。涵盖监督微调、多智能体协作等核心方法，整合多平台数据集与基准测试，实现跨NVIDIA/AMD/华为 NPU高效",
     sourceUrl: "https://mp.weixin.qq.com/s/c1JwDgR_Y3ehQ57c4e_nUw",
   },
   {
@@ -4371,7 +4371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPGA",
     keywords: ["FPGA", "MICRO", "StreamTensor", "LLM", "PyTorch", "GPU"],
-    excerpt: "关键词：StreamTensor]、数据流加速器、LLM 推理、迭代张量]、编译优化 一种编译器框架如何通过创新的类型系统和分层设计空间探索，自动化生成高性能、低能耗的数据流加速器",
+    excerpt: "本文提出 StreamTensor，首个 PyTorch 到设备的数据流编译器，创新迭代张量（itensor）类型与三层设计空间，解决现有架构核间关联、外存访问等痛点。FPGA 测",
     sourceUrl: "https://mp.weixin.qq.com/s/6cP1Pw-xj0Y2aNKAM2J_og",
   },
   {
@@ -4381,7 +4381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "加速器", "Meta", "COMET", "数据流", "建模"],
-    excerpt: "关键词：复合操作数据流建模、集体通信操作]、内存层级优化、机器学习加速器、性能建模与优化 在人工智能技术日新月异的今天，大语言模型、状态空间模型等复杂神经网络已成为推动技术发展的核",
+    excerpt: "COMET是首个为AI加速器显式建模集体通信的复合操作数据流优化框架。它通过创新的表示与成本模型，解决了分布式计算中复合操作的性能瓶颈，成功在关键操作上实现了最高3.46倍的加速，",
     sourceUrl: "https://mp.weixin.qq.com/s/G_ezLcJNzUnxKsADTYBFlg",
   },
   {
@@ -4391,7 +4391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MLSys",
     keywords: ["MLSys", "CUDA", "B200", "GPU", "内核", "大赛"],
-    excerpt: "关键词：FlashInfer、MLSys26、高性能推理]、AI 计算、深度学习 一行行精简的 CUDA 代码，将在 NVIDIA 最新 Blackwell B200 GPU 上展",
+    excerpt: "MLSys2026 FlashInfer 竞赛聚焦 NVIDIA B200 GPU 的 LLM 高性能内核开发，设三大核心赛道，支持人工或 AI 生成方案。参赛团队需通过 GitH",
     sourceUrl: "https://mp.weixin.qq.com/s/Ayo57f1y7QO6F0y_y96iAQ",
   },
   {
@@ -4401,7 +4401,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "遗憾终生",
     keywords: ["遗憾终生", "特奖", "vLLM", "清华", "历史性", "远征"],
-    excerpt: "关键词：vLLM、游凯超、大模型推理、技术创业、开源社区、AI 基础设施 vLLM 虽然诞生于伯克利，但它的成长靠的是“百家饭”。我们深深感激这一份支持，也因此坚定了一个信念：vL",
+    excerpt: "清华大学博士生游凯超，从开源项目vLLM的核心贡献者到联合创立估值8亿美元的InferAct。他引领团队将vLLM打造为AI时代的“推理Linux”，致力于降低大模型部署门槛，推动",
     sourceUrl: "https://mp.weixin.qq.com/s/NM71fjap8j3CneoVmbFQKA",
   },
   {
@@ -4411,7 +4411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "鹏城",
     keywords: ["鹏城", "正确率", "AscendKernelGen", "NPU", "L2", "Kernel"],
-    excerpt: "关键词：昇腾 Ascend、NPU 内核生成]、大语言模型、领域适应、强化学习、评估基准 在人工智能飞速发展的今天，深度学习的计算需求呈指数级增长，传统的 CPU 和通用 GPU ",
+    excerpt: "AscendKernelGen 框架通过领域自适应训练，解决了 LLM 生成 NPU 内核的难题，将复杂内核编译成功率从 0%提升至 95.5%，功能正确率达 64.3%，实现了高",
     sourceUrl: "https://mp.weixin.qq.com/s/5hh0KsOwsMIn912OgVNJeA",
   },
   {
@@ -4421,7 +4421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "流片",
     keywords: ["流片", "Akeana", "RISC", "服务器", "突破性", "芯片"],
-    excerpt: "关键词：RISC-V、Akeana、Alpine芯片、4纳米工艺、服务器级处理器 八颗 64 位乱序执行核心在 4 纳米工艺上协同工作，这款名为 Alpine 的测试芯片标志着 R",
+    excerpt: "Akeana成功流片4nm工艺Alpine测试芯片。该芯片是目前最高性能的RISC-V服务器级处理器，完全兼容RVA23标准，集成了多种核心与先进接口，计划于2026年下半年提供开",
     sourceUrl: "https://mp.weixin.qq.com/s/Lu3zL7tlVmXWi9COcEfNnA",
   },
   {
@@ -4431,7 +4431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "嵌入式", "处理器", "架构", "面向", "机器"],
-    excerpt: "关键词：时间可预测性、RISC-V、多核向量处理器]、神经网络推理、实时系统、FPGA 开源 实时系统尤其是自动驾驶等领域所使用的实时系统，正越来越多地采用神经网络。这一趋势使得人",
+    excerpt: "针对实时系统（如自动驾驶）神经网络推理的性能与可预测性矛盾，本文提出开源 RISC-V 多核向量处理器 MultiVic。其以本地暂存器 + 静态调度保障可预测性，多核设计提升性能",
     sourceUrl: "https://mp.weixin.qq.com/s/WMtVxV4ndP02bycd4w7L-Q",
   },
   {
@@ -4441,7 +4441,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "树莓", "ms", "Ultralytics", "YOLO26", "FPS"],
-    excerpt: "关键词：YOLO26、树莓派]、国产AI加速卡、M5Stack、边缘AI 速度快、功耗低、纯国产，树莓派终于有了真正实用的 AI 加速方案 近年来，随着 AI 技术的爆发式发展，边",
+    excerpt: "YOLO26模型纯国产边缘AI方案：YOLO26n模型与M5Stack LLM-8850-Card适配树莓派，实现\\x26lt;2ms推理、500+FPS帧率。方案易部署、全栈开源",
     sourceUrl: "https://mp.weixin.qq.com/s/HaE4G7dgl773TmpvPFXGCg",
   },
   {
@@ -4451,7 +4451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TTFT",
     keywords: ["TTFT", "p99", "SLO", "MIT", "UCSD", "GPU"],
-    excerpt: "关键词：GPU multi-tenancy、LLM serving、SLO compliance、PCIe-aware placement]、dynamic MIG、TTFT 在如",
+    excerpt: "针对共享A100集群LLM服务的PCIe干扰问题，本文提出融合动态MIG、PCIe感知放置与轻量级护栏的VM部署控制器。实验显示，其使SLO失效率降32%，p99延迟升15%，LL",
     sourceUrl: "https://mp.weixin.qq.com/s/Mb-_XsJnw_dJTaHMKGjNsA",
   },
   {
@@ -4461,7 +4461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MICRO",
     keywords: ["MICRO", "DOSA", "DNN", "闭环", "建模", "加速器"],
-    excerpt: "关键词：DOSA、可微分性能模型、梯度下降优化、设计空间探索、硬件-软件协同设计]、DNN加速器 深度神经网络（DNN）加速器已成为推动人工智能突破的关键硬件基础。然而，设计一款高",
+    excerpt: "本文提出DOSA框架，通过构建可微分的DNN加速器性能模型，使用梯度下降进行单循环的硬件与映射协同搜索。该方法显著提升了设计空间探索效率，在相似样本数下，EDP优于随机搜索2.80",
     sourceUrl: "https://mp.weixin.qq.com/s/yYdBeK-hl9Okv8wIhy4iHg",
   },
   {
@@ -4471,7 +4471,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPGPU",
     keywords: ["GPGPU", "控制流", "RISC", "Vortex", "GFLOP", "mm"],
-    excerpt: "关键词：RISC-V GPGPU、Vortex、控制流管理、解耦内存访问]、硬件优化、性能加速 从开源 GPU 的机遇与挑战说起。在当今计算领域，图形处理器（GPU）已从专为图形渲",
+    excerpt: "开源 RISC-V GPGPU 平台 Vortex 因控制流与内存开销性能受限，本文提出硬件 CF 管理器与解耦内存流通道增强方案，实现 8 倍提速、10 倍动态指令减少，面积效率",
     sourceUrl: "https://mp.weixin.qq.com/s/MI8AzXfyj4aUsflGdB_8iw",
   },
   {
@@ -4481,7 +4481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "挑战者", "重塑", "芯片", "校园", "项目"],
-    excerpt: "关键词：RISC-V、ISA、SiFive、开源、生态系统] 本文整理自 YouTube 上 More Than Moore 分析师 Ian Cutress 对 SiFive 架构",
+    excerpt: "本文深度复盘了 RISC-V 开源指令集架构如何从一个伯克利实验室的“暑期项目”，历经 15 年发展，成长为挑战 Arm 与 x86 垄断的行业新势力。其核心在于模块化设计与开放生",
     sourceUrl: "https://mp.weixin.qq.com/s/UXsGxRJZXj7PDEHqYpoWsw",
   },
   {
@@ -4491,7 +4491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "多维度",
     keywords: ["多维度", "LLM", "NPU", "全栈", "SOTA", "清华"],
-    excerpt: "关键词：多核NPU、LLM推理、NpuSim模拟器、张量并行]、内存管理、PD分拆与融合 随着 ChatGPT、Qwen、DeepSeek 等大型语言模型（LLM）的广泛应用，AI",
+    excerpt: "针对多核NPU的LLM推理优化难题，本文提出NpuSim多级别仿真框架，系统优化张量并行、核心放置、内存管理及PD策略。实验验证方案在4B-32B参数LLM上较SOTA实现1.32",
     sourceUrl: "https://mp.weixin.qq.com/s/gnRddxIkpCYMPwa0-mDrVw",
   },
   {
@@ -4501,7 +4501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "OpenAI",
     keywords: ["OpenAI", "AI", "Infra", "清华", "工程师", "对话"],
-    excerpt: "关键词：强化学习、post training、infra、开源、AI、模型跃迁、工程能力、信息差 大家最近都看了 WhynotTV 的最新视频播客《翁家翌：OpenAI，GPT，强",
+    excerpt: "从数学神童到OpenAI核心工程师，翁家翌亲历ChatGPT到GPT-5的诞生。他坚信工程能力是AI突破的关键，并以开源打破信息差。在确定性的世界里，他持续探索技术影响力与人生意义",
     sourceUrl: "https://mp.weixin.qq.com/s/lYELNRnW_Q3vwcMHEuCTiQ",
   },
   {
@@ -4511,7 +4511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "UCLA",
     keywords: ["UCLA", "Dato", "Task", "数据流", "康奈尔大学", "编程"],
-    excerpt: "关键词：Dato、数据流加速器、任务型编程模型]、通信抽象、虚拟-物理映射 随着人工智能计算的不断发展，数据流加速器 将扮演越来越重要的角色。Dato 为这些复杂硬件的编程提供了全",
+    excerpt: "Dato 是 Python 嵌入式任务型编程模型，专为数据流加速器设计，将数据通信与分片列为一等类型，通过虚拟-物理映射适配硬件。其在 NPU 上 GEMM 利用率达 84%、At",
     sourceUrl: "https://mp.weixin.qq.com/s/3VowsZwBORu6PhBQoM3q_A",
   },
   {
@@ -4521,7 +4521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "Token", "流水线"],
-    excerpt: "关键词：SGLang、流水线并行、超长上下文推理、动态分块]、分布式推理 本文聚焦大语言模型（LLM）向万亿参数与超长上下文演进时的推理基础设施瓶颈，提出 SGLang 优化版流水",
+    excerpt: "SGLang 推出优化流水线并行（PP）方案，整合分块 PP、异步 P2P 通信与动态分块，兼容 PD 解耦和 HiCache。DeepSeek-V3.1 PP4 TP8 比 TP",
     sourceUrl: "https://mp.weixin.qq.com/s/H9qT6LqZRMXSfS-M-d02gA",
   },
   {
@@ -4531,7 +4531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "最优性",
     keywords: ["最优性", "AMD", "tritonBLAS", "耗时", "乘法", "矩阵"],
-    excerpt: "关键词：确定性分析模型、零自动调优]、GPU 通用矩阵乘法（GEMM）、性能建模、Triton 编译器、架构可移植性 在人工智能和机器学习如火如荼的今天，通用矩阵乘法 （GEMM）",
+    excerpt: "本文提出tritonBLAS，一款基于Triton的GPU GEMM库。它以分析模型替代运行时自动调优，结合缓存层级等GPU架构参数选优核配置，15万问题规模达94.7%自动调优性",
     sourceUrl: "https://mp.weixin.qq.com/s/RdnrigHOsyYTHkQHjHvR0g",
   },
   {
@@ -4541,7 +4541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "分布式",
     keywords: ["分布式", "并行度", "MoE", "Megatron", "LM", "Learn"],
-    excerpt: "关键词：分布式 LLM 推理、强化学习]、并行化优化、分片策略、吞吐量提升、MoE 模型 分布式大语言模型（LLM）尤其是万亿参数混合专家（MoE）模型的推理，需依托数百至数千个 ",
+    excerpt: "耶鲁与微软提出RL驱动的Learn to Shard方案，首推分布式LLM推理中并行度与算子分片维度的联合优化。依托注意力精英策略，其在H100集群1.6T参数MoE模型上，经40",
     sourceUrl: "https://mp.weixin.qq.com/s/ehHwl5mhUZECazyFqxnckQ",
   },
   {
@@ -4551,7 +4551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "USTC", "MAN", "解码", "能效", "清华"],
-    excerpt: "关键词：T-MAN、查找表、低比特量化]、NPU 推理、端到端优化 当大模型遇上手机 NPU，推理速度反而比 CPU 还慢？USTC、微软研究院、清华等研究团队提出统一查找表方案，",
+    excerpt: "针对 NPU 运行低比特大模型时反量化开销大、能效低的问题，T-MAN 提出统一的查找表方案。该方案首次在 NPU 上实现端到端高效推理，使预填充和解码分别加速 1.4 倍和 3.",
     sourceUrl: "https://mp.weixin.qq.com/s/XEdG6g2LY0oLmw1YoapUfg",
   },
   {
@@ -4561,7 +4561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "开源",
     keywords: ["开源", "EasyDistill", "DistilQwen", "模型", "家族", "性能"],
-    excerpt: "关键词：知识蒸馏]、大语言模型、工具包、黑盒/白盒蒸馏 小而精的模型也能拥有大模型的智慧，秘诀就在这套开源工具包里。 在大模型风靡的今天，GPT-4、Qwen、DeepSeek 等",
+    excerpt: "阿里开源EasyDistill工具包，专为大模型知识蒸馏设计，支持黑盒与白盒蒸馏，涵盖系统1与系统2模型。它集成监督微调、强化学习、偏好优化及认知对齐等多种先进训练算法，提供完整配",
     sourceUrl: "https://mp.weixin.qq.com/s/99MVaBN9M80LoRtGdHWBwg",
   },
   {
@@ -4571,7 +4571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "训练", "Meta", "ThinkMachine", "MoEBlaze", "路由"],
-    excerpt: "关键词：MoEBlaze]、内存墙、MoE 训练、索引化路由 在当今大模型浪潮中，参数规模已突破万亿，训练成本与内存压力成为制约模型规模继续扩大的关键瓶颈。混合专家模型（Mixtu",
+    excerpt: "MoEBlaze是一个突破性的MoE训练框架，旨在解决因路由和复杂激活函数造成的“内存墙”瓶颈。其核心创新在于索引化路由与内核融合技术，可避免中间激活的物化存储，从而大幅降低内存占",
     sourceUrl: "https://mp.weixin.qq.com/s/WBoW811DgTDW9kK-3Fh3-w",
   },
   {
@@ -4581,7 +4581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MegaKernels",
     keywords: ["MegaKernels", "Luminal", "GPU", "SM", "内核", "内存"],
-    excerpt: "关键词：MegaKernels、Luminal编译器、GPU推理优化]、动态调度、符号工作队列、推理编译 只要 GPU 没有在加载数据，就是在浪费带宽；只要 GPU 没有在执行计算",
+    excerpt: "本文聚焦 GPU 推理效率优化，指出传统内核存在启动开销、波量化、内存延迟三大瓶颈。Luminal 提出将模型前向传播操作融合为单超级内核，通过动态调度、精细同步等技术消除瓶颈，并",
     sourceUrl: "https://mp.weixin.qq.com/s/hjui6jiY86m_MQtQlQEFTQ",
   },
   {
@@ -4591,7 +4591,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AngelSlim",
     keywords: ["AngelSlim", "链路", "腾讯", "优化", "模型", "部署"],
-    excerpt: "关键词：大模型压缩、投机采样、全模态推理、Eagle3 训练范式]、性能优化 近年来，大模型正从能力竞赛走向工程落地，推理阶段的成本、时延与稳定性逐渐成为制约规模化应用的核心因素。",
+    excerpt: "腾讯 AngelSlim 升级全模态大模型压缩工具，集成 Eagle3 投机采样训练范式。支持 LLM、VLM 及语音模型，实现训练即部署。实测显示，其推理速度最高飙升 1.9 倍",
     sourceUrl: "https://mp.weixin.qq.com/s/CW-7qAgNb_cd5eZXEdTM3g",
   },
   {
@@ -4601,7 +4601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "AI", "开源", "蚂蚁", "免费", "优化"],
-    excerpt: "关键词：SGLang、大模型推理]、技术沙龙、CuTe DSL、KV Cache 想要了解 SGLang 社区生态最新进展、DeepSeek 系列模型推理优化、CuTe DSL 通",
+    excerpt: "蚂蚁开源技术Meetup杭州站即将举办，聚焦SGLang社区、DeepSeek模型优化、KVCache系统、SGLang Diffusion、SGLang 模型极速启动、基于CuT",
     sourceUrl: "https://mp.weixin.qq.com/s/2Ym-dzblZ7TF550DanP7TQ",
   },
   {
@@ -4611,7 +4611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "Blackwell", "FP4", "FP6", "LLM", "TFLOPS"],
-    excerpt: "关键词：Blackwell、GPU、Microbenchmark]、5th-generation Tensor Core、TMEM] 本文工作量化了张量内存（TMEM）对矩阵密集型",
+    excerpt: "本文对 NVIDIA B200 GPU 进行微基准测试，剖析其第 5 代张量核心、TMEM、DE 及 FP4/FP6 精度等创新。相比 H200，其混合精度吞吐量提升 1.56 倍",
     sourceUrl: "https://mp.weixin.qq.com/s/DZhsQMUOOwl25pV8YsGWCg",
   },
   {
@@ -4631,7 +4631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "框架", "REVATI", "vLLM", "SGLang", "硬件"],
-    excerpt: "关键词：性能仿真建模、时间扭曲仿真]、大语言模型推理、虚拟时间协议]、无 GPU 仿真 得益于时间加速协议，REVATI 在 vLLM 和 SGLang 上的运行速度均比真实 GP",
+    excerpt: "本文提出REVATI——无GPU时间扭曲模拟器，解决LLM部署测试昂贵、离散模拟器需重实现的问题。它通过拦截CUDA调用虚拟设备、同步虚拟时间，直接执行系统代码，在vLLM/SGL",
     sourceUrl: "https://mp.weixin.qq.com/s/2GsXROvVqc4G3JebZJJAsw",
   },
   {
@@ -4641,7 +4641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "Sigma", "Tiny", "开源", "参数", "模型"],
-    excerpt: "关键词：Mixture-of-Experts (MoE)、super-high sparsity]、progressive sparsification scheduling、Si",
+    excerpt: "微软提出Sigma-MoE-Tiny模型，采用极稀疏MoE架构，总参数量20B而每个token仅激活0.5B参数（40:1）。为解决超高稀疏下的负载不均衡，论文提出渐进稀疏化调度策",
     sourceUrl: "https://mp.weixin.qq.com/s/4AMoB9hNIbYdUkLvgb1YCA",
   },
   {
@@ -4651,7 +4651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "David",
     keywords: ["David", "Patterson", "硬件", "模型", "挑战", "语言"],
-    excerpt: "关键词：LLM推理硬件、内存瓶颈、低延迟互连、高带宽闪存（HBF）]、近内存处理（PNM）] - Xiaoyu Ma：谷歌 DeepMind 高级 Staff 工程师]。研究方向为",
+    excerpt: "大型语言模型推理核心挑战是内存与互连而非计算，MoE、多模态等新趋势进一步加剧问题，现有GPU/TPU适配性不足。本文提出高带宽闪存（HBF）、近内存处理（PNM）、3D内存-逻辑",
     sourceUrl: "https://mp.weixin.qq.com/s/RaizMsxbLY0xyBm1lYkUKA",
   },
   {
@@ -4661,7 +4661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "Triton", "GPU", "Iris", "tile", "GEMM"],
-    excerpt: "关键词：Iris、Triton、多 GPU 通信、计算-通信融合、对称内存抽象、tile 级编程 现代 AI 工作负载需要近乎峰值的性能以充分提取 AI 系统的效率。 然而，多 G",
+    excerpt: "本文提出纯 Python/Triton 实现的多GPU 通信库 Iris，以瓦片级对称内存抽象契合Triton编程模型，消除性能与可编程性权衡。其支持多类计算-通信重叠模式，微基准",
     sourceUrl: "https://mp.weixin.qq.com/s/tjrHOltTYl0flJj2pvhSXw",
   },
   {
@@ -4671,7 +4671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LoPA",
     keywords: ["LoPA", "Token", "token", "解码", "小艺", "数量级"],
-    excerpt: "关键词：推理加速]、dLLM、LoPA、前瞻并行解码、Token 填充顺序（TFO）、分支并行（BP） 单样例推理速度对比：SGLang 部署的 Qwen3-8B (NVIDIA)",
+    excerpt: "本文针对扩散大语言模型（dLLM）推理并行性受限问题，提出无训练即插即用的LoPA算法，通过并行探索令牌填充顺序选最优分支，提升D2F模型TPF至10.1（GSM8K）和8.3（H",
     sourceUrl: "https://mp.weixin.qq.com/s/64Cg9Gk-t51CCcCJx7360Q",
   },
   {
@@ -4681,7 +4681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kernel",
     keywords: ["Kernel", "AKG", "Agent", "DSL", "一键", "智能"],
-    excerpt: "关键词：Kernel Generation、AI for AI System]、Multi-Agent System、Code Optimization]、Hardware Acc",
+    excerpt: "本文提出AKG Kernel Agent多智能体框架，以自动化AI计算核的生成、迁移与性能调优，含Designer、Coder等四专项agent，支持多DSL与硬件。经评估，其Tr",
     sourceUrl: "https://mp.weixin.qq.com/s/bY4b6QRep2TgiCSnyJr1zg",
   },
   {
@@ -4691,7 +4691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Intel", "MLIR", "NanoKernel", "内核", "乘法"],
-    excerpt: "关键词：MLIR]、nanokernels、microkernels]、matmul、vectorization、compiler 注：超微内核（Nanokernel） 指寄存器级",
+    excerpt: "Intel 团队提出 MLIR 驱动的编译方案，自动生成目标特定的矩阵乘法 Nanokernel，消除对外部微内核库的依赖。该方案支持 AVX2、AVX512、AMX 指令集，适配",
     sourceUrl: "https://mp.weixin.qq.com/s/AqXdeROJ-_QOB1jvWKdhhQ",
   },
   {
@@ -4701,7 +4701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "VLCache",
     keywords: ["VLCache", "token", "视觉", "精度", "智能", "效率"],
-    excerpt: "关键词：VLCache、视觉语言模型（VLM）、KV缓存复用、动态重计算]、推理加速、精度保留 你有没有遇到过这样的场景：用 AI 工具连续询问同一张图片的不同问题时，每次都要等待",
+    excerpt: "阿里 Qwen 团队提出一种视觉语言模型缓存复用框架VLCache，通过复用历史请求的视觉编码器输出与KV缓存，结合动态层感知重计算策略，仅需重计算约2%视觉token即可实现近无",
     sourceUrl: "https://mp.weixin.qq.com/s/17OUnGT_q7SEaHZX24nf_w",
   },
   {
@@ -4711,7 +4711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MobileRL",
     keywords: ["MobileRL", "GUI", "AndroidWorld", "成功率", "面向", "框架"],
-    excerpt: "关键词：MobileRL框架、端侧GUI智能体、强化学习、ADAGRPO算法、Android基准测试 - MobileRL: Online Agentic Reinforcemen",
+    excerpt: "本文提出MobileRL框架，通过无推理与推理监督微调预热模型，结合创新的ADAGRPO算法（含AdaPR、FCF、SPA策略）进行在线强化学习，解决移动GUI智能体任务难度长尾分",
     sourceUrl: "https://mp.weixin.qq.com/s/sJIGXnVVwH-Fc7hgLCNw1Q",
   },
   {
@@ -4721,7 +4721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kernel",
     keywords: ["Kernel", "SGLang", "vLLM", "FlashInfer", "Bench", "AI"],
-    excerpt: "关键词：AI for AI systems]、LLM、GPU Kernel、Benchmark]、Dynamic Substitution 近年来，随着大语言模型（Large La",
+    excerpt: "本文提出FlashInfer-Bench，一个从AI生成到生产部署的闭环框架。它通过标准化任务描述、真实负载数据集和动态内核替换机制，实现AI生成GPU内核在SGLang/vLLM",
     sourceUrl: "https://mp.weixin.qq.com/s/TPvjwIODPGJt4w-xyAk86A",
   },
   {
@@ -4731,7 +4731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "核化",
     keywords: ["核化", "细粒度", "编译器", "SGLang", "vLLM", "Mirage"],
-    excerpt: "关键词：#MPK、#LLM推理、#MegaKernel、#SM级任务图、#多GPU优化、#跨算子优化 MPK 作为首个自动 Mega Kernel 化多 GPU LLM 推理的编译",
+    excerpt: "Mirage Persistent Kernel是首个自动将多GPU模型推理转化为单一高性能巨核的编译与运行时系统。核心为SM级tGraph，捕捉细粒度依赖，结合编译器优化与内核内",
     sourceUrl: "https://mp.weixin.qq.com/s/YsHTI6PsQv803433pipGLw",
   },
   {
@@ -4741,7 +4741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "全栈",
     keywords: ["全栈", "Dragon", "Wing", "算力", "TOPS", "AI"],
-    excerpt: "高通 #Dragon Wing 系列 #全栈机器人技术 #物理 AI #工业物联网 #机器人生态 2026 年 1 月，全球消费电子展（CES）拉斯维加斯站上，高通技术公司（Qua",
+    excerpt: "2026年CES，高通发布全栈机器人技术套件与 Dragon Wing IQ10 处理器，依托Dragon Wing 全系列芯片矩阵，整合硬件、软件与 AI 形成端到端方案，兼具低",
     sourceUrl: "https://mp.weixin.qq.com/s/TbJh1MMYlZjNpeiMRCIgig",
   },
   {
@@ -4751,7 +4751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "GB200", "NVL72", "GPU", "MI355X", "成本"],
-    excerpt: "关键词：MoE、AI 推理、推理经济、NVIDIA GB200 NVL72]、AMD MI355X]、吞吐量 - From Dense to Mixture of Experts:",
+    excerpt: "本文借第三方基准测试评AI推理 token 经济学，对比英伟达（B200等）与AMD（MI355X）平台性能及TCO。英伟达性能、性价比占优，AMD价低但性能差，虽优化提速，前沿部",
     sourceUrl: "https://mp.weixin.qq.com/s/R0z1FfnomgYiBT41iwL8AQ",
   },
   {
@@ -4761,7 +4761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Meta",
     keywords: ["Meta", "TritorX", "ML", "ASIC", "Agentic", "OpInfo"],
-    excerpt: "关键词：TritorX、ML ASIC、PyTorch ATen 内核]、Agentic AI、有限状态机、算子覆盖 - Agentic Operator Generation f",
+    excerpt: "Meta, FAIR, 超级智能实验室提出TritorX框架，以大语言模型为核心，结合MTIA专用代码检查器、编译器及验证器的多源反馈，迭代生成并优化算子内核-包装器对。该框架在多",
     sourceUrl: "https://mp.weixin.qq.com/s/plgJM1Z9Xi-RmUYNwLkbWw",
   },
   {
@@ -4771,7 +4771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGLang",
     keywords: ["SGLang", "RL", "Lead", "AI", "学术", "职业"],
-    excerpt: "导语：想必大家都听了小宇宙《AI 实话实说》栏目第一期《和 SGLang RL Lead 赵晨阳聊聊 AI Infra 和开源社区》，本文对访谈的部分内容的总结，必然会有一些本文角",
+    excerpt: "赵晨阳在《AI实话实说》播客分享从学术转工业界的经历，聚焦AI基础设施、开源生态，解析技术趋势，给出工业界实战等职业建议，强调影响力的价值，呼吁主动学习应对AI失业挑战。",
     sourceUrl: "https://mp.weixin.qq.com/s/21d2O9J_bOPedtEVgZi9MA",
   },
   {
@@ -4781,7 +4781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoGLM",
     keywords: ["AutoGLM", "GUI", "Agent", "GPT", "成功率", "学会"],
-    excerpt: "关键词：AutoGLM、GUI 智能体、自主智能体训练方法、中间接口设计、Android 自主控制] - AutoGLM: Autonomous Foundation Agents",
+    excerpt: "AutoGLM是ChatGLM家族的GUI基础智能体，聚焦网页浏览与Android设备控制。核心创新为中间接口设计（分离规划与接地）和自进化在线课程强化学习，多项基准测试表现突出，",
     sourceUrl: "https://mp.weixin.qq.com/s/nCGmCFf_3F4CHC60Fk_hnQ",
   },
   {
@@ -4791,7 +4791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "维子", "层级", "共性", "架构", "逻辑"],
-    excerpt: "关键词：通用子空间、深度神经网络、低秩子空间]、模型可复用性]、权重空间分析 在大模型时代，一个矛盾始终困扰着研究者：我们训练的模型越来越大（从百亿到万亿参数），但每次适配新任务都",
+    excerpt: "本论文提出“通用权重子空间假设”：无论任务与数据如何，同架构神经网络的参数均会收敛到共享的低维子空间。通过对1100多个模型的大规模分析验证了这一现象。该发现能实现显著的模型压缩与",
     sourceUrl: "https://mp.weixin.qq.com/s/XnqkKJPn_oqeiL7CRaAMOw",
   },
   {
@@ -4801,7 +4801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "硬件", "ResNet", "YOLOv8", "Android", "Gen2"],
-    excerpt: "关键词：Android]、异构计算、模型量化、ResNet、YOLO、高通骁龙 当你用手机的“拍照识物”功能时，是否遇到过画面卡顿？当直播 APP 的实时美颜延迟明显时，你是否好奇",
+    excerpt: "本文探究Android系统中ResNet/YOLO模型在CPU、GPU、NPU的推理优化及量化方案。结果显示NPU最高提速298倍，ResNet适配INT8（精度损失小），GPU最",
     sourceUrl: "https://mp.weixin.qq.com/s/UTLUngjOnnFfmTnmemdDxw",
   },
   {
@@ -4811,7 +4811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "扩展性",
     keywords: ["扩展性", "DeepSeek", "HC", "Manifold", "Constrained", "Hyper"],
-    excerpt: "关键词：Manifold-Constrained Hyper-Connections、Hyper-Connections、Residual Connection、Manifold ",
+    excerpt: "本文针对Hyper-Connections（HC）扩展残差流后训练不稳定、内存开销大的问题，提出mHC框架。通过Sinkhorn-Knopp算法约束残差映射为双随机矩阵，搭配核融合",
     sourceUrl: "https://mp.weixin.qq.com/s/xXyurOxj2NE5pvKNwbRHDA",
   },
   {
@@ -4821,7 +4821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "AI", "W8A8C8", "FP8", "开源", "腾讯"],
-    excerpt: "关键词：HY-MT1.5 模型、机器翻译、多阶段训练框架]、性能-效率平衡、定制化翻译、模型量化 HY-MT1.5 系列模型在翻译质量和响应效率之间实现了卓越的平衡。兼具高翻译精度",
+    excerpt: "腾讯混元翻译模型1.5版开源，含1.8B（端侧轻量化）与7B（云侧高精度）双模型，支持33语种及5种民汉/方言互译。依托On-Policy蒸馏技术，性能超主流商用API，端侧模型1",
     sourceUrl: "https://mp.weixin.qq.com/s/CwEQv5-jJ2Iu5JMwzGTDUA",
   },
   {
@@ -4831,7 +4831,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "RL",
     keywords: ["RL", "infra", "国产", "模式"],
-    excerpt: "关键词：国产卡生态、强化学习、精度对齐、开源社区、基础设施、技术转向 这一年，在AI基础设施领域的探索像是一场充满未知的闯关之旅。从一头扎进国产卡生态，在算子大模型的训练与强化学习",
+    excerpt: "2025年，作者深耕AI基础设施领域，先在国产卡上完成 “刘备大模型” 全流程训练，却因RL生态滞后、精度对齐等难题转向RL infra。入职新公司后攻坚Eagle3训练，参与SG",
     sourceUrl: "https://mp.weixin.qq.com/s/wiKE5bTwXTT8AiA_CcOn0A",
   },
   {
@@ -4841,7 +4841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "跨代",
     keywords: ["跨代", "AMD", "Ryzen", "AI", "NPU", "GEMM"],
-    excerpt: "关键词：GEMM、Neural Processing Unit]、Hardware Acceleration、Deep Learning、XDNA Architecture 在 A",
+    excerpt: "本文针对AMD Ryzen AI的XDNA/XDNA2 NPU，提出系统方法论优化GEMM性能，平衡计算与内存瓶颈并利用NPU架构特性。实验显示int8达6.76（XDNA）/38",
     sourceUrl: "https://mp.weixin.qq.com/s/9OoAxjpK4LE8OonKX-O2Zg",
   },
   {
@@ -4851,7 +4851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "NeuralTalk", "TritonNext", "实训", "AI", "算子"],
-    excerpt: "关键词：TritonNext技术大会、FlagOS、Triton技术体系]、前沿技术观摩、实战技术工坊、NeuralTalk专属渠道 宝子们！岁末福利来啦～ 专为开发者准备的技术盛",
+    excerpt: "2026 TritonNext 技术大会，NeuralTalk 免费渠道现已开启！",
     sourceUrl: "https://mp.weixin.qq.com/s/DhFN2En0QDzD3uqpXxn20w",
   },
   {
@@ -4861,7 +4861,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "编译器",
     keywords: ["编译器", "LLM", "nncase", "graph", "异构", "架构"],
-    excerpt: "关键词：LLM 编译、e-graph]、异构存储架构、统一分布式编译、自动优化、端到端编译框架 - 本文转载自知乎账号：郑启航[1] - https://zhuanlan.zhih",
+    excerpt: "本文提出开源端到端编译器 nncase，破解 LLM 在异构存储架构部署难题。核心是 e-graph term rewrite 引擎，集成 Auto Vectorize 等三模块，",
     sourceUrl: "https://mp.weixin.qq.com/s/Ydy1_3fVpWxPFeL23j0idQ",
   },
   {
@@ -4871,7 +4871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "FP8", "Chitu", "赤兔", "原生", "指南"],
-    excerpt: "关键词：赤兔、FP8、LLM推理引擎]、开源、国产算力、GPU 在大模型产业化落地的浪潮中，推理引擎作为连接先进模型与多元算力的核心桥梁，直接决定了 AI 应用的部署效率、成本与稳",
+    excerpt: "国产开源大模型推理引擎 Chitu（赤兔），凭借软 FP8/FP4 转换、多元算力适配、多维并行优化三大核心技术，打破高端硬件依赖，实现老卡运行原生高精度模型，硬件成本降超 50%",
     sourceUrl: "https://mp.weixin.qq.com/s/hO7YSx7mAZWzDOxFW-xUnQ",
   },
   {
@@ -4881,7 +4881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FA3",
     keywords: ["FA3", "NVIDIA", "Tensor", "Core", "GPU", "Warp"],
-    excerpt: "关键词：Tensor Core GPU]、Software Pipelining、Warp Specialization、Twill、Constraint Solving、Modu",
+    excerpt: "本文针对GPU中软件流水线（SWP）与warp专业化（WS）优化依赖启发式或直觉的难题，提出Twill系统，以约束求解联合优化二者，自动生成最优调度，复现Hopper、Blackw",
     sourceUrl: "https://mp.weixin.qq.com/s/REL_vcr2jqZHxJ3AbgfwHQ",
   },
   {
@@ -4891,7 +4891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "AMD", "Versal", "ACAP", "NVIDIA", "Jetson"],
-    excerpt: "关键词：Energy Efficiency、GEMM]、Performance Modeling、Versal ACAP]、FPGA、Machine Learning 对于从事异构",
+    excerpt: "本文提出ML驱动的GEMM优化框架，针对AMD Versal ACAP架构，离线用6000+硬件数据训练模型，支持 GEMM 吞吐量/能效双目标调优。其吞吐量、能效超CHARM/A",
     sourceUrl: "https://mp.weixin.qq.com/s/RdcTMb9Oa0nq3B92sBdiig",
   },
   {
@@ -4901,7 +4901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GUI",
     keywords: ["GUI", "Agent", "MobileWorldBench", "像素", "建模", "语义"],
-    excerpt: "关键词：语义世界建模]、移动智能体、MobileWorldBench、MobileWorld、视觉语言模型]、GUI 世界建模 在手机 APP 操作中，我们早已习惯了“点击-反馈”",
+    excerpt: "本文提出语义世界建模范式替代移动GUI智能体像素级建模，推出MobileWorldBench基准与 1.4M 样本的MobileWorld 数据集，构建 VLM 规划框架。实验证实",
     sourceUrl: "https://mp.weixin.qq.com/s/S5lK3jNwd0Bjzf5n5Nz7xQ",
   },
   {
@@ -4911,7 +4911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GUI",
     keywords: ["GUI", "阶跃", "Agent", "MCP", "星辰", "模型"],
-    excerpt: "关键词：GUI 自动化、CSRS、Step-GUI、GUI-MCP、AndroidDaily、GUI 智能体 在智能手机和电脑主导的时代，我们每天都在和图形界面（GUI）打交道——",
+    excerpt: "本文提出GUI自动化全链路方案，含CSRS训练管道（成本降10-100倍、精度\\x26gt;90%）、Step-GUI模型（4B/8B，SOTA且支持本地部署）、GUI-MCP跨设",
     sourceUrl: "https://mp.weixin.qq.com/s/L2nB4hX5gxDc2ZBQIVIksw",
   },
   {
@@ -4921,7 +4921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CPU",
     keywords: ["CPU", "GPU", "NPU", "AI", "AME", "浙大"],
-    excerpt: "关键词：代理内存]、向量数据库、异构计算]、智能手机SoC、端侧AI 当我们用手机语音助手规划行程、让智能应用记住偏好时，背后都离不开“端侧 AI 的长期记忆 ”——也就是能持续存",
+    excerpt: "本文针对智能手机端智能体动态记忆需求，提出AME异构引擎，解决现有向量数据库与移动SoC、负载的适配问题，在骁龙8系列上查询吞吐量提1.4倍、索引构建快7倍、插入吞吐量高6倍。",
     sourceUrl: "https://mp.weixin.qq.com/s/PI1vcBTBcjd9TzVREOpbYg",
   },
   {
@@ -4931,7 +4931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TFLOPS",
     keywords: ["TFLOPS", "ETH", "Tile", "Based", "PE", "GEMM"],
-    excerpt: "关键词：Design in Tiles (DiT) 、Tile-Based Many-PE Accelerators、GEMM、Automated Deployment、Netwo",
+    excerpt: "针对瓦片式多 PE 加速器 GEMM 编程难问题，本文提出 DiT 自动化框架，整合 SoftHier 仿真与 DaCe 部署工具，对标 NVIDIA GH200 评估，多样矩阵下",
     sourceUrl: "https://mp.weixin.qq.com/s/D2N7xgmzesr4UEWKJKiIUg",
   },
   {
@@ -4941,7 +4941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVFP4",
     keywords: ["NVFP4", "MIT", "NVIDIA", "Four", "Over", "Six"],
-    excerpt: "关键词：NVFP4、Four Over Six（4/6）、大型语言模型（LLM）、自适应块缩放、低精度训练、后训练量化（PTQ）] - Four Over Six: More Ac",
+    excerpt: "本文针对NVFP4量化大语言模型时的训练发散与推理性能下降问题，提出Four Over Six方法，为每个值块评估4和6两个缩放因子以减少近最大值误差，适配NVIDIA Black",
     sourceUrl: "https://mp.weixin.qq.com/s/-AV1ntr5CtLJ1eUu5Sxy0g",
   },
   {
@@ -4951,7 +4951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "融合",
     keywords: ["融合", "MICRO", "RISC", "GPGPU", "算力", "开源"],
-    excerpt: "关键词：GPGPU、Microarchitecture]、Mixed-Precision、Fused Dot Product]、Tensor Computation - Mixed",
+    excerpt: "本文提出开源 GPGPU 混合精度融合点积单元，通过 4 阶段流水线融合浮点与整数计算，支持多精度格式运算。其在 FPGA 上实现 4 周期延迟与 306.6MHz频率，性能较传统",
     sourceUrl: "https://mp.weixin.qq.com/s/qpRQTs9WD21R8UJskbRaWg",
   },
   {
@@ -4961,7 +4961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "BLASST", "Softmax", "阈值", "解码", "注意力"],
-    excerpt: "关键词：BLASST、稀疏注意力、大语言模型、长上下文推理、动态剪枝] 在大语言模型（LLM）领域，“更长的上下文”始终是核心追求——从处理百万 token 的代码库，到分析超长文",
+    excerpt: "本文提出BLASST动态稀疏注意力方法，解决LLM长上下文注意力$O(n^2)$瓶颈，借Softmax阈值剪枝无效块，无需预计算，适配prefill/decode，含自动校准与稀疏",
     sourceUrl: "https://mp.weixin.qq.com/s/b2AwbI3fkr_J_5YtusxuwQ",
   },
   {
@@ -4971,7 +4971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "stall", "架构", "指南", "场景", "优化"],
-    excerpt: "关键词：LLM Inference、GPU、Prefill-Decode Heterogeneity]、Microarchitectural Analysis、Multi-GPU ",
+    excerpt: "本文系统表征GPU上LLM推理，揭示Prefill（计算受限）与Decode（内存受限）两阶段异质性，分析能耗可预测性与系统缩放规律，探讨MoE、RAG等影响，给出多场景优化指南，",
     sourceUrl: "https://mp.weixin.qq.com/s/BL4JQhsC0kOJRv-rMQxUVQ",
   },
   {
@@ -4981,7 +4981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SLMQuant",
     keywords: ["SLMQuant", "W4A8", "效能", "基准", "模型", "语言"],
-    excerpt: "关键词：小型语言模型、模型量化]、模型压缩、基准测试 （SLMQuant）、边缘部署 - SLMQuant: Benchmarking Small Language Model Q",
+    excerpt: "本文提出首个小型语言模型（SLM）量化基准SLMQuant，设压缩性能、推理性能、量化消耗三评估轨道，分析多量化方法，发现8位量化近无损、SLM瓶颈为权值分散，给出设计建议，未来将",
     sourceUrl: "https://mp.weixin.qq.com/s/9D2PgonG_PCbyWU5VP0cUg",
   },
   {
@@ -4991,7 +4991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "gpu",
     keywords: ["gpu", "ext", "eBPF", "GPU", "OS", "子系统"],
-    excerpt: "关键词：gpuext、eBPF、GPU资源管理]、跨层策略运行时、SIMT感知优化、多租户GPU调度] 如今，GPU 早已不是“游戏专属”，而是 AI 时代的“算力心脏”。从 LL",
+    excerpt: "本文针对GPU资源管理中统一策略适配差用户态缺全局控制、内核态改造成本高，提出eBPF-based的gpu_ext跨层运行时，将GPU驱动与设备化为可编程OS子系统，含SIMT验证",
     sourceUrl: "https://mp.weixin.qq.com/s/Q7Ypes67kwtmFAxfh1byUg",
   },
   {
@@ -5001,7 +5001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "LLM", "MoE", "RAG", "范式", "架构"],
-    excerpt: "关键词：LLM Inference、GPU、Two-Phase Heterogeneity]、Microarchitectural Analysis、System Scaling]",
+    excerpt: "本文针对 LLM 推理研究碎片化问题，提出四维分析框架，揭示 Prefill 计算约束、Decode 内存约束的核心异质性与瓶颈迁移规律，量化性能能耗关联，为相关优化提供实证基础与",
     sourceUrl: "https://mp.weixin.qq.com/s/2vK1NHWUo-cGfayMoNhS-A",
   },
   {
@@ -5011,7 +5011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "H100",
     keywords: ["H100", "MoE", "SonicMoE", "IO", "tile", "开源"],
-    excerpt: "关键词：混合专家模型（MoE）、SonicMoE、GPU 内核优化、内存高效算法]、令牌舍入路由、细粒度稀疏 MoE SonicMoE 已开源，方案基于 CuTe-DSL 实现并提",
+    excerpt: "在Hopper GPU上，SonicMoE对细粒度7B MoE的计算吞吐量达ScatterMoE BF16 kernel的1.86倍，方案基于 CuTe-DSL 实现并提供 PyT",
     sourceUrl: "https://mp.weixin.qq.com/s/OkCuIPncwdgAgD7tUjpnMw",
   },
   {
@@ -5021,7 +5021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "精度", "ChatGPT", "调用", "微调", "智能"],
-    excerpt: "关键词：小型语言模型、靶向微调、工具调用]、监督微调、模型效率]、ToolBench - Small Language Models for Efficient Agentic T",
+    excerpt: "本文针对LLM部署成本高问题，采用Hugging Face TRL的监督微调技术，基于ToolBench数据集训练OPT-350M小模型，单轮训练ToolBench通过率达77%，",
     sourceUrl: "https://mp.weixin.qq.com/s/bqgnZEdkB9Zf7vqXddyWvQ",
   },
   {
@@ -5031,7 +5031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "SuperOffload", "SuperChip", "LLM", "MFU", "芯片"],
-    excerpt: "关键词：SuperOffload、大语言模型训练、超级芯片、卸载技术]、异构计算 本研究探索超级芯片时代 LLM 训练软件优化方案]，发现基于 PCIe 带宽限制设计的传统卸载方案",
+    excerpt: "本文提出SuperOffload系统，专为超级芯片如NVIDIA GH200优化LLM训练，整合多种核心技术，吞吐量较主流方案提升2.5倍，单芯片支持25B模型训练，8芯片可实现1",
     sourceUrl: "https://mp.weixin.qq.com/s/fj_XLlnNnNEAWI7fzXFEFw",
   },
   {
@@ -5041,7 +5041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "decuda",
     keywords: ["decuda", "Nvidia", "GT200", "层级", "架构", "基准"],
-    excerpt: "关键词：GPU Microarchitecture、Microbenchmarking、CUDA、Memory Hierarchy]、Arithmetic Pipeline、Con",
+    excerpt: "本文验证CUDA指南部分GPU硬件特性，发现未文档化结构及与文档差异，介绍架构分析方法，以GT200为例用微基准测试探究其微架构，还提供数据支撑与参考，助力挖掘GPU潜力。",
     sourceUrl: "https://mp.weixin.qq.com/s/Cs9mrNtgmADrRbLJJm__LA",
   },
   {
@@ -5051,7 +5051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPRev",
     keywords: ["FPRev", "浮点", "逆向", "顺序", "工具"],
-    excerpt: "关键词：FPRev、浮点累加顺序、数值可复现性、异构计算、浮点运算、累加顺序推断 - Revealing Floating-Point Accumulation Orders in",
+    excerpt: "本文针对浮点累积操作如求和、矩阵乘法，在软硬件实现中累积顺序常未文档化，导致跨系统结果不一致、阻碍数值可复现性的问题，提出诊断工具FPRev。该工具通过数值测试非侵入式揭示累积顺序",
     sourceUrl: "https://mp.weixin.qq.com/s/e6BgP4Iv-Et9BRkSCig_Bg",
   },
   {
@@ -5061,7 +5061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "硬件",
     keywords: ["硬件", "FireSim", "RISC", "商用", "基准", "桥梁"],
-    excerpt: "关键词：RISC-V、FireSim、High Performance Computing、Simulation Model、Performance Evaluation - Br",
+    excerpt: "本文系统评估了FireSim仿真与真实RISC-V硬件的性能差异，通过对比Banana Pi和MILK-V平台，发现内存子系统是仿真主要瓶颈，为未来仿真工具改进与架构探索提供重要参",
     sourceUrl: "https://mp.weixin.qq.com/s/eB3tsdK4A9NqP7jJwu71LA",
   },
   {
@@ -5071,7 +5071,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ProfilingGuided",
     keywords: ["ProfilingGuided", "LLM", "TritonForge", "Triton", "内核", "成功率"],
-    excerpt: "关键词：TritonForge、Triton Kernel Optimization、Profiling-Guided、LLMs、Automated Optimization - ",
+    excerpt: "TritonForge开创性地融合LLM与硬件性能剖析，实现Triton GPU内核的自动优化。该系统通过剖析-生成闭环，平均带来1.76倍加速，最高可达5倍，为AI驱动的高性能计",
     sourceUrl: "https://mp.weixin.qq.com/s/Aa1pz-swbYYDPLvCJElzkQ",
   },
   {
@@ -5081,7 +5081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NiceToMeetYou",
     keywords: ["NiceToMeetYou", "MLIR", "LLVM", "助力", "静态", "手工"],
-    excerpt: "关键词：Abstract Transformers]、Program Synthesis、MLIR、Static Analysis、Compiler Optimization]、F",
+    excerpt: "要理解“抽象变换器”（abstract transformer），咱们得先从编译器的核心需求说起，再一步步拆解它的作用。",
     sourceUrl: "https://mp.weixin.qq.com/s/f_5Li-u9QorLEb-RyUbVLg",
   },
   {
@@ -5091,7 +5091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Triton", "Iris", "范式", "开源", "分布式"],
-    excerpt: "关键词：大型语言模型、多 GPU 分布式执行、细粒度融合]、三税分析框架、Triton、跨 GPU 通信] - Eliminating Multi-gpu Performance ",
+    excerpt: "本文突破传统BSP模型，提出“三税”框架揭示多GPU LLM性能瓶颈。通过Triton与Iris实现计算-通信融合，构建Tile级生产者-消费者流水线，在关键算子上实现10-20%",
     sourceUrl: "https://mp.weixin.qq.com/s/ttaE7q5GjKkC-Yt58SNAgQ",
   },
   {
@@ -5101,7 +5101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "ELANA", "token", "KV", "开源", "能效"],
-    excerpt: "关键词：大型语言模型 (LLM)、能效分析、延迟分析、性能评测工具、缓存分析、模型部署 - ELANA: A Simple Energy and Latency Analyzer ",
+    excerpt: "ELANA 是开源轻量型 LLM 评测工具，支持多 GPU 与边缘设备，兼容 Hugging Face 模型，可量化模型/KV 缓存大小、三类延迟及多维度能耗，为 LLM 高效部署",
     sourceUrl: "https://mp.weixin.qq.com/s/TaSn1lQDzfP-Dd-qcw-4tg",
   },
   {
@@ -5111,7 +5111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "PyTorch", "FPGA", "Vitis", "HLS", "闭源"],
-    excerpt: "关键词：PyTorch、Calyx、编译器工具链、机器学习加速器、FPGA - From PyTorch to Calyx: An Open-Source Compiler Too",
+    excerpt: "本文提出开源端到端编译器工具链，整合Allo、CIRCT与Calyx，实现PyTorch模型直编FPGA可综合SystemVerilog，经内存分区优化，性能最高达Vitis HL",
     sourceUrl: "https://mp.weixin.qq.com/s/gmTfCnHqvp8hfvUiYiHpQw",
   },
   {
@@ -5121,7 +5121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "跨平台",
     keywords: ["跨平台", "Triton", "GPU", "Attention", "SOTA", "顶尖"],
-    excerpt: "我们所研究的优化方法累计实现了高达 589%的性能提升，并已将相关内核与框架作为开源项目贡献（ibm.biz/vllm-ibm-triton-lib）。最终，我们开发的高度优化内核",
+    excerpt: "本文针对 LLM 推理硬件依赖问题，提出基于 Triton 的跨平台分页注意力内核方案，经优化性能大幅提升，适配多 GPU 且开源集成至 vLLM，实现硬件无关化部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/ph1UCvrsGQpYL9ZsOMW08A",
   },
   {
@@ -5131,7 +5131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "vLLM", "SGLang", "TileRT", "Tile", "Based"],
-    excerpt: "关键词：TileRT、超低延迟、LLM推理、tile 级运行时、多GPU、编译器驱动 TileRT: Tile-Based Runtime forUltra-Low-Latency",
+    excerpt: "TileRT 以编译器驱动的 tile 级运行时为核心，分解算子任务并多GPU重叠执行，8×B200上运行DeepSeek-V3.2，无有损优化下延迟显著优于vLLM、SGLang",
     sourceUrl: "https://mp.weixin.qq.com/s/5T-93n5kk7UbHXj_I3NIvw",
   },
   {
@@ -5141,7 +5141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "AI", "异构", "综述", "调度", "模型"],
-    excerpt: "关键词：scheduler、accelerator、DNN、heterogeneous edge computing、performance、NVIDIA Jetson] 本文聚焦",
+    excerpt: "本文聚焦现代异构边缘 GPU 的 DNN 调度技术，开展系统性综述。背景方面，边缘计算设备需求激增，Jetson 设备集成 CPU、GPU、DLA 等多加速器，但缺乏自动化 DNN",
     sourceUrl: "https://mp.weixin.qq.com/s/PmmhP-OyYzNqd3OK1izOzQ",
   },
   {
@@ -5151,7 +5151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RVV",
     keywords: ["RVV", "Intrinsic", "VecIntrinBench", "LLM", "开源", "通过率"],
-    excerpt: "关键词：RISC-V Vector Intrinsic、Code Migration]、Benchmark、Large Language Model、Intrinsic Code ",
+    excerpt: "VecIntrinBench为首个支持RVV内在函数的跨架构迁移基准，含50个开源库任务。对比显示，先进LLM在10次尝试内迁移通过率比规则基高20%且性能更优，但存在RVV AP",
     sourceUrl: "https://mp.weixin.qq.com/s/Y4M_RyTRja7C45krNDRSKA",
   },
   {
@@ -5161,7 +5161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "代码生成",
     keywords: ["代码生成", "NVIDIA", "ComputeEval", "LLMs", "CUDA", "基准"],
-    excerpt: "关键词：CUDA 代码生成、NVIDIA、CUDA 代码数据集、AI 辅助编程 大语言模型（LLMs）正深刻改变开发者的编码方式——无论是资深工程师还是入门开发者，如今的顶尖模型已",
+    excerpt: "ComputeEval是NVIDIA推出的CUDA代码生成评估框架。其通过难度升级的基准测试发现，大语言模型在复杂GPU编程（如性能优化）上仍有不足。该工具旨在推动AI辅助高性能计",
     sourceUrl: "https://mp.weixin.qq.com/s/yj4vYcSRa61igeeBm9XLWg",
   },
   {
@@ -5171,7 +5171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Brendan",
     keywords: ["Brendan", "Gregg", "Intel", "时代", "行业"],
-    excerpt: "关键词：Brendan Gregg、Intel、性能优化、火焰图、eBPF、异构计算 未来十年的性能专家，或许不再是只精通 CPU 或操作系统的“纵深者”，而必须是能横跨硬件微架构",
+    excerpt: "Brendan Gregg离职Intel，期间推出AI/GPU火焰图等成果，背后是计算架构离散化趋势。事件折射产业变迁，启示从业者需成横跨软硬件的“通感架构师”。",
     sourceUrl: "https://mp.weixin.qq.com/s/l8rPZCzJxL_R9KzFGxy-aQ",
   },
   {
@@ -5181,7 +5181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "B200",
     keywords: ["B200", "nm", "Chiplet", "RISC", "AI", "HPC"],
-    excerpt: "关键词：Chiplets、RISC-V、HPC、AI、NoC、Open-Source 据估算，第三代 Ogopogo 的开源实现方案可达到 10.3 DP-TFLOP/s 的峰值性",
+    excerpt: "本文提出面向开源Chiplet RISC-V路线，12nm Occamy性能为 876 DP-GFLOP/s、Ramora 1.29 DP-TFLOP/s、7nm Ogopogo ",
     sourceUrl: "https://mp.weixin.qq.com/s/Yc9rzTebhhjzLLL4wX7tXw",
   },
   {
@@ -5191,7 +5191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "Apple", "Silicon", "MLX", "MLC", "Ollama"],
-    excerpt: "关键词：Apple Silicon、本地 LLM 推理、推理框架对比、量化性能评估、长上下文处理、隐私保护 - Production-Grade Local LLM Inferen",
+    excerpt: "本文在 M2 Ultra Mac Studio 上，以 Qwen-2.5 测 Apple Silicon 5 个 LLM 框架，MLX 吞吐量优，MLC-LLM 长上下文强，Oll",
     sourceUrl: "https://mp.weixin.qq.com/s/7cWDiJkFy9yf6-hwrqoYmw",
   },
   {
@@ -5201,7 +5201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SLMs",
     keywords: ["SLMs", "CPU", "GPU", "NPU", "硬件", "模型"],
-    excerpt: "关键词：生成式 AI、Small Language Models(SLMs)、] edge computing、NPU、GPU、CPU - Edge Deployment of S",
+    excerpt: "本文针对边缘部署，测试11款0.6B-14B小模型对比CPU/GPU/NPU后端性能和能效。带宽归一化为前提，NPU表现最优，FP16场景 EDP 较 GPU 提升 84%，Q4精",
     sourceUrl: "https://mp.weixin.qq.com/s/Uk2QH58l9j6aYRsFzS9_PA",
   },
   {
@@ -5211,7 +5211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SIMT",
     keywords: ["SIMT", "Tile", "CUDA", "优化", "特性"],
-    excerpt: "关键词：cuTile Python、CUDA Tile、GPU 编程、tile-based 编程模型、CUDA Toolkit - 英伟达 CUDA 13.1 的发布为 GPU 引",
+    excerpt: "本文介绍 NVIDIA CUDA 13.1 的 cuTile Python，以瓦片模型简化 GPU 编程，自动处理底层任务，需 10.x/12.x GPU 等，支持 Nsight ",
     sourceUrl: "https://mp.weixin.qq.com/s/vSzFkJGHQk0vh41qHxuQtQ",
   },
   {
@@ -5221,7 +5221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AMD",
     keywords: ["AMD", "MI300X", "GPU", "内存", "性能", "分析"],
-    excerpt: "关键词：GPU 性能评估、大语言模型推理、AMD MI300X、NVIDIA H100/H200、软件生态优化] - AMD MI300X GPU Performance Anal",
+    excerpt: "本文全面评估 AMD MI300X GPU，对比 NVIDIA H100/B200，从计算、内存、通信维度用微基准与 Llama 70B 测试，发现其理论算力高但实际 LLM 推理",
     sourceUrl: "https://mp.weixin.qq.com/s/bgEecPr010fvYzGFwbKswg",
   },
   {
@@ -5231,7 +5231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Wave", "Ping", "Pong", "HipKittens", "AMD"],
-    excerpt: "关键词：HipKittens、AMD GPU、AI 内核优化、Tile-based 编程]、显式寄存器调度、Chiplet 感知调度] - HipKittens: Fast and",
+    excerpt: "本文针对AMD GPU AI内核开发痛点提出HipKittens框架，首次验证tile编程抽象向 AMD 的迁移，创新采用 8-wave ping-pong调度、显式寄存器调度等技",
     sourceUrl: "https://mp.weixin.qq.com/s/n1-U-mNlPQvxvYl0rpHACA",
   },
   {
@@ -5241,7 +5241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Warp",
     keywords: ["Warp", "Specialization", "GEMM", "Kernel", "建模", "误差"],
-    excerpt: "关键词：Warp 特化、GPU 性能建模、GeMM-WS 内核]、微分方程、SMT 求解器] - A Performance Model for Warp Specializati",
+    excerpt: "本文提出warp特化内核性能模型，以微分方程刻画GeMM-WS内核DMA与计算时序，开发Python仿真工具与Z3 SMT优化器。NVIDIA A6000测试中，模型预测误差4.5",
     sourceUrl: "https://mp.weixin.qq.com/s/LIvFdXIPEcSD-oURW8Pd3g",
   },
   {
@@ -5251,7 +5251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "Fermi", "GPU", "架构", "全球"],
-    excerpt: "关键词：Fermi、GPU 计算架构、双精度浮点性能、ECC 保护、CUDA 架构、并行计算 - NVIDIA’s Fermi: The First Complete GPU Co",
+    excerpt: "作为首个完整GPU计算架构NVIDIA Fermi。双精度性能较前代提8倍，符合IEEE 754-2008标准并支持FMA，全链路ECC保护；首推多语言支持，内存架构灵活，原子操作",
     sourceUrl: "https://mp.weixin.qq.com/s/F1aTagcohbISi43KpwOYCA",
   },
   {
@@ -5261,7 +5261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "DNN", "架构", "吞吐量", "模型", "效应"],
-    excerpt: "关键词：GPU Tail Effect、Deep Neural Networks (DNNs)、Neural Architecture Search (NAS)、Model Pru",
+    excerpt: "本文指出深度神经网络模型剪枝与神经架构搜索虽能减少计算量，却难持续降低 GPU 推理延迟，在于“GPU 尾效应”即最后一个处理波次资源未充分利用。发现模型深度结构与轻量级层工作负载",
     sourceUrl: "https://mp.weixin.qq.com/s/FUghaYWLvBMRjgnBFfgXyw",
   },
   {
@@ -5271,7 +5271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ms",
     keywords: ["ms", "NVIDIA", "CUDA", "内核", "优化", "性能"],
-    excerpt: "关键词：CUDA、尾效应、性能优化]、GPU、占用率 - CUDA Pro Tip: Minimize the Tail Effect - https://developer.nv",
+    excerpt: "NVIDIA 发布的这篇 CUDA 优化指南，聚焦“尾效应”对 GPU 性能的影响及解决方案。众所周知，该问题优化涉及 SM Warp 占用率，尾效应是一个无法避免的问题，Neur",
     sourceUrl: "https://mp.weixin.qq.com/s/KxiiZpSAsT9-N9IG_MuW5A",
   },
   {
@@ -5281,7 +5281,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "Occupancy", "优化"],
-    excerpt: "关键词：CUDA Occupancy（占用率）、Streaming Multiprocessor (SM)、] CUDA Optimization、Register/Shared ",
+    excerpt: "本文将深入探讨占用率的定义、重要性，以及 GPU 流多处理器（SM）上的资源限制对占用率的影响。我们还将探讨如何通过理解资源分配，帮助 CUDA 开发人员编写更高效的 GPU Ke",
     sourceUrl: "https://mp.weixin.qq.com/s/66uv5FOhWt7bnjWtOVn6zQ",
   },
   {
@@ -5291,7 +5291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "SM", "架构", "重演", "历史"],
-    excerpt: "关键词：流多处理器、GPU架构、CUDA、GPU 编程、并行计算 - A history of NVidia Stream Multiprocessor - https://fab",
+    excerpt: "本文聚焦2006-2018年NVIDIA流多处理6代架构演进，从Tesla到Turing，以统一架构、SIMT等创新为核心，工艺从90nm精进至12nm，核心数128增至4352，",
     sourceUrl: "https://mp.weixin.qq.com/s/-RIhCceIhy3X4a51-ndJzQ",
   },
   {
@@ -5301,7 +5301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "SM", "LLM", "MFU", "内核", "利用率"],
-    excerpt: "关键词：GPU 利用率]、MFU（模型浮点运算利用率）、SM 效率、内核融合、LLM 训练优化]、分布式策略兼容 - GPU Utilization is a Misleading",
+    excerpt: "GPU 利用率核心缺陷是仅衡量 “过去采样周期内 GPU 是否有Kernel执行”，不反映是否充分利用或工作负载并行度，极端情况下纯内存读写就能拉满该指标。而 SM 效率能更精准反",
     sourceUrl: "https://mp.weixin.qq.com/s/BXbfH6O1ALBXWmuQh2e3DQ",
   },
   {
@@ -5311,7 +5311,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "MXFP4", "PTQ", "BRQ", "专属", "精度"],
-    excerpt: "关键词：大语言模型、MXFP4格式、训练后量化]、块旋转量化、低精度量化、模型部署 - Block Rotation is All You Need for MXFP4 Quant",
+    excerpt: "LLM规模化存高存储与计算成本，但PTQ的W4A4量化准确性低，MXFP4适配长尾分布且软硬件兼容但缺专属PTQ方法。评估显示全局旋转基方法与其实质冲突致性能暴跌，本文提出BRQ策",
     sourceUrl: "https://mp.weixin.qq.com/s/Bw0F8b8EXrxvDRzQhhGmSA",
   },
   {
@@ -5321,7 +5321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "细粒度",
     keywords: ["细粒度", "Kernels", "Squire", "加速器", "能耗", "面向"],
-    excerpt: "关键词：硬件加速器、通用目的]、细粒度并行性]、动态规划、基因组学、依赖受限内核 - 标题：Squire: A General-Purpose Accelerator to Exp",
+    excerpt: "本文提出 Squire 通用加速器，旨在解决依赖受限内核难以有效利用细粒度并行性的问题。提出为多核系统中每个核心配备一个加速器，包含低功耗有序工作核心，可直接访问 L2 缓存并通过",
     sourceUrl: "https://mp.weixin.qq.com/s/UNhqAZYcSWCoJFj33vfpUQ",
   },
   {
@@ -5331,7 +5331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SOLE",
     keywords: ["SOLE", "Softmax", "LayerNorm", "面效", "Transformer", "能效"],
-    excerpt: "关键词：SOLE、Transformer、软硬件协同设计]、Softmax 优化、LayerNorm 优化、低精度计算 - SOLE: Hardware-Software Co-d",
+    excerpt: "本文针对Transformer推理中Softmax与LayerNorm的效率精度问题，提出SOLE硬件软件方案，含E2Softmax与AILayerNorm。实验在CV、NLP任务",
     sourceUrl: "https://mp.weixin.qq.com/s/KKF4rGZLAtgECxyOeFPpgg",
   },
   {
@@ -5341,7 +5341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "DeepSeek", "R1", "GPU", "Kernel", "自动"],
-    excerpt: "关键词：DeepSeek-R1、GPU 内核生成、推理时扩展]、注意力机制、Hopper GPU、大语言模型 - Automating GPU Kernel Generation ",
+    excerpt: "NVIDIA工程师借DeepSeek-R1模型结合推理时额外算力，以含验证器的闭环流程自动生成优化GPU注意力核，15分钟流程在KernelBench测试中Level-1问题正确率",
     sourceUrl: "https://mp.weixin.qq.com/s/Bv5wVRbXqHtKdrWR2C_yUw",
   },
   {
@@ -5351,7 +5351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoTriton",
     keywords: ["AutoTriton", "KernelLLM", "Triton", "TritonRL", "SFT", "RL"],
-    excerpt: "关键词：Triton Kernel Generation、Hierarchical Reward Reinforcement Learning、Knowledge Distilla",
+    excerpt: "本文提出8B领域专用大语言模型TritonRL，解决数据稀缺、奖励作弊问题。训练分两阶段：先借KernelBook数据集和DeepSeek-R1蒸馏数据，监督微调Qwen3-8B传",
     sourceUrl: "https://mp.weixin.qq.com/s/Sz_p5HRoKMBiSxCoR_xXsw",
   },
   {
@@ -5361,7 +5361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Vortex",
     keywords: ["Vortex", "RISC", "GPU", "Warp", "硬件", "软件"],
-    excerpt: "关键词：GPU、Warp 级特性、微架构、RISC-V GPU]、硬件实现]、软件方案、面积开销 - Hardware vs. Software Implementation of",
+    excerpt: "本文提出硬件和软件两种方案实现Warp特性。硬件方案通过扩展Vortex ISA，新增vx_vote、vx_shfl等指令，仅增加2%逻辑面积开销，在微基准测试中实现最高 4 倍 ",
     sourceUrl: "https://mp.weixin.qq.com/s/pYEMiZ2e1GBrIVNazi-1Vw",
   },
   {
@@ -5371,7 +5371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "共享内存",
     keywords: ["共享内存", "Bank", "Conflict", "A100", "GPU", "基准"],
-    excerpt: "关键词：CUDA 共享内存]、NVIDIA GPU、存储体（bank）、bank 冲突]、微基准测试、访问模式 - Notes About Nvidia GPU Shared Me",
+    excerpt: "本文以NVIDIA A100 GPU为测试平台，通过微基准测试深入探究CUDA共享内存的性能特征与访问优化逻辑。作为GPU流式多处理器的高速暂存内存，共享内存的效能易受存储体架构与",
     sourceUrl: "https://mp.weixin.qq.com/s/k425tX4jwyWR8CDzyXszFQ",
   },
   {
@@ -5381,7 +5381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "CUDA", "C++", "共享内存", "技术"],
-    excerpt: "关键词：CUDA、共享内存、bank 冲突]、动态共享内存、多设备兼容、线程同步] - 共享内存（Shared Memory）是 CUDA 中的一种高速片上内存，按线程块（Thre",
+    excerpt: "CUDA共享内存是片上百倍速缓存，通过“合并加载+协作重排”破解全局内存跨步访问顽疾，实现多维数组高效转置；但bank冲突与线程同步会抵消收益，线程块过小、数据量微或冲突严重时优化",
     sourceUrl: "https://mp.weixin.qq.com/s/AUOwEnTbTWJ-MLP9tD8POw",
   },
   {
@@ -5391,7 +5391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "LLM", "ByteRobust", "ETTR", "架构", "集群"],
-    excerpt: "关键词：ByteRobust、LLM 训练、大规模 GPU 集群]、故障容错、有效训练时间比（ETTR）]、快速恢复 ByteRobust 已部署在包含超过 20 万块 GPU 的",
+    excerpt: "ByteRobust 作为一款专为 LLM 稳健训练设计的大规模 GPU 基础设施管理系统，已部署在包含超过 20 万块GPU 的生产级 GPU 平台上，在 9600 块GPU上进",
     sourceUrl: "https://mp.weixin.qq.com/s/ApOmHguoI1f8-X6LzzWHhw",
   },
   {
@@ -5401,7 +5401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "内核模块", "Linux", "NVIDIA", "开源", "架构"],
-    excerpt: "关键词：NVIDIA、开源 GPU 内核模块、Linux、GPU 驱动]、开源实现、硬件支持 - NVIDIA Linux open GPU kernel module sourc",
+    excerpt: "NVIDIA Linux 开源 GPU 内核模块，采用分层架构与四大核心模块，适配多 Linux 版本及架构、兼容全系列 GPU，为 Linux GPU 生态创新提供底层技术支撑。",
     sourceUrl: "https://mp.weixin.qq.com/s/Kp8CQq-zTpqvMsan3905eg",
   },
   {
@@ -5411,7 +5411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Act", "ISA", "ms", "内核", "加速器"],
-    excerpt: "关键词：张量加速器]、编译器后端生成、ISA 描述、等式饱和、约束编程、深度学习 - Act: Automatically Generating Compiler Backends",
+    excerpt: "首个从张量加速器 ISA 描述自动生成编译器后端的工具Act，其首先形式化定义了张量加速器 ISA 描述规范，支持用户可编程内存和复杂参数化指令；通过新型参数化等式饱和指令选择阶段",
     sourceUrl: "https://mp.weixin.qq.com/s/L3VuU7vUXs4sK7QqtM8rVg",
   },
   {
@@ -5421,7 +5421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TPU",
     keywords: ["TPU", "vLLM", "PyTorch", "JAX", "统一"],
-    excerpt: "关键词：vLLM、Google TPU、大模型推理、适配优化、分布式部署、性能提升 !文章插图 - vLLM TPU: A New Unified Backend Supporti",
+    excerpt: "谷歌推出vLLM TPU新统一后端，基于tpu-inference插件，统一PyTorch（经Torchax）和JAX的XLA lowering路径，升级含RPA v3高效内核、S",
     sourceUrl: "https://mp.weixin.qq.com/s/G2qKTjH5Nr5-4ddXgYBj_g",
   },
   {
@@ -5431,7 +5431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Vortex",
     keywords: ["Vortex", "RISC", "SIMT", "GPGPU", "全栈", "开源"],
-    excerpt: "关键词：RISC-V、GPGPU]、SIMT、OpenCL、Vortex、异构计算 - Vortex: OpenCL Compatible RISC-V GPGPU - https",
+    excerpt: "本文提出 Vortex，一款支持 OpenCL 的 RISC-V GPGPU，设计基于 SIMT 架构，仅在 RV32IM 指令集基础上扩展 5 条指令即可实现 SIMT 执行，同",
     sourceUrl: "https://mp.weixin.qq.com/s/_a5idPMXKas5E7roquPMCQ",
   },
   {
@@ -5441,7 +5441,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "性能", "Triton", "TVM", "Neptune", "tile"],
-    excerpt: "关键词：Tensor Compilers、ML Operator Fusion]、GPU Parallelism Optimization、Reduction Operators]",
+    excerpt: "现有编译器数据依赖复杂、优化方式单一，难生成高效融合内核，开发者常依赖手动优化。Neptune通过两大创新突破：一是提出先进算子融合范式，主动打破部分依赖并构建代数修正表达式；二是",
     sourceUrl: "https://mp.weixin.qq.com/s/LotgTbmyaJ7xqFeUYG3lHg",
   },
   {
@@ -5451,7 +5451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RK3566",
     keywords: ["RK3566", "GPU", "NanoMind", "SoC", "模态", "异构"],
-    excerpt: "关建词：NanoMind、大型多模态模型（LMMs）、软硬件协同设计]、边缘设备、量化计算、动态卸载 - Tiny but Mighty: A Software-Hardware ",
+    excerpt: "现有 LMMs 多整体执行，未充分利用异构加速器（NPU/GPU/DSP），导致延迟高、功耗大。NanoMind 的核心创新是将模型分解为视觉、语言、音频等模块化 “砖块”，动态分",
     sourceUrl: "https://mp.weixin.qq.com/s/9YfcSn-i_EMuX_5yeB5hGA",
   },
   {
@@ -5461,7 +5461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "Tawa", "GPU", "warp", "cuBLAS", "Triton"],
-    excerpt: "关建词：Tawa、warp specialization、GPU、asynchronous references]、compiler、LLM kernels - Tawa: Aut",
+    excerpt: "本文提出 Tawa 自动编译器，其核心是异步引用（aref）IR 抽象，可表达 warp 级通信而不暴露底层硬件细节，通过任务感知分区将程序划分为生产者 - 消费者角色，利用多粒度",
     sourceUrl: "https://mp.weixin.qq.com/s/YMw30N-tnUQ4yOYdMJSrfg",
   },
   {
@@ -5471,7 +5471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "MLIR", "AIR", "AMD", "原语", "开源"],
-    excerpt: "关建词：MLIR-AIR、空间架构、编译器优化、AI 工作负载、并行调度、数据移动优化、编译器、数据流架构、硬件加速、机器学习、可重构技术、空间架构 - From Loop Nes",
+    excerpt: "本文针对现代空间架构（如 AMD NPUs）对细粒度计算调度、数据移动控制的需求，提出开源编译器栈 MLIR-AIR，以解决通用编译器抽象并行性、 locality 等关键特性导致",
     sourceUrl: "https://mp.weixin.qq.com/s/eZVfUVh3mlHuEHzQabw73g",
   },
   {
@@ -5481,7 +5481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Google",
     keywords: ["Google", "Coral", "NPU", "AI", "RISC", "全栈"],
-    excerpt: "关建词：Coral NPU、边缘AI、全栈开源平台、RISC-V]、超低功耗、硬件强化隐私 - https://research.google/blog/coral-npu-a-f",
+    excerpt: "Coral NPU 由 Google Research和 Google DeepMind 联合设计，是一种“AI 优先”的硬件架构，旨在支持下一代超低功耗、持续运行的边缘人工智能应",
     sourceUrl: "https://mp.weixin.qq.com/s/6fbmugw-wbnzfIhLK3Zrnw",
   },
   {
@@ -5491,7 +5491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "MLC", "TapML", "浏览器", "调试", "测试"],
-    excerpt: "关键词：Developer Productivity、Software Testing]、Machine Learning Systems、Model Deployment、Eme",
+    excerpt: "在 MLC-LLM 项目中，TapML 作为默认开发方法，2年内助力105个新兴模型部署到5个新兴平台，且部分平台支持领先其他框架10个月。实验表明，TapML可将调试时间从传统方",
     sourceUrl: "https://mp.weixin.qq.com/s/Ih-u8WPoFdPaMxhIFnG-fA",
   },
   {
@@ -5501,7 +5501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "M5",
     keywords: ["M5", "AI", "GPU", "CPU", "重构", "狂飙"],
-    excerpt: "北京时间 10 月 15 日晚，苹果正式发布新一代自研芯片 M5，这颗基于第二代 3 纳米工艺（3nm Gen 2） 打造的核心，堪称 “为 AI 而生” 的性能怪兽。 其革新之处",
+    excerpt: "GPU 架构重构 + 16 核神经引擎 + 10 核 CPU",
     sourceUrl: "https://mp.weixin.qq.com/s/rWPA7bNTh_Y0yNCXs9VoYA",
   },
   {
@@ -5511,7 +5511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "HPC", "Sophon", "SG2044", "RVV", "v1"],
-    excerpt: "关键词：RISC-V、High Performance Computing (HPC)、Sophon SG2044、NAS Parallel Benchmark、RVV v1.0、",
+    excerpt: "本文聚焦 SOPHGO 新一代 64 核 CPU Sophon SG2044，通过NAS Parallel Benchmark套件，首次全面评估其 HPC 性能，并与SG2042、",
     sourceUrl: "https://mp.weixin.qq.com/s/e0yUOIyE6Sjzp5_wgyqbcg",
   },
   {
@@ -5521,7 +5521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ChatGPT",
     keywords: ["ChatGPT", "Karpathy", "nanochat", "开源", "落地", "门槛"],
-    excerpt: "关键词：nanochat、Karpathy、低成本大模型训练、开源大模型、全栈大模型开发、RLHF - https://github.com/karpathy/nanochat -",
+    excerpt: "Andrej Karpathy开源的 nanochat 项目，以 “100美元能买到的最好 ChatGPT”打破大模型训练高成本壁垒。该项目**仅含 44 个文件、8 万余行代码*",
     sourceUrl: "https://mp.weixin.qq.com/s/uJ7vWGcSp9JgSgopbJz-WA",
   },
   {
@@ -5531,7 +5531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "陷阱",
     keywords: ["陷阱", "LLM", "Tequila", "精度", "方案", "突破"],
-    excerpt: "关键词：LLMs、三元量化（Ternary Quantization）、死区陷阱（Deadzone Trapping）、Tequila、Edge Deployment、Quanti",
+    excerpt: "为解决三元量化即权重{-1,0,1}因“死区陷阱”导致的精度损失与高训练开销问题，本文提出无陷阱三元量化方案 Tequila。死区陷阱源于权重落入区间(-Δ,Δ)时被量化为 0，S",
     sourceUrl: "https://mp.weixin.qq.com/s/Yc8DTPWBKtrEhfb8mAFWDg",
   },
   {
@@ -5541,7 +5541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "PTX", "GPU", "壁垒", "论文"],
-    excerpt: "关键词：PTX Emulation Library、OPBF 格式、libecuda、GPU 仿真、CUDA Architecture、图着色寄存器分配（Graph Colorin",
+    excerpt: "针对 NVIDIA Cubin 二进制格式封闭阻碍 GPU 仿真的核心问题，设计并实现了 PTX 仿真库 libecuda，以解锁 GPU 通用计算的开放研究路径。",
     sourceUrl: "https://mp.weixin.qq.com/s/5STe9JQA4tvZ5xKqa62ycg",
   },
   {
@@ -5551,7 +5551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "LLM", "LUT", "GEMM", "Softmax", "硬件"],
-    excerpt: "关键词：NPU（Neural Processing Unit）、mobile device、LLM、TTS（test-time scaling）、quantization、LLM ",
+    excerpt: "本文设计硬件感知块量化方案（使分组量化与 NPU 内存访问模式对齐），并采用基于查找表（LUT）的方法替代 Softmax、反量化等复杂操作。在高通骁龙平台混合精度 GEMM 加速",
     sourceUrl: "https://mp.weixin.qq.com/s/QZNb1IZMN8M-X3VW7ZCndQ",
   },
   {
@@ -5561,7 +5561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "确定性",
     keywords: ["确定性", "LLM", "浮点", "架构", "核心"],
-    excerpt: "关键词：LLM 推理、非确定性、批处理不变性、浮点非结合性、确定性推理、注意力机制 - Defeating Nondeterminism in LLM Inference - ht",
+    excerpt: "核心原因是浮点非结合性虽为数值差异基础，但关键在于内核缺乏“批处理不变性”——服务器负载波动导致批大小变化，使单个请求输出受影响，而 LLM 前向传播无原子操作，“运行-运行”本应",
     sourceUrl: "https://mp.weixin.qq.com/s/i-37_M7QoeMbQMqoZDWIYQ",
   },
   {
@@ -5571,7 +5571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FPRev",
     keywords: ["FPRev", "浮点", "逆向", "顺序", "工具"],
-    excerpt: "关键词：FPRev、浮点累加顺序、数值可复现性、异构计算、浮点运算、累加顺序推断 - Revealing Floating-Point Accumulation Orders in",
+    excerpt: "本文针对浮点累积操作如求和、矩阵乘法，在软硬件实现中累积顺序常未文档化，导致跨系统结果不一致、阻碍数值可复现性的问题，提出诊断工具FPRev。该工具通过数值测试非侵入式揭示累积顺序",
     sourceUrl: "https://mp.weixin.qq.com/s/e9cUwCc8lXgIqwNc5EaDrg",
   },
   {
@@ -5581,7 +5581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "PD",
     keywords: ["PD", "SGLang", "NVIDIA", "GreenContext", "吞吐量", "模型"],
-    excerpt: "关建词：PD-Multiplexing（PD多路复用）、LLM Serving、GreenContext、Goodput（有效吞吐量）、SLO（服务级别目标）、GPU Resour",
+    excerpt: "本文介绍了 SGLang 中一种新型 LLM 服务范式 PD-Multiplexing，其借助 NVIDIA GPU 的 GreenContext 能力，旨在解决LLM 服务中预填",
     sourceUrl: "https://mp.weixin.qq.com/s/IPk6P-DzTr2c6KDJVOFdWg",
   },
   {
@@ -5591,7 +5591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "NVDLA", "AI", "SoC", "MHz", "FPGA"],
-    excerpt: "关键词：系统级芯片（SoC）、RISC-V、NVIDIA 深度学习加速器（NVDLA）、硬件加速器、深度学习、现场可编程门阵列（FPGA） - Bare-Metal RISC-V ",
+    excerpt: "本文提出一种新 SoC 架构，通过软硬件协同优化，将开源 NVIDIA 深度学习加速器与 Codasip® 的 32 位 4 级流水线 RISC-V 核心紧密耦合，生成裸机汇编应用",
     sourceUrl: "https://mp.weixin.qq.com/s/oq7ppqjaRWFUnJsv9I1lww",
   },
   {
@@ -5601,7 +5601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "OpenAI",
     keywords: ["OpenAI", "GEMM", "GPU", "Kernel", "cuBLAS", "cuSPARSE"],
-    excerpt: "关键词：block-sparse weights、GPU kernels、neural networks、Small-World LSTMs、block-sparse convol",
+    excerpt: "该 GPU 内核包含块稀疏矩阵乘法与块稀疏卷积两大核心组件，支持 8×8、16×16、32×32 等块大小，适配 TensorFlow且易集成到PyTorch，还附带批量归一化、d",
     sourceUrl: "https://mp.weixin.qq.com/s/L022-srd-7EV4g4z7Dqoaw",
   },
   {
@@ -5611,7 +5611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "CUDA", "GPU", "内存", "最大化", "全局"],
-    excerpt: "关键词：CUDA、GPU性能优化、全局内存访问、合并内存访问、跨步访问、Nsight Compute 读完本文，最大收获在两点：一是理解CUDA中全局内存的合并访问是解锁 GPU ",
+    excerpt: "本文围绕 CUDA 全局内存访问，讲其特性、管理流程，重点对比合并与非合并访问，还涉跨步影响、数组优化及分析工具，核心是合并访问最大化带宽以解锁 GPU 性能。",
     sourceUrl: "https://mp.weixin.qq.com/s/YuxsotLSdhko2YFHR8nk7A",
   },
   {
@@ -5621,7 +5621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "CUDA", "GPU", "内存", "最大化", "全局"],
-    excerpt: "关键词：CUDA、GPU性能优化、全局内存访问、合并内存访问、跨步访问、Nsight Compute 读完本文，最大收获在两点：一是理解CUDA中全局内存的合并访问是解锁 GPU ",
+    excerpt: "本文围绕 CUDA 全局内存访问，讲其特性、管理流程，重点对比合并与非合并访问，还涉跨步影响、数组优化及分析工具，核心是合并访问最大化带宽以解锁 GPU 性能。",
     sourceUrl: "https://mp.weixin.qq.com/s/e-50mwYUWl9QgTSbmi1Ytg",
   },
   {
@@ -5631,7 +5631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "Blackwell", "架构", "剖析", "基准", "测试"],
-    excerpt: "关键词：Blackwell、GPU、Microbenchmark、HPC、Tensor Core、Memory Hierarchy - Dissecting the NVIDIA ",
+    excerpt: "本文揭示 Blackwell 架构关键子系统，包括存储层次结构、流式多处理器执行流水线，以及 SM 子核心单元——支持 FP4 和 FP6 精度的第五代张量核心。研究了延迟、吞吐量",
     sourceUrl: "https://mp.weixin.qq.com/s/sqGkZP9yq2e5OoTY2W7tcQ",
   },
   {
@@ -5641,7 +5641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "语言",
     keywords: ["语言", "A100", "MI300A", "GPU", "Mojo", "MLIR"],
-    excerpt: "关键词：Mojo、GPU、高性能计算（HPC）、科学内核、性能可移植性、Python 生态 - Mojo: MLIR-Based Performance-Portable HPC ",
+    excerpt: "本文探究了新型 Mojo 语言在 GPU 上科学计算工作负载的性能与可移植性。Mojo 作为首个基于 LLVM 的多级中间表示（MLIR）编译器基础设施的语言，通过融合Python",
     sourceUrl: "https://mp.weixin.qq.com/s/2sMbs2jV-BXmaOtExf94uw",
   },
   {
@@ -5651,7 +5651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Scaling",
     keywords: ["Scaling", "Test", "Time", "Right", "Thing", "视角"],
-    excerpt: "关键词：Test-Time Scaling、Large Language Models、System Perspective、Inference Optimization、Spec",
+    excerpt: "我们提出从系统驱动视角研究 TTS，分析推理模型在延迟、每 token 成本等实际指标下的缩放规律。结论表明，系统最优对实际部署更关键，推测解码具潜力，而张量并行有局限未达预期效果",
     sourceUrl: "https://mp.weixin.qq.com/s/Qdhd5pMYaHR1XGGDIHYP7w",
   },
   {
@@ -5661,7 +5661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GWh",
     keywords: ["GWh", "优化", "LLM", "能耗"],
-    excerpt: "关键词：AI Inference、Energy Efficiency、Large Language Models、Token Throughput、Hardware Optimiz",
+    excerpt: "本文聚焦大规模 LLM 推理的能耗估算与效率优化，旨在解决公共估算不一致且高估能耗的问题。研究提出自下而上的估算方法，基于token吞吐量，结合 H100 节点的 GPU 利用率、",
     sourceUrl: "https://mp.weixin.qq.com/s/oLAu4Xo2Mg4IT2hSixykPA",
   },
   {
@@ -5671,7 +5671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Fake",
     keywords: ["Fake", "Runs", "Real", "Fixes", "GRM", "AI"],
-    excerpt: "关键词：xPU-Shark、ML 加速器、微架构模拟、机器码级性能分析、DMA 优化、LLM 性能调优 生成式 AI 预计 2032 年达万亿级市场，仅微软 Bing AI 推理基",
+    excerpt: "GRM 通过软件精确模拟硬件的指令执行逻辑、流水线行为、缓存命中机制、DMA 调度规则等核心微架构特性，确保硬件设计符合预期规范。例如，在 ML 加速器开发中，GRM 可模拟矩阵运",
     sourceUrl: "https://mp.weixin.qq.com/s/diw2-Tkf8fU9Ht0qKUgewA",
   },
   {
@@ -5681,7 +5681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "TinyML", "PICO", "CPU", "嵌入式", "运算"],
-    excerpt: "关键词：TinyML、Embedded Systems、Real-Time Performance、Machine Learning、Benchmarking、PICO（Perfo",
+    excerpt: "本文提出 PICO-TINYML-BENCHMARK 框架，这是一种模块化、跨平台基准测试工具，评估资源受限嵌入式系统中 TinyML 模型的实时性能。框架聚焦推理延迟、CPU 利",
     sourceUrl: "https://mp.weixin.qq.com/s/4CI_D9Lkgabb9WzEpEAo8g",
   },
   {
@@ -5691,7 +5691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "节点", "线性", "驱动", "模型", "训练"],
-    excerpt: "关键词：large language models、distributed training、data parallelism、pretraining、supercomputing",
+    excerpt: "MIT 团队的研究虽未聚焦于模型本身的创新，却通过真实实验提炼出 5 条核心建议：全量预处理 token 化、节点本地复制数据、按需设置数据加载并行度、善用数据并行的线性缩放特性、",
     sourceUrl: "https://mp.weixin.qq.com/s/IWRZHfV225QUXd_RpuE5NA",
   },
   {
@@ -5701,7 +5701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "细粒度", "工具", "OSDI", "eBPF", "Neutrino"],
-    excerpt: "关键词：GPU Kernel Profiling、Programmable Probing、Fine-grained Analysis、GPU Architecture、Instr",
+    excerpt: "在 NVIDIA 与 AMD GPU 实验表明，Neutrino在 GPU 内核分析中开销极低，轻量探针仅引入 1.04 倍内核延迟与平均 4.11 个额外寄存器开销，可支持 LL",
     sourceUrl: "https://mp.weixin.qq.com/s/v9XE3h2HYSslPjTO2gtJgQ",
   },
   {
@@ -5711,7 +5711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NVIDIA",
     keywords: ["NVIDIA", "OpenAI", "GW", "算力", "核弹", "人工智能"],
-    excerpt: "- 基于 NVIDIA Vera Rubin 平台，2026 下半年启动首吉瓦级别部署 - 百万 GPU 集群构建下一代 AI 基础设施 2025 年 9 月 22 日，全球科技行",
+    excerpt: "1000 亿砸向 10GW 算力！NVIDIA 与 OpenAI 世纪联手，AI 基建战争打响！",
     sourceUrl: "https://mp.weixin.qq.com/s/Ayf3-z3c7aphufLzbDHKCQ",
   },
   {
@@ -5721,7 +5721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "极长",
     keywords: ["极长", "A100", "内存", "加速器", "吞吐量", "协同"],
-    excerpt: "关键词：LLM 推理加速器、长上下文 LLM 推理、硬件-软件协同设计、非对称量化、扁平化 Systolic 阵列、FlashAttention 适配 长上下文智能体 LLM 推理",
+    excerpt: "相同乘数计数与内存配置下，PLENA 对 LLaMA 系列模型的利用率较现有加速器提升达 8.5 倍，吞吐量较 A100 GPU 高 2.24 倍、较 TPU v6e 高 3.85",
     sourceUrl: "https://mp.weixin.qq.com/s/uoVuh_dQjbI1o3_epCXWAw",
   },
   {
@@ -5731,7 +5731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "IPO", "玄戒", "O2", "NPU", "HotChips"],
-    excerpt: "- 关键词：AI芯片、半导体工艺、国产芯突围、英伟达、智驾芯片、开源生态 - 本文 7925 字，阅读需 26 分钟，播客 43 分钟（中后段有bug，麻烦豆包同学看看!文章插图 ",
+    excerpt: "从Hot Chips大会揭示的“系统级设计转向”，到腾讯FastMP、VCCL等技术对效率的极致追求，行业早已达成共识：算力竞争的终局不是单芯片的性能极限，而是“芯片-架构-生态-",
     sourceUrl: "https://mp.weixin.qq.com/s/l_sClgLJZ49pitia3HACcg",
   },
   {
@@ -5741,7 +5741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "内存", "系统", "综述", "架构", "挑战"],
-    excerpt: "关键词：LLM Inference Systems、Memory Management、KV Cache、Quantization、Inference Runtime、Cache ",
+    excerpt: "本文系统综述了大型语言模型（LLM）推理系统的关键技术与架构演进，聚焦解决 LLM 参数规模大、KV 缓存占用高带来的内存压力与性能瓶颈。",
     sourceUrl: "https://mp.weixin.qq.com/s/34hloecuF9ZwU4I6SXIrrQ",
   },
   {
@@ -5751,7 +5751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Kernel", "SwizzlePerf", "L2", "命中率", "硬件"],
-    excerpt: "关键词：SwizzlePerf、Hardware-Awareness、Swizzling Patterns、GPU Kernel Optimization、L2 Hit Rate、",
+    excerpt: "正是瞄准 Swizzling 的核心价值与现有方法的不足，本文提出了硬件感知的 LLM 驱动方案 SwizzlePerf，其成果直接验证了 Swizzling 在 GPU Kern",
     sourceUrl: "https://mp.weixin.qq.com/s/mYCqkdJGlKCMm8CQE_eR4w",
   },
   {
@@ -5761,7 +5761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "vLLM",
     keywords: ["vLLM", "国产化", "核心技术", "峰会", "模型"],
-    excerpt: "关键词：昇腾芯片、vLLM、vLLM Ascend、大模型国产化、推理适配、GeekDay、国产算力生态 华为刚在GRCS 2025全球AI芯片峰会上扔出重磅炸弹🔥！昇腾AI芯片4",
+    excerpt: "昇腾950系列新增FP8低精度格式支持，算力直接飙到1-2PFLOPS✨；未来昇腾960、970更要实现算力翻倍+自研HiF4格式突破，这波操作简直是为大模型国产化部署开了“快车道",
     sourceUrl: "https://mp.weixin.qq.com/s/dvonLUPvKH5a6aP8xMAuzg",
   },
   {
@@ -5771,7 +5771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "综述", "优化", "模型", "系统"],
-    excerpt: "关键词：Large Language Model (LLM)、Inference Systems、Autoregressive Generation、Memory Manageme",
+    excerpt: "本文更强调技术间的协同关系与系统级整合逻辑，同时点出负载预测精度不足等现存挑战。对于从事 LLM 系统研发的研究者与工程师而言，这份综述既是梳理技术脉络的全景地图，也是探索下一代推",
     sourceUrl: "https://mp.weixin.qq.com/s/zcODv84aiaE0iiJXhOL-_Q",
   },
   {
@@ -5781,7 +5781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "SpecForge", "SGLang", "GB", "GPU", "解码"],
-    excerpt: "关键词：SpecForge、推测性解码、Eagle3、SGLang、草稿模型、TTT 机制 推测性解码（speculative decoding）是一种通过 “草稿模型提前预测、目",
+    excerpt: "SGLang团队开源SpecForge框架，专为Eagle3推测性解码打造，适配SGLang且支持MoE等架构，设双训练模式，16GB GPU可训70B目标模型草稿。实验获最高2.",
     sourceUrl: "https://mp.weixin.qq.com/s/xiZWFmeHEbTdOFDYnKbUZg",
   },
   {
@@ -5791,7 +5791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TTFT",
     keywords: ["TTFT", "AI", "FastVLM", "FastViTHD", "VLM", "高分辨率"],
-    excerpt: "关键词：Vision-Language Models、FastVLM、FastViTHD、Hybrid Vision Encoder、High-Resolution Input、L",
+    excerpt: "与运行在最高可能分辨率（1152×1152）的 LLaVA-OneVision相比，FastVLM 使用相同的 0.5B 参数 LLM 实现了相当的性能，但其 TTFT 快 85 ",
     sourceUrl: "https://mp.weixin.qq.com/s/DMdWNWSaQxR54iXbMuorxQ",
   },
   {
@@ -5801,7 +5801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "eBPF",
     keywords: ["eBPF", "GPU", "观测", "eGPU", "PTX", "注入式"],
-    excerpt: "关键词：eBPF、GPU、Heterogeneous (hybrid) systems、Parallel architectures、Runtime environments、Gr",
+    excerpt: "未来，我们将探索更广泛的设备上下文和内存共享方法——尤其是在即将推出的 Grace Hopper GPU 以及 CXL 内存池上——以扩展该方法的应用场景和适用范围。",
     sourceUrl: "https://mp.weixin.qq.com/s/r7Lt0uBXehrbdUGOjWFg8w",
   },
   {
@@ -5811,7 +5811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MoE",
     keywords: ["MoE", "Inference", "Bench", "硬件加速", "FP8", "碾压"],
-    excerpt: "关键词：混合专家模型（MoE）、MoE-Inference-Bench 基准、FP8 量化、张量并行、大型语言模型（LLM）、视觉语言模型（VLM） --- 本文是首个针对当前最先",
+    excerpt: "研究在 NVIDIA H100 GPU 上展开，实验结果确定了 MoE 的最优运行约束，并揭示了模型规模、专家稀疏性和硬件效率之间的明确权衡关系，为 MoE 模型高效部署提供关键见",
     sourceUrl: "https://mp.weixin.qq.com/s/NySlYEm_jhQk6qVsV5oinw",
   },
   {
@@ -5821,7 +5821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MobileLLM",
     keywords: ["MobileLLM", "LLM", "iPhone", "tokens", "解码", "开源"],
-    excerpt: "关键词：MobileLLM、1B参数语言模型、深度薄架构、权重共享、移动端部署、零样本推理 - MobileLLM: Optimizing Sub-billion Paramete",
+    excerpt: "125M 版本移动端解码速度达 50 tokens/s，支持 iPhone 全天对话续航，为移动端 LLM 部署提供高效解决方案。",
     sourceUrl: "https://mp.weixin.qq.com/s/3CFixJXGk-Njw0H8oeOzng",
   },
   {
@@ -5831,7 +5831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "初心",
     keywords: ["初心", "科研", "机器", "热情"],
-    excerpt: "或许我们不一定能做出 XGBoost、TVM 这样的项目，但他身上的“勇气”和“长期主义”，其实每个人都能学——慢慢来，守好自己想做的事，哪怕走得慢一点，也能走得远。 想必大家都在",
+    excerpt: "热爱、专注、不怕失败、守住初心。",
     sourceUrl: "https://mp.weixin.qq.com/s/102mqu8O5z70gk0Ggb6Ivg",
   },
   {
@@ -5841,7 +5841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TorchAO",
     keywords: ["TorchAO", "PyTorch", "FP8", "PTQ", "链路", "原生"],
-    excerpt: "关键词：TorchAO、模型量化、稀疏性（Sparsity）、端到端模型优化、大语言模型、PyTorch 原生（PyTorch-Native） - TorchAO: PyTorch",
+    excerpt: "FP8训练在405B规模达1.5倍吞吐量提升；QAT可恢复96%量化精度，结合LoRA使训练吞吐量提升1.89倍；PTQ 能将模型缩小2-4 倍、推理吞吐量提升2倍。此外，框架支持",
     sourceUrl: "https://mp.weixin.qq.com/s/KS7fNFdogCWpyL9-hV7Org",
   },
   {
@@ -5851,7 +5851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "内核",
     keywords: ["内核", "优化", "LLM", "GPU", "Astra", "SGLang"],
-    excerpt: "关键词：Astra、GPU 内核优化、多智能体系统、大语言模型（LLM）、CUDA 代码、大语言模型推理 本研究证实，基于多智能体的 LLM 系统是 GPU 核函数优化的一种极具潜",
+    excerpt: "Astra 使用 OpenAI o4-mini 进行零样本提示，平均实现了 1.32 倍的性能加速。案例研究进一步表明，LLM 能够自主应用循环变换、优化内存访问模式、利用 CUD",
     sourceUrl: "https://mp.weixin.qq.com/s/wXQWrx3Uo9BeTVknZRrqPQ",
   },
   {
@@ -5861,7 +5861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "MoE", "Hopper", "FP8", "GEMM", "TMA"],
-    excerpt: "关键词：FP8 Grouped GEMM、Tensor Memory Accelerator (TMA)、Padding Elimination、Mixture of Expert",
+    excerpt: "较带 Padding 的最先进 FP8 分组 GEMM，实现 1.7%-20.4% 的计算加速与最高 23.8% 的内存节省，且保持有效数据位级数值等价，可显著提升混合专家（MoE",
     sourceUrl: "https://mp.weixin.qq.com/s/_eGTMM8YvoU1SDB58Yzkzw",
   },
   {
@@ -5871,7 +5871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "制程",
     keywords: ["制程", "Arm", "Lumex", "CSS", "AI", "重塑"],
-    excerpt: "关键词：Arm Lumex CSS平台、设备端AI、Armv9.3 C1 CPU、Mali G1-Ultra GPU、3纳米制程、PPA - Accelerating Develo",
+    excerpt: "Arm 推出全新 Lumex CSS 计算子系统平台，旨在解决移动设备 AI 进阶中芯片面临的产品周期加速、先进封装难、3nm 制程设计复杂等痛点，满足旗舰移动与 PC 设备的设备",
     sourceUrl: "https://mp.weixin.qq.com/s/5L57yN5pYvSQ-T23ucoWhg",
   },
   {
@@ -5881,7 +5881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "分析模型", "ISCA", "LLM", "AMALI", "warp"],
-    excerpt: "关键词：AMALI、GPU、LLM inference、analytical model、tensor cores、performance modeling、MAPE（平均绝对百分",
+    excerpt: "本文提出一种名为 AMALI 的新型分析模型，用于精准建模现代 GPU 上的大语言模型（LLM）推理性能。现有 GPU 分析模型因张量核心建模不当、忽略常量缓存与指令缓存及未考虑 ",
     sourceUrl: "https://mp.weixin.qq.com/s/o5sXbwYOhf7KW2kv0oj-vg",
   },
   {
@@ -5891,7 +5891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "代码生成",
     keywords: ["代码生成", "AMD", "AI", "Engine", "BLAS", "AIEBLAS"],
-    excerpt: "关键词：AIEBLAS、AMD AI Engine、BLAS（基础线性代数程序库）、空间架构（Spatial Architectures）、数据流编程（Dataflow Progr",
+    excerpt: "专为AMD AI Engine设计的BLAS库。该库通过自动代码生成，将用户的高层需求转化为硬件适配代码，既提供可定制、易集成的数值计算接口，又能借助数据流编程优化片上通信，无需用",
     sourceUrl: "https://mp.weixin.qq.com/s/WIRkr5bmLgTbUMFylW0MGw",
   },
   {
@@ -5901,7 +5901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "NPUEval", "AMD", "LLM", "NPU", "Kernel"],
-    excerpt: "关键词：NPUEval、NPU Kernels、LLMs、Vectorization、Open Source Compilers、Performance Evaluation 【N",
+    excerpt: "因 NPU 编程较新、开发者社区分散，LLM 预训练数据中 NPU 领域优化代码不足，为此，本文提出 NPUEval 基准，含 102 个机器学习常用算子，基于开源编译器在AMD ",
     sourceUrl: "https://mp.weixin.qq.com/s/EN2ATeonfS7bp9W-Hmu5ew",
   },
   {
@@ -5911,7 +5911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Chitu",
     keywords: ["Chitu", "Meetup", "算力", "天团", "国产", "生态"],
-    excerpt: "关键词：Chitu（赤兔）、国产GPU、国产芯片、大模型推理引擎、性能优化 2025 年 9 月 13 日周六 13:30，杭州白金汉爵大酒店 B1 层 B03 会议室，专为国产算",
+    excerpt: "活动免费席位告急，Chitu 首次 Meetup 国产算力生态天团集结，冲击大模型推理性能极限！",
     sourceUrl: "https://mp.weixin.qq.com/s/oi_2Wycx8CUyW_GBvLeZ1g",
   },
   {
@@ -5921,7 +5921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "W4A8", "GEMM", "LiquidGEMM", "TRT", "矩阵"],
-    excerpt: "关键词：LiquidGEMM、W4A8 Quantization、LLM Serving、GEMM Kernel、LiquidQuant、GPU Acceleration 任务调度",
+    excerpt: "LiquidGEMM较最先进W4A8核加速达2.90倍，端到端系统级加速达4.94倍；对比NVIDIA TensorRT-LLM的各类量化GEMM核，性能提升1.12-1.63倍，",
     sourceUrl: "https://mp.weixin.qq.com/s/eRgVs4EmcT-K75bezmghZQ",
   },
   {
@@ -5931,7 +5931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FA3",
     keywords: ["FA3", "Triton", "Simplicial", "Attention", "峰值", "硬件"],
-    excerpt: "关键词：2-Simplicial Attention、TLX（Triton Low-Level Extensions）、Tensor Core、2D Sliding Window、",
+    excerpt: "为解决原 Triton 内核性能短板，基于TLX（Triton 低级扩展）重写内核，开发了三种版本（含 Warp 特化、计算流水线、乒乓调度等现代 GPU 技术）。",
     sourceUrl: "https://mp.weixin.qq.com/s/PgdpKi4qNjVYKeAn1tHlqA",
   },
   {
@@ -5941,7 +5941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SoC",
     keywords: ["SoC", "shadowAttn", "token", "NPU", "架构", "注意力"],
-    excerpt: "关键词：On-device LLM Inference、Dynamic Sparse Attention、Mobile SoCs、NPU-centric Inference（以NP",
+    excerpt: "将关键token估计任务卸载到NPU，利用NPU对相对值量化的鲁棒性降低开销，并设计 NPU 计算图分桶、头级NPU-CPU/GPU流水线、每头细粒度稀疏率等技术优化精度与效率。仅",
     sourceUrl: "https://mp.weixin.qq.com/s/GQpU2KKfLbWrKke7DO2XqA",
   },
   {
@@ -5951,7 +5951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "调度",
     keywords: ["调度", "CPU", "GPU", "集群", "厂商", "面向"],
-    excerpt: "关键词：Scheduling Languages、Autotuning、Exploratory Compilers、Domain-Specific Languages (DSLs)",
+    excerpt: "本文围绕调度语言展开，提供了其过去、现在与未来的分类体系，旨在梳理调度语言的演进脉络、解决当前语言碎片化问题，并为未来发展指明方向。",
     sourceUrl: "https://mp.weixin.qq.com/s/lMVW7QlsfsWpQIyp_mRoRw",
   },
   {
@@ -5961,7 +5961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "平衡术",
     keywords: ["平衡术", "GPU", "AGFT", "LLM", "功耗", "服务质量"],
-    excerpt: "关键词：LLM、GPU 频率优化、能效延迟积、能效、实时系统、推理性能 - AGFT: An Adaptive GPU Frequency Tuner for Real-Time ",
+    excerpt: "在 Llama 模型及 vLLM 上实验表明：AGFT 在 12 小时 Azure 动态负载中实现 30.9% 能耗节省、26.1% 能效比提升；静态负载能耗降低44.3%，将 T",
     sourceUrl: "https://mp.weixin.qq.com/s/A5RDSh3NaeW07JaHUidJPQ",
   },
   {
@@ -5971,7 +5971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Hexagon", "NPU", "tokens", "sLLM", "异构"],
-    excerpt: "关键词：on-device generative AI、NPU (Neural Processing Unit)、heterogeneous computing、Qualcomm ",
+    excerpt: "高通 Hexagon NPU 历经多代演进，从 2015 年支持基础 AI 任务，到 2023 年 Snapdragon 8 Gen 3 中的 NPU 实现 98%性能提升与 40",
     sourceUrl: "https://mp.weixin.qq.com/s/9wRBv_UCX4Y8cFk0TxJdsA",
   },
   {
@@ -5981,7 +5981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "计算资源",
     keywords: ["计算资源", "ISCA", "SRAM", "DSE", "Orojenesis", "算法"],
-    excerpt: "关键词：Orojenesis, tensor algorithms, data movement bounds, buffer capacity, ski-slope diagra",
+    excerpt: "对于GPT-3-6.7b LLM，在 320MB 的缓冲区容量下，通过融合实现高达 5.6 倍数据移动减少。实验揭示架构见解，包括可实现的数据移动可能比算法最小值高几个数量级，SR",
     sourceUrl: "https://mp.weixin.qq.com/s/fdlTUL9bEjnULjQ3Z2g9Tg",
   },
   {
@@ -5991,7 +5991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MultiKernelBench",
     keywords: ["MultiKernelBench", "GPU", "NPU", "TPU", "Kernel", "类算子"],
-    excerpt: "【NeuralTalk 简评】LLM 生成的 Kernel 在特定硬件平台上的性能呈现强依赖性，训练数据覆盖与硬件逻辑复杂度是关键制约，虽增加案例提示有效果，但如果有设计抽象底层实",
+    excerpt: "本文提出首个多平台基准测试套件 MultiKernelBench。该套件涵盖 14 个明确内核类别下的 285 项任务，支持英伟达 GPU、华为 NPU、谷歌 TPU 三大主流硬件",
     sourceUrl: "https://mp.weixin.qq.com/s/Kd8CzMoO7GjeuENrnEg6VQ",
   },
   {
@@ -6001,7 +6001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "注意力",
     keywords: ["注意力", "Zen", "Attention", "AMD", "NPU", "硬件"],
-    excerpt: "关键词：神经网络处理单元（NPU）、注意力机制（attention）、energy efficiency、memory bound、compiler framework、dynam",
+    excerpt: "与基线展开方案相比，Zen-Attention 使注意力块延迟最高降低 4 倍，端到端网络延迟最高优化 32%；即便在计算受限场景下，仍能实现 8% 的延迟降低与 DRAM 带宽占",
     sourceUrl: "https://mp.weixin.qq.com/s/5Wb3Zc1OMgwJ_ESK2d-anQ",
   },
   {
@@ -6011,7 +6011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "摩尔定律",
     keywords: ["摩尔定律", "系统优化", "HotChips", "GPU", "Zhihao", "Jia"],
-    excerpt: "关键词：GPU 机器学习优化、并行化（含数据/模型/流水线/张量并行）、内核融合（含巨型内核）、FlexFlow、Mirage Persistent Kernel（MPK）、Sca",
+    excerpt: "硬件的摩尔定律会放缓，但系统的摩尔定律才刚刚开始。",
     sourceUrl: "https://mp.weixin.qq.com/s/sVjLJMHGpeSuLFaKOmBeow",
   },
   {
@@ -6021,7 +6021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Qwen2",
     keywords: ["Qwen2", "VL", "RK3576", "开发板", "NPU", "模态"],
-    excerpt: "关键词：瑞芯微 RK3576、NPU（神经网络处理器）、端侧小语言模型（SLM）、多模态 LLM、边缘 AI 部署、开发板、RKLLM 随着大语言模型（LLM）技术的快速迭代，从云",
+    excerpt: "瑞芯微 RK3576 开发板作为一款聚焦边缘 AI 的硬件平台，其集成的 NPU（神经网络处理器）能否高效支撑多模态 LLM 的本地运行？性能表现如何？",
     sourceUrl: "https://mp.weixin.qq.com/s/WejrRLC0N-dTcVOZaJynCg",
   },
   {
@@ -6031,7 +6031,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MXFP4",
     keywords: ["MXFP4", "LLM", "GEMM", "RHT", "SR", "FP8"],
-    excerpt: "关键词：MXFP4、LLM 训练、随机舍入（SR）、随机哈达玛变换（RHT）、低精度计算、矩阵乘法（GEMM）、模型性能优化 - Training LLMs with MXFP4 ",
+    excerpt: "我们的方案中，超过一半的训练浮点运算使用 MXFP4 完成，能够显著加速预训练。基准测试表明在反向传播中比 FP8 快 30%，比 BF16 快 70%。",
     sourceUrl: "https://mp.weixin.qq.com/s/O7355lDEUlDqWp2e19zIZg",
   },
   {
@@ -6041,7 +6041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HotChips",
     keywords: ["HotChips", "PyTorch", "CUDA", "GPU", "Tri", "Dao"],
-    excerpt: "关键词：GPU 内核自动生成、领域专用语言 (DSL)、大语言模型 (LLM)、性能优化、Softmax、Gemm 十年前，我们写 CUDA；五年前，我们用 Triton；今天，我",
+    excerpt: "十年前，我们靠手写CUDA 挖掘 GPU 性能，开发者需要精通硬件架构；五年前，我们用 Triton 简化开发，通过 DSL 平衡效率与成本；今天，我们让 LLM 自动生成 Tri",
     sourceUrl: "https://mp.weixin.qq.com/s/p5bp462OzDOR0jGCi4_mmQ",
   },
   {
@@ -6051,7 +6051,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "评估",
     keywords: ["评估", "模型", "SLM", "Bench", "范式", "开源"],
-    excerpt: "关键词：小型语言模型（SLMs）、SLM-Bench、环境影响评估、性能基准、NLP 任务、计算效率、碳排放 - SLM-Bench: A Comprehensive Benchm",
+    excerpt: "当前大型语言模型（LLMs）虽性能卓越，但存在计算成本高、能耗大及碳排放多等问题，而小型语言模型（SLMs）虽具效率优势，却缺乏系统评估框架。为此，研究团队提出首个专为 SLMs ",
     sourceUrl: "https://mp.weixin.qq.com/s/Gat4vX8Ms07nL-rIYi5_SQ",
   },
   {
@@ -6061,7 +6061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "微内核",
     keywords: ["微内核", "RISC", "LLM", "IREE", "linalg", "mmt4d"],
-    excerpt: "关键词：GenAI、RISC-V、MicroKernel、decode、Llama、IREE - Accelerating GenAI Workloads by Enabling ",
+    excerpt: "在 IREE 的 passes 流水线中，为 RISC-V64 目标实现了将 MLIR linalg 方言的收缩操作下转为 linalg.mmt4d 操作，随后为 RISC-V 开",
     sourceUrl: "https://mp.weixin.qq.com/s/Q7Ey7vwCLkeO0OaExsNwHg",
   },
   {
@@ -6071,7 +6071,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "Kernel", "RL", "Kevin", "o4", "mini"],
-    excerpt: "关键词：CUDA 核函数生成、多轮强化学习、Kevin 模型、KernelBench、代码优化、奖励归因、GPU 性能加速 - Kevin: Multi-Turn RL for G",
+    excerpt: "Kevin 相比基础模型 QwQ-32B，正确性从 56%提升至 82%，平均加速比从 0.53 倍提升至 1.10 倍，超过 o4-mini 等前沿模型。串行优化轮次增加比并行采",
     sourceUrl: "https://mp.weixin.qq.com/s/6ffKbcNNpjQPj3m4RF3KKQ",
   },
   {
@@ -6081,7 +6081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "剖析",
     keywords: ["剖析", "性能", "RISC", "PMU", "LLVM", "Roofline"],
-    excerpt: "关键词：LLVM、性能、Roofline 模型、RISC-V、PMU、T-Head、SpacemiT、SiFive - Dissecting RISC-V Performance:",
+    excerpt: "为了摆脱对硬件 PMU 计数器的依赖，从应用中间表示获取操作强度和吞吐量指标，针对SpacemiT X60等RISC-V硬件，提出基于LLVM的编译器驱动 Roofline 的建模",
     sourceUrl: "https://mp.weixin.qq.com/s/_3GsGpLGSWrLE013cecXRQ",
   },
   {
@@ -6091,7 +6091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "TinyAI", "RISC", "mW", "方案", "开源"],
-    excerpt: "关键词：超低功耗、开源、GPU、微控制器、人工智能、RISC-V、TinyAI - e-GPU: An Open-Source and Configurable RISC-V Gr",
+    excerpt: "方案开源！e-GPU，一款开源且可配置的 RISC-V 图形处理单元，专为 TinyAI应用设计。由于功耗、面积限制及合适编程框架的缺乏，GPU 在超低功耗边缘设备中应用有限，e-",
     sourceUrl: "https://mp.weixin.qq.com/s/xK8b_djSHfRi7rXTzqJtDg",
   },
   {
@@ -6101,7 +6101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Arm",
     keywords: ["Arm", "Neural", "Technology", "GPU", "AI", "全景"],
-    excerpt: "技术关键词：移动神经超采样、参数预测网络、Vulkan ML扩展、10 TOPs/Watt能效、27 GOPs运算量、 temporal super sampling、UNet架构",
+    excerpt: "移动神经超采样创新：参数预测架构与 10 TOPs/Watt 下的 27 GOPs 性能突破！",
     sourceUrl: "https://mp.weixin.qq.com/s/P8lxkSp0wJHH1-bpKCB0SA",
   },
   {
@@ -6111,7 +6111,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "优化",
     keywords: ["优化", "RISC", "TROOP", "L1", "SRAM", "处理器"],
-    excerpt: "关键词：Vector processors、RISC-V、Micro-Architecture Optimization、Low operational intensity wor",
+    excerpt: "本文提出 TROOP，一套针对向量处理器的硬件优化方案，旨在提升低运算强度工作负载下的性能。现有向量处理器在 L1 内存带宽上存在局限，仅在向量寄存器文件数据重用率高的计算核心中效",
     sourceUrl: "https://mp.weixin.qq.com/s/wynOjavgavHPhJy4107DUg",
   },
   {
@@ -6121,7 +6121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SGEMM",
     keywords: ["SGEMM", "cube", "FP16", "Cube", "FP32", "GEMM"],
-    excerpt: "关键词：FP32 仿真，FP16 Cube，数值稳定性，矩阵分解，高性能计算，混合精度，精度恢复 - SGEMM-cube: Emulating FP32 GEMM on Asce",
+    excerpt: "算法将每个 FP32 操作数分解为两个 FP16 值，通过可调缩放策略补偿数值误差，最多可保留 22 位尾数精度。其对数值误差展开详细分析，引入项式累加方案，在低指数范围内提升了数",
     sourceUrl: "https://mp.weixin.qq.com/s/AsKvhRvfmJw1XrWECvaE1g",
   },
   {
@@ -6131,7 +6131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Apple",
     keywords: ["Apple", "Silicon", "LLM", "NVIDIA", "GPU", "终极"],
-    excerpt: "关键词：Apple Silicon、LLM Inference、Quantization、Unified-Memory-Architecture、Latency、Cost、Hard",
+    excerpt: "本文从量化角度对 Apple Silicon 上的大型语言模型推理进行了系统分析。研究对比了 Apple M 系列芯片（M2 Ultra、M2 Max、M4 Pro）与 NVIDI",
     sourceUrl: "https://mp.weixin.qq.com/s/10ULVZLwOeMPPIjrvham6Q",
   },
   {
@@ -6141,7 +6141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "Gemma", "bit", "能效", "神话", "参数"],
-    excerpt: "“工程上的成功，向来取决于效率，而非蛮力。你不会用一把大锤去挂一幅画，AI 亦然。” —— Google Developers Blog 本文 1207 字，阅读需 4 分钟，播客",
+    excerpt: "“工程上的成功，向来取决于效率，而非蛮力。你不会用一把大锤去挂一幅画，AI 亦然。",
     sourceUrl: "https://mp.weixin.qq.com/s/IUg8Tsh8fj8GbtBFgAOEgQ",
   },
   {
@@ -6151,7 +6151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ARISE",
     keywords: ["ARISE", "RISC", "指令集", "静态", "指令", "双重"],
-    excerpt: "关键词：ARISE、RISC-V、指令集扩展、CoreDSL、代码大小优化、动态指令计数、自动化生成 - ARISE: Automating RISC-V Instruction ",
+    excerpt: "ARISE 基于汇编模式自动生成 RISC-V 指令，通过可扩展指标集选择指令，实现代码大小和指令计数的静态及动态缩减，并使用 CoreDSL 语言生成指令集扩展，可无缝集成到 S",
     sourceUrl: "https://mp.weixin.qq.com/s/_lzzw2HNeF2tdb2Kvd5vcg",
   },
   {
@@ -6161,7 +6161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RTL",
     keywords: ["RTL", "GSIM", "Linux", "模拟器", "处理器", "香山"],
-    excerpt: "为加速 RTL 仿真，GSIM 采用了一系列优化技术，有些技术可能在改进一个因素的同时降低另一个因素的性能。在这种情况下，GSIM 通过相应策略平衡这些因素之间的权衡。 关键词：R",
+    excerpt: "GSIM 成功仿真了香山处理器，相比 Verilator，在香山启动 Linux 时提速 7.34 倍，在 Rocket 上运行 CoreMark 时提速 19.94 倍，且在资源",
     sourceUrl: "https://mp.weixin.qq.com/s/Ch-K_tHfIRbYcODf7epOdg",
   },
   {
@@ -6171,7 +6171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "课表",
     keywords: ["课表", "研修班", "干货", "盛宴", "优化", "模型"],
-    excerpt: "家人们，注意啦！一场关于大模型性能优化的“知识狂欢派对”即将上线——第二届大模型性能优化高级研修班，上一次我们已经打过预告计算所承办：大模型性能优化高级研修班！不收费，院里主办所里",
+    excerpt: "课表见文末！8 月 16 日到 20 日，五天不间断，让你沉浸式遨游在大模型的奇妙世界里！",
     sourceUrl: "https://mp.weixin.qq.com/s/ldfGXOCsDRB2NVftCUP2mA",
   },
   {
@@ -6181,7 +6181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "Transitive", "Array", "LLaMA", "加速器", "能耗"],
-    excerpt: "关键词：矩阵乘法、传递稀疏性、Transitive Array、GEMM 加速器、结果重用、LLaMA 模型、哈斯图 - Transitive Array: An Efficien",
+    excerpt: "Transitive Array 的高效 GEMM 加速器，核心利用“传递稀疏性”这一新型稀疏范式，通过重用先前计算结果大幅减少 GEMM 运算的计算开销。该加速器通过有向无环图表",
     sourceUrl: "https://mp.weixin.qq.com/s/U1__qN-sRPGk1IVcJ1_D8w",
   },
   {
@@ -6191,7 +6191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Llama", "全栈", "解码", "批量", "利用率"],
-    excerpt: "关键词：EAGLE-based speculative decoding、Llama models、Inference optimization、Training optimiza",
+    excerpt: "Meta 的 Infra 和 GenAI 团队实施了训练和推理优化技术，实现了基于 EAGLE 的 Llama 模型推测解码在生产规模的应用，刷新了 Llama 模型推理延迟的最新",
     sourceUrl: "https://mp.weixin.qq.com/s/BpYQjrATaI0slrr2dQbFgw",
   },
   {
@@ -6201,7 +6201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "社交性",
     keywords: ["社交性", "Mind", "Gap", "LLM", "偏向", "差距"],
-    excerpt: "关键词：Human-LLM task divergence（人类与 LLM 任务差异）、Value-driven cognition（价值驱动认知、Embodied experie",
+    excerpt: "研究发现，人类的任务生成受个人价值观（如对变化的开放性）和认知风格等心理因素系统影响，且会适应环境复杂性。而 LLM 即便被提供这些心理因素信息，也无法呈现相应行为模式，其生成的任",
     sourceUrl: "https://mp.weixin.qq.com/s/ZikduTLOqRQpqKgo9dnnlA",
   },
   {
@@ -6211,7 +6211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "架构",
     keywords: ["架构", "gem5", "M5", "GEMS", "模拟器", "建模"],
-    excerpt: "关键词：gem5 simulator、computer architecture modeling、simulation infrastructure、instruction se",
+    excerpt: "gem5 模拟器，它融合 M5 与 GEMS 的优势，整合高可配置仿真框架、多 ISA 支持、多样 CPU 模型及详细灵活的内存系统，支持 ARM、ALPHA 等多数商用 ISA，",
     sourceUrl: "https://mp.weixin.qq.com/s/4BxBgDTGZzOEKD_-yP9hcA",
   },
   {
@@ -6221,7 +6221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "HBM", "PIM", "存储技术", "内存", "服务器"],
-    excerpt: "如本文通篇所强调的，所有类型的存储本质上都涉及权衡。虽然开发同时改进所有特性的存储系统仍是可能的，但这方面的进展已非常缓慢，且正接近其极限。 关键词：Memory Technolo",
+    excerpt: "《由内存技术创新驱动的人工智能革命》由三星电子器件解决方案部门总裁兼首席技术官 Jaihyuk Song 主讲，分析了人工智能系统的内存需求和设计挑战，并全面概述了内存架构、内存技",
     sourceUrl: "https://mp.weixin.qq.com/s/s_6Rj-G-oT7j9o_BVHw6zQ",
   },
   {
@@ -6231,7 +6231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AutoTriton",
     keywords: ["AutoTriton", "Triton", "Claude", "DeepSeek", "R1", "开源"],
-    excerpt: "关键词：AutoTriton、Triton 编程、强化学习（RL）、监督微调（SFT）、TritonBench、KernelBench、GRPO 算法 - AutoTriton: ",
+    excerpt: "AutoTriton 是首个基于强化学习的 Triton 编程专用模型。通过监督微调，高质量数据收集，再通过结合规则奖励和执行奖励的 Group Relative Policy O",
     sourceUrl: "https://mp.weixin.qq.com/s/jMse9YwxoCT5mlBH-9UDkQ",
   },
   {
@@ -6241,7 +6241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "研修班",
     keywords: ["研修班", "计算所", "席位", "收费", "优化", "模型"],
-    excerpt: "本文不是商业广告，没有给我们打钱💰！ 不收费，院里主办，所里承包！ 各位 AI 追梦人、性能极客、算力魔法师： - 好消息！好消息！由中国科学院人事局 全程赞助、中国科学院计算技术",
+    excerpt: "友情提醒：本文不是商业广告，没有给我打钱💰！不收费，院里主办，所里承包！",
     sourceUrl: "https://mp.weixin.qq.com/s/63Qa4vPc5VJKnuFN5fcCjQ",
   },
   {
@@ -6251,7 +6251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "NCCL", "利用率", "瓶颈", "协议", "突破"],
-    excerpt: "关键词：NVIDIA NCCL、Collective communication、Communication protocols、Multi-GPU clusters、Collec",
+    excerpt: "本文深入剖析了NVIDIA Collective Communication Library（NCCL），这是支持大规模GPU集群高性能通信的关键软件层。尽管NCCL开源且API有",
     sourceUrl: "https://mp.weixin.qq.com/s/49pp-FEAsdAn4ZSLV0DKCg",
   },
   {
@@ -6261,7 +6261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "代码生成",
     keywords: ["代码生成", "正确率", "Triton", "GPU", "Agent", "GEAK"],
-    excerpt: "关键词：GEAK、Triton language、GPU kernel generation、Evaluation benchmarks、Inference-time comput",
+    excerpt: "GEAK在两个基准上的执行准确率分别达 54.89%和 63.33%，速度提升最高 2.59 倍，显著优于直接提示 LLMs 的基线。其通过推理时计算扩展（如顺序与并行扩展）、1-",
     sourceUrl: "https://mp.weixin.qq.com/s/bA3kcAPuav9cAaw-3VXPlA",
   },
   {
@@ -6271,7 +6271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训练",
     keywords: ["训练", "WLB", "LLM", "瓶颈", "工作"],
-    excerpt: "关键词：LLM Training、4D 并行（4D Parallelism）、负载均衡、变长文档打包（Variable-Length Document Packing）、细粒度分片",
+    excerpt: "WLB-LLM 针对两大失衡源优化：在流水线并行（PP）层，通过变长文档打包与异常长文档延迟策略，平衡微批次计算负载；在上下文并行（CP）层，采用细粒度按文档分片与自适应策略，消除",
     sourceUrl: "https://mp.weixin.qq.com/s/u9kzXQ0TaeNoCs7JZ6_GfQ",
   },
   {
@@ -6291,7 +6291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "微调",
     keywords: ["微调", "LLM", "MobiLLM", "端云", "内存", "协同"],
-    excerpt: "关键词：Transformer、LLMs、Mobile Device Fine-tuning、Edge AI、Low-bit Quantization - MobiLLM: Ena",
+    excerpt: "MobiLLM 框架让资源受限的移动设备保留冻结的主干模型，将内存和计算密集型的可训练侧网络反向传播卸载到高性能服务器，仅需移动端向服务器单向传输低宽度量化的激活值，既保护数据隐私",
     sourceUrl: "https://mp.weixin.qq.com/s/M_doXU_DlUAm91f6O2QcgQ",
   },
   {
@@ -6301,7 +6301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "CPU", "SEEK", "Sophon", "SG2042", "LLM"],
-    excerpt: "关键词：V-SEEK、LLM Inference Optimization、RISC-V、Sophon SG2042、llama.cpp、NUMA Optimization - V",
+    excerpt: "本文针对 RISC-V 服务器级 CPU 在大型语言模型推理中的性能瓶颈，提出系统级优化方案。作者以首款商用 64 核向量 RISC-V 处理器 Sophon SG2042 为平台",
     sourceUrl: "https://mp.weixin.qq.com/s/EVcvo-ZpiKycTZzC-E3jTw",
   },
   {
@@ -6321,7 +6321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NIPS",
     keywords: ["NIPS", "LLM", "Roofline", "ML", "驱动", "预测"],
-    excerpt: "关键词：LLM 推理延迟预测、Performance Modeling、Roofline Model、Regression Models、vLLM 推理服务器、Triton 推理服",
+    excerpt: "本文提出一种结合 Roofline 模型（RLM）与回归模型的 LLM 推理延迟预测方法，用于优化集群管理。该方法通过 RLM 提供的理论硬件性能数据，结合回归模型捕捉的运行时开销",
     sourceUrl: "https://mp.weixin.qq.com/s/eWPg0c7hf4GzbvkhCenixQ",
   },
   {
@@ -6331,7 +6331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Triton",
     keywords: ["Triton", "RISC", "MLIR", "内核", "优化", "平台"],
-    excerpt: "关键词：Triton Kernels、RISC-V、MLIR、Compiling、Optimizing、AI Accelerators、Benchmark - Compiling ",
+    excerpt: "将 Triton 内核基于 MLIR 编译和优化到 RISC-V 目标平台的研究取得了显著成果。Triton 内核在 RISC-V 平台上展现出良好的性能潜力，MLIR 为编译和优",
     sourceUrl: "https://mp.weixin.qq.com/s/QEdOnosQBkXT2IzLNrgevA",
   },
   {
@@ -6341,7 +6341,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "芯片",
     keywords: ["芯片", "Meta", "AI", "MTIA", "规模化", "协同"],
-    excerpt: "考虑到 AI 芯片漫长的开发周期与 AI 领域快速演进之间的矛盾，我们认为，深入理解 AI 工作负载、合理预测 AI 技术趋势，以及在芯片设计中保持灵活性（不过度增加复杂度），是未",
+    excerpt: "基于大 SRAM+LPDDR 架构的模型 - 芯片协同优化与规模化部署，成本较 GPU 降 44%！",
     sourceUrl: "https://mp.weixin.qq.com/s/I7nTpAXuTOVNC1Gyq4YE9A",
   },
   {
@@ -6351,7 +6351,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "Bandwidth", "Compute", "Sync", "Capacity", "Need"],
-    excerpt: "副标题：实现 10,000 tokens/sec 的路径必然 需要算法与硬件变革 的协同演进 关键词：Modeling、LLM Inference、Efficient Infere",
+    excerpt: "本文对基于 Transformer 的 LLM 推理进行了极限研究，聚焦内存带宽、内存容量、计算能力和分布式推理系统中的同步开销带来的性能瓶颈，开发了硬件无关的性能模型，可分析多种",
     sourceUrl: "https://mp.weixin.qq.com/s/MVe9xWh1hp5bUaIi8_VWuA",
   },
   {
@@ -6361,7 +6361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Ultra",
     keywords: ["Ultra", "HPC", "LLM", "能效", "集群", "评估"],
-    excerpt: "关键词：AI accelerators、LLMs、Energy efficiency、Inference performance、Qualcomm Cloud AI 100 Ult",
+    excerpt: "本文对 Qualcomm Cloud AI 100 Ultra 加速器与 NVIDIA（A100、H200 等）、AMD（MI300A）GPU 在大语言模型（LLM）推理任务中的性",
     sourceUrl: "https://mp.weixin.qq.com/s/0yDEumIoxb8M4iYSkjzykQ",
   },
   {
@@ -6371,7 +6371,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "GPU", "CUDA", "NVVM", "SPIR", "开源"],
-    excerpt: "关键词：CUDA, RISC-V GPU, Code Migration、NVIDIA - Supporting CUDA for an extended RISC-V GPU a",
+    excerpt: "我们展示了一种在 RISC-V 后端设备上执行 CUDA 源代码的方法。为了验证其可行性，我们构建了一个流水线，该流水线能够成功执行具有多种特性的多个 CUDA 源代码，包括多线程",
     sourceUrl: "https://mp.weixin.qq.com/s/Mbr501FUowVW_Q_j0u9WYw",
   },
   {
@@ -6381,7 +6381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "洞见",
     keywords: ["洞见", "架构", "模型", "性能", "语言", "调查"],
-    excerpt: "关键词：Small Language Model（小语言模型）、Edge Intelligence、On-device LLM - SMALL LANGUAGE MODELS: S",
+    excerpt: "本文对小型语言模型（100M–5B 参数）进行了全面的调查和测量，包括其能力、在设备上的运行时成本以及创新点。随后，我们总结了关键见解，以启发未来关于小型语言模型的研究。",
     sourceUrl: "https://mp.weixin.qq.com/s/cK1UOR2hmMTimw6LgBCQlA",
   },
   {
@@ -6391,7 +6391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TPUv5e",
     keywords: ["TPUv5e", "FlashAttention", "开源", "流程", "性能", "面积"],
-    excerpt: "关键词：Systolic Array, Flash Attention, Microarchitecture, Accelerators - SystolicAttention: ",
+    excerpt: "我们在单个脉动阵列内完成 FlashAttention 计算，我们方法的核心是 SystolicAttention 算法，它通过精心的调度和静态数据流管理实现了所有 FlashAt",
     sourceUrl: "https://mp.weixin.qq.com/s/KYqOrrxUdToCCGlxNqPyRQ",
   },
   {
@@ -6401,7 +6401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "性能", "KPerfIR", "Triton", "GPU", "FA3"],
-    excerpt: "关键词：KPerfIR、Triton Compiler、GPU 性能分析、编译器中心、MLIR、低开销优化、Region-based timing - KPerfIR: Towar",
+    excerpt: "本文提出 KPerfIR，一种新型多级编译器中心基础设施，让现代 GPU 将性能分析能力直接集成到编译器工作流中，提供可编程且可重用的性能分析框架，弥合编译器与性能分析器之间的差距",
     sourceUrl: "https://mp.weixin.qq.com/s/mbpQSU3mH_71KUb9_qbDKg",
   },
   {
@@ -6411,7 +6411,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "OSDI25",
     keywords: ["OSDI25", "SysGPT", "GPT", "准确率", "建议", "系统化"],
-    excerpt: "关键词：Serial Performance Optimization、Optimization Principles、Optimization Methodologies、Sys",
+    excerpt: "我们提出基于三个核心原则（移除、替换和重排序）的系统化框架，并提炼为八种可操作的方法论，这些方法论在十年的系统文献中被广泛使用。这一分类法明确了优化机会的范围，并提供一种用于推理性",
     sourceUrl: "https://mp.weixin.qq.com/s/pvERUjVQbh6WIDheKNk3ZA",
   },
   {
@@ -6421,7 +6421,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "特征分析", "Simulee", "LLM", "开源", "漏洞"],
-    excerpt: "关键词：CUDA、Program Bugs、Bug Characterization、Bug Detection、Synchronization Bugs、Simulee、GPU ",
+    excerpt: "研究结果表明，bug 主要出现在内核函数，其中 跨平台的通用错误是主要 bug 症状。还可观察到， 同步 bug 极难处理。 因此，我们开发了一种 全自动方法 Simulee ，它",
     sourceUrl: "https://mp.weixin.qq.com/s/RKiy22puEcXlO8CmJsWuRg",
   },
   {
@@ -6431,7 +6431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Bug",
     keywords: ["Bug", "Feature", "Kernel"],
-    excerpt: "夜里 2:47，机房的液冷泵发出低沉的嗡鸣。 stderr 滚动中...... 我——原本被设计成 “史上最快 8-bit GEMM 算子”， 如今被同事当成“万恶之源”——在滚动",
+    excerpt: "太难顶了，编译器有bug，sdk有bug，qemu有bug。。。",
     sourceUrl: "https://mp.weixin.qq.com/s/jxoYP4ijrtTzl2ipVBZbsg",
   },
   {
@@ -6441,7 +6441,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "训推",
     keywords: ["训推", "bug", "DeepSpeed", "Megatron", "LM", "Colossal"],
-    excerpt: "关键词：分布式训练与推理框架、大型语言模型（LLMs）、软件 bug、DeepSpeed、Megatron-LM、Colossal-AI、实证研究（基于 GitHub 真实修复） ",
+    excerpt: "通过系统分析这些漏洞的症状、根本原因、诊断与修复挑战以及常见的低难度修复策略，我们揭示了这些框架中漏洞的关键特征。崩溃、功能错误和构建失败是最常见的症状 ，而 API 误用、实现错",
     sourceUrl: "https://mp.weixin.qq.com/s/dBYBLzTl25tB04R4Eusxtw",
   },
   {
@@ -6451,7 +6451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Qwen3",
     keywords: ["Qwen3", "能干", "玩具", "模型", "工人"],
-    excerpt: "关键词：小语言模型（SLM）、Qwen3-0.6B、业务场景、生产环境、端侧王者 本文 908 字，阅读需 4 分钟，播客 5 分钟如下 - 0.5B 推理语言模型的技术研究：挖掘",
+    excerpt: "关键词：小语言模型（SLM）、Qwen3-0.6B、业务场景、生产环境、端侧王者本文 908 字，阅读需 4",
     sourceUrl: "https://mp.weixin.qq.com/s/0jwzDcvD7X17xoWgl0BS8g",
   },
   {
@@ -6461,7 +6461,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "树莓",
     keywords: ["树莓", "MoE", "EdgeMoE", "LLM", "开源", "内存"],
-    excerpt: "关键词：移动设备部署、Edge、混合专家模型（MoE）、稀疏大语言模型、专家级量化、树莓派、NVIDIA Jetson - EdgeMoE: Empowering Sparse L",
+    excerpt: "本文提出EdgeMoE，一种在移动设备上运行混合专家 LLM的推理引擎。通过分层存储权重、专家级比特宽度适配及预加载技术，减少内存占用与I/O开销。在多个MoE模型和边缘设备上内存",
     sourceUrl: "https://mp.weixin.qq.com/s/oCQVLLHYxHzULmNuVrQKCg",
   },
   {
@@ -6471,7 +6471,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "PipeThreader", "DNN", "FlashAttention", "Mamba2", "流水线"],
-    excerpt: "关键词：PipeThreader、sTask-graph、软件定义流水线、异构硬件利用、DNN 执行效率 - https://www.usenix.org/conference/o",
+    excerpt: "本文介绍了 PipeThreader，这是一个 DNN 编译器，它通过 sTask-graph 抽象和层次化的硬件能力来实现软件定义的流水线。在NVIDIA H100和AMD GP",
     sourceUrl: "https://mp.weixin.qq.com/s/0eTd32yV7RuT6CB75TWLKA",
   },
   {
@@ -6481,7 +6481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "LLM", "QiMeng", "cuBLAS", "OpenBLAS", "硬件"],
-    excerpt: "关键词：GEMM、大语言模型、QiMeng-GEMM、自动调优框架、硬件平台、提示词工程 - QiMeng-GEMM: Automatically Generating High-",
+    excerpt: "我们的方法生成的代码性能可以超越人类专家手工优化的库。虽然人类专家优化 GEMM 通常需要数月时间，但我们的方法将开发成本降低了 240 倍以上。QiMeng-GEMM 的进展在快",
     sourceUrl: "https://mp.weixin.qq.com/s/NAQqkoZnVTmlcDWcdwU1gw",
   },
   {
@@ -6491,7 +6491,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ZLUDA",
     keywords: ["ZLUDA", "CUDA", "GPU", "开源", "最新进展", "现状"],
-    excerpt: "关键词：ZLUDA、CUDA兼容层、AMD GPU、PTX翻译、PyTorch - https://github.com/vosen/ZLUDA - https://vosen.g",
+    excerpt: "ZLUDA的工作原理是在AMD显卡上创建一个CUDA兼容层，这样CUDA应用程序就可以在非NVIDIA GPU上运行，而无需修改代码。这意味着，使用ZLUDA，开发者可以在AMD显",
     sourceUrl: "https://mp.weixin.qq.com/s/SIwbNn2Tl11Hmu8O1DEAWg",
   },
   {
@@ -6501,7 +6501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "NVIDIA", "AMD", "Intel", "Tenstorrent", "二进制"],
-    excerpt: "关键词：ZLUDA、GPGPU、Binary、Compatibility、NVIDIA、AMD、深度学习框架层、跨平台 GPU 编译器 - HetGPU: The pursuit ",
+    excerpt: "通过 “统一 IR + 动态翻译 + 抽象层”的三层架构，将GPU二进制与底层硬件解耦，实现“一次编译，多平台运行” 的目标。创新在处理异构架构差异的系统性设计，对状态迁移原生支持",
     sourceUrl: "https://mp.weixin.qq.com/s/4pEsYIQlKTK0s32rtDfnDA",
   },
   {
@@ -6511,7 +6511,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SoC",
     keywords: ["SoC", "PPA", "nm", "EUV", "FinFET", "设计"],
-    excerpt: "关键词：5nm EUV FinFET、DTCO、骁龙 888、PPA 优化、可制造性 - High Performance 5G mobile SoC DesignTechnolo",
+    excerpt: "本文总结了骁龙 ® 888 移动平台，重点阐述骁龙 888 在 5 nm 工艺上的可制造性与量产就绪情况，并聚焦产品关键 KPI——CPU 性能及 CPU/DoU（Day-of-U",
     sourceUrl: "https://mp.weixin.qq.com/s/u2BNG81c0ic4JlCdeXBYHg",
   },
   {
@@ -6521,7 +6521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FlashMLA",
     keywords: ["FlashMLA", "TTFT", "解码", "吞吐量", "硬件", "注意力"],
-    excerpt: "关键词：Hardware-Efficient、Attention、Fast Decoding - Hardware-Efficient Attention for Fast Dec",
+    excerpt: "我们证明，关注高算术强度和有效并行化可在解码时产生硬件高效的注意力机制。这项工作重新设计了注意力机制，以在从内存加载的每字节数据上执行更多计算，从而在不牺牲并行可扩展性的情况下最大",
     sourceUrl: "https://mp.weixin.qq.com/s/WLqf4F3NP0kMYjDt7zivcQ",
   },
   {
@@ -6531,7 +6531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "性能",
     keywords: ["性能", "nm", "Mobile", "SoC", "协同", "优化"],
-    excerpt: "关键词：7nm FinFET 技术、骁龙 SDM855、双多晶硅间距（dual poly pitch）、工艺增强（2nd-year process enhancement） - 7",
+    excerpt: "本文介绍高通骁龙 SDM855 移动 SoC 及全球首个商用 5G 平台，采用业界领先的 7nm FinFET 技术。通过双多晶硅间距（CPP64和 CPP57）的工艺集成与设计协",
     sourceUrl: "https://mp.weixin.qq.com/s/v4opBvC6OjQWeAEZI0Sc2w",
   },
   {
@@ -6541,7 +6541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Next",
     keywords: ["Next", "Decade", "AI", "Performance", "Power", "Area"],
-    excerpt: "关键词：Artificial Intelligence, Machine Learning, Deep Neural Network, PPA, Heterogenous Inte",
+    excerpt: "后摩尔时代，传统依赖晶体管缩放的 PPA 优化面临挑战，IRDS预测2034年将达极限。为突破此限制，AI 系统需通过多学科 AI 协同优化实现系统级创新，核心方向包括内存中处理、",
     sourceUrl: "https://mp.weixin.qq.com/s/5qm0bfEFVfNEtVHmXw4jOA",
   },
   {
@@ -6551,7 +6551,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Kernel",
     keywords: ["Kernel", "GPU", "Scientist", "LLM", "GPGPU", "框架"],
-    excerpt: "关键词：GPGPU、Kernel Optimization、LLM、Iterative Framework - GPU Kernel Scientist: An LLM-Drive",
+    excerpt: "该框架在AMD MI300架构上验证了可行性，利用LLM泛化能力弥补领域知识缺口，实现了无需专家干预的自动化优化，展现了LLM在加速高性能计算开发、民主化GPU编程中的潜力，未来计",
     sourceUrl: "https://mp.weixin.qq.com/s/DKKucXjGqYgKq5UoQAhoyw",
   },
   {
@@ -6561,7 +6561,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "剪枝",
     keywords: ["剪枝", "Ansor", "MBCI", "MCFuser", "分块", "算子"],
-    excerpt: "关键词：Operator Fusion, Compute-Intensive, Automatic Exploration, Performance Model, GPU - MC",
+    excerpt: "方案基于 Triton 和 TVM，在英伟达A100 和 RTX 3080 GPU上展示了 MCFuser 显著提升性能的能力，与 Ansor 相比，加速比最高达 5.9 倍，并超",
     sourceUrl: "https://mp.weixin.qq.com/s/tYUZfsHnGBIh6w5y7wSxHA",
   },
   {
@@ -6571,7 +6571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "GEMM", "FPU", "MLIR", "RISC", "Micro"],
-    excerpt: "关键词：RISC-V、ISA Extension、Micro-kernels、Compiler Backend、MLIR https://arxiv.org/pdf/2502.04",
+    excerpt: "本文提出针对RISC-V指令集扩展的多层编译器后端，通过SSA-based IR分层抽象与渐进式lowering，实现对Snitch加速器的硬件循环和流寄存器等特性的高效支持。在矩",
     sourceUrl: "https://mp.weixin.qq.com/s/bqkvMsxGA9itcXygP5bkhg",
   },
   {
@@ -6581,7 +6581,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MLSys2025",
     keywords: ["MLSys2025", "CPU", "GPU", "Negativa", "ML", "内存"],
-    excerpt: "关键词：机器学习系统；软件膨胀；Negativa-ML；共享库；GPU 代码、CPU 代码、机器学习框架 https://arxiv.org/abs/2503.14226v2 ht",
+    excerpt: "关键词：机器学习系统；软件膨胀；Negativa-ML；共享库；GPU 代码、CPU 代码、机器学习框架ht",
     sourceUrl: "https://mp.weixin.qq.com/s/x_F_oSsA-Vp0pXvPIy2RYw",
   },
   {
@@ -6591,7 +6591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "硬件",
     keywords: ["硬件", "LLM", "token", "综述", "视角", "优化"],
-    excerpt: "关键词：生成式大型语言模型、硬件、推理加速、综述、能效、能耗、AI 趋势!文章插图 https://arxiv.org/abs/2410.04466 https://dai.sjt",
+    excerpt: "本文对不同硬件平台上高效的生成式 LLM 推理进行了全面综述。我们概述了主流生成式 LLM 的算法架构，并总结了针对 CPU、GPU、FPGA、ASIC 和 PIM/NDP 等不同",
     sourceUrl: "https://mp.weixin.qq.com/s/RGfu6jw5ki5z1CkotXgwZg",
   },
   {
@@ -6601,7 +6601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "协作",
     keywords: ["协作", "LLM", "同构", "算子", "异构", "综述"],
-    excerpt: "关键词：生成式大型语言模型、硬件、推理加速、综述、算子优化、异构协作、同构协作!文章插图 https://arxiv.org/abs/2410.04466 https://dai.",
+    excerpt: "本文聚焦生成式大语言模型（LLM）推理加速的硬件优化，涵盖 CPU、GPU、FPGA、ASIC 和 PIM/NDP 平台。本文总结了从三个加速方法：算子优化、异构协作和同构协作。",
     sourceUrl: "https://mp.weixin.qq.com/s/EQ0k2wwcgE1aLq-W9Lritw",
   },
   {
@@ -6611,7 +6611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "Sparsity", "Fast", "Decoding", "综述", "视角"],
-    excerpt: "关键词：生成式大型语言模型、硬件、稀疏化、Fast Decoding、CPU、GPU、FPGA、ASIC、PIM、NDP!文章插图 https://arxiv.org/abs/24",
+    excerpt: "本文从硬件视角探讨LLM推理加速的稀疏性和快速解码方法。稀疏性通过权重、激活和注意力稀疏优化，结构化稀疏更利于硬件加速，不同硬件支持各异。快速解码有推测解码和层跳过，GPU推测解码",
     sourceUrl: "https://mp.weixin.qq.com/s/3bQGzd1cbqqSRR3ykNoVbg",
   },
   {
@@ -6621,7 +6621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "硬件", "LLMs", "综述", "视角", "关联"],
-    excerpt: "关键词：生成式大型语言模型、硬件架构、量化、综述、CPU、GPU、FPGA、ASIC、PIM、NDP!文章插图 https://arxiv.org/abs/2410.04466 h",
+    excerpt: "本文从硬件视角全面综述生成式大语言模型（LLM）推理加速技术，分析 CPU、GPU、FPGA、ASIC、PIM/NDP 等平台的优化方法（如量化、稀疏化、快速解码、算子优化、异构协",
     sourceUrl: "https://mp.weixin.qq.com/s/_rvKIZB1IzsX7Z6oe1a2rw",
   },
   {
@@ -6631,7 +6631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLMs",
     keywords: ["LLMs", "Understand", "IR", "Compilers", "分析", "语义"],
-    excerpt: "关键词：大型语言模型, 中间表示, 控制流图, 反编译, 执行推理, 编译器优化 本文 9237 字，阅读需 37 分钟，播客 8 分钟如下 中间表示（IR，Intermediat",
+    excerpt: "尽管 LLM 能识别静态IR特征和基本控制流，但在更复杂的构造上存在困难，尤其循环推理、精确控制依赖和指令级执行行为。在反编译时常省略关键指令，误解控制结构，并以粗粒度语义近似执行",
     sourceUrl: "https://mp.weixin.qq.com/s/3FKgg8qVMoSuWebPZSLdfA",
   },
   {
@@ -6641,7 +6641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "模型",
     keywords: ["模型", "代码生成", "精度", "潜力", "差距", "数学"],
-    excerpt: "关键词：小型推理语言模型（SRLMs）、监督微调（SFT）、知识蒸馏（KD）、强化学习（RL）、数学推理、代码生成、训练策略、性能提升（这里指精度） https://arxiv.o",
+    excerpt: "本文调查 0.5B SRLMs 数学推理和代码生成领域能力，特别关注与它们有限容量相关的挑战。 检查各种训练策略的潜力和局限性，实证表明虽然 SRLMs 可以通过这些不同的训练方法",
     sourceUrl: "https://mp.weixin.qq.com/s/RkJKqbqCN0BfL7i9FsqxnQ",
   },
   {
@@ -6651,7 +6651,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "代码",
     keywords: ["代码", "NVIDIA", "AMD", "GPU", "SOTA", "CASS"],
-    excerpt: "关键词：GPU 代码转换；跨架构翻译；CASS 数据集；CASS 模型；CASS-Bench 基准测试；Nvidia；AMD https://arxiv.org/abs/2505.",
+    excerpt: "我们构建的数据集有7万个经验证的主机和设备代码对，填补低级GPU代码可移植性空白。由此训练了特定领域的CASS语言模型系列，实现95%源级、37.5%汇编级转换准确率，大幅超越GP",
     sourceUrl: "https://mp.weixin.qq.com/s/i89tmGcE8hF-DMHalblmGA",
   },
   {
@@ -6661,7 +6661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CUDA",
     keywords: ["CUDA", "代码", "编译器", "HPCTransCompile", "LLM", "AI"],
-    excerpt: "关键词：HPC, LLMs, Code Transpilation, CUDA Ecosystem, Code Porting https://arxiv.org/abs/2506",
+    excerpt: "用TVM生成 2 万对高性能 CUDA-CPU 代码对，结合数据增强构建数据集。基于该数据集微调的LLMs在CUDA到CPU代码转换任务中，编译通过率提升53%-81%，执行速度提",
     sourceUrl: "https://mp.weixin.qq.com/s/QzD4M24JJcT9D8mtL_RYQA",
   },
   {
@@ -6671,7 +6671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "自动",
     keywords: ["自动", "Arm", "x86", "RISC", "模拟器", "架构"],
-    excerpt: "关键词：Hardware Architecture、Autotuning、Simulation、Performance Estimation、TVM、gem5、cache opti",
+    excerpt: "我们设计了一种模拟器上执行自动调优工作负载接口，探索了使用指令精确模拟器进行 ML 工作负载自动调优可行性。我们训练比较 x86、ARM 和 RISC-V 架构的不同得分预测器。结",
     sourceUrl: "https://mp.weixin.qq.com/s/x6PicpU0GZxDd-7g6Rdtxg",
   },
   {
@@ -6681,7 +6681,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "LLaMA", "剖析", "之谜", "故障", "训练"],
-    excerpt: "随着人工智能技术的快速发展，GPU（图形处理单元）已成为训练大型深度学习模型的核心硬件。然而，在大规模的 GPU 训练过程中，故障问题频繁发生，严重影响了训练效率和模型性能。 本文",
+    excerpt: "GPU 训练过程中出现故障是不可避免，通过优化硬件、散热管理、软件兼容性和分布式训练，可显著减少故障的发生频率和影响。Meta在LLaMA-3训练中的经验表明，通过采取有效的解决方",
     sourceUrl: "https://mp.weixin.qq.com/s/p4XPk4N2E-Z_Vu4oD4l5nQ",
   },
   {
@@ -6691,7 +6691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "代码优化", "CompilerDream", "内置", "优化", "模型"],
-    excerpt: "关键词：World Models, Compiler Optimization, Code Data Mining https://arxiv.org/abs/2404.16077",
+    excerpt: "CompilerDream 是首个基于世界模型通用代码优化框架，在LLVM优化 pass 排序问题中用大规模 CodeContests数据集实现零样本泛化，代码尺寸优化实现最高 1",
     sourceUrl: "https://mp.weixin.qq.com/s/Rc0i7PkvucklTl2tPKYkxA",
   },
   {
@@ -6701,7 +6701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "J3DAI",
     keywords: ["J3DAI", "DNN", "CMOS", "AI", "加速器", "传感器"],
-    excerpt: "关键词：J3DAI, 3D, Edge AI/ML, SIMD, Hardware accelerator, Energy efficient, Low-power archite",
+    excerpt: "J3DAI 是一款为三晶圆堆叠 CMOS 图像传感器设计的 AI 硬件加速器。分为三个芯片，顶层芯片包含 RGB 像素矩阵，中间包含图像传感器的经典功能，底层针对多堆叠边缘 AI ",
     sourceUrl: "https://mp.weixin.qq.com/s/CeJCz7UJpNTax7jU-yMrXw",
   },
   {
@@ -6711,7 +6711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "分布式", "MoE", "层融", "Kernel", "FlashDMoE"],
-    excerpt: "关键词：算子融合、性能优化、大模型、GPU、软硬件协同设计、分布式机器学习 本文 8140 字，阅读需 32 分钟，播客 9 分钟见文末 本文是上一篇所有层融合成一个 GPU ke",
+    excerpt: "这是首个将整个混合专家（MoE）算子融合到单个 GPU 内核中的系统。通过在统一内核中嵌入计算、通信和调度，与最先进系统相比，实现了 6 倍速度提升、9 倍的 GPU 利用率提升，",
     sourceUrl: "https://mp.weixin.qq.com/s/oSI1sohZF3W08PqpU7AOUA",
   },
   {
@@ -6721,7 +6721,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "kernel", "Llama", "内核", "空闲", "融合"],
-    excerpt: "关键词：大内核（Megakernel）、低延迟、GPU带宽利用率、共享内存分页、显式同步机制、Llama-1B、内核融合、内存管道空闲周期 有些应用程序能从非常快速地运行大语言模型",
+    excerpt: "通过大内核架构消除 GPU 空闲周期，实现 Llama-1B 的极低延迟推理。这不仅是技术成果的展示，也传递了对高效硬件利用的追求，为后续 AI 模型在边缘设备、实时交互等场景的部",
     sourceUrl: "https://mp.weixin.qq.com/s/Fv5LnNgNQcU5OX9URMnVTg",
   },
   {
@@ -6731,7 +6731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLM",
     keywords: ["LLM", "内存", "移动", "MNN", "DRAM", "Flash"],
-    excerpt: "关键词：移动 SoC、移动端推理、大模型、模型加载、DRAM、Flash、Arm、高通、CPU、GPU 本文 8085 字，阅读需 33 分钟，播客 8 分钟。 大型语言模型（LL",
+    excerpt: "通过 DRAM-Flash 混合存储和组合量化优化内存使用，同时利用硬件驱动的数据重排、多核负载平衡、混合精度浮点运算和几何计算等策略提升推理速度。与主流框架相比，实现了高达 8.",
     sourceUrl: "https://mp.weixin.qq.com/s/C_4AU6RZSFnRk6QGmxyYcA",
   },
   {
@@ -6741,7 +6741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "NPU",
     keywords: ["NPU", "GPU", "HeteroLLM", "SoC", "LLM", "Gen"],
-    excerpt: "随着 ChatGPT、AI 代理和视频生成等人工智能技术的快速发展，现代移动系统已开始在本地设备上集成这些 AI 能力，以增强隐私保护并减少响应延迟。 为了满足 AI 任务的计算需",
+    excerpt: "HeteroLLM 通过利用 GPU 弥补 NPU 计算限制，缓解效率问题，解决了 SoC 内存带宽未充分利用和静态图约束等挑战。为设计更高效的边缘 AI 加速器和异构 SoC 提",
     sourceUrl: "https://mp.weixin.qq.com/s/E3yQZZPZwGTYvTiKh0efIQ",
   },
   {
@@ -6751,7 +6751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Grid",
     keywords: ["Grid", "Sample", "NPU", "微信", "HPC", "Deformable"],
-    excerpt: "关键词：System-Algorithm Co-Design, Domain-Specific Acceleration, Ascend NPU, Multi-Scale Defo",
+    excerpt: "我们提出了 xMSDA，一种基于系统-算法协同设计方法论的 Ascend NPU 上 MSDA 的高性能实现。相比网格采样基线，正向、反向和端到端训练实现了高达 5.9 倍、8.9",
     sourceUrl: "https://mp.weixin.qq.com/s/EpM2mCBoxesStdnps2fhEQ",
   },
   {
@@ -6761,7 +6761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Token",
     keywords: ["Token", "Transformer", "EdgeInfinite", "内存", "解决方案", "消耗"],
-    excerpt: "关键词：Edge Devices、Memory-Efficient、Transformer、Infinite-Context、Inference 基于 Transformer 的大",
+    excerpt: "本文提出边缘设备长上下文任务高效方法 EdgeInfinite：将压缩内存与可训练内存门控模块集成到基于 Transformer 的 LLMs 中，实现无限上下文推理，同时保持与原",
     sourceUrl: "https://mp.weixin.qq.com/s/iC_bCfQ7LxJ3RCF1jkChRQ",
   },
   {
@@ -6771,7 +6771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "KB",
     keywords: ["KB", "RAM", "MobileNet", "msf", "CNN", "TinyML"],
-    excerpt: "比 SOTA 还少 50% 峰值 RAM 的微控制器推理！ 关键词：TinyML、MCU、RISC-V、Inference、Tiny Model 人工智能涵盖了从大型语言模型到在微",
+    excerpt: "提出 msf-CNN，这是一种能够为 CNN 推理识别实用的基于分块的融合优化方案的技术和启发式方法，可共同满足内存和延迟约束。与先前针对微控制器的 CNN 融合工作相比，msf-",
     sourceUrl: "https://mp.weixin.qq.com/s/9OOuAieT6HwFhDERjKjY7g",
   },
   {
@@ -6781,7 +6781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "剪枝",
     keywords: ["剪枝", "Qwen3", "Pangu", "Light", "NPU", "吞吐量"],
-    excerpt: "关键词：模型剪枝、RMSNorm、推理加速、吞吐量、昇腾 NPU、华为盘古 大型语言模型（LLMs）在众多任务中实现了最先进的能力，但其庞大的规模和推理成本给实际部署带来了显著的计",
+    excerpt: "系统解决“剪什么”，“如何补偿激进结构修改并优化常被忽视的组件”。核心创新是跨层注意力剪枝和稳定层归一化剪枝，通过保留关键信息和稳定模型输出来抵消剪枝不利影响。将高成本的归一化步骤",
     sourceUrl: "https://mp.weixin.qq.com/s/eDbQwZOsLkmV28yBz9Iw2A",
   },
   {
@@ -6791,7 +6791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "处理器",
     keywords: ["处理器", "芯片", "编译器", "国重", "QiMeng", "计算所"],
-    excerpt: "关键词：处理器芯片、全自动设计、软硬件设计、高性能库自动化设计、编译器工具链自动化设计 处理器芯片设计技术是推动计算机科学及相关领域取得突破的关键前沿技术。随着信息技术的飞速发展，",
+    excerpt: "关键词：处理器芯片、全自动设计、软硬件设计、高性能库自动化设计、编译器工具链自动化设计处理器芯片设计技术是推动",
     sourceUrl: "https://mp.weixin.qq.com/s/pstvvCsKn6OhB7oNDsvvtQ",
   },
   {
@@ -6801,7 +6801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "三值",
     keywords: ["三值", "低功耗", "TeLLMe", "FPGA", "LLM", "内存"],
-    excerpt: "关键词：FPGA、三值矩阵乘法、加速器、LLM 在边缘平台上部署大语言模型（LLMs）面临着高计算和高内存需求的挑战。 尽管 最近的低比特量化方法（如 BitNet、DeepSee",
+    excerpt: "TeLLMe 采用基于查找表的矩阵乘法引擎，在投影层和前馈层中重用分组激活值和在线预计算，以实现三值矩阵运算。7W 功耗下吞吐量高达 9.51 个 Token /秒，支持 1024",
     sourceUrl: "https://mp.weixin.qq.com/s/hYvNNPsiNSTJ0-wjUYkxBQ",
   },
   {
@@ -6811,7 +6811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "AMD", "Untether", "初创", "芯片", "团队"],
-    excerpt: "芯片设计商 AMD 向《渠道商新闻》（CRN）证实，其已收购 Untether AI 的员工团队。Untether AI 是一家 AI 推理芯片开发商，其所售产品面向边缘环境和数据",
+    excerpt: "Untether AI 开发的 AI 推理芯片，主打在边缘环境和企业数据中心场景下，比竞争对手的产品速度更快、能效更高。",
     sourceUrl: "https://mp.weixin.qq.com/s/cQsAtZiqE644tQuV0VsIcQ",
   },
   {
@@ -6821,7 +6821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "架构",
     keywords: ["架构", "NPU", "SoC", "DNN", "CaMDN", "调度"],
-    excerpt: "关键词：Cache、Multi-tenant、DNN、NPU、SoC 随着深度神经网络（DNN）应用的快速发展，多租户（多租户是指多个 DNN 模型共享同一片硬件资源，如芯片或服务",
+    excerpt: "北航、清华和华光光电针对集成 NPU 的多租户 DNN 的架构与调度协同设计，解决多 NPU 共享缓存效率低的问题。结合轻量架构、缓存感知映射和动态缓存分配，减少 33.4%的内存",
     sourceUrl: "https://mp.weixin.qq.com/s/luB1BtXRjRNQXO7zL0nr_g",
   },
   {
@@ -6831,7 +6831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "llama", "cpp", "图级", "iPhone", "Pro"],
-    excerpt: "关键词：小语言模型、llama.cpp、移动设备、CPU、GPU 在设备端人工智能领域，人们普遍认为，凭借卓越的并行处理能力，GPU 在大语言模型（LLM）推理中总能提供最佳性能。",
+    excerpt: "通过在 iPhone 15 Pro 上以 llama.cpp 为推理引擎，对不同参数规模和精度设置的小型大语言模型进行实验，挑战了在设备端 AI 中 GPU 性能总是优于 CPU ",
     sourceUrl: "https://mp.weixin.qq.com/s/FbBBOgkYyWu8TYFK7TbfEQ",
   },
   {
@@ -6841,7 +6841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "评估",
     keywords: ["评估", "低功耗", "NPU", "Arm", "RISC", "SoC"],
-    excerpt: "在设备上进行神经网络（NN）推理相比于基于云端的处理具有诸多优势，包括可预测的延迟、增强的隐私性、更高的可靠性以及为供应商降低运营成本。 这激发了微控制器级神经网络加速器（通常称为",
+    excerpt: "帝国理工学院和剑桥针对超低功耗神经处理单元（μNPUs）性能评估展开研究。提出统一编译和基准测试框架的方法，标准化模型对比 latency、内存和功耗。在多款平台测试发现 GOPS",
     sourceUrl: "https://mp.weixin.qq.com/s/3N_gXQUZmBsqPjJWkE_s5Q",
   },
   {
@@ -6851,7 +6851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "ML", "Drift", "Layout", "LLM", "虚拟化"],
-    excerpt: "关键词：On-Device GPU、Inference、Large Generative Model 受生成式人工智能发展的推动，大型机器学习模型已在图像处理、音频合成和语音识别等",
+    excerpt: "ML Drift 推理框架，让大型生成模型在各硬件平台的 GPU 上高效部署。其通过张量虚拟化将逻辑张量索引与物理 GPU 索引解耦，在内存布局和内核优化山实现了极致灵活性。多个硬",
     sourceUrl: "https://mp.weixin.qq.com/s/Zt2pvjw90App_wsGPrcG8g",
   },
   {
@@ -6861,7 +6861,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Triton",
     keywords: ["Triton", "GPGPU", "LLM", "精度", "服务"],
-    excerpt: "为大型语言模型（LLM）提供服务对于人工智能驱动的应用程序至关重要，但这需要大量的计算资源，特别是在内存带宽和计算吞吐量 方面。 低精度计算已成为提高效率和减少资源消耗的关键技术。",
+    excerpt: "Tilus 配备了用于在块内寄存器中分布张量的代数布局系统、具有精细内存管理的线程块级编程模型以及对 1 到 8 位任意精度的广泛支持。实验结果表明，与 Triton 和 Ladd",
     sourceUrl: "https://mp.weixin.qq.com/s/XG5EE6uCQGVxJfyBsSkxWg",
   },
   {
@@ -6871,7 +6871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "VHDL",
     keywords: ["VHDL", "高性能", "代码", "优化", "模型", "设计"],
-    excerpt: "关键词：LLM 定制，RTL 设计，VHDL 设计，LLM as a Judge，高性能处理器设计生产力 不久前也分享过两篇类似的文章： - 斯坦福、CMU 提出 VeriCode",
+    excerpt: "本文探讨了将 LLM 定制化用于 VHDL 代码的解释，以提高高性能微处理器设计的效率。研究团队通过扩展预训练（EPT）和指令调优（IT）等技术，显著提升了模型在解释VHDL代码方",
     sourceUrl: "https://mp.weixin.qq.com/s/1YW_tipuAFo6Dx25U2peBQ",
   },
   {
@@ -6881,7 +6881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "压缩率",
     keywords: ["压缩率", "Qwen2", "硬件加速", "LLM", "模型", "边缘"],
-    excerpt: "关键词：LLMs, Edge AI, FPGA, Acceleration 基于 Transformer 的大型语言模型（LLMs）显著推动了人工智能能力的发展，但由于其高计算需求",
+    excerpt: "作者提出在Xilinx Kria KV260平台部署Qwen2.5-0.5B模型的框架。利用激活感知权重量化（AWQ）压缩模型，结合FPGA加速流水线，通过软硬件协同优化，将模型压",
     sourceUrl: "https://mp.weixin.qq.com/s/K9cxFvii2p9NxpDxkSxhYg",
   },
   {
@@ -6891,7 +6891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Autotuning",
     keywords: ["Autotuning", "GPGPU", "性能"],
-    excerpt: "关键词：LLM Portability, Domain-specific Languages, Performance of Systems, Code tuning 不久前，分享",
+    excerpt: "IBM Research 证明了自动调优是 LLM 性能可移植性的关键，将 Triton JIT 编译器与自动调优结合，为不同厂商和代 GPU 提供性能可移植性，甚至比厂商优化的实",
     sourceUrl: "https://mp.weixin.qq.com/s/4yHsNUVPgB4PFfE7b1COuw",
   },
   {
@@ -6901,7 +6901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Lite",
     keywords: ["Lite", "GPU", "AI", "集群"],
-    excerpt: "关键词：Lite-GPU、AI Cluster、Fault-tolerance、Resource Management、Co-packaged Optics（这点详见正文科普） 为",
+    excerpt: "Lite-GPU是小型、单芯片GPU，成本和功耗低，容错能力强。实验表明，Lite-GPU集群在内存管理、网络和数据中心管理方面展现出潜力。利用共封装光学和分离式内存等先进技术，重",
     sourceUrl: "https://mp.weixin.qq.com/s/Vs4zlOxKwYpPbgSeI15G3w",
   },
   {
@@ -6911,7 +6911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Tenstorrent",
     keywords: ["Tenstorrent", "RISC", "乘法", "矩阵", "评估", "能力"],
-    excerpt: "关键词：RISC-V、Tenstorrent Grayskull、Matrix Multiplication、Hardware Acceleration、Energy Effici",
+    excerpt: "我们评估了 Tenstorrent Grayskull e75 RISC-V 加速器在矩阵乘法的性能和效率，分析了其执行模型，研究了处理器网格大小、矩阵维度、数据格式和数值精度对计",
     sourceUrl: "https://mp.weixin.qq.com/s/7yAfQ1ckRSjZG-QFFWzxyw",
   },
   {
@@ -6921,7 +6921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GEMM",
     keywords: ["GEMM", "MixPE", "加速器", "能耗", "算法", "硬件"],
-    excerpt: "关键词：SW HW Co-design、mpGEMM、LLM、Inference、Quantization 基于 Transformer 的大型语言模型（LLMs）随着模型尺寸不断",
+    excerpt: "港中文、清华联合华为诺亚实验室，提出 MixPE，一种专为以最小反量化开销处理混合精度 GEMM 而设计的新型硬件加速器，利用每组参数共享来实现 mpGEMM 后反量化，减少主循环",
     sourceUrl: "https://mp.weixin.qq.com/s/cIRYdKc_CK6eV-H35ZYDUg",
   },
   {
@@ -6931,7 +6931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Prefill",
     keywords: ["Prefill", "Decode", "CPU", "GPU", "Cache", "MoE"],
-    excerpt: "关键词：MoE、CPU-GPU Scheduling、Inference、Cache Management 混合专家（MoE）架构因其能够在不按比例增加计算量的情况下提升模型容量而",
+    excerpt: "北大提出一种专为解决混合专家（MoE）推理中的动态专家激活和工作负载不平衡挑战而设计的混合 CPU-GPU 调度和缓存管理系统。通过结合动态层内调度、基于影响的预取和基于评分的缓存",
     sourceUrl: "https://mp.weixin.qq.com/s/JdQY9NIGoxoVtvNzeBkLww",
   },
   {
@@ -6941,7 +6941,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "Capacity", "CMU", "Meta", "LithOS", "能耗"],
-    excerpt: "关键词：GPGPU、软件资源调度、机器学习 机器学习（ML）工作负载在数据中心对 GPU 的需求激增，使得高效利用 GPU 变得至关重要。然而，在满足各个 ML 模型的多样化需求的",
+    excerpt: "LithOS，迈向高效 GPU 机器学习操作系统的一步。LithOS 对整个 ML 堆栈透明运行。通过 TPC 调度、内核原子化、硬件适配和电源管理等功能，LithOS 显著提高了",
     sourceUrl: "https://mp.weixin.qq.com/s/Or1yAGoCZi3LnYL_G-ppig",
   },
   {
@@ -6951,7 +6951,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Cost",
     keywords: ["Cost", "Efficient", "LLMs", "Large", "Super", "Tiny"],
-    excerpt: "近年来，大型语言模型（LLMs）通过优化传统的自然语言处理（NLP）流程，在提升人工智能性能和泛化能力方面取得了显著进展。 这推动了它们在各种系统中的集成应用。包括我们许多 NLP",
+    excerpt: "我们的超小型模型具有低延迟、成本效益、云独立性和隐私保护特点。实现方案基于强化学习和知识蒸馏的混合方法，有效提升了超小型模型的泛化能力，使超小型模型能够在特定领域的任务中几乎完全保",
     sourceUrl: "https://mp.weixin.qq.com/s/UJYsQXwWfibMKB9CeWAR8g",
   },
   {
@@ -6961,7 +6961,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "代码生成",
     keywords: ["代码生成", "CMU", "VeriCoder", "LLM", "RTL", "VerilogEval"],
-    excerpt: "关键词：LLM、RTL 代码自动生成、Verilog、数据集。 继昨天《ChiseLLM：推理大模型加速 Chisel 特定领域架构的敏捷硬件开发》，今天分享一篇关于基于 LLM ",
+    excerpt: "VERICODER 在两大 RTL 基准测试取得领先成果，相较前最佳改进有 71.7% 和 27.4%。数据构建基于教师 LLM 引导反馈驱动，由此构建 12 万条经功能正确性验证",
     sourceUrl: "https://mp.weixin.qq.com/s/BU5k5LIGAzgxc_FNjm4qGw",
   },
   {
@@ -6971,7 +6971,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ChiseLLM",
     keywords: ["ChiseLLM", "Chisel", "架构", "硬件", "模型", "领域"],
-    excerpt: "关键词：大型语言模型、特定领域架构、Chisel 语言、敏捷硬件开发 随着特定领域架构 （Domain-Specific Architecture, DSA）需求的不断增长，敏捷硬",
+    excerpt: "ChiseLLM 包括一个高质量的推理数据集和一个推理模型。本文在 LLM 辅助的基于 HCL 的敏捷硬件开发领域提供了高质量的领域适配训练语料库，提高模型 HCL 生成的性能；通",
     sourceUrl: "https://mp.weixin.qq.com/s/XwLmlKaE2xic0-0WXy43Rg",
   },
   {
@@ -6981,7 +6981,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "DNN",
     keywords: ["DNN", "RISC", "FPGA", "协同", "性能", "突破"],
-    excerpt: "得益于 RISC-V 的可定制性，在加速深度神经网络（DNNs）方面极具吸引力。我们可以通过指令集扩展以及相应的定制功能单元来实现这一目标。然而，要高效利用这些优势，需要采取软硬件",
+    excerpt: "作者提出加速半结构化和非结构化稀疏性 DNN 模型的 RISC-V扩展方案。借助 FPGA 比特级可配置性，在 DNN 权重区块通过预留位来编码稀疏信息，定制功能单元实现计算跳过。",
     sourceUrl: "https://mp.weixin.qq.com/s/p9-4MF-_YX5ubboRjO7BJQ",
   },
   {
@@ -6991,7 +6991,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "低功耗",
     keywords: ["低功耗", "RISC", "芯片", "联邦", "设备", "研究"],
-    excerpt: "基于 RISC-V 架构的系统正在为智能边缘设备中的高效设备端学习（On-Device Learning，ODL）铺平道路，其能够创建保护数据隐私的智能传感器网络。 然而，开发能够",
+    excerpt: "基于 RISC-V 架构的系统正在为智能边缘设备中的高效设备端学习（On-Device Learning，OD",
     sourceUrl: "https://mp.weixin.qq.com/s/x5P2YCc-VDFXuvQ91bXoRg",
   },
   {
@@ -7001,7 +7001,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "FlashInfer",
     keywords: ["FlashInfer", "LLM", "GPU", "引擎", "注意力", "面向"],
-    excerpt: "驱动大型语言模型（LLM）的 Transformer 架构因其注意力机制而成为基础。随着这些模型的规模不断扩大，导致计算资源需求激增、实时性要求提高，让高效的 GPU 注意力内核对",
+    excerpt: "已被集成进 SGLang、vLLM 和 MLC-Engine 等领先的 LLM 服务框架中。FlashInfer 通过块稀疏格式和可组合格式解决了键值缓存存储的异构性问题优化内存访",
     sourceUrl: "https://mp.weixin.qq.com/s/8THJfcLNy8dx19QtOC5EIA",
   },
   {
@@ -7011,7 +7011,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "VEXP",
     keywords: ["VEXP", "RISC", "Softmax", "指令集", "能耗", "性能"],
-    excerpt: "虽然 Transformer 模型主要由浮点（FP）矩阵乘法主导，但通过专用硬件或许多核可编程系统的激进加速，已将性能瓶颈转移到像 Softmax 这样的非线性函数上。 加速 So",
+    excerpt: "本文在 RISC-V Snitch 架构中集成自定义指数指令加速 Transformer 中的 Softmax 。软硬件协同设计，实现高达 162.7 倍性能提升，对 GPT-2 ",
     sourceUrl: "https://mp.weixin.qq.com/s/MQqo505TYCWqrfnl8E47OA",
   },
   {
@@ -7021,7 +7021,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "TVM", "RISC", "嵌入式", "开源", "加速器"],
-    excerpt: "机器学习（ML）编译器随着人工智能算法在各种设备上的广泛应用，已成为部署过程中的关键工具。当前的 ML 框架支持针对多种硬件后端的多级优化，但仅关注 ML 生命周期中的推理阶段。 ",
+    excerpt: "我们提出基于 Apache TVM 的通用编译方法概念，用于真实环境中对嵌入式设备训练机器学习模型 ，并展示编译堆栈，在不同架构上如嵌入式 GPU 和 CPU 以及 AI 加速器评",
     sourceUrl: "https://mp.weixin.qq.com/s/7EcuGsyqLT5nZe9k9BorXg",
   },
   {
@@ -7031,7 +7031,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "SGLang",
     keywords: ["SGLang", "LLM", "新手", "秘诀", "指南", "系统"],
-    excerpt: "近期看到 AMD 在 DeepSeek 上的工作，其性能与 NVIDIA H200 相比，MI300X 在类似延迟下实现了高达 5 倍的吞吐量提升，如下图所示为 DeepSeek ",
+    excerpt: "SGLang，一个用于高效编程和执行结构化语言模型程序的框架。通过 RadixAttention、压缩有限状态机和语言解释器的新颖优化技术，显著提高了复杂语言模型程序的吞吐量和延迟",
     sourceUrl: "https://mp.weixin.qq.com/s/RzH1lV80_75zLDMFGE1Gzw",
   },
   {
@@ -7041,7 +7041,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Softmax",
     keywords: ["Softmax", "Attention", "AI", "Cross", "Road", "能效"],
-    excerpt: "基于 Transformer 的模型（一种多头自注意力机制的神经网络架构）是高性能大型语言模型（LLMs）的核心，但它们相较于传统的深度神经网络（DNNs）需要更多的算力资源。 因",
+    excerpt: "观察发现随序列长度增加，Transformer 自注意力机制中 softmax 运算成为瓶颈，提出 Cross-Road Softmax 优化算法。基于 Cross-Road So",
     sourceUrl: "https://mp.weixin.qq.com/s/04GmE4gfRC5RRtwNJxhPAg",
   },
   {
@@ -7051,7 +7051,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Edge",
     keywords: ["Edge", "NVIDIA", "A100", "LM", "挑战赛", "大奖"],
-    excerpt: "在大模型时代，数据质量决定了一切。但在资源受限的边缘设备上，高效的语言模型（Edge LMs）更是依赖于高质量的数据。 如何在海量数据中筛选出最优子集，让小模型也能大放异彩？ 近日",
+    excerpt: "免费使用 A100，训练你的 Edge LM ！本次挑战提供 400M 规模的预训练 Transformer 模型，参赛者需要利用自研的过滤技术对数据进行优化，训练出更强大的 Ed",
     sourceUrl: "https://mp.weixin.qq.com/s/oBeWzZ-IMrBc5LSoI8jAvA",
   },
   {
@@ -7061,7 +7061,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "EdgeLLM", "CPU", "FPGA", "架构", "精度"],
-    excerpt: "人工智能，尤其是大型语言模型（LLMs），已经深刻地改变了我们日常的工作和交流方式。然而，由于计算密集型需求、繁重的内存访问、多样的操作符类型以及编译难题，将大型语言模型部署在资源",
+    excerpt: "加速器已成功部署在 AMD Xilinx VCU128 FPGA 平台。吞吐量上比NVIDIA A100SXM4-80G GPU 高出1.91倍，能效高出7.55倍，比最先进的 F",
     sourceUrl: "https://mp.weixin.qq.com/s/lgtp2IzGo0bpuQO8Y3SNRw",
   },
   {
@@ -7071,7 +7071,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "FP8", "GEMM", "MLA", "Fused", "MOE"],
-    excerpt: "!文章插图 亲爱的开发者朋友们， AMD诚邀您参加2025 AI 推理优化挑战赛！这是一个由AMD发起并全程赞助的顶级赛事，旨在通过开发和优化GPU算子，提升大模型推理性能，推动A",
+    excerpt: "特等奖奖金100,000美元，第一、二、三名可获25,000、15,000、10,000美元。AMD将提供PyTorch基线参考实现、Triton/AMD特定优化参考，以及目标算子",
     sourceUrl: "https://mp.weixin.qq.com/s/dnqKTNJNvWWeL_A-7womMw",
   },
   {
@@ -7081,7 +7081,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "PMS", "降低功耗", "功耗", "增强型", "三星"],
-    excerpt: "本文提出了一种在使用精度调制着色（Precision Modulated Shading，PMS）时降低 GPU 功耗同时保持图像质量的方法。PMS 通过指令的敏感度动态调整精度来",
+    excerpt: "本文解决了实现精度调制着色（PMS）过程中由于精度降低而导致的渲染错误，同时减少了与 Bfloat 模式频繁切换相关的开销。通过将提出的启发式算法与块默认模式设置为 BF20 一起",
     sourceUrl: "https://mp.weixin.qq.com/s/fw-quZY_3Z08wUgGVJcqJw",
   },
   {
@@ -7091,7 +7091,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "轻量",
     keywords: ["轻量", "TinyML", "FPGA", "全栈", "CFU", "Playground"],
-    excerpt: "对神经网络高效处理的需求推动了硬件加速器的开发。专用硬件的广泛采用突显了对硬件-软件协同设计以及特定领域优化的更敏捷设计流程的需求。在本文中，我们介绍了 CFU Playgroun",
+    excerpt: "TinyML 需要依赖硬件-软件协同设计的定制架构。CFU Playground 为用户提供实验性和模型特定加速的开源全栈框架。快速迭代设计和评估，探索 CPU 与耦合的 CFU ",
     sourceUrl: "https://mp.weixin.qq.com/s/KJqZrMQuzNbnJ6B4MdLlxg",
   },
   {
@@ -7101,7 +7101,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "硬件加速", "神经网络", "架构", "边缘", "性能"],
-    excerpt: "最近在 Transformer 神经网络架构方面的进展受到其巨大的计算需求的限制，这在边缘计算环境中带来了重大挑战。在这些网络连接受限的环境中，需要在资源受限的嵌入式处理器上进行本",
+    excerpt: "本文提出了一种新颖的硬件 CFU，用于加速边缘环境神经网络计算。其有一个带有本地缓存的可编程处理单元（PE）脉动阵列提供支持，执行 8 位整数乘法和累加操作。该架构支持算术操作的并",
     sourceUrl: "https://mp.weixin.qq.com/s/2ub9buk26_DUZwcKAQb9uw",
   },
   {
@@ -7111,7 +7111,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GraphGen",
     keywords: ["GraphGen", "垂域", "QA", "图谱", "新纪元", "饥荒"],
-    excerpt: "本文讨论了垂域模型训练中获取 QA 数据的难题，介绍了 GraphGen 这一知识图谱引导下的合成数据生成框架 及其优势、使用方法 等。支持本地 vllm 部署，代码和论文开源。 ",
+    excerpt: "缺少垂直领域 QA 数据，怎么办？",
     sourceUrl: "https://mp.weixin.qq.com/s/5PaKwpJY_rTI7ZkXRrf6Aw",
   },
   {
@@ -7121,7 +7121,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Paddle",
     keywords: ["Paddle", "MLIR", "AI", "革命性", "智能", "边缘"],
-    excerpt: "AI 加速器对于在边缘设备上部署深度学习模型具有积极的影响，而有效的编译器可以大大减少部署模型的工作量。多级中间表示（MLIR）框架因其可重用和可扩展的编译器基础设施，为在 AI ",
+    excerpt: "Paddle-MLIR，用 MLIR 框架编译 Paddle 模型，生成目标机器代码，机器代码在由 SOPHON 开发的边缘智能设备 SE7 上执行。实验表明，与 ONNX 框架相",
     sourceUrl: "https://mp.weixin.qq.com/s/xPTkwmsULujSzgT5rYlTPA",
   },
   {
@@ -7131,7 +7131,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Triton",
     keywords: ["Triton", "ML", "Intel", "GPU", "编程", "语言"],
-    excerpt: "研究背景 ❝ - 大型语言模型（LLMs）时代，密集运算（如通用矩阵乘法GEMM和多头注意力MHA）至关重要，且适合用基于tile的方法在GPU上并行执行。 - 传统GPU编程依赖",
+    excerpt: "实验表明，ML-Triton在GEMM、FlashAttention-2和分页注意力等AI核心运算上的性能表现优异，与专家调优的实现相比差距极小，充分证明了其设计的有效性和实用性。",
     sourceUrl: "https://mp.weixin.qq.com/s/36tV6t45XzO2Bv_su5ZNOA",
   },
   {
@@ -7141,7 +7141,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "软件",
     keywords: ["软件", "NPU", "PyTorch", "MindSpore", "Vs", "开源"],
-    excerpt: "本文对基于华为昇腾神经处理单元（Ascend NPU）的 MindSpore 和 PyTorch 进行性能评估。华为的昇腾 NPU 是一款专为神经网络计算加速而设计的芯片，它不仅为",
+    excerpt: "本文在昇腾 NPU 上对 MindSpore 和其他框架进行模型和算子的比较评估研究，实验表面框架性能差异 、 首个Epoch 初始化现象、 AMP性能提升 、 动静态图性能 差异",
     sourceUrl: "https://mp.weixin.qq.com/s/LTI362wN97OIzrzUyM5sAw",
   },
   {
@@ -7151,7 +7151,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TVM",
     keywords: ["TVM", "MetaSchedule", "图像", "评估", "模型", "分类"],
-    excerpt: "边缘深度学习正在消费类设备（如家用电器、汽车导航系统和物联网设备）中迅速部署。鉴于这些设备有限的计算能力和内存，优化作为张量程序表达的深度学习模型至关重要。 本论文来自三菱电机株式",
+    excerpt: "MetaSchedule 是 Apache TVM 开源机器学习编译器的一部分，可自动为硬件平台优化张量程序。实验表明，在多种模型中超过 ONNX Runtime 高达 4.77 ",
     sourceUrl: "https://mp.weixin.qq.com/s/n5TDAE4usVdcUAxcqt-Q-Q",
   },
   {
@@ -7161,7 +7161,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "二值",
     keywords: ["二值", "编译器", "NPU", "GEMM", "神经网络", "单元"],
-    excerpt: "二值化神经网络（BNNs）是将深度神经网络模型部署到资源受限设备上的最有前景的方法之一。然而，对于现代 BNNs（尤其是使用缩放因子和残差连接来最大化网络性能的 BNNs），在编译",
+    excerpt: "本文提出了一种扩展 NPU 和编译器的方法，以支持现代二值化神经网络（BNNs）。通过批归一化折叠、高效处理少输入通道卷积和位打包流水线等优化手段，显著提升二值卷积层的速度，并在B",
     sourceUrl: "https://mp.weixin.qq.com/s/zkok93V6j45_B7WUUrFfAw",
   },
   {
@@ -7171,7 +7171,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "IP",
     keywords: ["IP", "GPU", "NPU", "CPU", "神经网络", "硬件"],
-    excerpt: "三星提出了一种新颖的方案，用于在多个硬件 IP 核（如 GPU 和 NPU）上执行神经网络时消除 CPU 干预。将 CPU 中的数据同步角色委托给 GPU 和 NPU，使得 GPU",
+    excerpt: "三星提出在多硬件 IP 核（如 GPU 和 NPU）上执行神经网络时消除 CPU 干预的新方案。将 CPU 数据同步委托给 GPU 和 NPU，后二者作为生产者或消费者无缝协作。实",
     sourceUrl: "https://mp.weixin.qq.com/s/zrE_ClR3EHZTZ14xStXBbg",
   },
   {
@@ -7181,7 +7181,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "综述", "架构", "现状", "智能", "边缘"],
-    excerpt: "边缘智能（Edge intelligence）是边缘计算（Edge computing）和人工智能技术融合的产物。如今，关于如何高效且低成本地在边缘设备上运行 AI 应用程序的讨论",
+    excerpt: "中国电信研究院对基于 RISC-V 的边缘智能研究现状进行了全面分析 。从硬件架构的角度分析了基于 RISC-V 的 边缘 AI 加速器、协处理器、编译器和工具链，详细探讨了 RI",
     sourceUrl: "https://mp.weixin.qq.com/s/aZ1u3nC-spyWxfKue9gPCQ",
   },
   {
@@ -7191,7 +7191,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "RISC",
     keywords: ["RISC", "架构", "优化", "性能", "面积"],
-    excerpt: "RISC-V 是一种基于开放标准指令集架构（ISA）设计的处理器核心。其架构在计算领域具有重要意义，因其可扩展性和可定制性，以及精确性。该处理器在多个领域中都有应用，这带来了针对特",
+    excerpt: "RISC-V 是一种基于开放标准指令集架构（ISA）设计的处理器核心。其架构在计算领域具有重要意义，因其可扩展性和可定制性，以及精确性。",
     sourceUrl: "https://mp.weixin.qq.com/s/ejfNVTz90hhmj4CyWw4A1w",
   },
   {
@@ -7201,7 +7201,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CARL2010",
     keywords: ["CARL2010", "重构", "方法论", "语言", "领域"],
-    excerpt: "专用硬件可以显著加速应用程序。然而，设计专用硬件在人力和时间方面往往成本过高，使其仅适用于那些足够高产量以分摊这些成本的组件。 本文描述了一种利用可重构性来高效编译一类领域特定语言",
+    excerpt: "本文介绍了一种从领域特定语言（受限的C语言加上加速器功能）生成高效硬件的方法论，该方法论特别适用于具有显著数据并行性的应用。该方法论的优势在于能够利用FPGA的可重构性，实现高效、",
     sourceUrl: "https://mp.weixin.qq.com/s/EbV25eD4VfBvrfutw6zsrQ",
   },
   {
@@ -7211,7 +7211,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "GPU",
     keywords: ["GPU", "出口", "中国"],
-    excerpt: "近年来，美国对中国出口高性能GPU的限制不断升级，而英伟达（Nvidia）作为全球领先的AI芯片制造商，其产品在中美科技竞争中扮演了重要角色。从背景到现状，这一问题经历了复杂的发展",
+    excerpt: "据美国全国公共广播电台周三报道，在英伟达公司首席执行官黄仁勋上周出席了玛拉歌晚宴之后，特朗普政府改变了限制出口英伟达H20人工智能芯片的计划。美国对芯片出口管制的计划已经酝酿了几个",
     sourceUrl: "https://mp.weixin.qq.com/s/MOZadgVJgzYY1ME5hV4vaQ",
   },
   {
@@ -7221,7 +7221,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TVM",
     keywords: ["TVM", "Relax", "shape", "LLM", "动态", "部署"],
-    excerpt: "动态形状计算已成为现代机器学习工作负载中的关键部分，尤其是在新兴的大语言模型中。这些模型的成功推动了它们在各种后端环境中的普遍部署需求。本文介绍了Relax，一种用于优化端到端动态",
+    excerpt: "动态形状是现代机器学习的重要部分，尤其在LLM中。本文提出的Relax通过跨层次抽象，将计算图、循环级张量程序和外部库调用统一表示，并引入符号形状注解，支持全局动态形状跟踪和跨层次",
     sourceUrl: "https://mp.weixin.qq.com/s/Bze72XBB1JQy7-IvIbLmLA",
   },
   {
@@ -7231,7 +7231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Altis",
     keywords: ["Altis", "GPGPU", "定义", "测试", "性能", "标准"],
-    excerpt: "本文介绍了 Altis，这是一个用于现代通用图形处理单元（GPGPU）计算的基准测试套件。之前的基准测试套件，如 Rodinia 和 SHOC，为研究社区做出了很大贡献，但它们是在",
+    excerpt: "Altis 是一个为现代 GPU 架构和运行时设计的基准测试套件，从 Rodinia 和 SHOC 中汲取灵感，涵盖多样化应用领域。并专注于 CUDA 平台，代表了现代 GPGPU",
     sourceUrl: "https://mp.weixin.qq.com/s/RS-TwAdFsGE0PJToMzX9CA",
   },
   {
@@ -7241,7 +7241,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Mobile",
     keywords: ["Mobile", "MMLU", "Benchmark", "场景", "模型", "性能"],
-    excerpt: "大型语言模型（LLMs）的快速发展增加了在移动设备上部署它们以实现设备端人工智能应用的兴趣。移动用户与桌面用户在与 LLMs 交互时存在差异，形成了独特的期望和数据偏差。当前的基准",
+    excerpt: "Mobile-MMLU 基准与传统的基准在语义空间上占据不同位置，并始终具有更高移动相关性分数。我们在各种模型大小（1B-9B 参数）上的评估结果，揭示了移动语言模型能力的关键见解",
     sourceUrl: "https://mp.weixin.qq.com/s/D4WBbehllJa0LFEu4IFB9w",
   },
   {
@@ -7251,7 +7251,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "HPCA2015",
     keywords: ["HPCA2015", "GPGPU", "功耗", "模型", "机器", "性能"],
-    excerpt: "GPU（图形处理单元）作为现代计算系统中的关键组件，其重要性日益凸显。从智能手机到超级计算机，GPU 已经成为标准配置。它们的设计涵盖了广泛的应用场景，从小型、节能的嵌入式系统芯片",
+    excerpt: "经典永不过时。哪些特征对性能和功耗建模更有效、不同硬件配置下哪种情况会导致性能建模不准，怎么通过可解释的机器学习模型，而非LLM，帮助我们更深入理解硬件特性，这是本文的关键。",
     sourceUrl: "https://mp.weixin.qq.com/s/iyI3J_sJ0h-kJtnffpVDnw",
   },
   {
@@ -7261,7 +7261,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "LLMPerf",
     keywords: ["LLMPerf", "GPU", "建模", "融合", "模型", "性能"],
-    excerpt: "在如今这个数据飞速增长的时代，GPU（图形处理单元）已经成为了加速计算的主力军，从人工智能到科学模拟，处处都有它的身影。然而，如何让GPU的性能得到最大程度的发挥，却一直是个让人头",
+    excerpt: "仅依据静态信息预测OpenCL内核的执行时间。实验结果表明，LLMPerf在大规模数据集和公开基准测试中均展现出较好的预测能力和泛化能力。",
     sourceUrl: "https://mp.weixin.qq.com/s/KxZKPnHYnUUvCGPIKH57lA",
   },
   {
@@ -7271,7 +7271,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "NPU",
     keywords: ["NPU", "AI", "周易", "直播", "部署"],
-    excerpt: "AI部署新突破：安谋科技“周易”NPU助力开发者突围 在AI应用爆发式增长的当下，端侧推理需求持续攀升，NPU成为关键解决方案。安谋科技“周易”NPU凭借专项优化升级，加速性能达3",
+    excerpt: "端侧推理需求持续攀升，NPU成为关键解决方案。“周易”NPU凭借专项优化升级，加速性能达30 TOPS，助力开发者应对多元场景下的AI开发挑战。",
     sourceUrl: "https://mp.weixin.qq.com/s/cukvYYBpxwLM3TgEbXsxIg",
   },
   {
@@ -7281,7 +7281,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "LLM",
     keywords: ["LLM", "AttentionPredictor", "KV", "Attention", "革命"],
-    excerpt: "以大模型百万分之一参数量的预测小模型，在LongBench数据集上使用4%的KV Cache达到Full Cache 99%的模型准确率。 近日，中科大王杰教授团队（MIRA La",
+    excerpt: "AttentionPredictor是一种学习型注意力预测模型，专门用于大型语言模型（LLM），高效减少内存使用，同时保持高推理准确率，通过压缩键值（KV）缓存并预先加载关键标记，",
     sourceUrl: "https://mp.weixin.qq.com/s/xhOfudmWgbofLDRCC9yPeQ",
   },
   {
@@ -7291,7 +7291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Scaling",
     keywords: ["Scaling", "Law", "历程", "模型", "发展"],
-    excerpt: "百度是否先于OpenAI发现？ 缩放定律（Scaling Law）为深度学习模型的设计和训练提供了理论指导，特别是在构建和训练大规模模型时，如何有效地分配有限的计算资源以获得最佳性",
+    excerpt: "Scaling Law（缩放定律）是深度学习领域中描述模型性能如何随着模型规模、数据集大小和计算资源的增加而变化的一组规律。表明模型的性能（如准确率、损失函数的值）与模型的参数数量",
     sourceUrl: "https://mp.weixin.qq.com/s/GZuTkZKM8wlev8r30cuICQ",
   },
   {
@@ -7301,7 +7301,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "Lab", "LLM", "建模", "腾讯", "精度"],
-    excerpt: "低比特量化（low-bit quantization）和低比特大语言模型（low-bit LLM）近期受到了广泛的关注，因为有一些研究发现，它们能够以更小的模型规模、更低的内存占用",
+    excerpt: "研究发现，低比特量化只有在未充分训练的 LLM，上才能取得与 fp16/bf16 相当的性能表现。在充分训练的模型上进行低比特量化会造成较为严重的 degradation，反之在未",
     sourceUrl: "https://mp.weixin.qq.com/s/xLuKF4mlVomFqBVcxBKokg",
   },
   {
@@ -7311,7 +7311,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "NeurIPS",
     keywords: ["NeurIPS", "研讨会", "比赛", "模型"],
-    excerpt: "!文章插图 2024 年 12 月 10 日至 15 日， NeurIPS 2024 在加拿大温哥华举办。来自全球高校、科技公司的顶尖人才参与了此次盛会，一起研讨人工智能领域的最新",
+    excerpt: "端侧大模型竞赛和研讨会，竞赛设置了Compression Challenge、Training from Scratch Challenge两个赛道，吸引了100+全球高校或研发机",
     sourceUrl: "https://mp.weixin.qq.com/s/zioYPcH61WIY318ECtS9IA",
   },
   {
@@ -7321,7 +7321,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "LLM",
     keywords: ["LLM", "bit", "FlatQuant", "新篇章", "权重"],
-    excerpt: "本文介绍来自华为诺亚方舟实验室、清华大学和香港中文大学 联合在大语言模型量化上的最新工作 FlatQuant (Fast and Learnable Affine Transfor",
+    excerpt: "首次在 LLaMA-3-70B 达到 W4A4 \\x26lt; 1% 的精度损失，最高 2.3x prefill 和 1.7x decoding 加速比。",
     sourceUrl: "https://mp.weixin.qq.com/s/B4TDgSCLVlzs7jxuJGsCSw",
   },
   {
@@ -7331,7 +7331,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "How",
     keywords: ["How", "Do", "Paper", "Talk", "Reviews"],
-    excerpt: "本文的是由Onur Mutlu教授在CMU 2013 秋季的《740：Computer Architecture》课程中的一个小节《Guidelines on Paper Revi",
+    excerpt: "本文是由Onur Mutlu教授在2013年秋季为CMU的计算机体系结构课程准备的，主题是“论文/演讲评审指南”，虽然内容很短，但讲解了如何进行论文或演讲评审的指导和建议。当然，也",
     sourceUrl: "https://mp.weixin.qq.com/s/8hM6Li5GpKWSv5ZG61s6zg",
   },
   {
@@ -7361,7 +7361,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MLCEngine",
     keywords: ["MLCEngine", "引擎", "模型", "平台", "语言"],
-    excerpt: "近年来，大语言模型和生成式 AI 丰富和改变了我们几乎每个人的生活。在 ChatGPT 这类模型之外，开源模型在这年内同样飞速发展，日益涌现的开源大模型在拥有更好质量的同时，也为个",
+    excerpt: "要支持各种平台上做 universal deployment 有其独特的挑战。首先要支持一系列 GPU 编程模型和 runtime，从而在不同平台上加速 LLM 推理。支持过程伴随",
     sourceUrl: "https://mp.weixin.qq.com/s/SC0X0DrbIJbAoa5pDgcqgw",
   },
   {
@@ -7371,7 +7371,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "IntactKV",
     keywords: ["IntactKV", "关键词", "精度", "模型"],
-    excerpt: "本文介绍我们针对大语言模型量化的工作 IntactKV，可以作为插件有效提升GPTQ、AWQ、QuaRot等现有主流量化方法效果。论文作者来自清华大学、华为诺亚、中科院自动化所和香",
+    excerpt: "LLM存在一种只存在于输入的首词元[BOS]以及开头的一些特定词元上的特殊离群值，称为关键词元（pivot tokens）其汇聚了大量自注意力得分，本文基于此提出让大模型精度无损的",
     sourceUrl: "https://mp.weixin.qq.com/s/sSv6HiW5XNN7Lc9Uu-MlZg",
   },
   {
@@ -7381,7 +7381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "IEEE",
     keywords: ["IEEE", "Floating", "NaN"],
-    excerpt: "本文内容来自对IEEE 754标准中的特殊值NaN（非数）的调研，是源自对硬件计算结果的疑问，并在NumPy、TensorFlow、PyTorch中实验NaN这一特殊值的行为。本文",
+    excerpt: "本文内容来自对IEEE 754标准中的特殊值NaN（非数）的调研，是源自对硬件计算结果的疑问，并在NumPy、TensorFlow、PyTorch中实验NaN这一特殊值的行为。",
     sourceUrl: "https://mp.weixin.qq.com/s/sDkCMbEohQ0W96uCwRJ7-w",
   },
   {
@@ -7391,7 +7391,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TVM",
     keywords: ["TVM", "TensorIR", "TE", "Schedule"],
-    excerpt: "本文内容，主要来自官方文档的整合翻译与理解，涉及到的文档是《Blitz Course to TensorIR》，对TensorIR的实现与优化这部分介绍的Schedule是Tens",
+    excerpt: "本文内容来自官方文档的整合翻译与理解，如Blitz Course to TensorIR，Schedule部分参考Tensor Expression的，与TensorIR有一定共性",
     sourceUrl: "https://mp.weixin.qq.com/s/VmTjBNo6ccWpdLSpu5Cvmw",
   },
   {
@@ -7401,7 +7401,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "开发板", "MAIX", "III", "AXera", "Pi"],
-    excerpt: "拆箱大吉 最近新入手一枚AI开发板， 这是一款搭载「爱芯元智 AX620A」的视觉 AI 开发板，支持 400w 像素 AI ISP 夜景增强算法，在给用户带来了出色影像效果的同时",
+    excerpt: "最近新入手一枚AI开发板，这是一款搭载「爱芯元智 AX620A」的视觉 AI 开发板，支持 400w 像素 AI ISP 夜景增强算法，在给用户带来了出色影像效果的同时，通过多元化",
     sourceUrl: "https://mp.weixin.qq.com/s/lqxL-DmhBa-K9gu3uEyebQ",
   },
   {
@@ -7411,7 +7411,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "xNN",
     keywords: ["xNN", "框架"],
-    excerpt: "🙋🏻‍♀️ 编者按：蚂蚁端智能诉求可以追溯到 2017 年的支付宝新春扫福活动。2017 年是支付宝第一次引入 AR 实景扫福，通过扫描任意“福”字帮助大家去集收集福卡。当时的福字",
+    excerpt: "第一代能力建设轻量化建模中的结构搜索、模型压缩、模型转换、推理引擎；其次，紧跟业务与算法协同；最后，尝试着去建设我们第二阶段的可伸缩建模能力。通过一个低门槛的、设备感知的多模型研发",
     sourceUrl: "https://mp.weixin.qq.com/s/ca4NvwJ9XSI2UCLvuONgWQ",
   },
   {
@@ -7421,7 +7421,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Linux",
     keywords: ["Linux", "AI", "子系统", "加速器"],
-    excerpt: "根据Phoronix报道，Linux 6.2 将引入AI加速器子系统。 在今年9月位于Dublin的Linux Plumbers Conference上，Direct Render",
+    excerpt: "从 LPC 2022 的讨论来看，开发人员达成一定的初步共识：加速器和GPU有很多相同，取名为 accel 内核计算加速器 sub-system 将使用 DRM 作为基础组件。",
     sourceUrl: "https://mp.weixin.qq.com/s/qG-OakQI8XUXleMIMgTUNg",
   },
   {
@@ -7431,7 +7431,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "CCF",
     keywords: ["CCF", "HPC", "China", "高性能", "论坛", "系统"],
-    excerpt: "CCF HPC China 2022大会将于2022年12月12-15日在线上举办，作为主题论坛板块重要论坛之一，诚邀您参加，共话超算未来。 论坛名称： 高性能深度学习系统论坛 论",
+    excerpt: "本论坛聚焦深度学习系统领域，探讨从系统层面缓解上述问题，包括：数据并行、模型并行、流水并行、混合专家模型等分布式训练方法，自动分布式并行，高性能通信算子，模型压缩，机器学习编译优化",
     sourceUrl: "https://mp.weixin.qq.com/s/h9ycMvY-OWmZztTYdnzilw",
   },
   {
@@ -7441,7 +7441,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TVM",
     keywords: ["TVM", "架构", "DSA", "NVDLA", "硬件", "谈谈"],
-    excerpt: "本文转载自知乎（https://zhuanlan.zhihu.com/p/571045566），作者凉风（https://www.zhihu.com/people/banzhuan",
+    excerpt: "做一个高性能的自定义推理框架很不容易，要结合TVM来深度开发完全是给自己挖了个大坑。从当前的工作来看，总体上把TVM串起来了，同时性能上也有不错的结果，但是还有很多地方需要完善。在",
     sourceUrl: "https://mp.weixin.qq.com/s/h25q4gVKFs-XbxbDR-M5tQ",
   },
   {
@@ -7451,7 +7451,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "BYOC", "加速器", "硬件", "框架", "统一"],
-    excerpt: "本文是对Bring Your Own Codegen to Deep Learning Compiler的文章解读，内容结合TVM Conf视频和相关slides。部分内容的关键节",
+    excerpt: "本文提出一个可以将加速器厂商的代码生成模块与运行时集成到深度学习编译器的统一框架。对于通用的代码性能优化工作就交给标准编译器，对于深度学习的优化技术即高层级的工作则交给深度学习编译",
     sourceUrl: "https://mp.weixin.qq.com/s/XY_HUCivUfKDsXCMQnAA2g",
   },
   {
@@ -7461,7 +7461,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "开发板",
     keywords: ["开发板", "文末", "全彩", "TOPS", "INT8", "AI"],
-    excerpt: "在正（guang）文（gao）开始前（不是，先来看看两张表 下表统计一下目前千元内在售的 AI 主板（仅单主板，全套太贵）的 NPU 算力性能从高到低的排行（20221012） 下",
+    excerpt: "这是一款视觉 AI 开发板，支持 400w 像素 AI ISP 夜景增强算法，在边缘设备部署支持ResNet50、YOLOv5s、YOLOv7-Tiny、SCRFD、MonoFle",
     sourceUrl: "https://mp.weixin.qq.com/s/3bxFxO0Q0UmpzSM3_K794g",
   },
   {
@@ -7471,7 +7471,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "DCN",
     keywords: ["DCN", "EDVR", "TensorRT", "模型"],
-    excerpt: "随着终端播放设备的升级，观众对于视频的品质需求也逐步提升。需求从最开始的高清过渡到4K，最近8K也有开始流行的趋势。除了对于 分辨率提升的需求之外，视频在采集的过程中，也难免引入一",
+    excerpt: "为了进一步提高模型推理性能，爱奇艺对TensorRT底层机制做了详细的解析。如何对复杂模型推理进行TensorRT的格式转换。以及TensorRT的int8量化推理内部机制，以及如",
     sourceUrl: "https://mp.weixin.qq.com/s/Mys8HogjxFPfRiiB3U41lg",
   },
   {
@@ -7481,7 +7481,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "ML", "综述", "加速器"],
-    excerpt: "- 改编自机器之心（性能表格见文末） - 过去这一年，无论是初创公司还是成熟大厂，预告、发布和部署人工智能（AI）和机器学习（ML）加速器的步伐很缓慢。但这并非不合理，对于许多发布",
+    excerpt: "目前加速器的重点仍然是加速深层神经网络（DNN）模型，应用场景从极低功耗嵌入式语音识别和图像分类到数据中心大模型训练，典型的市场和应用领域的竞争仍在继续，这是工业公司和技术公司从现",
     sourceUrl: "https://mp.weixin.qq.com/s/_ZVh35cvYguKZRTS_51oSg",
   },
   {
@@ -7491,7 +7491,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GTC",
     keywords: ["GTC", "GPU", "OPPO", "NLP", "场景", "落地"],
-    excerpt: "导读：在已经结束的Nvidia GTC 2022 会议上， OPPO数智工程事业部机器学习团队分享了主题为 《Evolution Path of GPU Inference Acc",
+    excerpt: "OPPO机器学习团队于Nvidia GTC 2022会议分享，其GPU推理在NLP场景推理加速技术的演进历程包含：TensorFlow推理引擎、TVM编译优化、Model Stru",
     sourceUrl: "https://mp.weixin.qq.com/s/FL5MK6yy_3yDBgaAQKBQlw",
   },
   {
@@ -7501,7 +7501,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "转码", "硬件", "视频", "一体", "模型"],
-    excerpt: "编者按： AI技术的落地是渐渐地从服务器端、云端落地，逐步到移动端及边缘设备上。这些年随着AI技术的进步，轻量级算法模型 开始在移动端实时跑起来，并且移动端算法也在不断进行迭代和完",
+    excerpt: "如何让AI算法模型结合移动端硬件特点，差异化优化前馈推理库。让算法模型、推理库、硬件成为一体，使得视频云转码移动端化成为可能。\\x0d\\x0a本文将分享ZEGO在产品架构、移动端视",
     sourceUrl: "https://mp.weixin.qq.com/s/oroRvkeafKqXxR-ad0WOLA",
   },
   {
@@ -7511,7 +7511,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "LarC",
     keywords: ["LarC", "系统"],
-    excerpt: "AI 引领的新一代信息技术，正驱动新一轮科技浪潮席卷而来。作为近年来国内发展最为迅速的移动互联网平台之一，小红书乘势而上，目前已经形成了 以图文和短视频内容为主的超大型 UGC 社",
+    excerpt: "小红书技术团队基于 LarC 机器学习框架根据用户行为中的规律，找出用户感兴趣的内容并推荐。LarC 项目启动于 2019 年，逐渐落地到搜索、推荐、广告等领域，并已实现平台化，能",
     sourceUrl: "https://mp.weixin.qq.com/s/mG2kwtDEk5_A3n-aquAeOw",
   },
   {
@@ -7531,7 +7531,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "high",
     keywords: ["high", "service", "AI", "多媒体", "妈妈", "性能"],
-    excerpt: "本文作者：雨行、列宁、阿洛、腾冥、枭骑、无蹄、逍城、少奇、持信、云芑 概述 随着视频、文案、图文等多媒体模型在阿里妈妈智能创意、内容风控等业务场景的广泛落地，在提升业务效果的同时，",
+    excerpt: "high_service从集群服务调度、服务架构优化、模型推理加速等多个维度，构建了一整套解决方案，解决了流量波动导致的资源分配困难的问题，提高了服务的吞吐(QPS)和GPU利用率",
     sourceUrl: "https://mp.weixin.qq.com/s/Fd2GNXqO3wl3FrA7Wli3jA",
   },
   {
@@ -7541,7 +7541,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AMD",
     keywords: ["AMD", "Composable", "Kernel", "Tile", "Transformer", "范式"],
-    excerpt: "— 机器之心编译 — Composable Kernel（CK）库旨在提供一套在 AMD GPU 上算子融合的后端方案，该研究希望未来能够移植到 AMD 的所有 GPU 上，并且最",
+    excerpt: "Composable Kernel（CK）库提供一套在 AMD GPU 上算子融合的后端方案，其引入了Tensor Coordinate Transformation 和 Tile",
     sourceUrl: "https://mp.weixin.qq.com/s/gbX5IjpMzv9_NT6rBj7AQA",
   },
   {
@@ -7551,7 +7551,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "TVM", "MLIR", "谈谈", "协同", "软件"],
-    excerpt: "作者是一位AI编译器从业者，谈一谈工作以来对AI芯片软硬件协同、AI编译软件栈、TVM/MLIR的泛泛看法。 作者主页：https://www.zhihu.com/people/d",
+    excerpt: "作者是一位AI编译器从业者，谈一谈工作以来对AI芯片软硬件协同、AI编译软件栈、TVM/MLIR的泛泛看法。",
     sourceUrl: "https://mp.weixin.qq.com/s/0V-FKZKeeysrIvdNQb3vlA",
   },
   {
@@ -7561,7 +7561,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "PaddleBox",
     keywords: ["PaddleBox", "DNN", "百度", "解决方案", "模型", "训练"],
-    excerpt: "导读 introduction 本文介绍百度基于GPU的超大规模离散DNN训练框架PaddleBox。PaddleBox 打造了业界 首个层次化GPU稀疏参数服务器，结合高效的流水",
+    excerpt: "PaddleBox也在进行更深层次的框架升级，包括模型混布、异构集群、昆仑芯新硬件的探索等，进一步提升模型训练性能和资源利用率。PaddleBox也在场景上扩展到了特征抽取，目前已",
     sourceUrl: "https://mp.weixin.qq.com/s/M7xDK6XBhLrWU5vJHZVuWA",
   },
   {
@@ -7571,7 +7571,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "浅谈",
     keywords: ["浅谈", "C++", "Top", "down", "Micro", "architecture"],
-    excerpt: "开发过程中我们多少都会关注服务的性能，然而性能优化是相对比较困难，往往需要多轮优化、测试，属于费时费力，有时候还未必有好的效果。但是如果有较好的性能优化方法指导、工具辅助分析可以帮",
+    excerpt: "本文就仅仅是针对CPU调优进行调优，即如何榨干CPU的性能，将CPU吞吐最大化。（实际上CPU出厂的时候就已经决定了它的性能，我们需要做的就是让CPU尽可能做有用功），所以针对CP",
     sourceUrl: "https://mp.weixin.qq.com/s/3rz8gpvj35wRVB923dHU9g",
   },
   {
@@ -7581,7 +7581,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "融合",
     keywords: ["融合", "bottom", "up", "buffer", "loop", "突破"],
-    excerpt: "算子融合也称符算融合，作为面向DL模型推理的一种关键图优化技术，通过减少计算过程中的访存次数达到提升模型推理性能的目的，该技术在不同时期、不同框架下的落地方式各不相同。 本文将首先",
+    excerpt: "大约16年前后，业界对于推理应用的性能诉求还不普遍，对于有性能需求的场景，最常见的做法是利用设备供应商提供的API加速计算图中的部分计算密集型（Compute-bound，以下称C",
     sourceUrl: "https://mp.weixin.qq.com/s/wTRrroVLybJBgrTlbctEsg",
   },
   {
@@ -7591,7 +7591,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "模型",
     keywords: ["模型", "ModelScope", "AI", "开源", "社区", "服务"],
-    excerpt: "导语 让模型变成服务，Model as a Service。 11月3日，2022云栖大会杭州现场，阿里达摩院联手CCF开源发展委员会共同推出AI模型社区“魔搭”ModelScop",
+    excerpt: "达摩院推出AI模型社区开源模型超300个，中立开放框架无关，其模型兼容多种主流AI框架，支持多种训练与服务部署方式，用户均可自主选择。社区面向所有开发者开放，将实行理事会管理，旨在",
     sourceUrl: "https://mp.weixin.qq.com/s/Ekz3PUHRQBo9QW-ZqM4YnQ",
   },
   {
@@ -7601,7 +7601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Mobile",
     keywords: ["Mobile", "GPU", "OpenGL", "vs", "OpenCL"],
-    excerpt: "2020年8月TensorFlow Blog关于TensorFlow Lite的文章，就是提到OpenCL后端比OpenGL后端性能好，但事实真的是如此么？前几天我们刚发布有关《S",
+    excerpt: "先来看看TensorFlow这篇Blog《Even Faster Mobile GPU Inference with OpenCL》讲了什么，然后再看看OpenGL和OpenCL选",
     sourceUrl: "https://mp.weixin.qq.com/s/CglS2kqDrfl46tfpeuH5SA",
   },
   {
@@ -7611,7 +7611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "ShaderNN",
     keywords: ["ShaderNN", "OPPO", "着色器", "引擎"],
-    excerpt: "前不久，2022 OPPO开发者大会刚刚结束，OPPO在高性能异构计算领域，相较去年对于算力提升的追求，今年OPPO重点发力探索跨不同处理器的新型软件执行。比方，全部2D游戏图层渲",
+    excerpt: "ShaderNN不仅在推理时间上大幅超越业内的性能竞品，在平均功耗方面同样取得领先。未来，ShaderNN将深度集成到自研的AI Boost框架中，在更多场景中落地应用。",
     sourceUrl: "https://mp.weixin.qq.com/s/UDCGjQmy6EyfecWKl2lpcg",
   },
   {
@@ -7621,7 +7621,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "开发板", "CSK6", "NPU", "DSP", "MCU"],
-    excerpt: "聆思科技是一家专注于AIoT智能终端系统级（SoC）芯片的设计企业，公司成立于2020年4月，致力于将自主研发的芯片设计与行业领先的人工智能算法深度耦合，打造极简的单芯片系统，广泛",
+    excerpt: "CSK6 是聆思科技新一代的 AI 芯片 SoC 产品系列，集成了 ARM Star MCU、HiFi4 DSP以及聆思全新设计的 AI 神经网络处理内核 NPU，算力达到 128",
     sourceUrl: "https://mp.weixin.qq.com/s/hNFF1M29HOSxaXWthULjbQ",
   },
   {
@@ -7631,7 +7631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Google",
     keywords: ["Google", "MediaPipe", "解决方案", "机器", "设备", "技术"],
-    excerpt: "上周TFLite社区举办了一场名为《On-Device Machine Learning Solution with MediaPipe》的分享活动，分享嘉宾是来自Google M",
+    excerpt: "MediaPipe在中国目前没有团队，这次分享MediaPipe背后技术实现，机会较为难得。其实类似的生态工具链已有不少，如Face++的MegFlow是针对服务器的部署工具，而M",
     sourceUrl: "https://mp.weixin.qq.com/s/pIyLdRpL_mzK5XCH2DEkdQ",
   },
   {
@@ -7641,7 +7641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "INT4",
     keywords: ["INT4", "MegEngine", "CUDA", "Tensor", "Core", "算子"],
-    excerpt: "前阵子旷视的技术分享有个直播讲到其CUDA INT4的推理，这两天有了录播学习一下：https://www.bilibili.com/video/BV1wP411H7D2 。分享中",
+    excerpt: "不久前，旷视对CUDA INT4的推理方案有个技术分享，这两天有了录播学习一下。",
     sourceUrl: "https://mp.weixin.qq.com/s/MTAa-CLXARjTufz1h1eOsQ",
   },
   {
@@ -7651,7 +7651,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "S965",
     keywords: ["S965", "TinyML", "Efficient", "Deep", "Learning", "MIT"],
-    excerpt: "Fall 2022 • MIT Have you found it difficult to deploy neural networks on mobile devices an",
+    excerpt: "Keywords: TinyML, Efficient Deep Learning, AI Hardware, Microcontrollers, AIoT",
     sourceUrl: "https://mp.weixin.qq.com/s/_XPqOfjOxKiDh5K4edARmg",
   },
   {
@@ -7661,7 +7661,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Google",
     keywords: ["Google", "Lead", "Software", "Engineer", "Pixel", "team"],
-    excerpt: "For immediate consideration, please send a text (ASCII), HTML, PDF or DOC version of your ",
+    excerpt: "The Google Pixel team focuses on designing and delivering the world\\x26#39;s most helpful ",
     sourceUrl: "https://mp.weixin.qq.com/s/QFkD9X73-Cs74y_459theg",
   },
   {
@@ -7671,7 +7671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "ARM", "MegPeak", "ncnn", "ViT", "int8"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：【新闻】 ARM新架构 CPU大/中/小核和GPU深度解读、高通发布AI软件栈 推动OEM厂商和AI开发者、苹果发布5nm",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/YXt-VQyB5rTgQQa1dEFrkA",
   },
   {
@@ -7681,7 +7681,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MegPeak",
     keywords: ["MegPeak", "RooflineModel", "处理器", "指令", "优化", "空间"],
-    excerpt: "在这个算力需求爆炸的大背景下，如何发挥出已有硬件的最大算力变得非常重要，直观一点是：我们需要对现有算法针对特定的处理器 进行极致的性能优化，尽量满足目前 AI 算法对算力高要求（满",
+    excerpt: "为了更懂我们的处理器，MegEngine 团队开发了一个工具 MegPeak，可以帮助开发人员进行性能评估，开发指导等，目前已经开源到 GitHub。本文也将探索最优指令组合：以A",
     sourceUrl: "https://mp.weixin.qq.com/s/u3wL2XJlRvPFKFZjwSQ6OQ",
   },
   {
@@ -7691,7 +7691,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "模型",
     keywords: ["模型", "训练", "网络", "声音"],
-    excerpt: "NeuralTalk 曾多次发布有关华为诺亚深度学习加速库 Bolt 的文章（见文末），为什么？因为在卷的过程中有自己的创新点。 Bolt 在神经网络推理加速上取得了业界前沿的性能",
+    excerpt: "华为诺亚刚刚发布的Bolt V1.3版本，除了对现有的推理部分完善和优化，Bolt新增了端侧训练，网络finetune模块，端侧训练+推理一体化，打通端云协同的流程。",
     sourceUrl: "https://mp.weixin.qq.com/s/D1X6iCTi9ncA-7lWb-TWlQ",
   },
   {
@@ -7701,7 +7701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "编译器",
     keywords: ["编译器", "AI", "TFLite", "BiBERT", "GiraffeDet", "IR"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：【新闻】TFLite技术主管离职重返学校、国内GPGPU又添一员砺算科技 并完成数亿元融资、AMD完成对赛灵思的并购FPG",
+    excerpt: "想发就发，不想发就不发。关注模型压缩、低比特量化、移动端推理加速优化、部署。【本期看点】TFLite主管离职/国内又一GPGPU入局/BiBERT/GiraffeDet/G-Gho",
     sourceUrl: "https://mp.weixin.qq.com/s/BXl4rUWUaaomm4gkLGW5-w",
   },
   {
@@ -7711,7 +7711,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "程序运行",
     keywords: ["程序运行", "线程", "纤程", "内存", "铺垫", "进程"],
-    excerpt: "上次我们讲了 《多任务、协同式与抢占式、时间片以及任务优先级》 的概念， 最后讲到了时间片以及任务优先级的概念，任务优先级就牵扯到调度算法——排序。 但当时并没有讲到排序的对象，也",
+    excerpt: "上次我们讲了《多任务、协同式与抢占式、时间片以及任务优先级》的概念，最后讲到了时间片以及任务优先级的概念，任",
     sourceUrl: "https://mp.weixin.qq.com/s/IbyYuuCJpGf2gTQG7vA_2g",
   },
   {
@@ -7721,7 +7721,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "变革",
     keywords: ["变革", "技术"],
-    excerpt: "本文作者陈天奇是机器学习领域著名的青年华人学者之一，本科毕业于上海交通大学ACM班，博士毕业于华盛顿大学计算机系，研究方向为大规模机器学习。在本文中，陈天奇回答了目前深度学习编译技",
+    excerpt: "本文总结对于深度学习编译领域过去两年的思考和未来展望。新一代架构一直是我们核心关注的主题，这里提到的各个特性也都已重构完成或者进行中。TVM FFI去年逐渐成熟，TensorIR本",
     sourceUrl: "https://mp.weixin.qq.com/s/tLVtmgNWj6ZgaqJJLF4Skw",
   },
   {
@@ -7731,7 +7731,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "协同式",
     keywords: ["协同式", "程序运行", "多任务", "内存", "铺垫", "布局"],
-    excerpt: "计算机内存[1]（Computer Memory），是指计算机的临时存储区，其保存着中央处理单元（CPU）所要用的数据和指令，其中的指令，指令通常指处理器单独的某种操作[2]，由处",
+    excerpt: "操作系统知识铺垫之多任务、协同式与抢占式、时间片、任务优先级。",
     sourceUrl: "https://mp.weixin.qq.com/s/b6CusQjwC0ENNiyK70hy_A",
   },
   {
@@ -7741,7 +7741,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Arm",
     keywords: ["Arm", "公开课", "AI", "Ailia", "SDK", "NEON"],
-    excerpt: "公开课说明] Ailia SDK 是由 ax Inc. 和 AXELL CORPORATION 联合研发应用于边缘设备的推理框架， 它具有高速推理、支持跨平台以及开发者友好三大优势",
+    excerpt: "将详细介绍使用NEON对Arm CPU的优化以及使用Vulkan对Arm Mali计算着色器代码的优化实现。此外，我们还将演示各种机器学习模型如何在Arm环境中高速运行。",
     sourceUrl: "https://mp.weixin.qq.com/s/0MWA35XNwrAu1PnN4_L5_Q",
   },
   {
@@ -7751,7 +7751,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bolt",
     keywords: ["Bolt", "v1", "QualComm", "GPU", "诺亚方舟", "实验室"],
-    excerpt: "Bolt 是基于华为诺亚方舟实验室 研究成果，开源社区孵化的高性能深度学习推理加速库，目前已更新至v1.2.1版本，新版本增加了对QualComm GPU的深度优化。 !文章插图 ",
+    excerpt: "本文从 QualComm GPU 面向深度学习计算优化现状出发，分析当前环境下第三方自主优化面临的挑战，介绍Bolt自研的一套移动端GPU系统性调优机制。",
     sourceUrl: "https://mp.weixin.qq.com/s/3qnGcA0zwMp-RiiBVkuooQ",
   },
   {
@@ -7761,7 +7761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "RISC", "ECBSR", "MobileHumanPose", "TMAM", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：【新闻】RISC-V 基础指令集将扩展实现更小设备的矢量数学处理、苹果A15芯片评测CPU大幅升级、壁仞首款高端通用计算 ",
+    excerpt: "【本期看点】A15性能初评/壁仞流片/RISC-V矢量扩展Zve/ECBSR/MobileHumanPose/PPLCNet工业落地涨点技巧/推理性能探讨/长尾算子编译生成分析/C",
     sourceUrl: "https://mp.weixin.qq.com/s/boT5n2KXacMrETcNw38zrg",
   },
   {
@@ -7771,7 +7771,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Qualcomm",
     keywords: ["Qualcomm", "SoC", "GPU", "Gaming", "VR", "Automotive"],
-    excerpt: "Qualcomm（高通公司）是全球领先的无线科技创新者，也是5G研发、商用与实现规模化的推动力量。我们致力于发明突破性的基础科技。变革了世界连接、计算和沟通的方式。把手机连接到互联",
+    excerpt: "目前，Qualcomm面向上海、深圳、无锡、北京、西安开放了众多岗位。期待更多软硬件精英（机器学习、SoC验证、虚拟化、GPU、VR等岗位）的加入，与我们一起共同挖掘5G潜能，开启",
     sourceUrl: "https://mp.weixin.qq.com/s/OQPk9wKEht6yjppg4tgPbg",
   },
   {
@@ -7781,7 +7781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Mobile", "Former", "MicroNets", "燧原", "YOLO"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：【新闻】特斯拉发布自研了AI训练芯片Dojo D1，初创公司ThirdAI发力CPU软硬件联合优化，BERT训练从3天到7",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。【本期看点】特斯拉D1芯/Mobile-Former/MicroNets/Yolo-FastestV2/台积电3nm待量产/燧原",
     sourceUrl: "https://mp.weixin.qq.com/s/aeWgvElB4P8eC9Tx5_YS1Q",
   },
   {
@@ -7791,7 +7791,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "工程化",
     keywords: ["工程化", "AI", "落地", "挑战"],
-    excerpt: "NeuralTalk评：7月初便看到这篇文章，这三四年的简报也在断断续续地关注YCNN、YCNN2，再到现如今 KwaiNN 的消息，身边快手的朋友也经常发相关岗位的招聘。 本文介",
+    excerpt: "Y-tech团队是快手公司在人工智能领域的探索者和先行者。我们致力于通过计算机视觉、计算机图形学、机器学习、AR/VR/HCI等多领域的交叉，一方面帮助每个人更好的表达自己和创作内",
     sourceUrl: "https://mp.weixin.qq.com/s/szYsX5CpE4tewQETZafYpQ",
   },
   {
@@ -7801,7 +7801,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "ML",
     keywords: ["ML", "Core", "Create", "最新进展", "活动"],
-    excerpt: "主题：Core ML 和 Create ML 的最新进展 时间：2021年8月17日 周二 10:00-11:00 咨询：13:00-17:00 Core ML Core ML 旨",
+    excerpt: "​主题：Core ML 和 Create ML 的最新进展\\x0a​时间：2021年8月17日 周二 10:00-11:00\\x0a​咨询：13:00-17:00",
     sourceUrl: "https://mp.weixin.qq.com/s/o6rylF6H8lOCEQDT1qhgaQ",
   },
   {
@@ -7811,7 +7811,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Linaro",
     keywords: ["Linaro", "Virtual", "Connect", "Fall", "AIoT", "Arm"],
-    excerpt: "Linaro Virtual Connect Fall 2021 为Arm生态提供一个很好的平台，用于讨论和学习领先的软件主题、挑战以及机会。在9月8日到10日三天 的时间里，我们",
+    excerpt: "Linaro Virtual Connect Fall 2021 为Arm生态提供一个很好的平台，用于讨论和",
     sourceUrl: "https://mp.weixin.qq.com/s/xWEbPBIsBM7Lko6TY1rWxg",
   },
   {
@@ -7821,7 +7821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "ncnn", "CPU", "SoC", "旷视", "YOLOX"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：【新闻】 ncnn 携手龙芯和全志完成对risc-v与mips架构的国产cpu适配，OpenAI开源Triton简化GPG",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。【本期看点】ncnn适配国产CPU/谷歌手机芯片/旷视YOLOX/OpenAI Triton/Quantaichi/用MLIR优",
     sourceUrl: "https://mp.weixin.qq.com/s/UeXJQoD8MoLPH_prtgFzeQ",
   },
   {
@@ -7831,7 +7831,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "框架", "算子", "层级", "硬件", "公司"],
-    excerpt: "这个思考其实源于参加 WAIC 上组织的 AI 编译相关的闭门讨论的内容，观点有不少来源于现场讨论的朋友们，因为对这个主题感兴趣，我又结合自己的理解做了一些梳理。 之所以 关注 A",
+    excerpt: "本文将围绕一款 AI 新硬件上面，软件栈的建设，展开思考。AI 硬件公司，能成事非常不容易。首先是硬件要流片成功，然后是软件栈建设过得去，再之后还需要商业策略不掉链子（包括市场定位",
     sourceUrl: "https://mp.weixin.qq.com/s/2PJwXm-BCtseKxQSSKHpIQ",
   },
   {
@@ -7841,7 +7841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "CLTune",
     keywords: ["CLTune", "Generic", "Auto", "Tuner", "OpenCL", "Kernels"],
-    excerpt: "不恰当地说，这篇 CLTune 与前两天发的 《 GPGPU BLAS 计算库 CLBlast: A Tuned OpenCL BLAS Library 》 犹如 AutoTVM ",
+    excerpt: "在 2016 年 NVIDIA 举办的GPU技术大会上主题为《Better Than All the Rest: Finding Maximum-Performance GPU K",
     sourceUrl: "https://mp.weixin.qq.com/s/vlxCTgtPPeN1MU9sB0he3Q",
   },
   {
@@ -7851,7 +7851,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Intel",
     keywords: ["Intel", "ARM", "RISC", "历史"],
-    excerpt: "我们在开始分享今天的内容之前，先思考一下，为什么 Intel 会做行业第一？ !文章插图 因为它有掌握成本结构的 IDM 模式，有符合摩尔定律的 Tick-Tock 策略，这些都对",
+    excerpt: "今天，我们就聊聊指令集。简单聊聊 ARM 和 RISC-V 这两个在业内比较有话题性的指令集吧。件通过一个专业词汇上称为指令集的东西和硬件讲话。指令集是软硬件之间沟通的桥梁。如果在",
     sourceUrl: "https://mp.weixin.qq.com/s/9ZdCOs-12qzSk-84Rf_LGw",
   },
   {
@@ -7861,7 +7861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "BLAS",
     keywords: ["BLAS", "GPGPU", "CLBlast", "Tuned", "OpenCL", "Library"],
-    excerpt: "CLBlast是一个可用于生产环境，且高性能的OpenCL开源计算BLAS库，支持平台包括AMD、NVIDIA、Intel的CPU、GPU，也包括移动端领域如Adreno、Mali",
+    excerpt: "CLBlast是可用于生产环境，高性能的OpenCL兼容CUDA的开源计算BLAS库，支持平台包括AMD、NVIDIA、Intel的CPU、GPU，移动端如Adreno、Mali ",
     sourceUrl: "https://mp.weixin.qq.com/s/QkfiTAfqw1kjSrl_LZpJDQ",
   },
   {
@@ -7871,7 +7871,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "纪录",
     keywords: ["纪录", "平台", "GPU", "异构计算", "MLPerf", "图片"],
-    excerpt: "--- 阿里云打破MLPerf推理性能测试绝对性能纪录 ● 阿里云震旦异构计算加速平台全栈优化技术获历史性突破，MLPerf图像分类场景性能测试夺得多项第一。 ● 每秒处理107万",
+    excerpt: "震旦是阿里云自研的异构计算加速平台，适配GPU、ASIC等异构AI芯片，优化编译代码，释放异构芯片算力，支持TensorFlow、Caffe、PAI等多种深度学习框架，实现AI框架",
     sourceUrl: "https://mp.weixin.qq.com/s/u7BYw1x9Y2ygN4cRSOZGoA",
   },
   {
@@ -7881,7 +7881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "GPGPU", "SuperBench", "MLPerf", "PytorchVideo", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本期15条。【新闻】上海海张江——多家GPGPU公司消息：博瀚发布云端 AI 推理 芯片性能超 T4 今年 Q4 量 产、",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。【本期看点】上海张江GPGPU们的发布时间线/微软SuperBench/MLPerf/CSL-YOLO/PytorchVideo",
     sourceUrl: "https://mp.weixin.qq.com/s/pvxi418RD7CzdbvUMJdqfg",
   },
   {
@@ -7891,7 +7891,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "开发板",
     keywords: ["开发板", "全志", "R329", "AI", "芯片", "免费"],
-    excerpt: "活动说明 为了让开发者更快得体验搭载周易AIPU处理器 的全志R329芯片，NeuralTalk联合极术社区、矽速科技 共同组织了R329开发板免费申领评测活动，该开发板由矽速科技",
+    excerpt: "NeuralTalk联合极术社区、矽速科技共同组织了R329开发板免费申领评测活动，该开发板由矽速科技开发，支持智能语音和视频。同时，本次活动向各位对周易AIPU感兴趣的开发者开放",
     sourceUrl: "https://mp.weixin.qq.com/s/rnBVY1JwZubwx0sCFJcCQQ",
   },
   {
@@ -7901,7 +7901,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "WAIC",
     keywords: ["WAIC", "OpenPPL", "开源", "商汤", "高性能", "评价"],
-    excerpt: "我们在7月1日的嵌入式AI简报，已经提到商汤开源了他们的深度学习推理引擎PPL，今天，距离他们开源已经将近半个月，有人在知乎借着WAIC关于商汤提问：",
+    excerpt: "PPL 的名字最初是作为 Parrots Primitive Library 的缩写。Parrots 是 2015 年商汤 HPC 团队和港中文 MMLab 实验室合作的训练平台，",
     sourceUrl: "https://mp.weixin.qq.com/s/AA-V-w0wKCDAexjI5GrVSw",
   },
   {
@@ -7911,7 +7911,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "APP",
     keywords: ["APP", "端云", "AI", "字节", "跳动", "上线"],
-    excerpt: "有 3 个我感兴趣的点，我摘出来 1. 端侧 Pitaya SDK 与云训练侧 MLX 平台深度融合，算法工程师不再依赖客户端工程师进行任何开发，就可以独立完成算法在端上的运行与调",
+    excerpt: "字节跳动移动平台团队是大前端基础技术行业领军者，负责整个字节跳动中国区大前端基础设施建设，提升全产品线的性能、稳定性和工程效率，支持的产品包括但不限于抖音/今日头条/西瓜视频/火山",
     sourceUrl: "https://mp.weixin.qq.com/s/mLU7082dQRm8MUJiu16TIw",
   },
   {
@@ -7921,7 +7921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "流片",
     keywords: ["流片", "AI", "PyTorch", "PPL", "RSICV", "nm"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本期17条。【新闻】香山高性能处理器亮相 RISC-V 中国峰会，百度昆仑独立向汽车芯片进军，三星与高通重启 CPU 自研",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。【本期看点】PyTorch移动端更新/高通跳跃卷积/RSIC-V现状与趋势/三星3nm流片/多面体编译。",
     sourceUrl: "https://mp.weixin.qq.com/s/RnZsEJxzcDSklJzf-8EfXg",
   },
   {
@@ -7951,7 +7951,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Arm",
     keywords: ["Arm", "岗位", "实习生", "成都", "深圳", "设计"],
-    excerpt: "候选人需符合基本条件： 1. 2022届毕业生（毕业时间在2021年10月-2022年9月） 2. 实习时间不少于3个月 - 研发类：AI软件/AI硬件/安全/CPU软件/工具链/",
+    excerpt: "涵盖研发/设计/市场。研发包括：AI软件/AI硬件/安全/CPU软件/工具链/PDG开发/CPU软件系统验证/CPU硬件/CPU原型建模/物理IP开发与评估/AI系统/IT支持。",
     sourceUrl: "https://mp.weixin.qq.com/s/O-LrtshHwHBWk5s4HVHdRg",
   },
   {
@@ -7961,7 +7961,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "EMLL",
     keywords: ["EMLL", "开源", "高性能", "网易", "机器", "性能"],
-    excerpt: "简介 在人工智能技术不断深入发展的今天，我们对于计算的性能要求越来越高。传统的计算处理多数是基于云侧的，把所有图像、音频等数据通过网络传输到云中心进行处理后将结果反馈。但是随着数据",
+    excerpt: "EMLL为加速端侧AI推理而设计，提供基于端侧处理器的高性能机器学习计算库，支持fp32/fp16/int8等数据类型，已在网易有道词典笔、翻译王和超级词典等智能硬件产品的 NMT",
     sourceUrl: "https://mp.weixin.qq.com/s/qiS_DSpkaX_mCNpvLgeS-Q",
   },
   {
@@ -7971,7 +7971,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "趣谈",
     keywords: ["趣谈", "GPU", "ARM", "架构师", "异构", "处理器"],
-    excerpt: "我们需要的是一种更加普世的编程框架或范式。 我这两年的工作重心从 general purpose CPU 逐渐分散了些到 HPC 和 Graphic，坊间俗称兼职做 GPU 。 从",
+    excerpt: "话说天下大势，合久必分，分久必合。万里长征三杯酒，千秋功业一壶茶。",
     sourceUrl: "https://mp.weixin.qq.com/s/7oAvlMLGnZZD5VlsTIMkPw",
   },
   {
@@ -7981,7 +7981,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MegEngine",
     keywords: ["MegEngine", "TensorCore", "卷积", "算子", "原理"],
-    excerpt: "前言 2020年5月Nvidia发布了新一代的GPU架构安培（Ampere）。其中和深度学习关系最密切的莫过于性能强劲的第三代的TensorCore，新一代的TensorCore支",
+    excerpt: "本文将会深入介绍MegEngine CUDA平台的底层卷积算子的实现原理，并将会对Nvidia CUTLASS的Implicit GEMM卷积文档进行解读和补充。",
     sourceUrl: "https://mp.weixin.qq.com/s/RP3yFYrDUUTGUYtPHOakOQ",
   },
   {
@@ -7991,7 +7991,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "EdgeRec",
     keywords: ["EdgeRec", "淘宝", "挑战", "手机", "问题"],
-    excerpt: "打开淘宝主页，会有商品的推荐。 类似的，打开抖音，快手，也会有视频推荐。 这些一般被称之为瀑布流模型，它的框架则是cloud-to-edge，即每次打开，客户端会向服务器发送请求，",
+    excerpt: "打开淘宝主页，会有商品的推荐。类似的，打开抖音，快手，也会有视频推荐。这些一般被称之为瀑布流模型。",
     sourceUrl: "https://mp.weixin.qq.com/s/wNqcGmFeDLGl8vBeTjZ2HA",
   },
   {
@@ -8001,7 +8001,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "岗位",
     keywords: ["岗位", "IAGS", "社招", "AI", "ML", "Graphics"],
-    excerpt: "“智能+”时代已经来临AI、云计算等科技日新月异随之，人才需求也在不断增加满身技能的你离科技高端人才也许只差一步之遥别急，现在就有机会 英特尔IAGS岗位正在火热招聘中 你，是否准",
+    excerpt: "英特尔亚太研发有限公司，北京/上海，社招：岗位IGAS，从Graphics到系统软件开发、AI、机器学习，编译等等。",
     sourceUrl: "https://mp.weixin.qq.com/s/jQT5Vh3sfbVfDAgyrrs_iw",
   },
   {
@@ -8011,7 +8011,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TensorFlow",
     keywords: ["TensorFlow", "Lite", "解决方案", "设备"],
-    excerpt: "文 / Ellie Zhou、Tian Lin、Cong Li、Shuangfeng Li 以及 Sushant Prakash 简介和动机 TFLite 开源了一个端到端解决方案",
+    excerpt: "TFLite 开源了一个端到端解决方案来解决设备端的推荐任务。该解决方案可提供个性化、低延迟和高质量的设备端侧推荐，同时还能保护用户隐私。",
     sourceUrl: "https://mp.weixin.qq.com/s/6hxTqQsaj0vOk4787jPdRA",
   },
   {
@@ -8021,7 +8021,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Arm",
     keywords: ["Arm", "公开课", "图形界面", "Cortex", "处理器"],
-    excerpt: "刚到四月份Arm就悄悄的、以试探性的态度在Github上发布了一个专门针对“全体” Cortex-M处理器的2D图形加速库——Arm-2D（地址如下）： https://githu",
+    excerpt: "《Arm-2D Cortex-M实现图形显示界面》公开课，本周五晚上八点，Arm在4月发布的关于Cortex-M处理器的2D图形加速库—Arm-2D的技术分享等你来听，千万不要错过",
     sourceUrl: "https://mp.weixin.qq.com/s/jogjHnCC22TflqwwBxF4XQ",
   },
   {
@@ -8031,7 +8031,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Tensorflow",
     keywords: ["Tensorflow", "飞桨", "无量", "框架"],
-    excerpt: "文 | Peter潘欣@知乎 和深度学习框架打交道已有多年时间。从Google的TensorFlow, 到百度的PaddlePaddle，再到现在腾讯的无量。很庆幸在AI技术爆发的",
+    excerpt: "和深度学习框架打交道已有多年时间。从Google的TensorFlow, 到百度的PaddlePaddle，再到现在腾讯的无量。很庆幸在AI技术爆发的这些年横跨中美几家公司，站在一",
     sourceUrl: "https://mp.weixin.qq.com/s/8Viq0evE1yKPMz3MnrkcaA",
   },
   {
@@ -8041,7 +8041,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MNN",
     keywords: ["MNN", "GPU", "谈谈", "优化", "性能", "策略"],
-    excerpt: "概述 MNN自开源以来，一直以高性能、通用性、易用性等特性闻名于业界。近一年来，MNN GPU再发力，OpenCL后端针对移动端(Adreno/Mali GPU)、PC端性能总体提",
+    excerpt: "MNN(Mobile Neural Network)是一个高性能、通用的深度学习框架，支持在移动端、PC端、服务端、嵌入式等各种设备上高效运行。MNN利用设备的GPU能力，全面充分",
     sourceUrl: "https://mp.weixin.qq.com/s/ZFm0hBwuae2pRE2xPZzQUA",
   },
   {
@@ -8051,7 +8051,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "架构图",
     keywords: ["架构图", "英特尔", "北京", "上海"],
-    excerpt: "英特尔，上海，北京招人啦！ 架构图象与软件事业部（IAGS）我们招 【深度学习系统框架工程师】， 【BIOS验证/开发工程师】， 【云存储/云原生软件架构/软件开发工程师】， 【编",
+    excerpt: "​​英特尔，上海，北京招人啦！架构图象与软件事业部（IAGS），点击查看~",
     sourceUrl: "https://mp.weixin.qq.com/s/fIm4sJiLg5XEv5aFAZFEGw",
   },
   {
@@ -8061,7 +8061,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bolt",
     keywords: ["Bolt", "v1", "x86", "CPU", "性能"],
-    excerpt: "Bolt是基于华为诺亚方舟实验室研究成果，开源社区孵化的高性能深度学习推理加速库。目前已经更新v1.2版本，主要新增如下特性： - 1. 新增3D卷积加速， - 2. Window",
+    excerpt: "Bolt是基于华为诺亚方舟实验室研究成果，开源社区孵化的高性能深度学习推理加速库。目前已经更新v1.2版本，主要新增如下特性：\\x0a​1. 新增3D卷积/LSTM/GRU加速，\\",
     sourceUrl: "https://mp.weixin.qq.com/s/p_fX5WbPQRCsp8xJJLpH5A",
   },
   {
@@ -8071,7 +8071,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "ARM",
     keywords: ["ARM", "China", "Global", "Service", "Team", "上海"],
-    excerpt: "有好萝卜坑啦 arm china GS(global service)团队招新啦 急招，窗口期，福利满满 有如下岗位 !文章插图 --- 下面是各个岗位详细描述 --- 急Seni",
+    excerpt: "ARM China Global Service Team 招人，软件硬件都要，CPU/GPU！",
     sourceUrl: "https://mp.weixin.qq.com/s/HgIgj1qsk2GRyhpMfxovYQ",
   },
   {
@@ -8081,7 +8081,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "矩阵", "优化", "移动"],
-    excerpt: "移动端GPU目前主要有3家供应商， Qualcomm的Adreno系列，Arm的mali系列和Imagination的PowerVR GPU。主流开发语言包括OpenCL、Open",
+    excerpt: "本文不对各个语言的应用进行讨论，仅以OpenCL为例。不同设备的体系结构差异很大，即使同一供应商的设备，也存在多个系列，因此优化策略也有不同。本文仅介绍纹理内存在Adreno和Ma",
     sourceUrl: "https://mp.weixin.qq.com/s/y4-0oMDKwtG4sylGoB9JYA",
   },
   {
@@ -8101,7 +8101,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "MindSpore", "框架", "思路", "挑战"],
-    excerpt: "2020年的最后一天，MindSpore发布了1.1版本，1.1中很重要的特性是构建了端边云全场景统一的基础架构：https://gitee.com/mindspore/minds",
+    excerpt: "所谓全场景AI，是指可以将深度学习技术快速应用在云边端不同场景下的硬件设备上，包括云服务器、移动终端以及IoT设备等等，高效运行并能有效协同。对于框架而言，涉及三大挑战：快速部署、",
     sourceUrl: "https://mp.weixin.qq.com/s/odM-9Ml6vuwtJIPCqTim-g",
   },
   {
@@ -8111,7 +8111,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TNN",
     keywords: ["TNN", "Arm", "FP16", "指令", "性能", "理论"],
-    excerpt: "这次TNN又迎来重大更新，下面一起看看吧！ --- TNN由腾讯优图实验室打造，移动端高性能、轻量级推理框架，同时拥有跨平台、高性能、模型压缩、代码裁剪等众多突出优势。TNN框架在",
+    excerpt: "这次TNN又迎来重大更新，下面一起看看吧！",
     sourceUrl: "https://mp.weixin.qq.com/s/jypO8dA9pOzcokEazqFRBw",
   },
   {
@@ -8121,7 +8121,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MindSpore",
     keywords: ["MindSpore", "NeurIPS", "轻量化", "模型", "技术"],
-    excerpt: "随着卷积神经网络的广泛使用和在视觉类应用的巨大成功，如何克服计算和存储资源限制将卷积神经网络部署到智能手机和穿戴设备等端侧设备的模型轻量化技术越发重要。本文将对华为诺亚方舟实验室入",
+    excerpt: "本文将对华为诺亚方舟实验室入选NeurIPS 2020的模型轻量化技术工作进行介绍，涵盖了剪枝、结构蒸馏以及量化等几个方向，并且放出对应MindSpore首发端侧模型获取链接。",
     sourceUrl: "https://mp.weixin.qq.com/s/3ZltAFvdYP56iYJ3Wb2yOg",
   },
   {
@@ -8131,7 +8131,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "单目", "微信", "KB", "Mobile3DRecon", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次17条。【新闻】nVIDIA下一代GPU Hopper开启5nm，GraphCore IPU-M2000 benchm",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/_Nrur9DBsRwZQUa-g2OdjA",
   },
   {
@@ -8141,7 +8141,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "字节", "跳动", "体验"],
-    excerpt: "图1 2020年12月23日星期三北京时间 18:57 人在美国，刚下飞机。人在杭州，刚刚下班，利益相关，还就不匿了。阿里转战字节，不cue老东家，只聊聊在字节跳动做端AI的体验。",
+    excerpt: "人在杭州，刚刚下班，利益相关，还就不匿了。",
     sourceUrl: "https://mp.weixin.qq.com/s/PcFJY3wymDIQJ0Gz9uDc6Q",
   },
   {
@@ -8151,7 +8151,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "GPU",
     keywords: ["GPU", "softmax"],
-    excerpt: "在语言模型的训练中，词表的大小往往是一个瓶颈，因为要计算context在所有词语上的概率分布。这个分布则是由softmax计算得到的。 论文[1]针对softmax做了一些优化，尤",
+    excerpt: "一般针对softmax的优化可以分为三类：损失函数的近似，比如，使用层次化+霍夫曼编码的方法进行优化。\\x0a基于采样的方法，基于unigram或者bigram的频次对softma",
     sourceUrl: "https://mp.weixin.qq.com/s/hGJ0JlOxXYbn72qQkO4U3g",
   },
   {
@@ -8161,7 +8161,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Mali",
     keywords: ["Mali", "SDK", "C++", "OpenCL", "Kernel"],
-    excerpt: "本文作者是Anastasia Stulova（简称A.S.），写于December 14, 2020，A.S.是OpenCL方面的专家。 OpenCL分为两部分，host端代码和k",
+    excerpt: "OpenCL分为两部分，host端代码和kernel代码，本文AS将会给大家介绍OpenCL C++在kernel代码方面的支持工作。",
     sourceUrl: "https://mp.weixin.qq.com/s/JMrp7CqWxgESH2TsR6UlQA",
   },
   {
@@ -8171,7 +8171,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "BERT",
     keywords: ["BERT", "指南", "技巧", "代码", "原理"],
-    excerpt: "关于模型蒸馏，你是否有很多问号： - 蒸馏是什么？怎么蒸BERT？ - BERT蒸馏有什么技巧？如何调参？ - 蒸馏代码怎么写？有现成的吗？ 今天结合Distilled BiLST",
+    excerpt: "关于模型蒸馏，你是否有很多问号：蒸馏是什么？怎么蒸BERT？有什么技巧？如何调参？代码怎么写！今天我们将逐一分析Distilled BiLSTM/BERT-PKD/DistillB",
     sourceUrl: "https://mp.weixin.qq.com/s/JYy0fqJf-H0vI0XqlcPDsg",
   },
   {
@@ -8181,7 +8181,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bolt",
     keywords: ["Bolt", "HMS", "TinyBert", "A55", "ASR", "助力"],
-    excerpt: "华为HMS是什么？ HMS，全称是Huawei Mobile Services，即华为终端云服务。HMS汇聚华为终端芯-端-云能力，包含一整套开放的HMS Apps和 HMS Co",
+    excerpt: "关注Bolt的朋友们都知道，我们在NLP深度学习方面是走在前面的，比如之前发布过的TinyBERT超实时推理。在深度学习领域，NLP的热度在近些年逐渐追赶CV，然而基础设施并没有跟",
     sourceUrl: "https://mp.weixin.qq.com/s/ZRyK72hg-t03PvPJkmp2BA",
   },
   {
@@ -8191,7 +8191,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bolt",
     keywords: ["Bolt", "GPU", "引擎", "上帝", "优化", "性能"],
-    excerpt: "概述 移动端GPU在深度学习网络前向推理中占据着重要的地位，硬件本身具备高性能低功耗，适应大规模密集型计算等优势。普及已久的OpenCL与新兴的Vulkan也为其提供了完整的并行编",
+    excerpt: "Bolt深度学习轻量级推理库的MALI GPU支持始于2019年12月初，至今已覆盖绝大部分视觉网络，且持续向语音语义领域迈进。Bolt GPU在常见视觉网络性能测试中超越同类开源",
     sourceUrl: "https://mp.weixin.qq.com/s/33Yx9oS9B3PhqVepYTb69A",
   },
   {
@@ -8201,7 +8201,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "矩阵",
     keywords: ["矩阵", "高性能", "算法", "论坛"],
-    excerpt: "2020.12.13 | 科学院南路6号 1.论坛背景 由于稀疏矩阵计算 广泛存在于量子化学、有限元分析等科学与工程计算，以及社交网络分析、压缩深度神经网等现代机器学习应用之中，加",
+    excerpt: "时间：2020年12月13日 9:00-18:00，\\x0a地点：北京市海淀区科学院南路6号中科院计算所4层报告厅，",
     sourceUrl: "https://mp.weixin.qq.com/s/kbrPCyBUdDfvTbQEBoQxkQ",
   },
   {
@@ -8221,7 +8221,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TensorFlow",
     keywords: ["TensorFlow", "Lite", "内存", "优化", "环境"],
-    excerpt: "文 / Juhyun Lee 和 Yury Pisarchyk，软件工程师 由于资源限制严重，必须在苛刻的功耗要求下使用资源有限的硬件，因此在移动和嵌入式设备上进行推理颇有难度。在",
+    excerpt: "在本文中，我们将展示 TensorFlow Lite (TFLite) 在内存使用方面的改进，更适合在边缘设备上运行推理。",
     sourceUrl: "https://mp.weixin.qq.com/s/7cQ0VsxW-SD6xE36hM-F6g",
   },
   {
@@ -8231,7 +8231,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Bolt", "NanoDet", "MicroNet", "ImgTech", "IP"],
-    excerpt: "关注模型压缩、低比特 量化、移动端推理加速优化、部署 导读：本次20条。【新闻】苹果自研ARM架构M1登场，Imagination发布新AI加速器IP IMG Series4 NN",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/Hsira3FTyzITItq3bec2YQ",
   },
   {
@@ -8241,7 +8241,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bolt",
     keywords: ["Bolt", "v1", "AI", "框架", "性能"],
-    excerpt: "Bolt是基于华为诺亚方舟实验室研究成果，开源社区孵化的高性能深度学习推理加速库。 Github链接：https://github.com/huawei-noah/bolt，欢迎大",
+    excerpt: "Bolt是基于华为诺亚方舟实验室研究成果，开源社区孵化的高性能深度学习推理加速库，Bolt 1.0版本发布！",
     sourceUrl: "https://mp.weixin.qq.com/s/RuzUhy674442Ppvgq8DDdg",
   },
   {
@@ -8251,7 +8251,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MNN",
     keywords: ["MNN", "TensorRT", "CUDA", "ASR", "ARM", "CPU"],
-    excerpt: "一、框架通用性 1.1 几何计算 几何计算是本次发布中大规模的框架重构。它将大部分算子的计算过程中与硬件后端无关部分（形状计算和几何计算）剥离出来，极大地降低了异构后端算子实现的成",
+    excerpt: "除了这次的Release Note外！MNN有自己的官网啦！https://www.mnn.zone/官网上还可以下载MNN团队全新力作「MNN工作台」，涵盖开箱即用模型、可视化训",
     sourceUrl: "https://mp.weixin.qq.com/s/fY-LEORLtMIcAipBKAk0_g",
   },
   {
@@ -8261,7 +8261,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Arm",
     keywords: ["Arm", "DevSummit", "AI", "IoT", "芯片", "原生"],
-    excerpt: "一年一度的Arm技术大会Arm DevSummit来啦！两天35+深度技术干货分享盛宴 来自Arm，阿里，谷歌，Unity（https://unity.cn/），新思科技（www.",
+    excerpt: "2020 Arm DevSummit 30+场 AI/IoT/芯片设计/云原生/移动计算等技术分享等你来听~",
     sourceUrl: "https://mp.weixin.qq.com/s/kJr1tzvoslx9klAaRzG_5A",
   },
   {
@@ -8271,7 +8271,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Lab", "社招", "字节", "高性能", "算法"],
-    excerpt: "语音和音频团队负责处理语音理解、音乐和音频的核心问题，并提供能够模仿各种声音的强力工具。 图 字节跳动的部分产品矩阵 我们AI Lab语音团队与字节跳动的各产品团队有密切合作，利用",
+    excerpt: "字节跳动AI Lab语音团队社招：高性能/算法引擎，地点北京。",
     sourceUrl: "https://mp.weixin.qq.com/s/ZEATLd4pvvcByh3Ji-G2Ug",
   },
   {
@@ -8281,7 +8281,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "框架图", "IR", "挑战", "优势"],
-    excerpt: "IR（Intermediate Representation即中间表示） 是程序编译过程中，源代码与目标代码之间翻译的中介，IR的设计对编译器来说非常关键，好的IR要考虑从源代码到",
+    excerpt: "本文重点分析AI框架对IR有什么特殊的需求、业界有什么样的方案。首先带大家了解下通用的编译器IR的分类以及各自特点。",
     sourceUrl: "https://mp.weixin.qq.com/s/dbOo4iaOVZ5GsnsUG_YmFg",
   },
   {
@@ -8291,7 +8291,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Cortex", "ARM", "Z2", "AIPU", "TFLite"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次19条。「新闻」华为麒麟9000处理器SoC，ARM中国发布周易Z2 AIPU单核算力4TOPS，ARM开发者峰会揭晓",
+    excerpt: "​关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/Hl6x5tpJTD66k33uTXFHAw",
   },
   {
@@ -8301,7 +8301,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "编译器", "A14", "TNN", "v0", "nnfusion"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读： 本次20条。 「新闻」 9月15日起华 (无奈 ) 为芯片封锁全面生效、 苹果发布 5nm A14 处理器 当世无敌！ ",
+    excerpt: "​关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/H3zIFVAJeAJxEGfh2GYe-w",
   },
   {
@@ -8311,7 +8311,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "TensorFlow",
     keywords: ["TensorFlow", "Lite", "Running", "Slower", "Recent", "Linux"],
-    excerpt: "Written by Michael Larabel in Software on 10 September 2020. https://www.phoronix.com/scan",
+    excerpt: "The Linux 5.0 to 5.9 kernel benchmarking posted this week showed TFLite running slower sin",
     sourceUrl: "https://mp.weixin.qq.com/s/hM4QfkQ-FVOKJrmzekMUQQ",
   },
   {
@@ -8321,7 +8321,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Lite", "bit", "NV", "ARM", "卷积"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本期18条。【新闻】美商务部再发声明欲断华为芯片后路，IBM首款7nm EUV 商用处理器POWER10面世增加AI推理指",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/L_yQat03dEP83z8aacIpPA",
   },
   {
@@ -8331,7 +8331,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "优化", "业务"],
-    excerpt: "作者： PAI团队 进入正题前，还是先打个招聘小广告，欢迎对我们工作感兴趣的同学联系我们，可以直接邮件muzhuo.yj@alibaba-inc.com。 本文是AI编译优化系列连",
+    excerpt: "本文将介绍一个AI编译优化技术在阿里实际业务落地case。AI编译技术落地过程中，不仅完善自身完备性和优化效果，同时和业务结合中加深线上环境复杂度的认知，理解分布式训练中的各种挑战",
     sourceUrl: "https://mp.weixin.qq.com/s/YZzwHTkRQuse_HhuQthltA",
   },
   {
@@ -8341,7 +8341,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "内存",
     keywords: ["内存", "iOS", "Memory", "app", "管理", "系统"],
-    excerpt: "0. 前言 本文以 iOS Memory 的相关内容作为主题，主要从一般操作系统的内存管理、iOS 系统内存、app 内存管理等三个层面进行了介绍，主要内容的目录如下： iOS 是",
+    excerpt: "0. 前言本文以 iOS Memory 的相关内容作为主题，主要从一般操作系统的内存管理、iOS 系统内存、",
     sourceUrl: "https://mp.weixin.qq.com/s/aJ_1IoXk-gXgJF5aJD2ZcQ",
   },
   {
@@ -8351,7 +8351,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "优化",
     keywords: ["优化", "AI", "算子", "密集"],
-    excerpt: "作者：PAI团队 进入正题前，还是先打个招聘小广告，欢迎对我们工作感兴趣的同学联系我们，细节参见这里，可以直接邮件muzhuo.yj@alibaba-inc.com。 本文是AI编",
+    excerpt: "本文是AI编译优化系列连载的第二篇，PAI团队在访存密集算子上以XLA为基点开展了大量的工作，工作内容涵盖前端、中端、后端以及执行引擎。这一系列工作先后经历了V1和V2两代演进。",
     sourceUrl: "https://mp.weixin.qq.com/s/ED8NnWQiwx_No1m6E6x1xA",
   },
   {
@@ -8361,7 +8361,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "embedded",
     keywords: ["embedded", "ai", "bench"],
-    excerpt: "- 测试标准基于：embedded-ai.bench Spec（ADB Shell环境 benchmark公约，见后文【本次测试标准】）； - 测试框架：3个； - 测试平台：2个",
+    excerpt: "embedded-ai.bench第1期，圣杯模型，孰优孰劣？",
     sourceUrl: "https://mp.weixin.qq.com/s/KROibD9sJAGg-S-rzwZSuQ",
   },
   {
@@ -8371,7 +8371,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "优化",
     keywords: ["优化", "AI", "算子", "密集"],
-    excerpt: "作者：PAI团队 进入正题前，还是先打个招聘小广告，欢迎对我们工作感兴趣的同学联系我们，细节参见这里，可以直接邮件muzhuo.yj@alibaba-inc.com。 本文是 AI",
+    excerpt: "利用AI硬件加速单元的算力大幅提升训练和推理的性能，但是硬件厂商极致手工（汇编）优化需要针对各种情况（例如不同算法、不同尺寸、不同硬件架构）分别进行精细调优，工作量极大，因此很难在",
     sourceUrl: "https://mp.weixin.qq.com/s/Mk2B-ICto_0L_lr7dRa7zg",
   },
   {
@@ -8381,7 +8381,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "CoreML", "MCUNet", "Pytorch", "OneFlow", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次18条。【业界新闻】CoreML 更新支持更多模型且CPU支持fp16，SoC方面联发科发布中端芯片天玑720，三星猎",
+    excerpt: "嵌入式AI简报，第52期，2020-08-06。关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/XZDIyzIi6LpZoTA5RKY14w",
   },
   {
@@ -8391,7 +8391,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "OneFlow",
     keywords: ["OneFlow", "开源", "灵魂", "框架"],
-    excerpt: "NeuralTalk评：OneFlow框架开源日，各媒体都在转发相关PR稿件。NT就不参与了，这里就转发袁老师之前的这篇《深度学习框架的灵魂》，并附上NeuralTalk的评论。 ",
+    excerpt: "今天OneFlow框架开源，各媒体都在转发相关PR稿件。NT就不参与了，这里就转发袁老师之前的这篇《深度学习框架的灵魂》，并附上NeuralTalk的评论。\\x0a今天OneFlo",
     sourceUrl: "https://mp.weixin.qq.com/s/h_2loKErSS2im5pDAHDQxA",
   },
   {
@@ -8401,7 +8401,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "总纲", "优化"],
-    excerpt: "作者：PAI团队 知乎用户：杨军 原文链接：https://zhuanlan.zhihu.com/p/163717035 随着AI模型结构的快速演化，底层计算硬件的层出不穷，用户使",
+    excerpt: "随着AI模型结构的快速演化，底层计算硬件的层出不穷，用户使用习惯的推陈出新，单纯基于手工优化来解决AI模型的性能和效率问题越来越容易出现瓶颈。为了应对这些问题，AI编译优化技术已经",
     sourceUrl: "https://mp.weixin.qq.com/s/tf2iAE2N0LqYO6Yi_XNlcg",
   },
   {
@@ -8411,7 +8411,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Nvidia",
     keywords: ["Nvidia", "Arm", "计划"],
-    excerpt: "据彭博社报道，英伟达已表示有意收购Arm 。 该新闻网站的消息来源是匿名的，并暗示可能还有其他可能的竞标者。他们还声称，ARM母公司软银最终可能会选择在公开市场上出售该公司的股票。",
+    excerpt: "据彭博社报道，英伟达已表示有意收购Arm 。\\x0a该新闻网站的消息来源是匿名的，并暗示可能还有其他可能的竞标者。他们还声称，ARM母公司软银最终可能会选择在公开市场上出售该公司的",
     sourceUrl: "https://mp.weixin.qq.com/s/B7Rq8qKhSXOSRIUuvCWCTA",
   },
   {
@@ -8421,7 +8421,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MCUNet",
     keywords: ["MCUNet", "IoT", "新作", "团队", "机器", "设备"],
-    excerpt: "IoT设备+微型机器学习时代已经到来了 【Happy导语】MIT韩松团队提出了一种适用于IoT设备的模型设计方案，它将NAS与Engine进行了协同设计，从而确保了模型可以更好的在",
+    excerpt: "本文是韩松团队依旧是在IoT设备上的工作，作者开发了TinyNAS和TinyEngine，设计出了MCUNet网络结构，在这两个神器的辅助下，并对比TF-Lite Micro和CM",
     sourceUrl: "https://mp.weixin.qq.com/s/g-atrsTylCB3rmMHEvdFkQ",
   },
   {
@@ -8431,7 +8431,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "MobileNeXt", "Tengine", "Lite", "NCNN", "RISC"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次18条。【新闻】Graphcore发布第二代 7nm IPU M2000、Imagination发布主打安全可用于汽车",
+    excerpt: "嵌入式AI简报，第51期，2020-07-18。关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/usuG11nWKwCnW16oP6hOTQ",
   },
   {
@@ -8441,7 +8441,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "ncnn",
     keywords: ["ncnn", "RISC"],
-    excerpt: "作者：nihui 原文链接：https://zhuanlan.zhihu.com/p/160249065 已获作者转载授权 up把 ncnn 移植到 RISC-V 啦！ RISC-",
+    excerpt: "RISC-V，我喜欢缩写成 riscv，能少按一次 shift 和减号，是一个基于精简指令集（RISC）原则的开源指令集架构（ISA）。作为完全开源的指令集，天生自带开源的光环基因",
     sourceUrl: "https://mp.weixin.qq.com/s/1Q-Vg9jMT3HRfnQHwVROnw",
   },
   {
@@ -8451,7 +8451,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "ARM",
     keywords: ["ARM", "CPU", "bit", "道路"],
-    excerpt: "知乎作者：十七树 原文链接：https://zhuanlan.zhihu.com/p/158161592 本文已获原作者转载授权 深度学习的端侧学习对轻量化有着极致的追求，从201",
+    excerpt: "深度学习的端侧对轻量化有极致追求，从2016到今，业界在推理时用的数据类型位数一降再降：FP32、FP16、INT8。低比特能节省模型占用的存储空间和功耗，精心设计的算法上面也能获",
     sourceUrl: "https://mp.weixin.qq.com/s/v8A3aWIZaURkUmaRz4WUQg",
   },
   {
@@ -8461,7 +8461,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AI",
     keywords: ["AI", "Inference", "算力", "领域", "全球"],
-    excerpt: "今年的ISCA中有一个Tutorial[2]和三篇论文[3-5]，直接和推荐系统的加速有关。以此为起点，本文讨论一下如何加速推荐系统这个问题。推荐系统的优化和加速是一个系统性问题。",
+    excerpt: "作者是一位具备数十年经验的专用处理器和SoC架构师，目前致力于开发原创性的通用计算体系，建立高效的软硬件平台并提供一体化解决方案，实现国产高端通用智能计算芯片的突破。",
     sourceUrl: "https://mp.weixin.qq.com/s/3UExhkvFP7Sxs2dnThFh_Q",
   },
   {
@@ -8471,7 +8471,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Bert",
     keywords: ["Bert", "ms", "TinyBert", "硬件", "落地", "手机"],
-    excerpt: "知乎作者：江雪 原文标题：深入硬件特性加速TinyBert，首次实现手机上Bert 6ms推理 原文链接：https://zhuanlan.zhihu.com/p/15452606",
+    excerpt: "6ms的TinyBert极速端侧推理优化是怎么结合硬件一步步实现的。",
     sourceUrl: "https://mp.weixin.qq.com/s/fDJjdtwcTI6Blu9SQrPvFg",
   },
   {
@@ -8481,7 +8481,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次18条。【新闻】ARM GPU驱动支持独立更新；高通发布基于1.7GHz A53和Adreno504的智能手表处理器W",
+    excerpt: "嵌入式AI简报 (2020-07-02)。关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/4ioIVHSAq1r1C1cQ-OVgLg",
   },
   {
@@ -8491,7 +8491,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "MNN",
     keywords: ["MNN", "引擎", "客观", "评价"],
-    excerpt: "知乎作者：姜霄棠 原文链接：https://zhuanlan.zhihu.com/p/151666822 本文已获原作者转载授权 欢迎致辞 每当有深度学习框架开源时，我们也和广大的",
+    excerpt: "每当有深度学习框架开源时，我们也和广大的吃瓜群众一样，期冀着是不是能有一波新的浪潮，把端侧AI拖上一个新的高度。但同时，出于同行们对MNN的认可，我们几乎每一次都会在对比的榜单上出",
     sourceUrl: "https://mp.weixin.qq.com/s/XfUbemlCe1fvH-rOWnUpmA",
   },
   {
@@ -8501,7 +8501,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "离线",
     keywords: ["离线", "EasyQuant", "TensorFlow", "方式"],
-    excerpt: "原文标题：Hello, EasyQuant! 知乎作者：圈圈虫 原文链接：https://zhuanlan.zhihu.com/p/151292945 本文已获原作者原创转载授权 ",
+    excerpt: "@格灵深瞳DeepGlint 最近开源量化算法 EasyQuant，包括论文《EasyQuant: Pose-training Quantization via Scale Opt",
     sourceUrl: "https://mp.weixin.qq.com/s/SwoAJ7DVPkj6cWauhzFU_g",
   },
   {
@@ -8511,7 +8511,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "编译器",
     keywords: ["编译器", "综述", "架构", "论文"],
-    excerpt: "arXiv上面看到的综述“The Deep Learning Compiler: A Comprehensive Survey（https://arxiv.org/abs/2002",
+    excerpt: "深度学习编译器架构的综述论文《The Deep Learning Compiler: A Comprehensive Survey》。",
     sourceUrl: "https://mp.weixin.qq.com/s/eKGA56K3hDt1WxJ6BIUbPA",
   },
   {
@@ -8521,7 +8521,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MindSpore",
     keywords: ["MindSpore", "AKG", "Auto", "Kernel", "Generator", "开源"],
-    excerpt: "It provides the ability to automatically fuse ops with specific patterns. AKG works with M",
+    excerpt: "华为MindSpore开源AKG，目标多硬件后端的算子融合等特定匹配的优化。",
     sourceUrl: "https://mp.weixin.qq.com/s/VfxUcTWoftSqpy8LH6pcEQ",
   },
   {
@@ -8531,7 +8531,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "社招",
     keywords: ["社招", "Kaldi", "CUDA", "小米", "语音", "工程师"],
-    excerpt: "招语音识别框架开发工程师 (CUDA) 工作职责 与小米语音识别专家Kaldi开源项目作者Dan Povey一起工作，参与核心代码开发，共同打造下一代开源语音识别框架。 岗位要求 ",
+    excerpt: "与小米语音识别专家Kaldi开源项目作者Dan Povey打造下一代Kaldi！",
     sourceUrl: "https://mp.weixin.qq.com/s/qAn_GpkgJJfAuUsdFu0fKA",
   },
   {
@@ -8541,7 +8541,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次18条。「新闻」ARM中国剧情不停反转，ARM正式断供华为，高通6月17日上午新品发布，AMD移动处理器X1+A78及",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。星辰山海不负韶华，凝芯聚力砥砺前行！",
     sourceUrl: "https://mp.weixin.qq.com/s/gI7apvWEIG87wpOy9wJLrw",
   },
   {
@@ -8551,7 +8551,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "Arm",
     keywords: ["Arm", "Mali", "GPU", "架构"],
-    excerpt: "对于手机终端来说，GPU图像处理能力是衡量一台手机的性能标杆。首先，是UI流畅性，大家拿到手机都得先划来划去看下UI是否流畅，而UI其实主要还是用GPU渲染的；其次是游戏的流畅性，",
+    excerpt: "本文翻译自ARM官方的GPU Architecture，简述了Arm Mali GPU四大微架构：Utgard、Midgard、Bifrost、Valhall，并结合作者Keepi",
     sourceUrl: "https://mp.weixin.qq.com/s/Iv-__XF6z3EtUYIka4sKAg",
   },
   {
@@ -8561,7 +8561,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "ARM",
     keywords: ["ARM", "浅谈", "A78", "架构", "发展"],
-    excerpt: "ARM 2020 TechDay上，ARM不出意外的发布了其下一代移动旗舰核心Cortex-A78，并且也稍有意外的同时发布了新的服务器核心Cortex-X1。 在移动领域，ARM",
+    excerpt: "作者MikeslCroom是一位十年芯片老兵，本文将对ARM的移动端新一代核心A78、X1，对其架构的发展历程做一个分析。",
     sourceUrl: "https://mp.weixin.qq.com/s/349MAZWE4cvqt1p6q9kccw",
   },
   {
@@ -8571,7 +8571,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次16条。【业界新闻】TensorFlow Lite亮相TF DevSummit性能方面支持OpenCL且CPU基于ru",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署",
     sourceUrl: "https://mp.weixin.qq.com/s/x4EQNaRtYeHqgruIO2sSSg",
   },
   {
@@ -8581,7 +8581,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "TensorFlow",
     keywords: ["TensorFlow", "Lite", "GPU", "Delegate", "代理", "委托"],
-    excerpt: "本文将会结合TensorFlow的中文蹩脚文档和我的理解，浮光掠影地 对委托代理（Delegate）做一定的解释。如果出错了还请读者指出， 本文仅从TensorFlow Lite的",
+    excerpt: "本文将会结合TensorFlow的中文蹩脚文档和我的理解，浮光掠影地对委托代理（Delegate）做定的解释。",
     sourceUrl: "https://mp.weixin.qq.com/s/jxW7mcysdl-CsUHb5oYVVQ",
   },
   {
@@ -8591,7 +8591,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Tengine",
     keywords: ["Tengine", "MobileNetV1", "初识", "引擎", "交叉", "平台"],
-    excerpt: "前阵子看到Tengine为OpenCV4.3版本贡献了ARM CPU底层汇编代码，加速深度学习计算。最近也看到Tengine的不少同学在做相关PR。可能有小伙伴不了解Tengine",
+    excerpt: "Tengine 是OPEN AI LAB 针对端智能设备开发的轻量级，模块化，高性能深度学习推理引擎，并支持用DLA、GPU、xPU作为硬件加速计算资源异构加速。",
     sourceUrl: "https://mp.weixin.qq.com/s/8NZohymDz9F6llOUOCUVuw",
   },
   {
@@ -8601,7 +8601,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次15条。「新闻」 高通发布中端Soc 768G，骁龙875性能规格曝光，联发科方面跟进，发布天玑1000+，中高端的天",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/0duRETUITqiKG2Y1s-1FpQ",
   },
   {
@@ -8611,7 +8611,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Paddle",
     keywords: ["Paddle", "Lite", "backend", "kernel", "底层", "策略"],
-    excerpt: "导读 ： Paddle Lite是Paddle Mobile和Anakin的推理框架继任者。 定位安卓/iOS移动端，以及X86端在内的多场景高性能预测 ，兼容支持ONNX、Ten",
+    excerpt: "Paddle Lite是Paddle在预测端的推理框架，支持X86/cuda/arm cpu/gpu/npu，也是Ankain和Paddle Mobile的继承者。这次不看别的，一",
     sourceUrl: "https://mp.weixin.qq.com/s/jEB1McrkU8iay1klc0DIfQ",
   },
   {
@@ -8621,7 +8621,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本期内容23条。「业界新闻」除了提到的三星下一代旗舰Soc外，还有与骁龙835麒麟970的GPU在同一档次的Exynos9",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/5j0yD62syNHcHlgAa72nhA",
   },
   {
@@ -8631,7 +8631,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "Lab", "社招", "字节", "高性能", "算法"],
-    excerpt: "语音和音频团队负责处理语音理解、音乐和音频的核心问题，并提供能够模仿各种声音的强力工具。 图 字节跳动的部分产品矩阵 我们AI Lab语音团队与字节跳动的各产品团队有密切合作，利用",
+    excerpt: "字节跳动AI Lab语音团队社招：高性能/算法引擎，地点北京。",
     sourceUrl: "https://mp.weixin.qq.com/s/PpbJTx8B4EkcBUu0mxqNaw",
   },
   {
@@ -8641,7 +8641,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本期19条。「新闻」部分三个最近开源的框架：清华大学计算机图形学组的Jittor、旷视动态图和静态图合一且训练推理一体的M",
+    excerpt: "嵌入式AI简报 (2020-04-04)关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/EuStzcG46QJAU8_CIQQyvg",
   },
   {
@@ -8651,7 +8651,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "MNN",
     keywords: ["MNN", "社招", "架构", "高性能", "团队"],
-    excerpt: "MNN 是一个轻量级的深度学习端侧推理引擎，核心解决深度神经网络模型在端侧推理运行问题，涵盖深度神经网络模型的优化、转换和推理。 关于 MNN 的优势，阿里的 AI 科学家贾扬清评",
+    excerpt: "MNN 是一个轻量级的深度学习端侧推理引擎，核心解决深度神经网络模型在端侧推理运行问题，涵盖神经网络模型的优化、转换和推理。",
     sourceUrl: "https://mp.weixin.qq.com/s/8KYNy02b_hhOd1kzqnDZgA",
   },
   {
@@ -8661,7 +8661,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "美团",
     keywords: ["美团", "社招", "高性能", "算法", "团队", "机器"],
-    excerpt: "美团是中国领先的生活服务电子商务平台，秉承“帮大家吃得更好，生活更好”的使命，我们的业务覆盖了超过200个品类和2800个城区县网络，在餐饮、外卖、酒店旅游、丽人、家庭、休闲娱乐等",
+    excerpt: "美团点评机器学习平台团队招人啦：AI高性能/编译/算法方向。我们是公司级机器学习工程团队，负责公司内绝大多数机器学习场景。",
     sourceUrl: "https://mp.weixin.qq.com/s/S7aDTu-s5PMJEUpj7s2fUA",
   },
   {
@@ -8671,7 +8671,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读： 距离我们比较近的，国内疫情形势已经收敛，坐等3月底旷视框架开源，华为云发布了旗下的2020“新旗舰”——鲲鹏云手机；距离",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/R61f-igC15m6Ayfj4I6xsg",
   },
   {
@@ -8681,7 +8681,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "Paddle",
     keywords: ["Paddle", "社招", "架构", "高性能", "百度", "算法"],
-    excerpt: "部门介绍 深度学习技术平台部负责国内开源深度学习框架飞桨（PaddlePaddle）设计、开发及应用。飞桨是目前国内唯一的开源全平台深度学习框架，项目团队汇集多名深度学习领域资深专",
+    excerpt: "百度Paddle团队社招高性能、编译优化方面。还有架构/算法/产品。",
     sourceUrl: "https://mp.weixin.qq.com/s/oakXZChICRNZefLHc7_HwA",
   },
   {
@@ -8691,7 +8691,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次内容20条。「业界新闻」Face++即将开源自己的深度学习框架，国产5G SoC新星虎贲T7520都值得关注，两家国外",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署嵌入式AI简报 (2020-03-02)",
     sourceUrl: "https://mp.weixin.qq.com/s/EuOzPRGwhevc_tH91LjBwA",
   },
   {
@@ -8701,7 +8701,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读：本次内容20条。ARM 发布 Cortex-M55 和 Ethos-U55 系列，适合语音AI模型推理，ARM也发布用Co",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/XXWIHNeNBAXysh6TNjTEKg",
   },
   {
@@ -8711,7 +8711,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 导读： 本次内容20条，关于BERT有4条。「业界新闻」搜狗的手机AR实景导航挺有意思，其中「论文」三篇BERT量化/加速方面的",
+    excerpt: "嵌入式AI简报 (2020-01-27)。NeuralTalk 关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/M5p9BQff-onFu4WhXlYP7Q",
   },
   {
@@ -8721,7 +8721,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：个别链接打不开，请点击文末阅读原文跳转 业界新闻 - 苹果5nm A14处理器：和华为抢产能 | 安兔兔",
+    excerpt: "嵌入式AI简报 (2020-01-06)，关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/CauGwb1nv-jDzTWFcxhNhg",
   },
   {
@@ -8741,7 +8741,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署!文章插图 注：个别链接打不开，请点击文末阅读原文跳转 业界新闻 - 华为全新5nm芯片曝光 A78架构/性能暴涨50% | 安兔",
+    excerpt: "嵌入式AI简报 (2019-12-17)关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/LNKDwfNT21I3tD_gWR5-qg",
   },
   {
@@ -8751,7 +8751,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开请用手机打开 业界新闻 - 谷歌发布人体图像分割工具BodyPix 2.0，支持在浏览器上多人识别，可在",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署",
     sourceUrl: "https://mp.weixin.qq.com/s/YMt58VqwyeVS_UTCZoL1Ew",
   },
   {
@@ -8761,7 +8761,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开请用手机打开 业界新闻 - NVIDIA推出Jetson Xavier™NX，用于边缘的机器人和嵌入式计",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署",
     sourceUrl: "https://mp.weixin.qq.com/s/Hm8y5nPHX_MPct9_D56AJg",
   },
   {
@@ -8771,7 +8771,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 嵌入式AI简报 (2019-10-31) 关注模型压缩、低比特量化、移动端推理加速优化、",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：若有链接打不开，请点击【阅读原文】",
     sourceUrl: "https://mp.weixin.qq.com/s/o2SiucgNYvRzwU5iQqJlqA",
   },
   {
@@ -8781,7 +8781,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - PyTorch 1.3发布：能在移动端部署，支持Colab云TPU，阿里云",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。注：若有链接打不开，请点击【阅读原文】",
     sourceUrl: "https://mp.weixin.qq.com/s/vh4p3nSB6gkfQNjHuZYoHw",
   },
   {
@@ -8791,7 +8791,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - 华为Mate 40曝光 首发麒麟1000处理器 | 安兔兔",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。这是多少期了我也记不清了(#^.^#)",
     sourceUrl: "https://mp.weixin.qq.com/s/2-R0CLeL30FFAAkF7HSRpg",
   },
   {
@@ -8801,7 +8801,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - A13 Bionic 芯片，苹果发布会的真正亮点 | Tinc V 雷锋网",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署",
     sourceUrl: "https://mp.weixin.qq.com/s/i7USxTmTxUTdnQQU9SXchQ",
   },
   {
@@ -8811,7 +8811,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - 国产AI框架再进化！百度Paddle Lite发布：率先支持华为NPU在线",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：若有链接打不开，请点击【阅读原文】",
     sourceUrl: "https://mp.weixin.qq.com/s/vs-J5DjOHohfwItrMh0GJw",
   },
   {
@@ -8821,7 +8821,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - 鸿蒙OS仓库连登GitHub榜首，华为鸿蒙手机或将年底上市 | 新智元",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：若有链接打不开，请点击【阅读原文】",
     sourceUrl: "https://mp.weixin.qq.com/s/XGUT65dpE1FPipjeo2quIA",
   },
   {
@@ -8831,7 +8831,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：若有链接打不开，请点击【阅读原文】 业界新闻 - 阿里平头哥第一颗产品——玄铁910首次交货 | 量子位",
+    excerpt: "嵌入式AI简报 (2019-07-30)关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/jkgK1jRkq8vmPK3doUUang",
   },
   {
@@ -8841,7 +8841,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开请用手机打开，链接失效请点击【阅读原文】跳转到Github 业界新闻 - 麒麟810实体芯片首次亮相，对",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：PC端微信链接打不开请用手机打开。",
     sourceUrl: "https://mp.weixin.qq.com/s/FNqi7BOgTGeRlkpBLACAsg",
   },
   {
@@ -8851,7 +8851,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "软件",
     keywords: ["软件", "优化"],
-    excerpt: "注：若文中链接失效，请点击【阅读原文】 在软件发布时，都会对其裁剪。在此过程中，会先查明编译的依赖关系，并将重型的依赖库进行替换或者移除。本文将会介绍在软件发布时，库裁剪命令str",
+    excerpt: "在软件发布时，都会对其裁剪。在此过程中，会先查明编译的依赖关系，并将重型的依赖库进行替换或者移除。",
     sourceUrl: "https://mp.weixin.qq.com/s/I-_fVcYUD-3AaJYaSiXb0A",
   },
   {
@@ -8861,7 +8861,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开阅读原文 业界新闻 - 联发科P65正式发布：12nm、性能提升25% | 安兔兔 摘要：",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：PC端微信链接打不开，请用手机打开阅读原文。",
     sourceUrl: "https://mp.weixin.qq.com/s/ZYubeIZ8-Rot7B5hLMEAuQ",
   },
   {
@@ -8871,7 +8871,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开阅读原文 业界新闻 - 苹果全球开发者大会（WWDC）推出机器学习模型框架Core ML ",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：PC端微信链接打不开，请用手机打开阅读原文。",
     sourceUrl: "https://mp.weixin.qq.com/s/f_jPWsnbdBGYxFv87LzwPg",
   },
   {
@@ -8881,7 +8881,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开阅读原文 业界新闻 - 谷歌限制华为安卓合作，余承东透露华为欲布局自研操作系统 | 新智元",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：PC端微信链接打不开，请用手机打开阅读原文。",
     sourceUrl: "https://mp.weixin.qq.com/s/dWWbuH8DhZL5xMD-dXcGjQ",
   },
   {
@@ -8891,7 +8891,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开阅读原文 业界新闻 - MIT初创公司发布全球首个光子AI芯片原型！独立光学计算硬件，庞大",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署注：PC端微信链接打不开请用手机打开。",
     sourceUrl: "https://mp.weixin.qq.com/s/r1JUXpRj5H32nHqNMDyp4Q",
   },
   {
@@ -8901,7 +8901,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开【阅读原文】 业界新闻 - Xilinx 宣布收购 Solarflare | 赛灵思",
+    excerpt: "嵌入式AI简报 (2019-04-27)关注模型压缩、低比特量化、移动端推理加速优化、部署。",
     sourceUrl: "https://mp.weixin.qq.com/s/-TE_WW2XmMVuJDVi4pTqbA",
   },
   {
@@ -8911,7 +8911,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "SNPE",
     keywords: ["SNPE", "神经网络", "评测", "引擎", "分析"],
-    excerpt: "骁龙（SnapDragon）神经处理引擎（SNPE）是一个针对高通骁龙加速深层神经网络的运行时软件，高通在CSDN和其官网都提供了下载。 本文以SNPE 1.23为基准，将结合高通",
+    excerpt: "骁龙（SnapDragon）神经处理引擎（SNPE）是一个针对高通骁龙加速深层神经网络的运行时软件。",
     sourceUrl: "https://mp.weixin.qq.com/s/UfN6e8s1bxouHHQ1VDSAKg",
   },
   {
@@ -8921,7 +8921,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开【阅读原文】 业界新闻 - TensorFlow MLIR 发布： 全新的中介码与编译器框",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署。注：PC端微信链接打不开，请用手机打开【阅读原文】",
     sourceUrl: "https://mp.weixin.qq.com/s/vceVjXOyOHpRY2JGLfVlxA",
   },
   {
@@ -8931,7 +8931,7 @@ export const posts: PostMeta[] = [
     original: true,
     category: "AI",
     keywords: ["AI", "嵌入式"],
-    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署 注：PC端微信链接打不开，请用手机打开【阅读原文】 业界新闻 - 视频：波士顿动力发布仓储搬运机器人Handle搬箱子，子不高，",
+    excerpt: "关注模型压缩、低比特量化、移动端推理加速优化、部署",
     sourceUrl: "https://mp.weixin.qq.com/s/p3eOtHyI_h1KEDItzRrz7g",
   },
   {
@@ -8941,7 +8941,7 @@ export const posts: PostMeta[] = [
     original: false,
     category: "AlexNet",
     keywords: ["AlexNet", "经典"],
-    excerpt: "这篇文章是Alex Krizhevsky在2012年提出的，Alex师从Hinton（也是本文的第三作者），之后也是FeiFei Li的学生。下面这幅图是模型的架构图（五个卷积后接",
+    excerpt: "这篇文章是Alex Krizhevsky在2012年提出的AlexNet，本文对这篇经典文章ImageNet Classification with Deep Convolutio",
     sourceUrl: "https://mp.weixin.qq.com/s/eebs6jHRL_VEDqOQiyM_gA",
   },
 ]

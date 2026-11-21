@@ -90,7 +90,8 @@ function PostCard({ post, index }: { post: typeof posts[number], index: number }
         {post.original && <span className="original-badge">原创</span>}
       </div>
       <h2><Link to={`/post/${post.slug}`}>{post.title}</Link></h2>
-      <p>{post.excerpt}</p>
+      <div className="post-card-keywords">{post.keywords.map((keyword) => <span key={keyword}>#{keyword}</span>)}</div>
+      <p className="post-card-excerpt">{post.excerpt}</p>
       <Link className="read-more" to={`/post/${post.slug}`}>阅读全文 <ArrowRight size={16} /></Link>
       {index === 0 && <span className="latest-label">最新</span>}
     </article>
@@ -276,22 +277,64 @@ function NotFound() {
   return <main className="page-shell narrow-page not-found"><p className="section-kicker">404</p><h1>没有找到这篇文章</h1><p>文章可能已移动或尚未收录。</p><Link to="/" className="primary-link"><ArrowLeft size={17} />返回首页</Link></main>
 }
 
+let searchIndexCache: Record<string, string> | null = null
+
+function loadSearchIndex(): Promise<Record<string, string>> {
+  if (searchIndexCache) return Promise.resolve(searchIndexCache)
+  return fetch(`${import.meta.env.BASE_URL}search-index.json`)
+    .then((res) => res.ok ? res.json() : {})
+    .then((data) => { searchIndexCache = data; return data })
+    .catch(() => ({}))
+}
+
 function SearchDialog({ open, onClose }: { open: boolean, onClose: () => void }) {
   const [query, setQuery] = useState('')
+  const [index, setIndex] = useState<Record<string, string>>({})
   useEffect(() => {
     if (!open) setQuery('')
+    else loadSearchIndex().then(setIndex)
     const handleKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose() }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
   }, [open, onClose])
+  const results = useMemo(() => {
+    const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
+    if (!terms.length) return []
+    const scored = posts.map((post) => {
+      const title = post.title.toLowerCase()
+      const keywords = post.keywords.join('').toLowerCase()
+      const excerpt = post.excerpt.toLowerCase()
+      const body = (index[post.slug] || '').toLowerCase()
+      let score = 0
+      for (const t of terms) {
+        let hit = 0
+        if (title.includes(t)) hit = Math.max(hit, 10)
+        if (keywords.includes(t)) hit = Math.max(hit, 8)
+        if (excerpt.includes(t)) hit = Math.max(hit, 5)
+        if (body.includes(t)) hit = Math.max(hit, 2)
+        if (!hit) return null
+        score += hit
+      }
+      return { post, score }
+    }).filter(Boolean) as Array<{ post: typeof posts[number], score: number }>
+    scored.sort((a, b) => b.score - a.score || (a.post.date < b.post.date ? 1 : -1))
+    return scored.slice(0, 30).map((s) => s.post)
+  }, [query, index])
+  const makeSnippet = (post: typeof posts[number]) => {
+    const body = index[post.slug] || post.excerpt
+    const q = query.trim().toLowerCase()
+    const pos = q ? body.toLowerCase().indexOf(q.split(/\s+/)[0].toLowerCase()) : -1
+    if (pos < 0) return post.excerpt.slice(0, 80)
+    const start = Math.max(0, pos - 30)
+    return (start > 0 ? '…' : '') + body.slice(start, pos + 50) + '…'
+  }
   if (!open) return null
-  const results = posts.filter((post) => `${post.title}${post.excerpt}${post.keywords.join('')}`.toLowerCase().includes(query.toLowerCase()))
   return (
     <div className="dialog-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
       <section className="search-dialog" role="dialog" aria-modal="true" aria-label="搜索文章">
-        <div className="search-input-wrap"><Search size={21} /><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索标题、摘要或关键词…" /><button className="icon-button" onClick={onClose} aria-label="关闭搜索"><X size={20} /></button></div>
-        <p className="search-result-count">{query ? `找到 ${results.length} 篇相关文章` : '输入关键词开始搜索'}</p>
-        <div className="search-results">{query && results.map((post) => <Link key={post.slug} to={`/post/${post.slug}`} onClick={onClose}><span>{post.category}</span><strong>{post.title}</strong><ArrowUpRight size={18} /></Link>)}{query && results.length === 0 && <div className="empty-state">没有找到相关内容，试试其他关键词。</div>}</div>
+        <div className="search-input-wrap"><Search size={21} /><input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="全文搜索：标题、关键词、摘要、正文…" /><button className="icon-button" onClick={onClose} aria-label="关闭搜索"><X size={20} /></button></div>
+        <p className="search-result-count">{query ? `找到 ${results.length} 篇相关文章` : '输入关键词开始搜索，多个词用空格分隔（同时满足）'}</p>
+        <div className="search-results">{query && results.map((post) => <Link key={post.slug} to={`/post/${post.slug}`} onClick={onClose}><span>{post.category}</span><strong>{post.title}</strong><p>{makeSnippet(post)}</p><ArrowUpRight size={18} /></Link>)}{query && results.length === 0 && <div className="empty-state">没有找到相关内容，试试其他关键词。</div>}</div>
       </section>
     </div>
   )
@@ -300,6 +343,16 @@ function SearchDialog({ open, onClose }: { open: boolean, onClose: () => void })
 export default function App() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [tagFilter, setTagFilter] = useState('')
+  useEffect(() => {
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === '/' && !searchOpen && !(event.target instanceof HTMLInputElement) && !(event.target instanceof HTMLTextAreaElement)) {
+        event.preventDefault()
+        setSearchOpen(true)
+      }
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [searchOpen])
   return (
     <div className="app">
       <Header onSearch={() => setSearchOpen(true)} />
