@@ -1,6 +1,6 @@
 关键词：Blackwell GPU、**Claude Code Skill**、**知识库工程**、内核优化、:mdnice-bold-italic[tcgen05]
 
-> 如果你正在写一段跑在 B200 上的 FlashAttention-4，或正纠结 `tcgen05.mma` 应该配哪一种 TMEM 布局，你大概率会经历同一种痛苦：**答案散落在 CUTLASS 的几十个 PR、vLLM/SGLang 的近千条提交、几篇英伟达官方博客与若干 PTX 手册章节里**，:mdnice-bold-italic[搜索引擎给不出，社区帖子又零碎过时。] 更尴尬的是，让大模型替你查——它连 tcgen05 和 wgmma 的区别都未必稳定答对。
+> *如果你正在写一段跑在 B200 上的 FlashAttention-4，或正纠结 `tcgen05.mma` 应该配哪一种 TMEM 布局，你大概率会经历同一种痛苦：**答案散落在 CUTLASS 的几十个 PR、vLLM/SGLang 的近千条提交、几篇英伟达官方博客与若干 PTX 手册章节里**，:mdnice-bold-italic[搜索引擎给不出，社区帖子又零碎过时。] 更尴尬的是，让大模型替你查——它连 tcgen05 和 wgmma 的区别都未必稳定答对。*
 
 ![文章插图](/articles/2026-05-30-kernelwiki-blackwell-wikipedia-2179-pr-cb52c7cd/images/01.webp)
 

@@ -1,6 +1,6 @@
 关键词：**AI Agent**、软件自动化、**命令行接口(CLI)、** 大模型应用、**零代码适配**
 
-一行命令，让任意软件接入 OpenClaw、nanobot、Cursor、Claude Code 等 Agent 框架。
+*一行命令，让任意软件接入 OpenClaw、nanobot、Cursor、Claude Code 等 Agent 框架。*
 
 > 如今，AI Agent（智能体）正在以前所未有的速度演进。从早期的文本问答，到如今的复杂推理，大语言模型（LLM）的“大脑”已经足够聪明。然而，当我们需要 Agent 帮我们完成一项具体的现实任务——比如“用 Blender 渲染一个带物理碰撞的 3D 场景”、“在 GIMP 中批量去背图片”或者“用 LibreOffice 生成一份包含财报数据的 PDF”时，现有的 AI Agent 往往束手无策。
 

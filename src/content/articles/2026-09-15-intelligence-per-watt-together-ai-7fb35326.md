@@ -1,6 +1,6 @@
 关键词：**本地推理**、每瓦智能、:mdnice-bold-italic[大模型效率]、**混合路由**、:mdnice-bold-italic[端侧 AI]
 
-> 去年的一篇文章👀，再拿出来看看。当全球每天数万亿次大模型推理请求涌向少数数据中心，一个被反复追问的问题浮出水面：:mdnice-bold-italic[本地设备，到底能不能接住这波 AI 流量？斯坦福 Hazy Research 与 Together AI 在这篇论文里，把 20 多个本地模型塞进 8 种硬件，跑了整整 100 万次真实查询。]
+> *去年的一篇文章👀，再拿出来看看。当全球每天数万亿次大模型推理请求涌向少数数据中心，一个被反复追问的问题浮出水面：:mdnice-bold-italic[本地设备，到底能不能接住这波 AI 流量？斯坦福 Hazy Research 与 Together AI 在这篇论文里，把 20 多个本地模型塞进 8 种硬件，跑了整整 100 万次真实查询。]*
 
 ![文章插图](/articles/2026-09-15-intelligence-per-watt-together-ai-7fb35326/images/01.webp)
 

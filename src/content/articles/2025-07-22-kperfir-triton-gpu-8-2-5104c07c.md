@@ -10,7 +10,7 @@
 - [超越 Triton？任意低精度 GPGPU 计算虚拟机，加速 LLM 服务](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447888475&idx=1&sn=c452ca77513dd283a6850181735ecaa0&scene=21#wechat_redirect)
 - [ML-Triton：Intel 在 Triton GPU 编程的多级编译与语言扩展的工作](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447887927&idx=1&sn=07061b7b0fe72cdb4bfd91e42f9431b2&scene=21#wechat_redirect)
 
-> 现代人工智能编译器（如 Triton [1]）旨在弥合高层机器学习算子与底层硬件代码之间的鸿沟。然而，面对:mdnice-bold-italic[快速演进的 GPU 架构] （如 NVIDIA Hopper 中的 Tensor Core 和 TMA [2]）以及新型算子（如 Flash-Attention-3 [3]），这些:mdnice-bold-italic[编译器生成的代码性能往往落后于手工调优的实现] （如 cuBLAS [4]）。
+> *现代人工智能编译器（如 Triton [1]）旨在弥合高层机器学习算子与底层硬件代码之间的鸿沟。然而，面对:mdnice-bold-italic[快速演进的 GPU 架构] （如 NVIDIA Hopper 中的 Tensor Core 和 TMA [2]）以及新型算子（如 Flash-Attention-3 [3]），这些:mdnice-bold-italic[编译器生成的代码性能往往落后于手工调优的实现] （如 cuBLAS [4]）。*
 
 性能分析是缩小这一差距的关键，但**现有工具** （如 NVIDIA Nsight Compute [5]、AMD RocTracer [6]）**与编译器工作流脱节**，缺乏高层语义信息，**难以分析细粒度优化** （如 GPU 内核内的函数单元重叠执行），且反馈闭环（从分析到优化）:mdnice-bold-italic[效率低下]。
 

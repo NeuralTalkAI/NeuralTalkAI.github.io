@@ -1,6 +1,6 @@
 关键词：**AI Agent**、强化学习、**多智能体**、:mdnice-bold-italic[链式推理]、AI 对齐
 
-> 本文整理自 OpenAI 研究科学家 Noam Brown 的深度播客访谈，:mdnice-bold-italic[围绕 AI Agent 的定义、技术基础、能力边界、多智能体协作风险与对齐挑战展开，解读大模型能力演进的核心逻辑，探讨前沿 AI 的发展方向。]
+> *本文整理自 OpenAI 研究科学家 Noam Brown 的深度播客访谈，:mdnice-bold-italic[围绕 AI Agent 的定义、技术基础、能力边界、多智能体协作风险与对齐挑战展开，解读大模型能力演进的核心逻辑，探讨前沿 AI 的发展方向。]*
 
 ![文章插图](/articles/2026-09-16-openai-noam-brown-agentic-ai-991356f3/images/01.webp)
 

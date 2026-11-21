@@ -1,6 +1,6 @@
 关键词：**智能体友好 UX**、:mdnice-bold-italic[JSON 信封契约]、稳定 Row Key、**ProfileSource 抽象**、静默失败守护
 
-> 当 Claude 或 Cursor 这样的**编码智能体被丢进一个充斥着 `.nsys-rep` 与 `.ncu-rep` 的 GPU 性能调优工程时**，它会遇到一堵令人难堪的墙：:mdnice-bold-italic[Nsight GUI 不可脚本化、`nsys stats` 输出的是给人眼读的纯文本表格、`jq` 与 SQLite 之间的胶水又得每个团队自己手搓。]
+> *当 Claude 或 Cursor 这样的**编码智能体被丢进一个充斥着 `.nsys-rep` 与 `.ncu-rep` 的 GPU 性能调优工程时**，它会遇到一堵令人难堪的墙：:mdnice-bold-italic[Nsight GUI 不可脚本化、`nsys stats` 输出的是给人眼读的纯文本表格、`jq` 与 SQLite 之间的胶水又得每个团队自己手搓。]*
 
 智能体擅长生成代码，却拙于点鼠标；它擅长解析 JSON，却容易在自由文本里幻觉数字。
 

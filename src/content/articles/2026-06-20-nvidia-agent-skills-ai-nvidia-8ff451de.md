@@ -1,6 +1,6 @@
 关键词：**Agent Skills**、技能签名验证、**自动化同步管线**、插件分发、:mdnice-bold-italic[AI 智能体治理]
 
-> 当你在 Claude Code 里对 AI 说"帮我用 cuOpt 解一个线性规划问题"，**智能体不是胡编乱造，而是精准地按照 NVIDIA 官方文档的最佳实践**，一步步帮你调用 API、配置服务器、提交求解。:mdnice-bold-italic[它为什么能做到？因为它脑子里装了一份经过 NVIDIA 密码学签名认证的"技能手册"。]
+> *当你在 Claude Code 里对 AI 说"帮我用 cuOpt 解一个线性规划问题"，**智能体不是胡编乱造，而是精准地按照 NVIDIA 官方文档的最佳实践**，一步步帮你调用 API、配置服务器、提交求解。:mdnice-bold-italic[它为什么能做到？因为它脑子里装了一份经过 NVIDIA 密码学签名认证的"技能手册"。]*
 
 ![文章插图](/articles/2026-06-20-nvidia-agent-skills-ai-nvidia-8ff451de/images/01.webp)
 

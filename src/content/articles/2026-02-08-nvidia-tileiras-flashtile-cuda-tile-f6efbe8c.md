@@ -1,7 +1,7 @@
 关键词：FlashTile、**CUDA Tile IR**、:mdnice-bold-italic[TileLang]、NVRTC、**编译流水线**
 
 ::: block-1
-FlashTile 整个设计哲学是：前端做精确的语义下降和轻量规范化，把重型硬件优化委托给 TileLang，同时在前后端之间做好"桥接优化"（block size 适配、shared memory 限制、PTX 后处理等），确保端到端的正确性和性能。
+*FlashTile 整个设计哲学是：前端做精确的语义下降和轻量规范化，把重型硬件优化委托给 TileLang，同时在前后端之间做好"桥接优化"（block size 适配、shared memory 限制、PTX 后处理等），确保端到端的正确性和性能。*
 :::
 
 - :mdnice-bold-italic[FlashTile is a CUDA Tile IR compiler that is compatible with NVIDIA's tileiras, targeting SM70 through SM121 NVIDIA GPUs.]

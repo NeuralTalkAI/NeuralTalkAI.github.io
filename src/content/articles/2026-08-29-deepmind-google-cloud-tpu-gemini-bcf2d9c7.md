@@ -1,6 +1,6 @@
 关键词：Gemini、**DeepMind**、:mdnice-bold-italic[TPU]、Goodput、**端云混合**
 
-> 当十万颗 TPU 在同一个集群里昼夜运转，当一个模型的训练周期以"月"为单位计算，**前沿研究与产品落地之间的鸿沟，远比外界想象的更深**。本文基于对谷歌工程副总裁、核心 ML 团队负责人 Bill Jia 的深度访谈，完整还原了 :mdnice-bold-italic[Gemini 从实验室创意走向十亿用户产品的工程全貌。]
+> *当十万颗 TPU 在同一个集群里昼夜运转，当一个模型的训练周期以"月"为单位计算，**前沿研究与产品落地之间的鸿沟，远比外界想象的更深**。本文基于对谷歌工程副总裁、核心 ML 团队负责人 Bill Jia 的深度访谈，完整还原了 :mdnice-bold-italic[Gemini 从实验室创意走向十亿用户产品的工程全貌。]*
 
 Bill Jia，谷歌工程副总裁（VP Engineering, Google Cloud），核心 ML 团队（Core ML）负责人。他所带领的团队是谷歌内部衔接 AI 研究与产品落地的关键枢纽：
 

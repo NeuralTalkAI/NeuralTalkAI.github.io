@@ -1,6 +1,6 @@
 关键词：性能仿真建模、:mdnice-bold-italic[时间扭曲仿真]、**大语言模型推理**、:mdnice-bold-italic[虚拟时间协议]、**无 GPU 仿真**
 
-> 得益于时间加速协议，:mdnice-bold-italic[REVATI 在 vLLM 和 SGLang 上的运行速度均比真实 GPU 执行快一个数量级以上]。值得注意的是，模型越大、GPU 执行时间越长，REVATI 的加速比越高——在 Llama-3.1-70B 上达到峰值性能。
+> *得益于时间加速协议，:mdnice-bold-italic[REVATI 在 vLLM 和 SGLang 上的运行速度均比真实 GPU 执行快一个数量级以上]。值得注意的是，模型越大、GPU 执行时间越长，REVATI 的加速比越高——在 Llama-3.1-70B 上达到峰值性能。*
 
 ![文章插图](/articles/2026-01-12-gpu-5-17-revati-vllm-afcd0e26/images/01.webp)
 

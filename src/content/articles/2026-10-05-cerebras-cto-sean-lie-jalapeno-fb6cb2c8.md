@@ -1,6 +1,6 @@
 关键词：Cerebras、**晶圆级芯片**、:mdnice-bold-italic[超快推理]、CS5、Sean Lie
 
-> 如果把大模型推理比作一场竞速，Sean Lie 大概就是那个把引擎做得最大、也最不怕别人说他疯的人。:mdnice-bold-italic[他是 Cerebras 的联合创始人兼 CTO，也是那整块晶圆级芯片（wafer-scale）背后的首席架构师——当年几乎所有人都对他们说"你们疯了，这东西造不出来"，而如今 Cerebras 不仅把晶圆级芯片做成了量产产品，还刚刚完成了史上规模最大的半导体 IPO。]
+> *如果把大模型推理比作一场竞速，Sean Lie 大概就是那个把引擎做得最大、也最不怕别人说他疯的人。:mdnice-bold-italic[他是 Cerebras 的联合创始人兼 CTO，也是那整块晶圆级芯片（wafer-scale）背后的首席架构师——当年几乎所有人都对他们说"你们疯了，这东西造不出来"，而如今 Cerebras 不仅把晶圆级芯片做成了量产产品，还刚刚完成了史上规模最大的半导体 IPO。]*
 
 ![文章插图](/articles/2026-10-05-cerebras-cto-sean-lie-jalapeno-fb6cb2c8/images/01.webp)
 

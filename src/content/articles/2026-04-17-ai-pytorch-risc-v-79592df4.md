@@ -1,6 +1,6 @@
 关键词：:mdnice-bold-italic[RISC-V]、**PyTorch**、CI/CD、**RVV 向量化**、RISE 项目
 
-> 在刚刚落幕的 PyTorch Conf EU 2026 上，Meta 软件工程师、RISE 项目技术指导委员会联合主席 Ludovic Henry，:mdnice-bold-italic[用一句“So... how do you start?”的质朴发问，撕开了新兴硬件生态最关键的命题：如何让 RISC-V 这一潜力架构，真正承接 PyTorch 这座 AI 框架基石？]
+> *在刚刚落幕的 PyTorch Conf EU 2026 上，Meta 软件工程师、RISE 项目技术指导委员会联合主席 Ludovic Henry，:mdnice-bold-italic[用一句“So... how do you start?”的质朴发问，撕开了新兴硬件生态最关键的命题：如何让 RISC-V 这一潜力架构，真正承接 PyTorch 这座 AI 框架基石？]*
 
 ![文章插图](/articles/2026-04-17-ai-pytorch-risc-v-79592df4/images/01.webp)
 

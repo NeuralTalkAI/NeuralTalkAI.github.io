@@ -1,6 +1,6 @@
 关键词：:mdnice-bold-italic[NVIDIA SASS]、Blackwell SM120、**张量核心**、:mdnice-bold-italic[模式库]、**逆向工程**
 
-> 每一份用 `nvcc` 编出来的 cubin，最终都会被 GPU 翻译成一种没有官方手册的本地汇编——SASS。CUDA 程序员看得到 PTX，**能读懂 Nsight 给的 warning，却几乎可能没有办法在底层去回答**：":mdnice-bold-italic[为什么 ptxas 把我的 `a  b + c` 拆成两条 FADD 而不是一条 FFMA？"、"为什么这两个 `LDG` 共用了同一个 scoreboard？"]
+> *每一份用 `nvcc` 编出来的 cubin，最终都会被 GPU 翻译成一种没有官方手册的本地汇编——SASS。CUDA 程序员看得到 PTX，**能读懂 Nsight 给的 warning，却几乎可能没有办法在底层去回答**：":mdnice-bold-italic[为什么 ptxas 把我的 `a  b + c` 拆成两条 FADD 而不是一条 FFMA？"、"为什么这两个 `LDG` 共用了同一个 scoreboard？"]*
 
 自 2018 年 Citadel 的 Jia 等人系统逆向 Volta 与 Turing 之后，Ampere、Hopper、Blackwell 三代消费/数据中心架构基本【鲜有】同等深度的公开工作。
 

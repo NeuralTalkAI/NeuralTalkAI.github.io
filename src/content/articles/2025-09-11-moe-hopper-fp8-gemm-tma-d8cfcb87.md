@@ -1,6 +1,6 @@
 关键词：FP8 Grouped GEMM、Tensor Memory Accelerator (TMA)、Padding Elimination、Mixture of Experts (MoE)、Hopper GPU Architecture、Low-Precision Computing
 
-> 【NeuralTalk简评】这篇并非想要表达 Hopper 架构 “软硬件设计不合理”，而是解决应用场景和硬件约束的矛盾，即 “MoE 动态分组 GEMM 的应用场景” 与 “Hopper 为高性能设定的硬件约束（TMA 静态配置、内存对齐）” 存在矛盾，导致现有方案需通过 padding 引入额外开销。作者通过软件层优化（描述符池、双阶段加载、对齐管理），在满足 Hopper 硬件约束的前提下消除 padding，进而适配硬件以释放性能。
+> *【NeuralTalk简评】这篇并非想要表达 Hopper 架构 “软硬件设计不合理”，而是解决应用场景和硬件约束的矛盾，即 “MoE 动态分组 GEMM 的应用场景” 与 “Hopper 为高性能设定的硬件约束（TMA 静态配置、内存对齐）” 存在矛盾，导致现有方案需通过 padding 引入额外开销。作者通过软件层优化（描述符池、双阶段加载、对齐管理），在满足 Hopper 硬件约束的前提下消除 padding，进而适配硬件以释放性能。*
 
 ![文章插图](/articles/2025-09-11-moe-hopper-fp8-gemm-tma-d8cfcb87/images/01.webp)
 

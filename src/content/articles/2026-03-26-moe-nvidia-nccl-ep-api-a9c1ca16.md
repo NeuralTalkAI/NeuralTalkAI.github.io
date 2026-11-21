@@ -1,6 +1,6 @@
 关键词： MoE（Mixture-of-Experts）、NCCL、**GPU 通信**、**Device-Initiated Communication**、:mdnice-bold-italic[大模型推理]
 
-> 在通往通用人工智能的道路上，模型的规模正以前所未有的速度扩张。当稠密的 Transformer 模型在计算和参数效率上触及天花板时，混合专家（Mixture-of-Experts, MoE）架构以其“**加人加卡不加计算** ”的特性，成为了各大 AI 公司竞相追逐的“圣杯”。:mdnice-bold-italic[从 DeepSeek-V3 到 Mixtral，MoE 通过将模型参数解耦为稀疏的“专家”网络，在保持推理成本可控的前提下，实现了模型容量的指数级增长。]
+> *在通往通用人工智能的道路上，模型的规模正以前所未有的速度扩张。当稠密的 Transformer 模型在计算和参数效率上触及天花板时，混合专家（Mixture-of-Experts, MoE）架构以其“**加人加卡不加计算** ”的特性，成为了各大 AI 公司竞相追逐的“圣杯”。:mdnice-bold-italic[从 DeepSeek-V3 到 Mixtral，MoE 通过将模型参数解耦为稀疏的“专家”网络，在保持推理成本可控的前提下，实现了模型容量的指数级增长。]*
 
 然而，硬币的另一面是，MoE 架构带来了一个全新的、极其棘手的通信挑战。假设你有一万个“专家”（子网络）分布在数千张 GPU 上，每个输入 token 需要根据实时计算出的路由规则，动态地、精确地被“分发”到其选中的几个专家那里，处理完后再将结果“收集”回来。:mdnice-bold-italic[这个过程不再是传统的大规模同步通信（如 AllReduce），而是变成了一个细粒度、动态、全对全（All-to-All）的“调兵遣将”。]
 

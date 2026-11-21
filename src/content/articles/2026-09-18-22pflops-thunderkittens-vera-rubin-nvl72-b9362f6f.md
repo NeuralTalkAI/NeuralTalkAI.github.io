@@ -2,7 +2,7 @@
 
 关键词：:mdnice-bold-italic[ThunderKittens]、**Vera Rubin NVL72**、GEMM、**NVFP4**、FP8
 
-> 谁说天文学家小猫，不可爱呢🐱！Together AI 内核团队完成 ThunderKittens 算子库对 NVIDIA Vera Rubin NVL72 新平台适配，针对 NVFP4、FP8 精度 GEMM 矩阵乘法做深度优化。:mdnice-bold-italic[Vera Rubin 相比 Blackwell 架构 B200，算力、显存带宽、SM 数量大幅跃升，但直接移植 B200 原有内核，算力仅达到理论屋顶值 42%‑44%，存在明显数据供给瓶颈。]
+> *谁说天文学家小猫，不可爱呢🐱！Together AI 内核团队完成 ThunderKittens 算子库对 NVIDIA Vera Rubin NVL72 新平台适配，针对 NVFP4、FP8 精度 GEMM 矩阵乘法做深度优化。:mdnice-bold-italic[Vera Rubin 相比 Blackwell 架构 B200，算力、显存带宽、SM 数量大幅跃升，但直接移植 B200 原有内核，算力仅达到理论屋顶值 42%‑44%，存在明显数据供给瓶颈。]*
 
 ![文章插图](/articles/2026-09-18-22pflops-thunderkittens-vera-rubin-nvl72-b9362f6f/images/01.webp)
 

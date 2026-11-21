@@ -1,6 +1,6 @@
 关键词：**MoE Align Block Size**、Triton、:mdnice-bold-italic[SGLang]、**TLE**、**atomic_fused**、CUDA
 
-> MoE Align Block Size 作为大模型 MoE 架构中的核心算子，其性能表现直接影响后续 GEMM 等计算环节的效率，当 token 数量与专家数同步提升且分布呈长尾特征时，传统实现的并行度、内存访问等问题极易形成性能瓶颈。
+> *MoE Align Block Size 作为大模型 MoE 架构中的核心算子，其性能表现直接影响后续 GEMM 等计算环节的效率，当 token 数量与专家数同步提升且分布呈长尾特征时，传统实现的并行度、内存访问等问题极易形成性能瓶颈。*
 
 ![文章插图](/articles/2026-03-09-triton-sglang-moe-align-block-1ea56526/images/01.webp)
 

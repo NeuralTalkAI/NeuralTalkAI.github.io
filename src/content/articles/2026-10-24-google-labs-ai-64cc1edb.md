@@ -1,6 +1,6 @@
 关键词：**Google Labs**、:mdnice-bold-italic[Josh Woodward]、AI 产品、产品创新、**Lenny’s Podcast**
 
-过去半年，DeepSeek 招聘“AI 跨界技术人才”，Kimi 寻找 7 名“wild card”。奇怪岗位背后，是 AI 公司怎样判断人与点子的潜力。这个问题落到项目层面，会变成一道更具体的选择题。
+*过去半年，DeepSeek 招聘“AI 跨界技术人才”，Kimi 寻找 7 名“wild card”。奇怪岗位背后，是 AI 公司怎样判断人与点子的潜力。这个问题落到项目层面，会变成一道更具体的选择题。*
 
 > Google Labs 负责人 Josh Woodward 的工作，每天都要面对一批看起来很有吸引力的 AI Demo。**模型能力每周都在变化，新点子几乎用不完，真正困难的是决定把人和时间投向哪里，又在哪里停手。**
 

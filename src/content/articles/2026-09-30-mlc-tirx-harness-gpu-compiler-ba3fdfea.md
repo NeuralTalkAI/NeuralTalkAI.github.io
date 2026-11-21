@@ -2,7 +2,7 @@
 
 关键词：**TIRx Harness**、:mdnice-bold-italic[智能体 GPU 编程]、**编译支撑框架**、GPU 内核优化、MLC 社区
 
-> 我们打造了TIRx Harness[1]这一编译支撑框架，**它融合了精简稳定的编译基础、知识库、工具集与基准测试服务器**，可帮助智能体开发出正确、高效的 GPU 内核。在测试负载下，:mdnice-bold-italic[Kimi Delta 注意力（KDA）内核的前向传播几何平均提速较 FlashKDA 达 2.94 倍，反向传播较 Flash 线性注意力（FLA）达 6.84 倍。]
+> *我们打造了TIRx Harness[1]这一编译支撑框架，**它融合了精简稳定的编译基础、知识库、工具集与基准测试服务器**，可帮助智能体开发出正确、高效的 GPU 内核。在测试负载下，:mdnice-bold-italic[Kimi Delta 注意力（KDA）内核的前向传播几何平均提速较 FlashKDA 达 2.94 倍，反向传播较 Flash 线性注意力（FLA）达 6.84 倍。]*
 
 ![文章插图](/articles/2026-09-30-mlc-tirx-harness-gpu-compiler-ba3fdfea/images/01.jpg)
 

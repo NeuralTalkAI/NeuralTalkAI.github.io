@@ -1,6 +1,6 @@
 关键词：MoonEP、:mdnice-bold-italic[专家并行负载均衡]、**MoE 动态调度**、权重预取、**Token 路由**
 
-> **说明** ：**本文只介绍MoonEP[1] 的基本思路和接口抽象，不展开 kernel 实现**。对于代码细节，我倾向于使用 AI 辅助阅读源码来理解。:mdnice-bold-italic[本文主要讨论三个问题：为什么 MoonEP 要同时调度 token 和 expert、这样做要付出什么成本，以及它适合哪些场景。]
+> ***说明** ：**本文只介绍MoonEP[1] 的基本思路和接口抽象，不展开 kernel 实现**。对于代码细节，我倾向于使用 AI 辅助阅读源码来理解。:mdnice-bold-italic[本文主要讨论三个问题：为什么 MoonEP 要同时调度 token 和 expert、这样做要付出什么成本，以及它适合哪些场景。]*
 
 ![文章插图](/articles/2026-08-06-moonep-moe-token-expert-c9717580/images/01.webp)
 

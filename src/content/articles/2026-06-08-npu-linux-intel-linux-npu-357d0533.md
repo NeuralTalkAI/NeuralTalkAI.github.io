@@ -1,6 +1,6 @@
 关键词：**Intel NPU**、Level Zero、**ivpu 内核驱动**、:mdnice-bold-italic[命令缓冲]、模型缓存
 
-> 自从 Meteor Lake 把 NPU（Neural Processing Unit）这块异构加速器塞进消费级 CPU 之后，"AI PC" 这个词就开始频繁出现在各种发布会上。但很少有人去看一眼：:mdnice-bold-italic[当你在笔记本上跑一个 OpenVINO 推理时，从 Python 调用到 NPU 上电运算，中间到底经过了多少层代码？这个过程里，是谁在生成命令缓冲、谁在做模型缓存、谁负责把 ELF 形态的 graph 翻译成 NPU 能吃进去的指令？]
+> *自从 Meteor Lake 把 NPU（Neural Processing Unit）这块异构加速器塞进消费级 CPU 之后，"AI PC" 这个词就开始频繁出现在各种发布会上。但很少有人去看一眼：:mdnice-bold-italic[当你在笔记本上跑一个 OpenVINO 推理时，从 Python 调用到 NPU 上电运算，中间到底经过了多少层代码？这个过程里，是谁在生成命令缓冲、谁在做模型缓存、谁负责把 ELF 形态的 graph 翻译成 NPU 能吃进去的指令？]*
 
 ![文章插图](/articles/2026-06-08-npu-linux-intel-linux-npu-357d0533/images/01.webp)
 

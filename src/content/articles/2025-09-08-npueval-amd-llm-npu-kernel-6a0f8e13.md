@@ -1,6 +1,6 @@
 关键词：NPUEval、NPU Kernels、LLMs、Vectorization、Open Source Compilers、Performance Evaluation
 
-> *【NeuralTalk简评】* AMD NPU 的 AIE tile 依赖 VPU（向量处理单元），向量化代码是释放其算力、降低延迟与功耗的关键。而 NPU 编程生态不成熟、架构碎片化，LLM 生成的代码常“功能正确但低效”，只有向量化 kernel 能匹配其为 AI 负载设计的并行架构，因此本文在代码生成重点聚焦向量化。
+> **【NeuralTalk简评】* AMD NPU 的 AIE tile 依赖 VPU（向量处理单元），向量化代码是释放其算力、降低延迟与功耗的关键。而 NPU 编程生态不成熟、架构碎片化，LLM 生成的代码常“功能正确但低效”，只有向量化 kernel 能匹配其为 AI 负载设计的并行架构，因此本文在代码生成重点聚焦向量化。*
 
 ![文章插图](/articles/2025-09-08-npueval-amd-llm-npu-kernel-6a0f8e13/images/01.webp)
 

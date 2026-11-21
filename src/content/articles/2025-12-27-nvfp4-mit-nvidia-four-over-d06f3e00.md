@@ -13,7 +13,7 @@
 - **[MXFP4近无损LLM训练：MXFP4 GEMM结合RHT与SR，比FP8快2倍计算且6.7B GPT模型近无损](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447891301&idx=1&sn=07fa64e075a9cf2fa5d6cced89b8b108&scene=21#wechat_redirect)**
 - **[SOLE：Softmax/LayerNorm软硬件协同优化，36倍加速与2.8+倍面效和能效比的低精度Transformer架构](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447893805&idx=1&sn=b82015bdc4d1d0bee906f5471e88de62&scene=21#wechat_redirect)**
 
-> 随着大型语言模型（LLM）规模扩大，NVFP4 等低精度格式因速度和内存优势被广泛应用，但需**将矩阵乘法所有操作数量化为 NVFP4，易导致训练发散和推理性能下降**。为此，:mdnice-bold-italic[本文提出 Four Over Six（4/6）方法，对 NVFP4 量化算法进行改进。]
+> *随着大型语言模型（LLM）规模扩大，NVFP4 等低精度格式因速度和内存优势被广泛应用，但需**将矩阵乘法所有操作数量化为 NVFP4，易导致训练发散和推理性能下降**。为此，:mdnice-bold-italic[本文提出 Four Over Six（4/6）方法，对 NVFP4 量化算法进行改进。]*
 
 FP4 等浮点格式的**量化误差主要集中在块内近最大值处**，这是性能退化的核心原因。4/6 的:mdnice-bold-italic[核心创新是为每个值块评估两个缩放因子（4 和 6）：相较于传统 NVFP4 固定缩放至 6 的做法，部分块缩放至 4 可使可表示值分布更均匀，显著降低近最大值的量化误差]。例如，数值块[10,20,30,40]缩放至 4 时均方误差为 0，远优于缩放至 6 时的 4.33。
 

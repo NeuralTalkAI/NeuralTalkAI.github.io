@@ -2,7 +2,7 @@
 
 关键词：摩尔线程、**MUSA 驱动**、基准测试、:mdnice-bold-italic[Celero 框架]、**CUDA 对照评测**
 
-> 当我们谈论一块 GPU "快不快"，惯性反应往往是去看 TFLOPS、HBM 带宽，或跑一遍 GEMM、ResNet。**可真正决定上层框架体验的，往往是那些藏在驱动深处的细节**：`cudaMalloc(1B)` 要花多少微秒？:mdnice-bold-italic[空 kernel 的 launch latency 是 5μs 还是 15μs？]
+> *当我们谈论一块 GPU "快不快"，惯性反应往往是去看 TFLOPS、HBM 带宽，或跑一遍 GEMM、ResNet。**可真正决定上层框架体验的，往往是那些藏在驱动深处的细节**：`cudaMalloc(1B)` 要花多少微秒？:mdnice-bold-italic[空 kernel 的 launch latency 是 5μs 还是 15μs？]*
 
 两路 stream 通过 event 串行起来比单 stream 多了多少同步开销？这些"边角料"在大模型训练里被放大成性能黑洞。
 

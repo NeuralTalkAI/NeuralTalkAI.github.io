@@ -1,6 +1,6 @@
 关键词：**MXFP8**、NVFP4、**强化学习（RL）**、:mdnice-bold-italic[低精度量化]、Blackwell
 
-> 本文介绍了 LMSYS 团队**在 Miles 框架中落地的两套 Blackwell 原生低精度 RL 方案**：端到端 MXFP8 与逐 token NVFP4，:mdnice-bold-italic[目标是在不牺牲训练稳定性的前提下吃满 Blackwell Tensor Core 的 FP8/FP4 算力。]
+> *本文介绍了 LMSYS 团队**在 Miles 框架中落地的两套 Blackwell 原生低精度 RL 方案**：端到端 MXFP8 与逐 token NVFP4，:mdnice-bold-italic[目标是在不牺牲训练稳定性的前提下吃满 Blackwell Tensor Core 的 FP8/FP4 算力。]*
 
 **低精度 RL 的核心难点在于"精度契约"——rollout、训练、checkpoint 转换与实时权重更新必须使用完全一致的量化方式**，否则采样策略与学习策略会逐渐分歧。
 

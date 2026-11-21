@@ -12,7 +12,7 @@
 - [从算子库到编译生成：Hexagon-MLIR 通过 MLIR 实现 PyTorch 与 Triton 在 Hexagon NPU 上的统一优化与 3.95 倍多线程加速](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447898220&idx=1&sn=8da7c546a9ac4f04b378e2a316c35de7&scene=21#wechat_redirect)
 - [打破库依赖与 93% 峰值效率！Intel 提出 MLIR 驱动的编译器自动生成 NanoKernel 实现高性能矩阵乘法内核！性能媲美手工优化](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447895855&idx=1&sn=23bb841f0a281cb91e82b9e37fbddd8c&scene=21#wechat_redirect)
 
-> 面向边缘设备的 AI 核函数编译，其性能优劣除受其他因素影响外，核心取决于编译器在**分层内存** 与**显式数据搬移** 的:mdnice-bold-italic[硬件特性下，挖掘并行性并隐藏内存延迟的能力。]
+> *面向边缘设备的 AI 核函数编译，其性能优劣除受其他因素影响外，核心取决于编译器在**分层内存** 与**显式数据搬移** 的:mdnice-bold-italic[硬件特性下，挖掘并行性并隐藏内存延迟的能力。]*
 
 :mdnice-bold-italic[本文提出了一套基准测试方法，并给出了基于 MLIR 的编译流水线中三种编译器可控优化机制的测试结果]，分别为：向量化（Vec）、跨硬件上下文的多线程（MT）、以及利用**乒乓式暂存缓冲区** （两块独立的高速片上暂存区，交替用于数据接收和计算）实现**DMA 传输** 与计算重叠的双缓冲（DB, double buffer）。
 

@@ -1,6 +1,6 @@
 关键词：**Manifold-Constrained Hyper-Connections**、Hyper-Connections、**Residual Connection**、Manifold Projection、Large Language Models
 
-> 通过高效的基础设施级优化（如核融合、重计算、通信重叠），mHC 在实现这些改进的同时，仅引入可忽略的计算开销。:mdnice-bold-italic[TileLang 简化了具有复杂计算流程的核的实现过程，并使我们能够以最小的工程工作量充分利用内存带宽。4.3.1 部分有比较多的公式和工程优化细节描述。]
+> *通过高效的基础设施级优化（如核融合、重计算、通信重叠），mHC 在实现这些改进的同时，仅引入可忽略的计算开销。:mdnice-bold-italic[TileLang 简化了具有复杂计算流程的核的实现过程，并使我们能够以最小的工程工作量充分利用内存带宽。4.3.1 部分有比较多的公式和工程优化细节描述。]*
 
 ![文章插图](/articles/2026-01-02-deepseek-hc-manifold-constrained-hyper-920732df/images/01.webp)
 

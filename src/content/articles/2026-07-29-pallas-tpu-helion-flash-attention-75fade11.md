@@ -2,7 +2,7 @@
 
 关键词：**Helion**、:mdnice-bold-italic[TPU]、**Pallas**、软件流水线、**自动调优**
 
-> "**Helion 是 PyTorch 用于编写性能可移植机器学习内核的高级 DSL**。我们与 Google 合作构建了 **TPU 后端，将 Helion 内核编译到 Pallas**。"PyTorch 官方博客在 2026 年 7 月发布的这篇文章提到：:mdnice-bold-italic[深度学习内核编写，正在从"一套硬件一套代码"走向"一次编写、多硬件运行"。]
+> *"**Helion 是 PyTorch 用于编写性能可移植机器学习内核的高级 DSL**。我们与 Google 合作构建了 **TPU 后端，将 Helion 内核编译到 Pallas**。"PyTorch 官方博客在 2026 年 7 月发布的这篇文章提到：:mdnice-bold-italic[深度学习内核编写，正在从"一套硬件一套代码"走向"一次编写、多硬件运行"。]*
 
 这背后的产业背景十分清晰。Google 最新的 TPU v7（Ironwood）在 BF16 算力与 HBM 带宽这两项现代机器学习负载最关键的硬件指标上，已经**与 NVIDIA B200 高度可比，且总体拥有成本可能更低。**
 

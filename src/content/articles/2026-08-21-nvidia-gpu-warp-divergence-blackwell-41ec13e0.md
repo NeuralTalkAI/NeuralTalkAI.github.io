@@ -1,6 +1,6 @@
 关键词：**Warp 分歧**、独立线程调度、**SIMT 重收敛**、Blackwell 架构、:mdnice-bold-italic[GPU 微基准测试]
 
-> “自 2017 年 Volta 架构引入独立线程调度以来，NVIDIA GPU 的控制流分歧处理被广泛认为已进入固定形态。”这一默认假设几乎贯穿了过去九年的 GPU 性能分析与模拟器设计。
+> *“自 2017 年 Volta 架构引入独立线程调度以来，NVIDIA GPU 的控制流分歧处理被广泛认为已进入固定形态。”这一默认假设几乎贯穿了过去九年的 GPU 性能分析与模拟器设计。*
 
 ![文章插图](/articles/2026-08-21-nvidia-gpu-warp-divergence-blackwell-41ec13e0/images/01.webp)
 

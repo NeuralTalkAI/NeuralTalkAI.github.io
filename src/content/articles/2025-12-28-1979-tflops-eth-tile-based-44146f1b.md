@@ -12,7 +12,7 @@
 - **[GEMM 95% FPU 利用率！基于 MLIR 面向 RISC-V 指令集扩展的加速Micro-kernels的多层编译器后端](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447889407&idx=1&sn=f5640780406954ae498d2c98d162d454&scene=21#wechat_redirect)**
 - **[2.6 倍加速，能耗降 1.4 倍！量化算法与硬件协同设计混合精度 GEMM 加速器 MixPE](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447888337&idx=1&sn=b1d1893f0112202dfc3dda07b298c57a&scene=21#wechat_redirect)**
 
-> 针对基于 Tile 的多 PE（处理单元）加速器在 GEMM 部署中**编程复杂度高、手动优化难度大**，且现有方案**未有效利用片上网络（NoC）集体通信原语** 的问题，:mdnice-bold-italic[本文提出自动化框架“Design in Tiles（DiT）”，实现该类加速器上 GEMM 的高效部署。]
+> *针对基于 Tile 的多 PE（处理单元）加速器在 GEMM 部署中**编程复杂度高、手动优化难度大**，且现有方案**未有效利用片上网络（NoC）集体通信原语** 的问题，:mdnice-bold-italic[本文提出自动化框架“Design in Tiles（DiT）”，实现该类加速器上 GEMM 的高效部署。]*
 
 DiT 由两大核心组件构成：
 

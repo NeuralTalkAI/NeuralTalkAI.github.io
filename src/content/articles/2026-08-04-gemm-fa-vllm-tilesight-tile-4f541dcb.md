@@ -1,6 +1,6 @@
 关键词：GPU 性能建模、**Tile 抽象**、:mdnice-bold-italic[流水线重叠]、**缓存重用距离**、分布式推理
 
-> 当 Triton、TileLang、甚至 NVIDIA 刚刚在 CUDA 13.1 中推出的 CUDA Tile **都把 tile 作为一等编程公民时，性能分析工具还停留在 roofline 的粗粒度边界、ML 模型的黑盒预测、或者 profiler 的事后采样**。黄仁勋称 :mdnice-bold-italic[CUDA Tile 是 CUDA 诞生 20 年来最重要的进步]，但写 kernel 的人依然要靠 autotuning 在上千种配置里暴力搜索，靠 NSight Compute 的计数器猜瓶颈在哪。
+> *当 Triton、TileLang、甚至 NVIDIA 刚刚在 CUDA 13.1 中推出的 CUDA Tile **都把 tile 作为一等编程公民时，性能分析工具还停留在 roofline 的粗粒度边界、ML 模型的黑盒预测、或者 profiler 的事后采样**。黄仁勋称 :mdnice-bold-italic[CUDA Tile 是 CUDA 诞生 20 年来最重要的进步]，但写 kernel 的人依然要靠 autotuning 在上千种配置里暴力搜索，靠 NSight Compute 的计数器猜瓶颈在哪。*
 
 这个 gap 在 AI workload 下变得愈发尖锐。现代 LLM kernel 早就不是简单的 GEMM 了，FlashAttention-3 在 H100 上涉及十几种异构操作：Tensor Core 上的两个 GEMM、CUDA Core 上的 reduction 和 softmax、SFU 上的特殊函数，**它们之间有精细的数据依赖，占用不同的硬件资源，理论上可以重叠，但重叠程度完全取决于调度顺序和流水线深度**。
 

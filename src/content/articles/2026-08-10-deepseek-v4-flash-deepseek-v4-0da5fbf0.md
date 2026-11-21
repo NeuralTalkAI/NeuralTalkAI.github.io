@@ -2,7 +2,7 @@
 
 关键词：DeepSeek V4 Flash、**视觉微调**、:mdnice-bold-italic[NVFP4 量化]、MoonViT、**SGLang、vLLM**
 
-> DeepSeek V4 Flash 发布以来一直被一件事卡着脖子：这个总参数 304B、每 token 只激活 13B 的 MoE 模型**只能读文字，看不见图**。:mdnice-bold-italic[浏览器智能体要读 UI 截图、自动化工具要识别界面元素，全都得绕道闭源多模态 API。]
+> *DeepSeek V4 Flash 发布以来一直被一件事卡着脖子：这个总参数 304B、每 token 只激活 13B 的 MoE 模型**只能读文字，看不见图**。:mdnice-bold-italic[浏览器智能体要读 UI 截图、自动化工具要识别界面元素，全都得绕道闭源多模态 API。]*
 
 8 月初，Hugging Face 上出现了社区仓库 `webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4`[1]，干的正是这件事——**给 V4 Flash 接上视觉前端，并用 NVFP4 量化压缩权重**。它被社区媒体评价为"补上了浏览器智能体不依赖闭源多模态 API 的缺口"。**同期还有 FlyCockpit 项目的 vLLM 路线**。
 

@@ -1,6 +1,6 @@
 关键词：MoE 大模型、动态权重量化、KV 缓存管理、:mdnice-bold-italic[推理服务优化]、**分页式显存调度**
 
-> 论文中有一句核心判断精准点出了当前 MoE 部署的核心矛盾：With MoE, the loaded model size can occupy more than 60% of the GPU memory。:mdnice-bold-italic[MoE 架构通过稀疏激活大幅降低了推理计算量，成为长上下文、复杂推理任务的主流选择，但总参数量的膨胀让模型权重成为 GPU 显存的核心占用者，与随上下文线性增长的 KV 缓存形成了直接的零和博弈。]
+> *论文中有一句核心判断精准点出了当前 MoE 部署的核心矛盾：With MoE, the loaded model size can occupy more than 60% of the GPU memory。:mdnice-bold-italic[MoE 架构通过稀疏激活大幅降低了推理计算量，成为长上下文、复杂推理任务的主流选择，但总参数量的膨胀让模型权重成为 GPU 显存的核心占用者，与随上下文线性增长的 KV 缓存形成了直接的零和博弈。]*
 
 传统静态量化方案只能在推理前固定权重精度，无法适配动态变化的显存压力：短上下文时显存有余量却无法提升精度，长上下文时 KV 缓存挤占空间又无法进一步压缩权重，最终只能通过卸载权重到 CPU 引发性能暴跌。
 

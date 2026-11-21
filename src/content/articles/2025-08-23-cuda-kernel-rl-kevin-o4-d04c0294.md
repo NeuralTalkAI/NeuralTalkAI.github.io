@@ -12,7 +12,7 @@
 - [AutoTriton：通过强化学习实现自动Triton编程！8B参数媲美Claude-4 与 DeepSeek-R1！代码开源！](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447890530&idx=1&sn=2f4b9743242cd200c0bae8e8f8c68e67&scene=21#wechat_redirect)
 - [GPU Kernel Scientist：LLM 驱动下的 GPGPU Kernel 迭代框架](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447889551&idx=1&sn=606751b8d2b4190238f0fb800f1d5751&scene=21#wechat_redirect)
 
-> 编写 GPU 内核是一项具有挑战性的任务，对 AI 系统的效率至关重要。它也:mdnice-bold-italic[是一个高度迭代的过程：领域专家编写代码，并通过执行反馈来提高性能]。此外，它还:mdnice-bold-italic[具有可验证的奖励，如正确性和加速比，这使其成为应用强化学习（RL）的天然环境。]
+> *编写 GPU 内核是一项具有挑战性的任务，对 AI 系统的效率至关重要。它也:mdnice-bold-italic[是一个高度迭代的过程：领域专家编写代码，并通过执行反馈来提高性能]。此外，它还:mdnice-bold-italic[具有可验证的奖励，如正确性和加速比，这使其成为应用强化学习（RL）的天然环境。]*
 
 为了将这一过程的迭代性质明确地融入训练中，我们开发了一种灵活的多轮 RL 方法，以解决在现实世界场景中遇到的独特挑战，例如从长轨迹中学习以及跨轮次的有效奖励归因。
 

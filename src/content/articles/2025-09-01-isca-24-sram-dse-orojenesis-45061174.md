@@ -1,6 +1,6 @@
 关键词：Orojenesis, tensor algorithms, data movement bounds, buffer capacity, ski-slope diagram, design-space exploration, fusion optimization
 
-> 【NeuralTalk简评】“Orogenesis” 意为造山运动，灵感源于修整滑雪坡的雪地车，用来比喻计算张量算法的数据移动极限。而 Buffer Reuse（缓冲区复用）正是触及这一极限的关键，尤其适用于卷积、GEMM 等算法。雪地车修整雪坡时，会将雪推到最优位置以减少浪费和劳力，Orojenesis 的思路与之类似：希望芯片中数据 “移动” 的距离和次数最少，通过优化缓冲区设计、最大化复用率，找到数据移动的 “下界”，达到芯片早期架构设计空间探索的效率极限。
+> *【NeuralTalk简评】“Orogenesis” 意为造山运动，灵感源于修整滑雪坡的雪地车，用来比喻计算张量算法的数据移动极限。而 Buffer Reuse（缓冲区复用）正是触及这一极限的关键，尤其适用于卷积、GEMM 等算法。雪地车修整雪坡时，会将雪推到最优位置以减少浪费和劳力，Orojenesis 的思路与之类似：希望芯片中数据 “移动” 的距离和次数最少，通过优化缓冲区设计、最大化复用率，找到数据移动的 “下界”，达到芯片早期架构设计空间探索的效率极限。*
 
 ![文章插图](/articles/2025-09-01-isca-24-sram-dse-orojenesis-45061174/images/01.webp)
 

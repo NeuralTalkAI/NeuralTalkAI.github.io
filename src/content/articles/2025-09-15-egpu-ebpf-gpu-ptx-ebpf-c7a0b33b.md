@@ -1,6 +1,6 @@
 关键词：eBPF、GPU、Heterogeneous (hybrid) systems、Parallel architectures、Runtime environments、Graphics processors
 
-> Meta 每天要运行数万个 GPU 任务，人工分析已不切实际。为此，Meta 等机构通过自动化平台与分层遥测架构解决这一规模难题——其可观测性栈中的工作流程和工具表明，:mdnice-bold-italic[系统化的性能监控、自动化的数据分析以及分层遥测架构，能精准定位数据饥饿、内核使用不佳、工作负载不均衡等常见效率问题，进而提升大规模 AI 系统的效率。]
+> *Meta 每天要运行数万个 GPU 任务，人工分析已不切实际。为此，Meta 等机构通过自动化平台与分层遥测架构解决这一规模难题——其可观测性栈中的工作流程和工具表明，:mdnice-bold-italic[系统化的性能监控、自动化的数据分析以及分层遥测架构，能精准定位数据饥饿、内核使用不佳、工作负载不均衡等常见效率问题，进而提升大规模 AI 系统的效率。]*
 
 然而，**这类方案仍受限于现有 GPU 观测工具的固有缺陷**：无论是 NVIDIA 的 CUPTI 还是 NVBit 等二进制插桩框架，往往会带来:mdnice-bold-italic[显著开销，甚至需要中断运行中的 GPU 内核] 才能完成 instrumentation 。更关键的是，作为 **Linux 系统中成熟的轻量级可观测性框架**，eBPF 长期聚焦 CPU 领域，:mdnice-bold-italic[因 GPU 异步执行、并行线程模型等特性，始终难以延伸至 GPU 硬件层面 。]
 

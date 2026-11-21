@@ -8,7 +8,7 @@
 - [ZLUDA：让 CUDA 程序在非英伟达 GPU 上“零修改”运行的开源兼容层——现状、原理与 2025 最新进展](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447889691&idx=1&sn=ef6cd986f95c897029ba4b2981231cbe&scene=21#wechat_redirect)
 - 本文 23430 字，阅读需 94 分钟，播客 7 分钟如下
 
-> 异构 GPU 基础设施带来了二进制兼容性挑战：由于指令集、执行模型和驱动程序栈的差异，为:mdnice-bold-italic[一家供应商的 GPU 编译的代码无法在另一家的 GPU 上运行]。
+> *异构 GPU 基础设施带来了二进制兼容性挑战：由于指令集、执行模型和驱动程序栈的差异，为:mdnice-bold-italic[一家供应商的 GPU 编译的代码无法在另一家的 GPU 上运行]。*
 
 我们提出了 HetGPU，这是一个新系统，由编译器、运行时和抽象层组成，共同实现**单个 GPU 二进制文件在英伟达（NVIDIA）、超微半导体（AMD）、英特尔（Intel）和 Tenstorrent 硬件上执行**。
 

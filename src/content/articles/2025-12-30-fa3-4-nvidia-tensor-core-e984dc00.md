@@ -1,6 +1,6 @@
 关键词：:mdnice-bold-italic[Tensor Core GPU]、**Software Pipelining**、**Warp Specialization**、Twill、Constraint Solving、:mdnice-bold-italic[Modulo Scheduling]
 
-> 随着 AI 大模型向“更大参数、更长序列”发展，Tensor Core GPU 的优化需求将持续增长。:mdnice-bold-italic[Twill 所代表的“约束求解驱动的最优优化”范式，有望成为未来 GPU 内核优化的主流方向——让专家从繁琐的手工优化中解放出来，专注于算法创新而非硬件适配。]
+> *随着 AI 大模型向“更大参数、更长序列”发展，Tensor Core GPU 的优化需求将持续增长。:mdnice-bold-italic[Twill 所代表的“约束求解驱动的最优优化”范式，有望成为未来 GPU 内核优化的主流方向——让专家从繁琐的手工优化中解放出来，专注于算法创新而非硬件适配。]*
 
 换句话说，可能会改变 AI kernel 优化的生态，不需要那么多人写算子了，这尤其是对于框架开发者，:mdnice-bold-italic[无需再为每代 GPU 手工优化核心内核如注意力、Transformer，因为！Twill 可自动生成最优策略！]
 

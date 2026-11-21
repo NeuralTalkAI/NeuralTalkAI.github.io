@@ -16,7 +16,7 @@
 - [基于 LLM 跨硬件GEMM优化框架 QiMeng-GEMM：自动搜索元提示组合下特定规模显著优于cuBLAS、OpenBLAS](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447889763&idx=1&sn=21f80712d58b5241461c6a1fe4098951&scene=21#wechat_redirect)
 - [芯片软硬件全自动化设计！计算所处理器国重实验室提出 QiMeng 方案：从特定领域处理器芯片大模型，到编译器工具链、高性能库！](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447888640&idx=1&sn=22f8a7efccb43f1b0bdbf4186529b167&scene=21#wechat_redirect)
 
-> 在工业界和学术界对可扩展、硬件优化解决方案的需求推动下，AI 生成 GPU 内核的需求正迅速增长。:mdnice-bold-italic[随着深度学习工作负载在复杂性和多样性上的提升]，**自动化底层内核开发以满足性能和生产力需求变得至关重要。**
+> *在工业界和学术界对可扩展、硬件优化解决方案的需求推动下，AI 生成 GPU 内核的需求正迅速增长。:mdnice-bold-italic[随着深度学习工作负载在复杂性和多样性上的提升]，**自动化底层内核开发以满足性能和生产力需求变得至关重要。***
 
 主要的云服务提供商、半导体公司和研究机构目前正大力投资于 AI 驱动的 GPU 代码生成，旨在**减少手动优化工作**，同时**在 AMD Instinct™ MI300X 等硬件上实现接近专家水平的性能。**
 

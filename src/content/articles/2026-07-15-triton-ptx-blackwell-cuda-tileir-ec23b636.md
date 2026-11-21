@@ -1,6 +1,6 @@
 关键词：**Triton 后端**、:mdnice-bold-italic[CUDA TileIR]、Blackwell GPU、**MLIR 方言转换**、无序内存模型
 
-> 当 Triton 的 `tl.dot`、`tl.load` 遇上 NVIDIA Blackwell 上的 TMA、2CTA-MMA、CGA 调度，:mdnice-bold-italic[传统"Triton → TTGIR → LLVM/PTX → SASS"的下降路径开始显出疲态——它要在 SIMT 抽象上手工调度 warp、stage、register。]
+> *当 Triton 的 `tl.dot`、`tl.load` 遇上 NVIDIA Blackwell 上的 TMA、2CTA-MMA、CGA 调度，:mdnice-bold-italic[传统"Triton → TTGIR → LLVM/PTX → SASS"的下降路径开始显出疲态——它要在 SIMT 抽象上手工调度 warp、stage、register。]*
 
 ![文章插图](/articles/2026-07-15-triton-ptx-blackwell-cuda-tileir-ec23b636/images/01.webp)
 

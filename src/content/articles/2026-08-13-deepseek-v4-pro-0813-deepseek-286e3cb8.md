@@ -1,6 +1,6 @@
 关键词：**DeepSeek V4-Pro**、Agent、:mdnice-bold-italic[Harness]、开源模型、API 定价
 
-> 2026 年 8 月 12 日，DeepSeek 官方 API 文档首页与定价页双双确认：`deepseek-v4-pro` 模型版本已更新为 DeepSeek-V4-Pro-0813，调用方式不变，Responses API 同步支持。:mdnice-bold-italic[V4-Pro 正式版已经静默上线，只是更新日志的正式公告尚未发布。官方版式的 Agent 评测表显示，0813 在 HLE、Terminal Bench 2.1、DeepSWE、DSBench 等基准上大幅超越 4 月预览版，并与 Opus-4.8、Fable 5 贴身竞争。]
+> *2026 年 8 月 12 日，DeepSeek 官方 API 文档首页与定价页双双确认：`deepseek-v4-pro` 模型版本已更新为 DeepSeek-V4-Pro-0813，调用方式不变，Responses API 同步支持。:mdnice-bold-italic[V4-Pro 正式版已经静默上线，只是更新日志的正式公告尚未发布。官方版式的 Agent 评测表显示，0813 在 HLE、Terminal Bench 2.1、DeepSWE、DSBench 等基准上大幅超越 4 月预览版，并与 Opus-4.8、Fable 5 贴身竞争。]*
 
 四个月前预览版发布时，DeepSeek 官方把话说得很满：Agent 能力开源第一梯队、世界知识仅次于 Gemini-3.1-Pro、推理比肩顶级闭源模型。但"预览版"三个字始终悬在头上，直到 7 月 31 日 Flash 正式版惊喜发布，Pro 版依然缺席。
 

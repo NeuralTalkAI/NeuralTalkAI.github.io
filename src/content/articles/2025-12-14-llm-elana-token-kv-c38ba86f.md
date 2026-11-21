@@ -13,7 +13,7 @@
 - **[剖析RISC-V不同平台性能：PMU剖析与基于LLVM硬件无关Roofline，分析SiFive、平头哥C910和进迭时空性能](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447891030&idx=1&sn=54a3b4ba00d5f77b2dbffbf7b8355e72&scene=21#wechat_redirect)**
 - **[代码开源！OSDI'25 通过类 eBPF 探测实现可编程细粒度 GPU 内核分析工具 Neutrino：跨厂商GPU剖析工具！](https://mp.weixin.qq.com/s?__biz=MjM5NDczOTA4NQ==&mid=2447892532&idx=1&sn=446017b09eaec1e92fb6d77ed8301908&scene=21#wechat_redirect)**
 
-> 大型语言模型（LLM）在各类硬件平台**部署时，延迟与能耗是核心约束**，而:mdnice-bold-italic[现有评测工具缺乏统一、轻量化的 LLM 专用框架]。为此，美国得克萨斯大学奥斯汀分校团队开源了轻量型学术友好型**评测工具 ELANA，用于 LLM 的能效与延迟分析**。
+> *大型语言模型（LLM）在各类硬件平台**部署时，延迟与能耗是核心约束**，而:mdnice-bold-italic[现有评测工具缺乏统一、轻量化的 LLM 专用框架]。为此，美国得克萨斯大学奥斯汀分校团队开源了轻量型学术友好型**评测工具 ELANA，用于 LLM 的能效与延迟分析**。*
 
 ELANA **支持多 GPU 与边缘 GPU 平台，兼容 Hugging Face 所有公开模型及 API，可轻松适配压缩或低比特模型**。
 

@@ -1,6 +1,6 @@
 关键词：**编译器世界模型**、张量程序优化、**代价模型**、:mdnice-bold-italic[动作条件状态转移]、**TVM AutoScheduler**
 
-> AutoTVM 到 Ansor，从 TenSet 到 TLP，:mdnice-bold-italic[评估一个候选调度（Schedule）的方式始终是把最终的 TensorIR 代码拍成一张"静态照片"喂给模型，至于这段代码是经过了哪些循环切分、融合、绑定才长成这样，评估器一概不知。]
+> *AutoTVM 到 Ansor，从 TenSet 到 TLP，:mdnice-bold-italic[评估一个候选调度（Schedule）的方式始终是把最终的 TensorIR 代码拍成一张"静态照片"喂给模型，至于这段代码是经过了哪些循环切分、融合、绑定才长成这样，评估器一概不知。]*
 
 ![文章插图](/articles/2026-07-26-toward-compiler-world-models-tvm-c458f9fa/images/01.webp)
 

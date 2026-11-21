@@ -2,7 +2,7 @@
 
 关键词：**PDL**、:mdnice-bold-italic[Megakernel]、持久化 Kernel、CUDA Graph、**ThunderKittens**
 
-> 当一个 $batch = 1$ 的解码被拆成约一百个 Kernel 时，GPU 会反复停止加载权重、排空一个 Grid、再重新启动。:mdnice-bold-italic[斯坦福 Hazy Research 团队的 Megakernel 给出的答案是让一个 CTA 常驻在每个 SM 上，把整个模型当作一条指令流来解释执行。而该研究追问的是反过来的问题：Megakernel 的性能优势究竟有多少来自"持久化"本身，又有多少可以通过更好的调度在普通 Kernel 链中复现？]
+> *当一个 $batch = 1$ 的解码被拆成约一百个 Kernel 时，GPU 会反复停止加载权重、排空一个 Grid、再重新启动。:mdnice-bold-italic[斯坦福 Hazy Research 团队的 Megakernel 给出的答案是让一个 CTA 常驻在每个 SM 上，把整个模型当作一条指令流来解释执行。而该研究追问的是反过来的问题：Megakernel 的性能优势究竟有多少来自"持久化"本身，又有多少可以通过更好的调度在普通 Kernel 链中复现？]*
 
 ![文章插图](/articles/2026-08-31-megakernel-cuda-pdl-97-4-aa5c9945/images/01.png)
 

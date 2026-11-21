@@ -1,6 +1,6 @@
 关键词：**SuperOffload**、大语言模型训练、**超级芯片**、:mdnice-bold-italic[卸载技术]、异构计算
 
-> 本研究探索:mdnice-bold-italic[超级芯片时代 LLM 训练软件优化方案]，发现基于 PCIe 带宽限制设计的传统卸载方案，难以充分利用超级芯片硬件资源。
+> *本研究探索:mdnice-bold-italic[超级芯片时代 LLM 训练软件优化方案]，发现基于 PCIe 带宽限制设计的传统卸载方案，难以充分利用超级芯片硬件资源。*
 
 为此，我们设计首个适配超级芯片的 SuperOffload 系统，它可同时高效调用 Hopper GPU、Grace CPU 与 NVLink-C2C 互联。
 

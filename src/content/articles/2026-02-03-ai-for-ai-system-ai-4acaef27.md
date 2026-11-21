@@ -1,8 +1,8 @@
 关键词：**AI for AI System**、:mdnice-bold-italic[Deep learning runtime]、**Agent development**、CUDA
 
-> 副标题：:mdnice-bold-italic[“完全由 AI 生成”是否是一个有误导性的宣传标签？见【关键问题二】]
+> *副标题：:mdnice-bold-italic[“完全由 AI 生成”是否是一个有误导性的宣传标签？见【关键问题二】]
 >
-> 完全由 AI 代码助手生成的深度学习框架，从 Python 接口到 CUDA 内存管理，无一不是 AI 手笔，这背后是怎样的一套方法论？
+> 完全由 AI 代码助手生成的深度学习框架，从 Python 接口到 CUDA 内存管理，无一不是 AI 手笔，这背后是怎样的一套方法论？*
 
 如果你关注 AI 编程和大型语言模型的最新进展，可能已经听说过让 AI 写代码、调试程序甚至完成简单项目。但如果告诉你，:mdnice-bold-italic[现在有一个完整的、支持 GPU 加速的深度学习框架——从 Python/Node.js 接口，到张量计算、自动微分、CUDA 内存管理] ——**几乎完全由 AI 代码助手生成**，你会怎么想？
 
