@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="NeuralTalk，记录 AI、计算系统与工程实践。" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // 旧 Hash 链接跳转：/#/post/x -> /post/x
+      (function () {
+        var m = location.hash.match(/^#!?\/?(.*)$/);
+        if (m && m[1]) location.replace('/' + m[1]);
+      })();
+    </script>
     <title>NeuralTalk</title>
     <link rel="alternate" type="application/rss+xml" title="NeuralTalk" href="/rss.xml" />
   </head>
