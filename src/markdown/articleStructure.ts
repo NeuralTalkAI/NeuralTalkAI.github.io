@@ -29,13 +29,12 @@ export function getArticleToc(markdown: string): TocItem[] {
   return items
 }
 
-/** Portable Markdown uses repository-relative assets; the website serves them from public/.
- *  用相对路径（./images/...）而不是根路径（/images/...），兼容 GitHub Pages 项目子路径部署。 */
+/** 图片统一用站点根路径（/articles/...、/images/...）。
+ *  SEO 路由改造后文章页是真实多级路径（/post/<slug>/），相对路径会基于文章目录解析导致 404，
+ *  必须保持根路径；站点部署在域名根，无需考虑子路径。 */
 export function normalizeArticleImageUrls(markdown: string) {
   return markdown
-    .replace(/\]\(\.\.\/\.\.\/\.\.\/public\//g, '](./')
-    .replace(/\]\(\/articles\//g, '](./articles/')
-    .replace(/\]\(\/images\//g, '](./images/')
+    .replace(/\]\(\.\.\/\.\.\/\.\.\/public\//g, '](/')
 }
 
 /** The exported static list is replaced by the complete, linked heading tree. */
